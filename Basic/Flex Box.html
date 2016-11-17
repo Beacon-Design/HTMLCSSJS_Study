@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Flex Item</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style type="text/css">
+
+      .container {
+        display: flex;
+        flex-wrap: nowrap;
+      }
+      .box {width:100%; height: 150px;}
+      .blue{background-color: blue;}
+      .green{background-color: green;}
+      .orange{background-color: orange;}
+      .red{background-color: red;}
+
+      @media screen and (max-width: 500px) {
+      	.blue{order:0;}
+      	.green{order:1;}
+      	.yellow{order: 2}
+      	.red{order: 3}
+      }
+      @media screen and (min-width: 501px) and (max-height: 899px) {
+      	.blue{order: 3}
+      	.green{order: 1}
+      	.yellow{order: 0}
+      	.red{order: 2}
+      }
+      @media screen and (max-width: 900px) {
+      	.blue{order: 2}
+      	.green{order: 0}
+      	.yellow{order: 3}
+      	.red{order: 1}
+      	
+      }
+
+
+
+      /*@media screen and (min-width: 400px) {
+        .dark_blue { order: 2; }
+        .light_blue { order: 4; }
+        .green { order: 1; }
+        .orange { order: 5; }
+        .red { order: 3; }
+      }*/
+      
+      /*@media screen and (min-width: 500px) {
+        .dark_blue { order: 4; }
+        .light_blue { order: 1; }
+        .green { order: 2; }
+        .orange { order: 3; }
+        .red { order: 5; }
+      }*/
+
+      /*@media screen and (min-width: 600px) {
+        .dark_blue { order: 5; }
+        .light_blue { order: 4; }
+        .green { order: 3; }
+        .orange { order: 2; }
+        .red { order: 1; }
+      }*/
+
+      /*@media screen and (min-width: 700px) {
+        .dark_blue { order: 4; }
+        .light_blue { order: 5; }
+        .green { order: 2; }
+        .orange { order: 3; }
+        .red { order: 1; }
+      }*/
+
+    </style>
+  </head>
+  <body>
+
+    <div class="container">
+      <div class="box blue">blue</div>
+      <div class="box green">green</div>
+      <div class="box orange">orange</div>
+      <div class="box red">red</div>
+    </div>
+  </body>
+</html>

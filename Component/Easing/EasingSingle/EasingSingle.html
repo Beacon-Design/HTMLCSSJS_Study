@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta charset="utf-8">
+	<title>Easing Single V01</title>
+	<style type="text/css">
+		button,input{
+
+			/* Style Section */
+			width: 128px;
+			height: 48px;
+
+			
+			/* Position Section */
+			float: left;
+		}
+		section{
+
+			/* Style Section */
+			width: 30px;
+			height: 30px;
+			background-color: blue;
+			border-radius: 4px;
+
+
+			/* Position Section */
+			float: left;
+			margin-left: 40px;
+
+			/* Animation Section */
+			transform: translateX(0px);
+		}
+		div{
+			width: 300px;
+			height: 2px;
+			background-color: gray;
+			float: left;
+			/*margin-left: 40px;*/
+		}
+		#aniStart{
+			transform: translateX(300px);
+			transition-delay: 0.3s;
+			transition-property: transform;
+			transition-duration: 1s;
+			/*transition-timing-function: ease;*/
+			transition-timing-function: cubic-bezier(0.175, 0.885, 0.32, 1.275);
+
+		}
+		#mouseOut{
+			opacity: 0;
+			transition-property: opacity;
+			transition-duration: 0.3s;
+
+		}
+
+
+	</style>
+</head>
+<body>
+	<article>
+		<header>
+			<!-- <input type="button" name="btn" value="ease" onclick="animation()"> -->
+			<!-- <button onmousemove="aniStart()" onmouseout="aniEnd()">ease</button> -->
+			<button onclick="aniStart()" > ease</button>
+			
+
+		</header>
+
+		<section></section>
+		<div></div>
+	</article>
+
+<!-- Script Section -->
+<script type="text/javascript">
+	function aniStart(){
+		document.getElementsByTagName("section")[0].setAttribute("id","aniStart");
+	}
+	function aniEnd(){
+		document.getElementsByTagName("section")[0].removeAttribute("id");
+	}
+</script>
+</body>
+</html>

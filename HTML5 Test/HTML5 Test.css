@@ -1,0 +1,16 @@
+/*========== Attribute Selectors ==========*/
+/*====== regular expression can be used in attribute selector ======*/
+[name]{
+	color:blue;
+}
+[name="Tark"]{
+	color:pink;
+}
+[name~="John"]{
+	background-color: #ccc;
+}
+
+/*========== Pseudo Class ==========*/
+p:nth-child(odd){color: red;}
+p:nth-child(even){color:green;}
+p:nth-child(3){color: darkblue;background-color: lightblue}

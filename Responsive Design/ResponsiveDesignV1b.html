@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width initial-scale=1">
+<meta charset="utf-8">
+	<title>Responsive Design @media V1b</title>
+	<style type="text/css">
+
+	@media screen and (max-width: 500px){
+		#five{color:white;background-color: blue;}
+		#fiveandnine{display: none;}	
+		#nine{display: none;}	
+	}
+	@media screen and (min-width: 900px) {
+		#nine{color:yellow;background-color: red;}
+		#five{display: none;}
+		#fiveandnine{display: none;}
+	}
+	@media  screen and (min-width: 500px) and (max-width: 900px){
+		#fiveandnine{color:green;background-color: pink;}
+		#five{display: none;}
+		#nine{display: none;}
+	}	
+	</style>
+</head>
+<body>
+<p id="five">@media screen and (max-width:500px)</p>
+<p id="nine">@media screen and (min-width:900px)</p>
+<p id="fiveandnine">@media screen and (min-width:500px) and (max-width:900px)</p>
+</body>
+</html>

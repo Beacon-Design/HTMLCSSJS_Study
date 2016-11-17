@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+	<title>Center</title>
+	<style type="text/css">
+	/*========== verticalCenterText ==========*/
+		.verticalCenterText{
+			height: 60px;
+			line-height: 60px;
+			background-color: #999;
+			color: blue;
+		}
+
+	/*========== verticalCenter1 ==========*/
+		table tbody tr td{height: 300px;background-color: #ccc;}
+
+
+	/*========== verticalCenter2 ==========*/
+		.verticalCenter2{
+			height: 100px;
+			background-color: #ccc;
+			display: table-cell;
+			vertical-align: middle;
+		}
+		
+	/*========== verticalCenter3 ==========*/
+		.verticalCenter3div{height: 80px;background-color: #999;}
+		#verticalCenter3{
+			text-align: center;
+			position: relative;
+			top: 50%;
+			transform: translateY(-50%);
+		}
+		
+	/*########## horizontalCenter ##########*/
+		#horizontalCenter{
+			width: 600px;
+			margin: 20px auto;
+			background-color: #666;text-align: center;
+		}
+
+	/*########## horizontalCenter1 ##########*/
+		.horizontalCenter1{
+			margin: 0 auto;
+		}
+
+	/*########## horizontalCenter3 ##########*/
+		#horizontalCenter3{
+			float: left;
+			position: relative;
+			left: 50%
+		}
+		#horizontalCenter3>p{
+			background-color: #ccc;
+			position: relative;
+			left: -50%
+		}
+	</style>
+</head>
+<body>
+
+<!-- verticalCenterText -->
+<div class="verticalCenterText">
+<p>垂直居中-父元素高度确定的单行文本.
+父元素高度确定的单行文本的竖直居中的方法是通过设置父元素的 height 和 line-height 高度一致来实现的。
+这种文字行高与块高一致带来了一个弊端：当文字内容的长度大于块的宽时，就有内容脱离了块。</p>
+</div>
+
+
+<!-- verticalCenter1 -->
+<table><tbody><tr><td class="verticalCenter1">
+<div>
+<p>垂直居中-父元素高度确定的多行文本（方法一）</p>
+<p>使用插入 table  (包括tbody、tr、td)标签，同时设置 vertical-align：middle。
+css 中有一个用于竖直居中的属性 vertical-align，在父元素设置此样式时，
+会对inline-block类型的子元素都有用。</p>
+<p>因为 td 标签默认情况下就默认设置了 vertical-align 为 middle，所以我们不需要显式地设置了。</p>
+</div>
+</td></tr></tbody></table>
+
+
+
+<!-- verticalCenter2 -->
+<div class="verticalCenter2">
+<p>垂直居中-父元素高度确定的多行文本（方法二）</p>
+<p>这种方法的好处是不用添加多余的无意义的标签，但缺点也很明显，它的兼容性不是很好，不兼容 IE6、7而且这样修改display的block变成了table-cell，破坏了原有的块状元素的性质。</p>
+</div>
+
+<!-- verticalCenter3 -->
+<div class="verticalCenter3div">
+<p id="verticalCenter3">verticalCenter3 行内元素居中</p>
+</div>
+
+<!-- horizontalCenter -->
+<div id="horizontalCenter">
+<p>水平居中设置-定宽块状元素</p>
+</div>
+
+
+<!-- horizontalCenter1 -->
+<div>
+<table><tbody><tr><td><ul><li id="horizontalCenter1">
+<p>水平居中总结-不定宽块状元素方法（一）</p>
+<p>第一步：为需要设置的居中的元素外面加入一个 table 标签. 
+第二步：为这个 table 设置“左右 margin 居中”</p>
+<p>table标签的长度自适应性-即不定义其长度也不默认父元素body的长度（table其长度根据其内文本长度决定），因此可以看做一个定宽度块元素，然后再利用定宽度块状居中的margin的方法，使其水平居中。</p>
+</li></ul></td></tr></tbody></table>
+</div>
+
+<!-- horizontalCenter2 -->
+<p>第二种方法：改变块级元素的 display 为 inline 类型（设置为 行内元素 显示），然后使用 text-align:center 来实现居中效果。</p>
+<p>这种方法相比第一种方法的优势是不用增加无语义标签，但也存在着一些问题：它将块状元素的 display 类型改为 inline，变成了行内元素，所以少了一些功能，比如设定长度值。</p>
+
+
+<!-- horizontalCenter3 -->
+<div id="horizontalCenter3">
+<p>
+方法三：通过给父元素设置 float，然后给父元素设置 position:relative 和 left:50%，子元素设置 position:relative 和 left: -50% 来实现水平居中。
+</p>
+</div>
+
+
+</body>
+</html>

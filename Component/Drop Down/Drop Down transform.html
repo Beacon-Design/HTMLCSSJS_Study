@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta charset="utf-8">
+	<title>Drop Down transform</title>
+	<style type="text/css">
+		html,body{
+			margin: 0px;
+			padding: 0px;
+		}
+		main{
+			width: 320px;
+			height: 568px;
+			background-color: #999;
+		}
+		button{
+			width: 120px;
+			height: 48px;
+			text-align: center;
+			margin: 20px;
+		}
+		header{
+			color: #fff;
+			width: 320px;
+			height: 80px;
+			line-height: 80px;
+			text-align: center;
+			background-color: #666;
+			transform: translateY(-200px);
+
+			transition-property: transform;
+			transition-duration:1s;
+			transition-timing-function: ease;
+		}
+		#ani{
+			transform: translateY(0px);
+		}
+	</style>
+	<script type="text/javascript">
+		function action(){
+			document.getElementsByTagName('header')[0].setAttribute("id","ani");
+
+}
+		function reset(){
+			document.getElementsByTagName("header")[0].removeAttribute("id");
+		}
+	</script>
+</head>
+<body>
+<main>
+	<!-- Drop Down Section -->
+	<header>
+		header
+	</header>
+</main>
+	
+	<!-- Button Section -->
+<footer>
+	<button onclick="action()">Action</button>
+	<button onclick="reset()">Reset</button>
+</footer>
+
+</body>
+</html>

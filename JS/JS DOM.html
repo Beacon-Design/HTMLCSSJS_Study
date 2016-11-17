@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+	<title>JS DOM</title>
+	<link rel="stylesheet" type="text/css" href="">
+	<script src="JS DOM.js"></script>
+	<style type="text/css">
+		#sec{
+			color: red;
+			background-color: blue;
+		}
+		.cl{background-color: pink;}
+	</style>
+</head>
+<body>
+<div id="main">
+	<p>This is tag p 1</p>
+</div>
+<section>this is a section tag</section>
+<br>
+<h2>this is h2</h2>
+<article id="art">
+	<h4>this is h4 first</h4>
+	<h4 id="hMid">this is h4 mid</h4>
+	<h4>this is h4 last</h4>
+</article>
+<div>
+	<h5 id="ptoc">this is h5</h5>
+	<p >/// previous sibling</p>
+	<p id="sib">/// sib</p>
+	<p>/// next sibling</p>
+</div>
+<button onclick="addItem()">add something</button>
+<br>
+<button onclick="removeItem()">remove</button>
+<br>
+<button onclick="setAttri()">set attribute</button>
+<br>
+<button onclick="pToC()">parent to child</button>
+<br>
+<button onclick="cToP()">child to parent</button>
+<br>
+<button onclick="nextSiblingColor()">next sibling</button>
+<br>
+<button onclick="previousSiblingColor()">previous sibling</button>
+</body>
+</html>
