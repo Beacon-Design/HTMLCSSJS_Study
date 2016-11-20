@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta name="viewport" content="width=device-width,inisital-scale=1">
+    <meta charset="utf-8">
+    <title>Button</title>
+    <style type="text/css">
+        div {
+            margin: 10px;
+            font-size: 20px;
+        }
+        
+        button {
+            width: 128px;
+            height: 48px;
+            background-color: lightblue;
+            border-radius: 12px;
+            border-style: none;
+        }
+        
+        input {
+            width: 128px;
+            height: 48px;
+            background-color: lightblue;
+            border-radius: 12px;
+            border-style: none;
+        }
+        
+        p {
+            color: goldenrod;
+        }
+    </style>
+</head>
+
+<body>
+
+    <p name="b">name</p>
+    <p name="b">name</p>
+    <button onmouseover="" onmouseout="" onmousedown="" onmouseup="">Button</button>
+    <br/>
+    <br/>
+    <input type="button" value="input button" onclick="change()" />
+
+    <script type="text/javascript">
+        function change() {
+            document.getElementsByName("b")[0].innerHTML = "red";
+            //            document.getElementsByName("b").style.color="red";
+            //            document.getElementsByClassName("b")[0].style.color="red";
+            //            document.getElementById("b").style.color="red";
+            //            document.getElementById("b").innerHTML="red";
+        }
+    </script>
+</body>
+
+</html>

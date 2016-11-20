@@ -5,16 +5,56 @@
 <meta charset="utf-8">
 	<title>Button</title>
 	<style type="text/css">
+        div{
+            margin: 10px;
+            font-size: 20px;
+        }
 		button{
 			width: 128px;
 			height: 48px;
 			background-color: lightblue;
-			
+            border-radius: 12px;
+            border-style: none;
 		}
+        input{
+            width: 128px;
+            height: 48px;
+            background-color: lightblue;
+            border-radius: 12px;
+            border-style: none;
+            color: antiquewhite;
+        }
 	</style>
 </head>
 <body>
-<button>Click</button>
+<!--<button class="btn" onmousemove="over()" onmouseout="out()" onmousedown="changeColor()" onmouseup="out()">Click</button>-->
+    
+<input type="button" id="btn" value="CLASS" onclick="click()"/>
 
+<!--<input type="button" class="btn" value="input button" onmousemove="over()" onmouseout="out()" onmousedown="changeColor()" onmouseup="out()"/>-->
+    
+    <div id="text">change color</div>
+    
+    <script type="text/javascript">
+//        function changeColor(){
+//            document.getElementById("text").style.color="red";
+////            document.getElementById("btn").style.backgroundColor="blue";
+////            document.getElementsByName("btn").style.backgroundColor="blue";
+//            document.getElementsByClassName("btn").style.backgroundColor="blue";
+//        }
+//        function over(){
+////            document.getElementById("btn").style.backgroundColor="gray";
+////            document.getElementsByName("btn").style.backgroundColor="gray";
+//        }
+//        function out(){
+////            document.getElementById("btn").style.backgroundColor="lightblue";
+////            document.getElementsByName("btn").style.backgroundColor="lightblue";
+//        }
+        function click(){
+//            document.getElementsByClassName("btn")[0].innerHTML="red";
+            document.getElementById("text").style.color="red";
+        }
+    
+    </script>
 </body>
 </html>

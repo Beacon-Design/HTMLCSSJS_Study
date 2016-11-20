@@ -1,0 +1,73 @@
+
+html,body{
+    margin: 0px;
+    padding: 0px;
+}
+main{
+    width: 320px;
+    height: 580px;
+    background-color: #999;
+}
+header{
+    /*  head  */
+    width: 320px;
+    height: 60px;
+    background-color:darkgray;
+    text-align: center;
+    line-height: 60px;
+    color: white;
+    position: absolute;
+    z-index: 2;
+}
+section{
+    /*  drop down  */
+    color: black;
+    width: 320px;
+    height: 40px;
+    line-height: 40px;
+    text-align: center;
+    background-color: yellow;
+    position: absolute;
+    z-index: 1;
+    transform: translateY(20px);
+
+    transition-property: transform;
+    transition-duration:0.6s;
+/*    transition-timing-function: ease;*/
+    transition-timing-function: cubic-bezier(0.47, 0, 0.745, 0.715)
+}
+#ani{
+    transform: translateY(60px);
+}
+/*  Buttons */
+footer{
+    position: relative;
+    top: -80px;
+
+}
+button{
+    width: 80px;
+    height: 34px;
+    text-align: center;
+    margin: 10px;
+    position: absolute;
+}
+button.ease{
+    position: relative;
+}
+#btnL{
+    left: 5%;
+}
+#btnR{
+    right: 5%;
+}
+div{
+    /*  BG  */
+    width: 320px;
+    height: 580px;
+    background-color: lightblue;
+    text-align: center;
+    line-height: 568px;
+    color: lightcyan;
+    z-index: 0;
+}

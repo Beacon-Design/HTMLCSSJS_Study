@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+    <head>
+    <title>Basic Css_Link </title>
+        <style>
+/*            a{color: chocolate;}*/
+            a:link{
+                /* 未被访问的链接 */
+                text-decoration: none;
+                color: red;
+            }
+            a:visted{
+                /* 已被访问的链接 */
+                text-decoration: none;
+                color: red;
+            }
+            a:hover{
+                /* 鼠标指针移动到链接上 */
+                text-decoration: underline;
+                color: greenyellow;
+            }
+            a:active{
+                /* 正在被点击的链接 */
+                text-decoration: underline;
+                color: yellow;
+            }
+        
+        </style>
+    </head>
+    <body>
+        <a href="http://www.baidu.com" target="_blank">This is a link</a>
+        <br>
+        <p>当为链接的不同状态设置样式时，请按照以下次序规则：
+        <p>a:hover 必须位于 a:link 和 a:visited 之后</p>
+        <p>a:active 必须位于 a:hover 之后</p>
+    
+    </body>
+</html>

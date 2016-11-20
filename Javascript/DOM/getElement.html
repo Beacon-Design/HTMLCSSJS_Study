@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>getElement</title>
+    <style>
+        section {
+            background-color: yellow;
+        }
+    </style>
+</head>
+
+<body>
+    <section id="gebi">
+        this is section(getElementById test)
+    </section>
+    
+    <button onclick="e()">getElementById function button</button>
+    <button onclick="i()">innerHTML function button</button>
+
+    <script type="text/javascript">
+        function e(){
+            document.getElementById("gebi").style.backgroundColor="red";
+        }
+        function i(){
+            var e = document.getElementById("gebi");
+            e.innerHTML="innerHTML test work!";
+            
+        }
+    
+    
+    </script>
+</body>
+
+</html>
