@@ -1,0 +1,45 @@
+body{
+	margin: 0;
+}
+header{
+    background-color: antiquewhite;
+    color: blue;
+    padding: 8px 5px 0px 25px;
+
+}
+header h1{
+    margin:0;
+    display: inline;
+
+}
+nav ul{
+    margin: 0;
+    display: inline;
+    padding: 0 0 0 20px;
+
+}
+nav ul li{
+    display: inline-block;  
+    /*    inline-block disable list-style-type    */
+    list-style-type:decimal;
+    
+    padding: 2px 10px;
+    
+    background-color: green;
+    color: red;
+
+}
+
+/*a tag default has a color*/
+nav ul li a{
+    color: gray;
+}
+
+.col{
+    background-color: lightgrey;
+    border-radius: 5px;
+    color: black;
+    padding: 10px .5px;
+    margin: .5px;
+    width: 31%;
+}
