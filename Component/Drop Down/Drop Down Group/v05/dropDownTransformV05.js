@@ -24,18 +24,18 @@ function easeOutBack() {
 }
 
 function easeInOutCubic(){
-    var name = "easeInOutCubic" //ease name
-    var number = "0.47, 0, 0.745, 0.715" //ease value
-    var cubic = "cubic-bezier(" + number + ")" //ease value for cubic-bezier
-    var e = document.getElementsByTagName("section")[0] //toast element
-    var easeName = document.getElementById("easeName") //output text of ease name
+    var easeName = "easeInOutCubic" //ease name
+    var easeValue = "0.47, 0, 0.745, 0.715" //ease value
+    var cubicBezier = "cubic-bezier(" + number + ")" //ease value for cubic-bezier
+    var toast = document.getElementsByTagName("section")[0] //toast element
+    var easeNameOutput = document.getElementById("easeName") //output text of ease name
     var numberElement = document.getElementById("number") // output text of ease value
-    e.innerHTML=name;
-    e.style.transitionTimingFunction=cubic;
-    e.style.backgroundColor="orange";
+    toast.innerHTML=easeName;
+    toast.style.transitionTimingFunction=cubicBezier;
+    toast.style.backgroundColor="orange";
     
-    easeName.innerHTML=name;
-    numberElement.innerHTML=number;
+    easeNameOutput.innerHTML=easeName;
+    numberElement.innerHTML=easeValue;
     
 
 }

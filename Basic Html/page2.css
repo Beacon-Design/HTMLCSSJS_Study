@@ -1,0 +1,14 @@
+body{
+    background-color: #ccc;
+}
+h1,h2{
+    background: yellow;
+    padding: 10px 100px 1px;;
+/*    padding: Top Right Bottom Left;   */
+/*    padding: Top RightLeft Bottom;    */
+/*    padding: TopBottom RightLeft;     */
+/*    padding: All;     */
+}
+.secondary{
+    color: brown;
+}
