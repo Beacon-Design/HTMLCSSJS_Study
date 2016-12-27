@@ -1,0 +1,8 @@
+{
+    "name":"nejs demo",
+    "main":"index.html",
+    "scripts":
+     {
+    "start": "nw"
+  }
+}

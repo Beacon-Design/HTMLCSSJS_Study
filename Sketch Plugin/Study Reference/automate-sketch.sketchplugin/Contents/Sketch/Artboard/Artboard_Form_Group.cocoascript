@@ -1,0 +1,51 @@
+/*----------------------------------------------------------
+
+author: Ashung Hung
+email: Ashung.hung@gmail.com
+Homepage: https://github.com/Ashung/Automate-Sketch
+description:
+version: 2016.2.0707
+license: CC-BY 4.0
+
+----------------------------------------------------------*/
+
+var onRun = function(context) {
+
+    var doc = context.document;
+    var page = doc.currentPage();
+    var selection = context.selection;
+    var count = selection.count();
+
+    if(count > 0) {
+        for(var i = 0; i < count; i ++) {
+            var group = selection.objectAtIndex(i);
+            var name = group.name();
+
+            if(group.className() == "MSLayerGroup") {
+
+                var x = group.frame().x(),
+                    y = group.frame().y(),
+                    w = group.frame().width(),
+                    h = group.frame().height();
+
+                var artboard = MSArtboardGroup.new();
+                    artboard.frame().setX(x);
+                    artboard.frame().setY(y);
+                    artboard.frame().setWidth(w);
+                    artboard.frame().setHeight(h);
+                    artboard.frame().setConstrainProportions(false);
+                    artboard.setName(name);
+
+                page.addLayers([artboard]);
+
+                page.moveLayersToArtboards();
+
+                group.ungroup();
+
+            }
+        }
+    } else {
+        doc.showMessage("Please select at least 1 group.");
+    }
+
+}

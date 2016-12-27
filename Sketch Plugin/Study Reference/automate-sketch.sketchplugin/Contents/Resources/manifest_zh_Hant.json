@@ -1,0 +1,546 @@
+{
+    "name": "Automate Sketch",
+    "description": "Make Sketch more efficient, a lot of useful features in one.",
+    "author": "Ashung Hung",
+    "email": "Ashung.hung@gmail.com",
+    "homepage": "https://ashung.github.io/Automate-Sketch",
+    "version": "1.0.20161222",
+    "identifier": "com.ashung.hung.automate_sketch",
+    "compatibleVersion": "3",
+    "bundleVersion": "1",
+    "commands": [
+        {
+            "name": "適配父級寬 (可有邊距)",
+            "identifier": "fix_to_parent_width_with_margin",
+            "handler": "fixToParentWidthWithMargin",
+            "script": "Layer/Fix_to_Parent_Width_or_Height_with_Margin.cocoascript"
+        },
+        {
+            "name": "適配父級高 (可有邊距)",
+            "identifier": "fix_to_parent_height_with_margin",
+            "handler": "fixToParentHeightWithMargin",
+            "script": "Layer/Fix_to_Parent_Width_or_Height_with_Margin.cocoascript"
+        },
+        {
+            "name": "為選中物件增加邊界層",
+            "identifier": "bounds_layer_for_every_selection",
+            "script": "Layer/Bounds_Layer_for_Every_Selection.cocoascript"
+        },
+        {
+            "name": "均分圖層",
+            "identifier": "divide_layer",
+            "script": "Layer/Divide_Layer.cocoascript"
+        },
+        {
+            "name": "解鎖當頁所有圖層",
+            "identifier": "unlock_all_layers",
+            "script": "Layer/Unlock_All_Layers.cocoascript"
+        },
+        {
+            "name": "穿透點選關閉",
+            "identifier": "click_through_off",
+            "handler": "clickThroughOff",
+            "script": "Layer/Click_Through.cocoascript"
+        },
+        {
+            "name": "穿透點選開啟",
+            "identifier": "click_through_on",
+            "handler": "clickThroughOn",
+            "script": "Layer/Click_Through.cocoascript"
+        },
+        {
+            "name": "選擇當頁所有組",
+            "identifier": "select_all_groups",
+            "script": "Layer/Select_All_Groups.cocoascript"
+        },
+        {
+            "name": "選擇當頁畫板內所有組",
+            "identifier": "select_all_groups_in_artboard",
+            "script": "Layer/Select_All_Groups_in_Artboard.cocoascript"
+        },
+        {
+            "name": "選擇物件內所有圖層",
+            "identifier": "select_all_child_layers",
+            "script": "Layer/Select_All_Child_Layers.cocoascript"
+        },
+        {
+            "name": "清理圖層名",
+            "identifier": "clear_layer_name",
+            "script": "Layer/Clear_Layer_Name.cocoascript"
+        },
+        {
+            "name": "清除所有不可見圖層",
+            "identifier": "delete_all_hidden_layers",
+            "script": "Layer/Delete_All_Hidden_Layers.cocoascript"
+        },
+        {
+            "name": "清除選中畫板下的不可見圖層",
+            "identifier": "delete_all_hidden_layers_in_artboard",
+            "script": "Layer/Delete_All_Hidden_Layers_in_Artboard.cocoascript"
+        },
+        {
+            "name": "清除所有空組",
+            "identifier": "delete_all_empty_groups",
+            "script": "Layer/Delete_All_Empty_Groups.cocoascript"
+        },
+        {
+            "name": "清除選中畫板下的空組",
+            "identifier": "delete_all_empty_groups_in_artboard",
+            "script": "Layer/Delete_All_Empty_Groups_in_Artboard.cocoascript"
+        },
+        {
+            "name": "刪除不必要的嵌套組",
+            "identifier": "remove_redundant_groups",
+            "script": "Layer/Remove_Redundant_Groups.cocoascript"
+        },
+        {
+            "name": "兩物件互換位置",
+            "identifier": "change_layer_places",
+            "script": "Arrange/Change_Places.cocoascript"
+        },
+        {
+            "name": "兩物件基於中心互換位置",
+            "identifier": "change_layer_places_center",
+            "script": "Arrange/Change_Places_Center.cocoascript"
+        },
+        {
+            "name": "水平排列物件",
+            "identifier": "tile_layers_by_position_x",
+            "handler": "tileLayersByPositionX",
+            "script": "Arrange/Tile_Objects.cocoascript"
+        },
+        {
+            "name": "垂直排列物件",
+            "identifier": "tile_layers_by_position_y",
+            "handler": "tileLayersByPositionY",
+            "script": "Arrange/Tile_Objects.cocoascript"
+        },
+        {
+            "name": "據圖層列表順序水平排列物件",
+            "identifier": "tile_layers_horizontally_by_index",
+            "handler": "tileLayersHorizontallyByIndex",
+            "script": "Arrange/Tile_Objects.cocoascript"
+        },
+        {
+            "name": "據圖層列表順序垂直排列物件",
+            "identifier": "tile_layers_vertically_by_index",
+            "handler": "tileLayersVerticallyByIndex",
+            "script": "Arrange/Tile_Objects.cocoascript"
+        },
+        {
+            "name": "據物件 X 值調整列表順序",
+            "identifier": "order_layers_by_x",
+            "handler": "orderLayersByX",
+            "script": "Arrange/Order_Objects_by_XY.cocoascript"
+        },
+        {
+            "name": "據物件 Y 值調整列表順序",
+            "identifier": "order_layers_by_y",
+            "handler": "orderLayersByY",
+            "script": "Arrange/Order_Objects_by_XY.cocoascript"
+        },
+        {
+            "name": "反轉列表順序",
+            "identifier": "reverse_layer_order",
+            "script": "Arrange/Reverse_Layer_Order.cocoascript"
+        },
+
+
+        {
+            "name": "首字大寫",
+            "identifier": "capitalize",
+            "script": "Type/Capitalize.cocoascript"
+        },
+        {
+            "name": "更改西文字型",
+            "identifier": "change_typeface_for_the_latin_character_set",
+            "script": "Type/Change_Typeface_for_the_Latin_Character_Set.cocoascript"
+        },
+        {
+            "name": "中西文字型間增加空格",
+            "identifier": "add_space_between_cjk_and_western_character",
+            "script": "Type/Add_Space_Between_CJK_and_Western_Character.cocoascript"
+        },
+        {
+            "name": "選擇當前頁或畫板內所有文字圖層",
+            "identifier": "select_all_textlayer_in_artboard_or_page",
+            "script": "Type/Select_All_TextLayer_in_Artboard_or_Page.cocoascript"
+        },
+        {
+            "name": "取消當頁固定圖層名",
+            "identifier": "unfixed_layer_name",
+            "script": "Type/Unfixed_Layer_Name.cocoascript"
+        },
+        {
+            "name": "基於物件切片",
+            "identifier": "new_layer_base_slice",
+            "handler": "new_slice_for_normal",
+            "script": "Slice/New_Layer_Base_Slice_With_Preset.cocoascript"
+        },
+        {
+            "name": "基於物件切片 iOS (由 1x 到所有)",
+            "identifier": "new_layer_base_slice_for_ios_1x",
+            "handler": "new_slice_for_ios_1x",
+            "script": "Slice/New_Layer_Base_Slice_With_Preset.cocoascript"
+        },
+        {
+            "name": "基於物件切片 iOS (由 1x 到所有)",
+            "identifier": "new_layer_base_slice_for_ios_2x",
+            "handler": "new_slice_for_ios_2x",
+            "script": "Slice/New_Layer_Base_Slice_With_Preset.cocoascript"
+        },
+        {
+            "name": "基於物件切片 iOS (PDF)",
+            "identifier": "new_layer_base_slice_for_ios_pdf",
+            "handler": "new_slice_for_ios_pdf",
+            "script": "Slice/New_Layer_Base_Slice_With_Preset.cocoascript"
+        },
+        {
+            "name": "基於物件切片 Android (由 MDPI 到所有)",
+            "identifier": "new_layer_base_slice_for_android_1x",
+            "handler": "new_slice_for_android_1x",
+            "script": "Slice/New_Layer_Base_Slice_With_Preset.cocoascript"
+        },
+        {
+            "name": "基於物件切片 Android (由 XHDPI 到所有)",
+            "identifier": "new_layer_base_slice_for_android_2x",
+            "handler": "new_slice_for_android_2x",
+            "script": "Slice/New_Layer_Base_Slice_With_Preset.cocoascript"
+        },
+        {
+            "name": "基於物件切片 Android (由 XXHDPI 到所有)",
+            "identifier": "new_layer_base_slice_for_android_3x",
+            "handler": "new_slice_for_android_3x",
+            "script": "Slice/New_Layer_Base_Slice_With_Preset.cocoascript"
+        },
+        {
+            "name": "基於物件切片網頁 (由 1x 到 1x 和 2x)",
+            "identifier": "new_slice_base_slice_for_web",
+            "handler": "new_slice_for_web",
+            "script": "Slice/New_Layer_Base_Slice_With_Preset.cocoascript"
+        },
+        {
+            "name": "基於物件切片網頁 (SVG)",
+            "identifier": "new_layer_base_slice_for_svg",
+            "handler": "new_slice_for_svg",
+            "script": "Slice/New_Layer_Base_Slice_With_Preset.cocoascript"
+        },
+        {
+            "name": "",
+            "identifier": "select_all_slices",
+            "script": "Slice/Select_All_Slices.cocoascript"
+        },
+        {
+            "name": "選擇選中組或畫板內的所有切片",
+            "identifier": "select_slices_in_selected_group_or_artboard",
+            "script": "Slice/Select_Slices_In_Selected_Group_or_Artboard.cocoascript"
+        },
+        {
+            "name": "選擇組內切片",
+            "identifier": "select_slices_in_group",
+            "script": "Slice/Select_Slices_In_Group.cocoascript"
+        },
+        {
+            "name": "重置匯出選項",
+            "identifier": "reset_export_options",
+            "script": "Slice/Reset_Export_Options.cocoascript"
+        },
+        {
+            "name": "清除當頁切片",
+            "identifier": "clear_slices",
+            "script": "Slice/Clear_Slices.cocoascript"
+        },
+        {
+            "name": "清除可匯出設定",
+            "identifier": "clear_exportables",
+            "script": "Slice/Clear_Exportables.cocoascript"
+        },
+        {
+            "name": "從選擇物件新建畫板",
+            "identifier": "artboard_from_selection",
+            "script": "Artboard/Artboard_from_Selection.cocoascript"
+        },
+        {
+            "name": "從組新建畫板",
+            "identifier": "artboard_form_group",
+            "script": "Artboard/Artboard_Form_Group.cocoascript"
+        },
+        {
+            "name": "畫板轉為組",
+            "identifier": "artboard_to_group",
+            "script": "Artboard/Artboard_to_Group.cocoascript"
+        },
+        {
+            "name": "切換畫板為縱向或橫向",
+            "identifier": "switch_between_portrait_and_landscape",
+            "script": "Artboard/Switch_Between_Portrait_and_Landscape.cocoascript"
+        },
+        {
+            "name": "選擇當頁所有損壞的元件例項",
+            "identifier": "select_all_missing_instances_in_current_page",
+            "script": "Symbol/Select_All_Missing_Instances_in_Current_Page.cocoascript"
+        },
+        {
+            "name": "選擇元件的所有例項",
+            "identifier": "select_all_instances_of_symbol",
+            "script": "Symbol/Select_All_Instances_of_Symbol.cocoascript"
+        },
+        {
+            "name": "重新命名所有例項",
+            "identifier": "rename_all_instance",
+            "script": "Symbol/Rename_All_Instances.cocoascript"
+        },
+        {
+            "name": "將選中圖層直接變為元件",
+            "identifier": "selection_to_symbol_master",
+            "script": "Symbol/Selection_to_Symbol.cocoascript"
+        },
+        {
+            "name": "將選中的未用元件轉為組",
+            "identifier": "detach_unused_symbol_master",
+            "script": "Symbol/Detach_Unused_Symbol_Master.cocoascript"
+        },
+        {
+            "name": "刪除未用元件",
+            "identifier": "remove_unused_symbols",
+            "script": "Symbol/Remove_Unused_Symbols.cocoascript"
+        },
+        {
+            "name": "從 CSS 色值新增單色填充",
+            "identifier": "add_solid_fill_from_css_color",
+            "script": "Styles/Add_Solid_Fill_from_CSS_Color.cocoascript"
+        },
+        {
+            "name": "從全局色版快速填充",
+            "identifier": "fill_color_from_global_colors",
+            "handler": "fillColorFromGlobalColors",
+            "shortcut": "cmd \\",
+            "script": "Styles/Fill_Color_from_Colors.cocoascript"
+        },
+        {
+            "name": "從文件色版快速填充",
+            "identifier": "fill_color_from_document_colors",
+            "handler": "fillColorFromDocumentColors",
+            "shortcut": "cmd alt \\",
+            "script": "Styles/Fill_Color_from_Colors.cocoascript"
+        },
+        {
+            "name": "清除未使用樣式",
+            "identifier": "remove_all_unused_styles",
+            "script": "Styles/Remove_All_Unused_Styles.cocoascript"
+        },
+        {
+            "name": "清除輔助線",
+            "identifier": "clear_guides",
+            "script": "Guides/Clear_Guides.cocoascript"
+        },
+        {
+            "name": "Android 資料夾工具",
+            "identifier": "android_fairy",
+            "handler": "AndroidFairy",
+            "script": "Utilities/Run_Shell_File.cocoascript"
+        },
+        {
+            "name": "在 Finder 中顯示",
+            "identifier": "show_file_in_finder",
+            "handler": "showFileInFinder",
+            "script": "Utilities/Utilities.cocoascript"
+        },
+        {
+            "name": "在終端開啟",
+            "identifier": "open_terminal_at_file_folder",
+            "handler": "openTerminalAtFileFolder",
+            "script": "Utilities/Utilities.cocoascript"
+        },
+        {
+            "name": "網站",
+            "identifier": "web_site",
+            "handler": "website",
+            "script": "Utilities/help.cocoascript"
+        },
+        {
+            "name": "問題反饋",
+            "identifier": "report_issue",
+            "handler": "reportIssue",
+            "script": "Utilities/help.cocoascript"
+        },
+        {
+            "name": "檢查插件更新",
+            "identifier": "check_for_updates",
+            "handler": "checkForUpdates",
+            "script": "Utilities/help.cocoascript"
+        },
+        {
+            "name": "通過 PayPal 捐贈 💵",
+            "identifier": "donate_via_paypal",
+            "handler": "donateViaPaypal",
+            "script": "Utilities/help.cocoascript"
+        },
+        {
+            "name": "通過微信捐贈 💵",
+            "identifier": "donate_via_wechat",
+            "handler": "donateViaWechat",
+            "script": "Utilities/help.cocoascript"
+        },
+        {
+            "name": "通過支付寶捐贈 💵",
+            "identifier": "donate_via_alipay",
+            "handler": "donateViaAlipay",
+            "script": "Utilities/help.cocoascript"
+        },
+        {
+            "name": "更改選單語言",
+            "identifier": "change_language",
+            "script": "Utilities/Change_Languages.cocoascript"
+        }
+    ],
+    "menu": {
+        "isRoot": false,
+        "title": "自動化",
+        "items": [
+            {
+                "title": "圖層",
+                "items": [
+                    "fix_to_parent_width_with_margin",
+                    "fix_to_parent_height_with_margin",
+                    "-",
+                    "bounds_layer_for_every_selection",
+                    "divide_layer",
+                    "-",
+                    "unlock_all_layers",
+                    "-",
+                    "click_through_off",
+                    "click_through_on",
+                    "-",
+                    "select_all_groups",
+                    "select_all_groups_in_artboard",
+                    "select_all_child_layers",
+                    "-",
+                    "clear_layer_name",
+                    "-",
+                    "remove_redundant_groups",
+                    "delete_all_hidden_layers",
+                    "delete_all_hidden_layers_in_artboard",
+                    "delete_all_empty_groups",
+                    "delete_all_empty_groups_in_artboard"
+                ]
+            },
+            {
+                "title": "排列",
+                "items": [
+                    "change_layer_places",
+                    "change_layer_places_center",
+                    "-",
+                    "tile_layers_by_position_x",
+                    "tile_layers_by_position_y",
+                    "tile_layers_horizontally_by_index",
+                    "tile_layers_vertically_by_index",
+                    "-",
+                    "order_layers_by_x",
+                    "order_layers_by_y",
+                    "reverse_layer_order",
+                    "-",
+                ]
+            },
+            {
+                "title": "文字",
+                "items": [
+                    "capitalize",
+                    "-",
+                    "change_typeface_for_the_latin_character_set",
+                    "add_space_between_cjk_and_western_character",
+                    "-",
+                    "select_all_textlayer_in_artboard_or_page",
+                    "-",
+                    "unfixed_layer_name"
+                ]
+            },
+            {
+                "title": "切片",
+                "items": [
+                    "new_layer_base_slice",
+                    "new_layer_base_slice_for_ios_1x",
+                    "new_layer_base_slice_for_ios_2x",
+                    "new_layer_base_slice_for_ios_pdf",
+                    "-",
+                    "new_layer_base_slice_for_android_1x",
+                    "new_layer_base_slice_for_android_2x",
+                    "new_layer_base_slice_for_android_3x",
+                    "-",
+                    "new_slice_base_slice_for_web",
+                    "new_layer_base_slice_for_svg",
+                    "-",
+                    "select_all_slices",
+                    "select_slices_in_selected_group_or_artboard",
+                    "select_slices_in_group",
+                    "-",
+                    "reset_export_options",
+                    "clear_slices",
+                    "clear_exportables"
+                ]
+            },
+            {
+                "title": "畫板",
+                "items": [
+                    "artboard_from_selection",
+                    "artboard_form_group",
+                    "artboard_to_group",
+                    "-",
+                    "switch_between_portrait_and_landscape"
+                ]
+            },
+            {
+                "title": "元件",
+                "items": [
+                    "select_all_missing_instances_in_current_page",
+                    "select_all_instances_of_symbol",
+                    "rename_all_instance",
+                    "-",
+                    "selection_to_symbol_master",
+                    "detach_unused_symbol_master",
+                    "-",
+                    "remove_unused_symbols"
+                ]
+            },
+            {
+                "title": "样式",
+                "items": [
+                    "add_solid_fill_from_css_color",
+                    "fill_color_from_global_colors",
+                    "fill_color_from_document_colors",
+                    "-",
+                    "remove_all_unused_styles"
+                ]
+            },
+            {
+                "title": "辅助线",
+                "items": [
+                    "clear_guides",
+                ]
+            },
+            {
+                "title": "實用工具",
+                "items": [
+                    "android_fairy",
+                    "-",
+                    "show_file_in_finder",
+                    "open_terminal_at_file_folder"
+                ]
+            },
+            {
+                "title": "幫助",
+                "items": [
+                    "web_site",
+                    "report_issue",
+                    "check_for_updates",
+                    "-",
+                    "donate_via_paypal",
+                    "donate_via_wechat",
+                    "donate_via_alipay",
+                    "-",
+                    "change_language"
+                ]
+            }
+        ]
+    }
+}

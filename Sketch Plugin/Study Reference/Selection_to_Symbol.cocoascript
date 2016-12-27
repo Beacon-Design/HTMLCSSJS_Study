@@ -1,0 +1,33 @@
+
+var onRun = function(context) {
+
+    var doc = context.document;
+    var selection = context.selection;
+
+    var layers = MSLayerArray.arrayWithLayers(selection);
+    if (MSSymbolCreator.canCreateSymbolFromLayers(layers)) {
+
+        var symbolName = selection.firstObject().name();
+        var symbolInstance = MSSymbolCreator.createSymbolFromLayers_withName_onSymbolsPage(layers, symbolName, false);
+
+        var positionX = symbolInstance.frame().x(),
+            positionY = symbolInstance.frame().y(),
+            symbolID = String(symbolInstance.symbolID());
+
+        var loop = doc.currentPage().children().objectEnumerator();
+        var layer;
+        while (layer = loop.nextObject()) {
+            if (layer.class() == "MSSymbolMaster") {
+                if (String(layer.symbolID()) == symbolID) {
+                    layer.frame().setX(positionX);
+                    layer.frame().setY(positionY);
+                }
+            }
+        }
+
+        symbolInstance.removeFromParent();
+    } else {
+        doc.showMessage("Can't create symbol from selection, maybe selection contain a Artboard.");
+    }
+
+}

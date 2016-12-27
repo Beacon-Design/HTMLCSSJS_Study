@@ -19,3 +19,30 @@ var bio={
 
 bio.name = "jim";
 bio["name"] = "jim";
+
+//Two object all equivalent
+var person = { firstname:"Tony", lastname:"Alice" };
+
+person = new object();
+person.first = "Tony";
+person.lastname = "Alice";
+
+//passing value
+var tony ={name:"tony"};
+function great(person){
+    console.log("hi" + person.name);
+}
+great(tony);
+great({name:"jim"});
+
+//two all same
+var english = {};
+english.greeting = {};
+english.greeting.great = "hello";
+
+
+var english = {
+    greeting: {
+        greet: "hello"
+    }
+};

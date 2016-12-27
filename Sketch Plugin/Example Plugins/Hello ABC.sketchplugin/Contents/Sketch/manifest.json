@@ -1,0 +1,17 @@
+{
+    "name" : "Aello",
+    "identifier" : "com.sketchapp.examples.helloABC",
+    "version" : "1.0.5",
+    "description" : "Pretty much the smallest example Sketch Plugin you could have.",
+    "authorEmail" : "sam@sketchapp.com",
+    "author" : "Sam Deane",
+    "commands" : [
+    {
+      "script" : "helloABC.js",
+      "handler" : "abcRun",
+      "shortcut" : "shift q",
+      "name" : "He abc",
+      "identifier" : "helloABC"
+    }
+  ]
+}

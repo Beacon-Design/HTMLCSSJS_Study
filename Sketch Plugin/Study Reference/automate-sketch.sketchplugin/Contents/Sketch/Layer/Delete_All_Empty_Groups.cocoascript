@@ -1,0 +1,20 @@
+/*----------------------------------------------------------
+
+author: Ashung Hung
+email: Ashung.hung@gmail.com
+Homepage: https://github.com/Ashung/Automate-Sketch
+license: CC-BY 4.0
+
+----------------------------------------------------------*/
+
+var onRun = function(context) {
+    var doc = context.document;
+    var page = doc.currentPage();
+    var layers = page.children();
+    for(var i = 0; i < layers.count(); i++) {
+        var layer = layers[i];
+        if (layer.class() == "MSLayerGroup" && !layer.containsLayers()) {
+            layer.removeFromParent();
+        }
+    }
+}
