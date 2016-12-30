@@ -39,6 +39,32 @@ npm install -g live-server
 7.在其他设备上的浏览器中输入 http://192.168.1.1:8000 （ip地址：端口号）
 （其他设备应与mac在同一网络中）
 
+https://github.com/tapio/live-server
+```
+--port=NUMBER - select port to use, default: PORT env var or 8080
+--host=ADDRESS - select host address to bind to, default: IP env var or 0.0.0.0 ("any address")
+--no-browser - suppress automatic web browser launching
+--browser=BROWSER - specify browser to use instead of system default
+--quiet | -q - suppress logging
+--verbose | -V - more logging (logs all requests, shows all listening IPv4 interfaces, etc.)
+--open=PATH - launch browser to PATH instead of server root
+--watch=PATH - comma-separated string of paths to exclusively watch for changes (default: watch everything)
+--ignore=PATH - comma-separated string of paths to ignore (anymatch-compatible definition)
+--ignorePattern=RGXP - Regular expression of files to ignore (ie .*\.jade) (DEPRECATED in favor of --ignore)
+--middleware=PATH - path to .js file exporting a middleware function to add; can be a name without path nor extension to reference bundled middlewares in middleware folder
+--entry-file=PATH - serve this file (server root relative) in place of missing files (useful for single page apps)
+--mount=ROUTE:PATH - serve the paths contents under the defined route (multiple definitions possible)
+--spa - translate requests from /abc to /#/abc (handy for Single Page Apps)
+--wait=MILLISECONDS - (default 100ms) wait for all changes, before reloading
+--htpasswd=PATH - Enables http-auth expecting htpasswd file located at PATH
+--cors - Enables CORS for any origin (reflects request origin, requests with credentials are supported)
+--https=PATH - PATH to a HTTPS configuration module
+--proxy=ROUTE:URL - proxy all requests for ROUTE to URL
+--help | -h - display terse usage hint and exit
+--version | -v - display version and exit
+
+```
+
 
 ## Version 3.
 ### Apache Web Server

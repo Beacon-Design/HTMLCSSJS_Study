@@ -1,1 +1,0 @@
-#This is a Html+Css+Javascript study folder.

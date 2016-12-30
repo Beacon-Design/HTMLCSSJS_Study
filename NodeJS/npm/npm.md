@@ -1,6 +1,12 @@
 # NPM
 
+## NPM 常用命令
+
+[npm docs](https://docs.npmjs.com)
+
 ```
+//To upgrade, run: [sudo] npm install npm@latest -g
+
 $ npm -v
 2.3.0
 //查看版本信息
