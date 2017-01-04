@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="utf-8">
+    <title>12 Columns</title>
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+        body{margin: 0}
+        .container{margin: auto 30px;}
+        .header {
+            border: 1px solid green;
+            padding: 15px;
+        }
+        .row:after {
+            content: "";
+            clear: both;
+            display: block;
+        }
+        [class*="col-"] {
+            float: left;
+            padding: 15px;
+            border: 1px solid red;
+        }
+        .col-1 { width: 8.33333333%; }
+        .col-2 { width: 16.66666667%; }
+        .col-3 { width: 25%; }
+        .col-4 { width: 33.33333333%; }
+        .col-5 { width: 41.66666667%; }
+        .col-6 { width: 50%; }
+        .col-7 { width: 58.33333333%; }
+        .col-8 { width: 66.66666667%; }
+        .col-9 { width: 75%; }
+        .col-10 { width: 83.33333333%; }
+        .col-11 { width: 91.66666667%; }
+        .col-12 { width: 100%; }
+        #blue{background-color: blue;}
+        #yellow{background-color: yellow;}
+        #red{background-color: red;}
+        #gray{background-color: gray;}
+        #content{background-color: aquamarine;width:100%;height: 100%;}
+    </style>
+</head>
+
+<body>
+<div class="container">
+    <div class="header" id="blue">
+        <h1>Chania</h1>
+    </div>
+
+    <div class="row" id="gray">
+        <div class="col-9" id="red">
+            <h1>The City</h1>
+            <p>Chania is the capital of the Chania region on the island of Crete. The city can be divided in two parts, the old town and the modern city.</p>
+            <div id="content">qopopaso</div>
+        </div>
+
+        <div class="col-3" id="yellow">
+            <p>Chania is the capital of the Chania region on the island of Crete. The city can be divided in two parts, the old town and the modern city.</p>
+        </div>
+
+
+    </div>
+</div>
+</body>
+
+</html>
