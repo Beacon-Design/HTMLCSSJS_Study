@@ -17,6 +17,10 @@ viewport meta
 - minimum-scale：允许用户缩放到的最小比例。
 - user-scalable：用户是否可以手动缩放。
 
+```html
+<meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=no">
+```
+
 ### 网格视图
 
 响应式网格视图通常是 12 列，宽度为100%，在浏览器窗口大小调整时会自动伸缩。
