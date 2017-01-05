@@ -1,22 +1,92 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-   <meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=no">
+
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=no">
     <meta charset="UTF-8">
-    <title>Server Test File</title>
+    <title>Input and Touch Keyboard</title>
 </head>
+
 <body>
+    <div>
+        <label for="email">email:</label>
+        <input type="email">
+        <p>no capital</p>
+    </div>
     <ul>
-        <li><button href="../../src/smile.png" target="_blank">smile.png</button></li>
-        <li><button></button></li>
-        <li><button></button></li>
-        <li><button></button></li>
-        <li><button></button></li>
+        <li><label for="">E-mail field </label>
+            <input type="email" autocapitalize="off" autocorrect="off" autocomplete="email">
+            <p>Disable auto-correct and disable auto-capitalization. Invoke special @ keyboard.</p>
+        </li>
+
+        <li><label for="">Phone field </label>
+            <input type="tel" autocorrect="off" autocomplete="tel">
+            <p>Invoke special phone keyboard. (Note: iOS doesn't allow input of special characters such as parenthesis and dash with the phone keyboard. Thus, never require phone numbers to be formatted with such characters.)</p>
+        </li>
+
+        <li><label for="">Name field </label>
+            <input type="text" autocorrect="off" autocomplete="name">
+            <p>Disable auto-correct. (Note: while it is recommended to use a single name field, if you split it across multiple fields, be sure to assign the appropriate autocomplete values.)
+            </p>
+        </li>
+
+        <li><label for="">Address line fields </label>
+            <input type="text" autocorrect="off" autocomplete="address-line1">
+            <p>Disable auto-correct. (Note: be sure to update the autocomplete attribute accordingly if using multiple address line fields.)</p>
+        </li>
+
+        <li><label for="">City </label>
+            <input type="text" autocorrect="off" autocomplete="address-level2">
+            <p>Disable auto-correct.</p>
+        </li>
+
+        <li><label for="">State </label>
+            <input type="text" autocorrect="off" autocomplete="address-level1">
+            <p>Disable auto-correct.</p>
+        </li>
+
+        <li><label for="">ZIP code field </label>
+            <input type="text" inputmode="numeric" pattern="[0-9]*" novalidate autocorrect="off" autocomplete="postal-code">
+            <p>Set input pattern to numeric input. (Note: Argentina, Canada, Netherlands, and UK, may use letters in their postal code. To support these, dynamically change the input pattern depending on selected country. Also, for the numeric keyboard to be invoked on all Android devices, the field type must be changed to type=number, however, this may cause issues with leading zeroes in some browser versions – therefore if changing to type=number, make absolutely sure to handle these exceptions.)</p>
+        </li>
+
+        <li><label for="">Credit card number field </label>
+            <input type="text" inputmode="numeric" pattern="[0-9]*" novalidate autocorrect="off" autocomplete="cc-csc">
+            <p>Numeric keyboard. (Note: for the numeric keyboard to be invoked on all Android devices, the field type must be changed to type=number, however, this may cause issues with leading zeroes in some browser versions – therefore if changing to type=number, make absolutely sure to handle these exceptions.)</p>
+        </li>
+
+        <li><label for="">Credit card security code field </label>
+            <input type="text" inputmode="numeric" pattern="[0-9]*" novalidate autocorrect="off" autocomplete="cc-csc">
+            <p>Numeric keyboard. (Note: for the numeric keyboard to be invoked on all Android devices, the field type must be changed to type=number, however, this may cause issues with leading zeroes in some browser versions – therefore if changing to type=number, make absolutely sure to handle these exceptions.)</p>
+        </li>
+
+        <li><label for="">Quantity field </label>
+            <input type="number">
+            <p>Semantic numeric keyboard.
+            </p>
+        </li>
+
+        <li><label for="">Month input </label>
+            <input type="month" name="month">
+        </li>
+
+        <li><label for="">Time input </label>
+            <input type="time" name="time">
+        </li>
+
+        <li><label for="">Date field </label>
+            <input type="date">
+            <p>Date picker keyboard. (Note: you may want to implement an actual calendar date picker.)</p>
+        </li>
+
+        <li><label for="">Submit button </label>
+            <input type="submit">
+            <p>For the 'Go' button on keyboard to work, avoid using type=button. (Thanks to Todd Gilbert for the tip.)</p>
+        </li>
+
+        <li><label for="">URL input </label>
+            <input type="url" name="url">
+        </li>
     </ul>
-   <br>    
-   <a href="../../src/smile.png">smile</a>
-   <a href="smile.png">smile</a>
-   
-   
 </body>
 </html>
