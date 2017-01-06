@@ -140,15 +140,17 @@ HTML5 code and demos for invoking different touch keyboards depending on input t
 
 **Code & Demos**  / Updated October 11, 2016
 
-### E-mail field
+### email input / E-mail field
 
 Disable auto-correct and disable auto-capitalization. Invoke special @ keyboard.
+
+> On iOS, setting the `type` to `email` will automatically disable auto-capitalization. 
 
 ```html
  <input type="email" autocapitalize="off" autocorrect="off" autocomplete="email">
 ```
 
-### Phone field
+### tel input / Phone field
 
 Invoke special phone keyboard. *(Note: iOS doesn't allow input of special characters such as parenthesis and dash with the phone keyboard. Thus, never require phone numbers to be formatted with such characters.)*
 
@@ -156,7 +158,7 @@ Invoke special phone keyboard. *(Note: iOS doesn't allow input of special chara
 <input type="tel" autocorrect="off" autocomplete="tel">
 ```
 
-### Name field
+### text input / Name field
 
 Disable auto-correct. *(Note: while it is recommended to use [a single name field](http://baymard.com/blog/mobile-form-usability-single-input-fields), if you split it across multiple fields, be sure to assign the [appropriate autocomplete values](https://html.spec.whatwg.org/multipage/forms.html#attr-fe-autocomplete-name).)*
 
@@ -164,7 +166,33 @@ Disable auto-correct. *(Note: while it is recommended to use [a single name fi
 <input type="text" autocorrect="off" autocomplete="name">
 ```
 
-### Address line fields
+##### autocorrect / autocapitalize /autocomplete
+
+ios autocorrect
+
+```html
+ <input type="text" autocorrect="on" autocomplete="on">
+```
+
+iOS 5 开始新增了很多关键字：
+
+none等同于off。
+
+当设置了 `autocapitalize="words"` 时，每个单词的开头字母会自动大写。
+
+当设置了 `autocapitalize="characters"` 时，每个字母都会大写。
+
+当设置了 `autocapitalize="sentences"` 时，每句开头字母会自动大写。
+
+`<input type="password" >`不会开启自动首字母大写。
+
+如果在设置中没有开启「首字母大写」，即使设定autocapitalize="on"也不会有作用。
+
+如果「自动改正」和「首字母大写」都启用了，那么提示的字母也是首字母大写的。
+
+ios > 设置 > 通用 > 键盘 > 自动改正；首字母自动大写
+
+### text input / Address line fields
 
 Disable auto-correct. *(Note: be sure to update the autocomplete attribute accordingly if using multiple address line fields.)*
 
@@ -172,15 +200,17 @@ Disable auto-correct. *(Note: be sure to update the autocomplete attribute acco
 <input type="text" autocorrect="off" autocomplete="address-line1">
 ```
 
-### City
+### text input / City
 
 Disable auto-correct.
+
+dividing an input entity into multiple fields, you should always clearly indicate both required and optional fields 
 
 ```html
 <input type="text" autocorrect="off" autocomplete="address-level2">
 ```
 
-### State
+### text input / State
 
 Disable auto-correct.
 
@@ -188,7 +218,7 @@ Disable auto-correct.
 <input type="text" autocorrect="off" autocomplete="address-level1">
 ```
 
-### ZIP code field
+### text input / ZIP code field
 
 Set input pattern to numeric input. *(Note: Argentina, Canada, Netherlands, and UK, may use letters in their postal code. To support these, dynamically change the input pattern depending on selected country. Also, for the numeric keyboard to be invoked on all Android devices, the field type must be changed to type=number, however, this may cause issues with leading zeroes in some browser versions – therefore if changing to type=number, make absolutely sure to handle these exceptions.)*
 
@@ -196,7 +226,7 @@ Set input pattern to numeric input. *(Note: Argentina, Canada, Netherlands, and
 <input type="text" inputmode="numeric" pattern="[0-9]*" novalidate autocorrect="off" autocomplete="postal-code">
 ```
 
-### Credit card number field
+### text input / Credit card number field
 
 Numeric keyboard. *(Note: for the numeric keyboard to be invoked on all Android devices, the field type must be changed to type=number, however, this may cause issues with leading zeroes in some browser versions – therefore if changing to type=number, make absolutely sure to handle these exceptions.)*
 
@@ -204,7 +234,7 @@ Numeric keyboard. *(Note: for the numeric keyboard to be invoked on all Android
 <input type="text" inputmode="numeric" pattern="[0-9]*" novalidate autocorrect="off" autocomplete="cc-number">
 ```
 
-### Credit card security code field
+### text input / Credit card security code field
 
 Numeric keyboard. *(Note: for the numeric keyboard to be invoked on all Android devices, the field type must be changed to type=number, however, this may cause issues with leading zeroes in some browser versions – therefore if changing to type=number, make absolutely sure to handle these exceptions.)*
 
@@ -212,21 +242,38 @@ Numeric keyboard. *(Note: for the numeric keyboard to be invoked on all Android
 <input type="text" inputmode="numeric" pattern="[0-9]*" novalidate autocorrect="off" autocomplete="cc-csc">
 ```
 
-### Quantity field
+### number input / Quantity field
 
 Semantic numeric keyboard.
+
+dividing an input entity into multiple fields (a strong input formatting example is good,数字输入格式需注意易用性）
+
+- [max](http://www.runoob.com/tags/att-input-max.html) - 规定允许的最大值。
+- [min](http://www.runoob.com/tags/att-input-min.html) - 规定允许的最小值。
+- [step](http://www.runoob.com/tags/att-input-step.html) - 规定合法数字间隔。
+- [value](http://www.runoob.com/tags/att-input-value.html) - 规定默认值。
 
 ```html
 <input type="number">
 ```
 
-### Month input
+### month input
 
 ```html
 <input type="month" name="month">
 ```
 
-### Date field
+### week input
+
+ios mobile does not support
+
+定义 week 和 year 控件（不带时区）
+
+```html
+ <input type="week" name="week_year">
+```
+
+### date input / Date field
 
 Date picker keyboard. *(Note: you may want to implement an actual calendar date picker.)*
 
@@ -236,7 +283,7 @@ Date picker keyboard. *(Note: you may want to implement an actual calendar date
 <input type="date">
 ```
 
-### Time Input
+### time input / Time
 
 使用time类型时会提示iOS显示一个简单的拾取器来选择小时和分钟。
 
@@ -244,7 +291,7 @@ Date picker keyboard. *(Note: you may want to implement an actual calendar date
 <input type="time" name="time">
 ```
 
-### Submit button
+### submit input / Submit Button
 
 For the 'Go' button on keyboard to work, avoid using *type=button*. *(Thanks to Todd Gilbert for the tip.)*
 
@@ -252,10 +299,94 @@ For the 'Go' button on keyboard to work, avoid using *type=button*. *(Thanks t
 <input type="submit">
 ```
 
-### URL input
+### url input
 
 url  input 类型可以用来帮助用户输入网址
 
 ```html
 <input type="url" name="url">
+```
+### checkbox input
+
+```html
+<input type="checkbox" value="apple" name="checkbox">
+```
+
+### color input
+
+ios mobile does not support
+
+```html
+<input type="color" name="color">
+```
+
+### file input
+
+ios mobile support
+
+```html
+<input type="file" name="file">
+```
+
+### hidden input
+
+定义隐藏字段，隐藏字段对于用户是不可见的。隐藏字段常常存储默认值，或者由 JavaScript 改变它们的值
+
+```html
+<input type="hidden" name="apple" value="tree">
+```
+
+### image input
+
+定义图像作为提交按钮
+
+```html
+<input type="image" src="smile.png" alt="Submit" onclick="alert()">
+```
+
+### password input
+
+定义密码字段（密码字段中的字符会被遮蔽）
+
+```html
+<input type="password" name="pwd" maxlength="8">
+```
+
+### radio input
+
+允许用户在一定数量的选择中选取一个选项
+
+```html
+<input type="radio" name="gender" value="male"> Male
+```
+
+### range input
+
+定义用于精确值不重要的输入数字的控件（比如 slider 控件）。您也可以设置可接受数字的限制
+
+请使用下面的属性来规定限制：
+
+- [max](http://www.runoob.com/tags/att-input-max.html) - 规定允许的最大值。
+- [min](http://www.runoob.com/tags/att-input-min.html) - 规定允许的最小值。
+- [step](http://www.runoob.com/tags/att-input-step.html) - 规定合法数字间隔。
+- [value](http://www.runoob.com/tags/att-input-value.html) - 规定默认值。
+
+```html
+<input type="range" name="points" min="1" max="10" value="9">
+```
+
+### reset input
+
+定义重置按钮（重置所有表单值为默认值）
+
+```html
+<input type="reset">
+```
+
+### search input
+
+定义搜索字段（比如站内搜索或谷歌搜索等）
+
+```html
+<input type="search" name="googlesearch">
 ```
