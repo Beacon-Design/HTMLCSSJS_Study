@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=no">
+    <meta charset="utf-8">
+    <title>HTML DOM Event_key</title>
+
+    <script>
+        function myPress(event) {
+            var x = event.key;
+            document.getElementById("demo").innerHTML = "onkeypress 按键为: " + x;
+        }
+
+        function myDown(event) {
+            var x = event.key;
+            document.getElementById("demo").innerHTML = "onkeydown 按键为: " + x;
+        }
+    </script>
+</head>
+
+<body>
+    <form name="rkCode">
+        onkeypress:
+        <input type="text" name="press" onkeypress="myPress(event)"> <br> onkeydown:
+        <input type="text" name="down" onkeydown="myDown(event)">
+    </form>
+    <p id="demo"></p>
+</body>
+</html>

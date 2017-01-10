@@ -3,29 +3,27 @@
 <head>
     <meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=no">
     <meta charset="utf-8">
-    <title>Keyboard_Key</title>
+    <title>HTML DOM Event_key</title>
 
     <script>
-         keycode()
-                function myFunction(event) {
-                    //alert(event.keyCode)
-                    var cNumber = event.keyCode;
-                    var tLetter = String.fromCharCode(cNumber);
-                    document.getElementById("demo1").innerHTML = " Unicode 值为: " + cNumber ; 
-                    
-                    document.getElementById("demo2").innerHTML =  "Letter is : " + tLetter;
-                }
+        function myPress(event) {
+            var x = event.key;
+            document.getElementById("demo").innerHTML = "onkeypress 按键为: " + x;
+        }
 
-
+        function myDown(event) {
+            var x = event.key;
+            document.getElementById("demo").innerHTML = "onkeydown 按键为: " + x;
+        }
     </script>
 </head>
 
 <body>
     <form name="rkCode">
-        <input type="text" name="key" onkeypress="myFunction(event)">
+        onkeypress:
+        <input type="text" name="press" onkeypress="myPress(event)"> <br> onkeydown:
+        <input type="text" name="down" onkeydown="myDown(event)">
     </form>
-    <p id="demo1"></p>
-    <p id="demo2"></p>
+    <p id="demo"></p>
 </body>
-
 </html>
