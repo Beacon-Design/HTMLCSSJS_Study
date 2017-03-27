@@ -1,0 +1,88 @@
+.page {
+    width: 600px;
+    margin: 0 auto;
+}
+
+.synopsis {
+    color: #7E8184;
+    font-style: italic;
+}
+
+
+/*Descendant selectors*/
+
+.synopsis em {
+    font-style: normal;
+}
+
+h1 em {}
+
+.button {
+    color: #FFF;
+    background-color: #5995DA;
+    font-weight: bold;
+    padding: 20px;
+    text-align: center;
+    border: 2px solid #5D6063;
+    border-radius: 5px;
+    width: 200px;
+    margin: 20px auto;
+}
+
+.call-to-action {
+    font-style: italic;
+    background-color: #EEB75A;
+}
+
+
+/* Try to avoid this descendant selectors*/
+.article h2 .subheading em{
+    color: blue;
+}
+
+
+.btn:link,                 /* Change this */
+.btn:visited {             /* Change this */
+  display: block;             /* Add this */
+  text-decoration: none;      /* Add this */
+
+  color: #FFF;                /* The rest is the same */
+  background-color: #5995DA;
+  font-weight: bold;
+  padding: 20px;
+  text-align: center;
+  border: 2px solid #5D6063;
+  border-radius: 5px;
+
+  width: 200px;
+  margin: 20px auto;
+}
+
+.btn:hover,
+.btn:visited:hover {
+  color: #FFF;
+  background-color: #76AEED;  /* Light blue */
+}
+
+.btn:active,
+.btn:visited:active {
+  color: #FFF;
+  background-color: #5995DA;  /* Blue */
+}
+
+.cta:link,
+.cta:visited {
+  font-style: italic;
+  background-color: #EEB75A;     /* Yellow */
+}
+
+
+.cta:hover,
+.cta:visited:hover {
+  background-color: #F5CF8E;     /* Light yellow */
+}
+
+.cta:active,
+.cta:visited:active {
+  background-color: #EEB75A;     /* Yellow */
+}

@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Basic CSS</title>
+    <link rel="stylesheet" href="Basic_CSS.css">
+    <style>
+        body {
+            color:black;
+        }
+    </style>
+
+
+</head>
+
+<body>
+
+    <h3>the cascade</h3>
+    <p>The “cascading” part of CSS is due to the fact that rules cascade down from multiple sources. </p>
+    <p>The CSS hierarchy for every web page looks like this:</p>
+    <ul>
+        <li>The browser’s default stylesheet</li>
+        <li>User-defined stylesheets</li>
+        <li>External stylesheets</li>
+        <li>Page-specific styles</li>
+        <li>Inline styles</li>
+    </ul>
+    <p>This is ordered from least to most precedence, which means styles defined in each subsequent step override previous ones.</p>
+    
+    <p>The &lt;style&gt; element is used to add page-specific CSS rules to individual HTML documents. The &lt;style&gt; element always lives in the &lt;head&gt; of a web page, which makes sense because it’s metadata, not actual content.</p>
+    
+    <p>CSS rules can be spread across several external stylesheets by adding multiple &lt;link/&gt; elements to the same page. A common use case is to separate out styles for different sections of your site. This lets you selectively apply consistent styles to distinct categories of web pages.</p>
+    <p>The order of the &lt;link/&gt; elements matters. Stylesheets that come later will override styles in earlier ones. </p>
+
+
+<!--units of measurement-->
+    <hr>
+    <h3>units of measurement</h3>
+    <p>The em unit is very useful for defining sizes relative to some base font.<br/> If we (or the user) ever wanted to make the base font bigger or smaller, em units would allow our entire page to scale accordingly.</p>
+    <p>basic font-size:18px;</p>
+    <p id="five">id="five" font-size:1em</p>
+    <p id="six">id="six" font-size:2em</p>
+
+    <hr>
+    <h3>more text styles</h3>
+    <p>[selecting multiple elements]<br/> font-family:"Helvetica","Arial",sans-serif; <br/> browser tries to load the left-most one first (Helvetica), falls back to Arial if the user doesn’t have it, and finally chooses the system’s default sans serif font.
+    </p>
+
+    <h1>this is h1</h1>
+    <h2>this is h2</h2>
+    <h3>this is h3</h3>
+    <h4>this is h4</h4>
+    <h5>this is h5</h5>
+    <h6>this is h6</h6>
+
+    <p>The text-decoration property determines whether text is underlined or not.</p>
+    <p>The aptly named text-align property defines the alignment of the text in an HTML element.left,right, center, or justify</p>
+    <p>The font-weight property defines the “boldness” of the text in an element, and the font-style property indicates whether it’s italicized or not.
+
+    </p>
+    
+
+
+</body>
+</html>

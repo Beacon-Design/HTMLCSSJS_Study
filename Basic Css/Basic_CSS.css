@@ -1,0 +1,17 @@
+body {
+    color: #414141;
+    background-color: #EEEEEE;
+    font-size: 18px;
+}
+p#five {
+    font-size:1em;
+}
+p#six {
+    font-size: 2em;
+}
+
+/*selecting multiple elements*/
+h1,h2,h3,h4,h5,h6{
+    font-family:"Helvetica","Arial",sans-serif;
+    font-weight: normal;  
+}

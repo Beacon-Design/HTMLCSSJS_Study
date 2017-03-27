@@ -1,22 +1,42 @@
-<html>
+<html lang="en">
 
 <head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="styles.css">
     <title>Basic html</title>
 </head>
 
 <body>
-    this is <b>BOLD</b>.
-    this is <em>em</em>.
-    this is <strong>Strong</strong>.
-    this is <i>i</i>.
-    this is <u>u</u>.
-    <a href="http://www.baidu.com" target="_blank">this is a tag</a>.
+    <h3>inline elements(phrasing content)</h3>
+    <p>
+        emphasis(italic) elements: this is <em>em</em>.
+        <br> strong(bold) elements: this is <strong>Strong</strong>.
+    </p>
+    <p>
+        (You might be wondering why we’re using the terms “emphasis” and “strong” instead of “italic” and “bold”. That brings us to an important distinction between HTML and CSS. HTML markup should provide semantic information about your content—not presentational information. In other words, HTML should define the structure of your document, leaving its appearance to CSS.)
+    </p>
     
-    <br>
+    this is <b>BOLD</b>. <br>
+    this is <i>i</i>.  <br>
+    this is <u>u</u>. <br>
+    this is <ins>ins</ins>. <br>
+    this is <del>del</del>. <br>
+    <a href="http://www.baidu.com" target="_blank">this is a tag</a>.<br>
+    
+    <p>
+    It’s better to use the <strong>&lt;ins&gt;</strong> and <strong>&lt;del&gt;</strong> elements instead of adding a line-through style to, say, an ordinary <strong>&lt;p&gt;</strong> element.
+    </p>
     <hr>
+
+    <h3>Imgs</h3>
     <img src="star.png">
     <img src="../src/smile.png">
     <img src="http://simpleicon.com/wp-content/uploads/smile-64x64.png">
+
+    <!--    List-->
+    <hr>
+    <h3>Lists</h3>
+    <p>Step-by-step procedures like recipes, instructions, and even tables of contents are good candidates for <strong>ordered lists</strong>, while <strong>unordered lists</strong> are better for representing item inventories, product features, pro/con comparisons, and navigational menus.</p>
     <ul>
         <li>item 1</li>
         <li>item 2</li>
@@ -24,9 +44,14 @@
     </ul>
     <ol>
         <li>item 1</li>
-        <li>item 2</li>
+        <li>
+            <p>this is a p</p>
+        </li>
         <li>item 3</li>
     </ol>
+
+    <!--   h1~h6-->
+    <hr>
     <div></div>
     <span></span>
     <p>this is p</p>
@@ -36,6 +61,30 @@
     <h4>this is h4</h4>
     <h5>this is h5</h5>
     <h6>this is h6</h6>
+
+    <!--   Reserved Characters-->
+    <hr>
+    <h3>Reserved Characters</h3>
+    <p>Entities always begin with an ampersand (&) and end with a semicolon (;). In between, you put a special code that your browser will interpret as a symbol.There are three reserved characters in HTML: &lt; &gt; and &amp;. </p>
+    <p><a href="https://dev.w3.org/html5/html-author/charref">HTML entities</a></p>
+    <br>
+
+    <!--   Quotes-->
+    <hr>
+    <h3>Quotes</h3>
+    <ul>
+        <li>&ldquo;</li>
+        <li>&rdquo;</li>
+        <li>&lsquo;</li>
+        <li>&rsquo;</li>
+    </ul>
+
+    <!--   Link-->
+    <hr>
+    <h3>Link</h3>
+    <p>The <strong>rel</strong> attribute defines the relationship between the resource and the HTML document</p>
+    <p>The value for <strong>href</strong> can be an absolute, relative, or root-relative link.</p>
+
 
 </body>
 

@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>CSS Box Model</title>
+    <style style="text/css">
+        h1,
+        h2 {
+            background-color: antiquewhite;
+        }
+        
+        em,
+        strong {
+            background-color: aquamarine;
+            display: block;
+        }
+        
+        h1 {
+            padding: 30px 20px 2px;
+            border: 1px solid #5d6063;
+        }
+        
+        h2 {
+            padding-top: 20px;
+            padding-bottom: 20px;
+            padding-left: 10px;
+            padding-right: 10px;
+            border-bottom: 1px solid #5d6063;
+        }
+    </style>
+</head>
+
+<body>
+
+   
+    <!--    block elements and inline elements-->
+    <hr>
+    <h3>block elements and inline elements</h3>
+    <ul>
+        <li>Block boxes always appear below the previous block element. This is the “natural” or “static” flow of an HTML document when it gets rendered by a web browser.</li>
+
+        <li>The width of block boxes is set automatically based on the width of its parent container. </li>
+
+        <li>The default height of block boxes is based on the content it contains. When you narrow the browser window, the &lt;h1&gt; gets split over two lines, and its height adjusts accordingly.</li>
+
+        <li>Inline boxes don’t affect vertical spacing. They’re not for determining layout—they’re for styling stuff inside of a block.</li>
+
+        <li>The width of inline boxes is based on the content it contains, not the width of the parent element.</li>
+    </ul>
+    <p> <em>em</em>. <strong>strong</strong>.</p>
+    <p>change an element's box type</p>
+    <p>em,strong{display:block;}</p>
+    <p>em,strong{display:inline;}</p>
+
+    <!--    content, padding, border, and margin-->
+    <hr>
+    <h3>content, padding, border, and margin</h3>
+    <p>The “CSS box model” is a set of rules that determine the dimensions of every element in a web page. It gives each box (both inline and block) four properties:</p>
+    <ul>
+        <li>Content – The text, image, or other media content in the element.</li>
+        <li>Padding – The space between the box’s content and its border.</li>
+        <li>Border – The line between the box’s padding and margin.</li>
+        <li>Margin – The space between the box and surrounding boxes.</li>
+    </ul>
+
+    <!--    padding-->
+    <hr>
+    <h3>padding</h3>
+    <h1>this is padding h1</h1>
+    <h2>this is padding h2</h2>
+    <p>{padding:20px;} (top right bottom left)</p>
+    <p>{padding:20px 10px;} (Vertial Horizontal)</p>
+    <p>{padding:20px 10px 2px;} (top Horizonal bottom)</p>
+    <p>{padding:20px 30px 40px 2px;} (top right bottom left)</p>
+
+    <!--    borders-->
+    <hr>
+    <h3>borders</h3>
+    <h3>{border: 1px solid #5d6063;} (size style color)</h3>
+    <p>{border-bottom: 1px solid #5d6063;}</p>
+    <p>Borders are common design elements, but they’re also invaluable for debugging. When you’re not sure how a box is being rendered, add a border: 1px solid red; declaration to it. This will clearly show the box’s padding, margin, and overall dimensions with just a single line of CSS. </p>
+
+    <!--    margins-->
+    <hr>
+    <h3>margins</h3>
+    <p>Margins define the space outside of an element’s border. Or, rather, the space between a box and its surrounding boxes. it accepts the same shorthand formats as padding.</p>
+    <ul>
+        <li>The padding of a box has a background, while margins are always transparent.</li>
+        <li>Padding is included in the click area of an element, while margins aren’t.</li>
+        <li>Margins collapse vertically, while padding doesn’t</li>
+    </ul>
+
+    <h3>margins on inline elements</h3>
+    <p>Inline boxes completely ignore the top and bottom margins of an element.</p>
+
+    <!--    vertical margin collapse-->
+    <hr>
+    <h3>vertical margin collapse</h3>
+    <p>When you have two boxes with vertical margins sitting right next to each other, they will collapse. Instead of adding the margins together like you might expect, only the biggest one is displayed.</p>
+
+    <h3>preventing margin collapse</h3>
+    <p>Sometimes you do want to prevent the margins from collapsing. All you need to do is put another invisible element in between them</p>
+
+    <div style='padding-top: 1px; background-color:lightgray;'></div>
+    <!-- Add this -->
+
+    <p>padding doesn’t ever collapse</p>
+    <p>A third option to avoid margin collapse is to stick to a bottom-only or top-only margin convention. For instance, if all your elements only define a bottom margin, there’s no potential for them to collapse.</p>
+
+    <!--    generic boxes-->
+    <hr>
+    <h3>generic boxes</h3>
+    <p>Both &lt;div&gt; and &lt;span&gt; are “container” elements that don’t have any affect on the semantic structure of an HTML document.</p>
+    <p>The only real difference between &lt;div&gt; and &lt;span&gt; is that the former is for block-level content while the latter is meant for inline content.</p>
+
+    <!--    explicit dimensions-->
+    <hr>
+    <h3>explicit dimensions</h3>
+
+
+    <p>The
+        <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/overflow" target="_blank">overflow</a> property specifies whether to clip content, render scrollbars or just display content when it overflows its block level container.</p>
+
+    <p>The
+        <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/white-space" target="_blank">white-space</a> property is used to describe how whitespace inside the element is handled.</p>
+        
+<!--        content boxes and border boxes-->
+    <hr>
+    <h3>content boxes and border boxes</h3>
+    <p>The width and height properties only define the size of a box’s content. </p>
+    <p>{width: 200px; box-sizing: content-box; } (only content width is 200px)</p>
+    <p>{width: 200px; box-sizing: border-box; } (including padding and borders)</p>
+    
+    
+<!--    aligning boxes-->
+    <hr>
+    <h3>aligning boxes</h3>
+    <p>text-align property, which aligns the content and inline boxes inside of a block-level element.</p>
+    <p>There are three methods for horizontally aligning block-level elements: <br> “auto-margins” for center alignment; <br> “floats” for left/right alignment; <br> “flexbox” for complete control over alignment.</p> 
+    
+    <h3>centering with auto-margins</h3>
+    <p>When you set the left and right margin of a block-level element to auto, it will center the block in its parent element.</p>
+    
+    <div style="color: #FFF;
+  background-color: #4A90E2;
+  font-weight: bold;
+  padding: 20px;
+  text-align: center;
+
+  width: 200px;
+  box-sizing: border-box;
+  margin: 20px auto; /* Vertical  Horizontal */">  width: 200px;margin: 20px auto;</div>
+   <p>Note that this only works on blocks that have an explicit width defined on them. Remove that width: 200px line, and our button will be the full width of the browser, making “center alignment” meaningless.</p>
+    
+    
+<!--    resetting styles-->
+    <hr>
+    <h3>resetting styles</h3>
+    <p>It’s usually a good idea to override default styles to a predictable value using the “universal” CSS selector (*)</p>
+    <p>* {margin: 0;padding: 0;box-sizing: border-box;}</p>
+    
+
+
+
+
+
+
+</body>
+
+</html>

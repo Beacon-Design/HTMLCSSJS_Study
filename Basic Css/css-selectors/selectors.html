@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>CSS Selectors</title>
+    <link rel="stylesheet" href="selectors.css">
+</head>
+
+<body>
+    <div class='page'>
+        <!-- Add this -->
+        <h1>CSS Selectors</h1>
+
+        <p class='synopsis'>CSS selectors let you <em>select</em> individual HTML elements in an HTML document. This is <strong>super</strong> useful.</p>
+
+        <p>This is what “descendant selectors” are for. They let you target only those elements that are inside of another element. For example, we can pull out that &lt;em&gt; in the .synopsis paragraph</p>
+
+        <p>CSS selectors let you <em>select</em> individual HTML elements in an HTML document. This is <strong>super</strong> useful.</p>
+
+        <p>Classes are ridiculously important, since they allow you to select arbitrary boxes in your web pages.</p>
+
+        <p>We’ll also be talking about links in this example, so here’s
+            <a href='https://internetingishard.com'>Interneting Is Hard</a> for us to style.
+        </p>
+
+        <div class='button'>Button One</div>
+        <div class='button call-to-action'>Button Two</div>
+    </div>
+    <!-- And this -->
+
+    <!--    Try to avoid this descendant selectors-->
+    <div class='article'>
+        <h2>
+            <span class='subheading'>This is <em>really</em> special text</span>
+        </h2>
+    </div>
+
+    <hr>
+    <h3>link elements, not div elements</h3>
+    <a class='btn' href='nowhere.html'>Button One</a>
+    <a class='btn cta' href='nowhere.html'>Button Two</a>
+
+
+</body>
+
+</html>
