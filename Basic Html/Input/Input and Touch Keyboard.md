@@ -417,6 +417,52 @@ list 属性引用数据列表，其中包含输入字段的预定义选项。
 
 
 
+# Input 属性
+
+### value 属性
+
+value 属性为 input 元素设定值。
+
+对于不同的输入类型，value 属性的用法也不同：
+
+- type="button", "reset", "submit" - 定义按钮上的显示的文本
+- type="text", "password", "hidden" - 定义输入字段的初始值
+- type="checkbox", "radio", "image" - 定义与输入相关联的值
+
+注释：<input type="checkbox"> 和 <input type="radio"> 中必须设置 value 属性。
+
+注释：value 属性无法与 <input type="file"> 一同使用。
+
+```
+<input value="value">
+```
+
+
+
+### placeholder 属性
+
+placeholder 属性提供可描述输入字段预期值的提示信息（hint）。
+
+该提示会在输入字段为空时显示，并会在字段获得焦点时消失。
+
+注释：placeholder 属性适用于以下的 <input> 类型：text, search, url, telephone, email 以及 password。
+
+```
+<input placeholder="text">
+```
+
+
+
+
+
+
+
+
+
+------
+
+
+
 # HTML <select> 标签
 
 select 元素可创建单选或多选菜单。

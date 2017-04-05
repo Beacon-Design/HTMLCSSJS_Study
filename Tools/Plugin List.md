@@ -6,21 +6,37 @@ live-server
 
 
 #Plugin List
-### Bracket
+## Bracket
 
 1. Display Shortcuts
+
 2. Markdown Preview
+
 3. Emmet
+
 4. Beautify
+
 5. Indent Guides
 
-### Sublime Text
+6. Brackets Outline List
+
+7. Brackets Builder Extended(Vhornets/Kmashint)
+
+8. Python Tidy
+
+   ​
+
+   ​
+
+## Sublime Text
 
 Package Control
 
 Emmet
 
-### Visual Studio Code
+
+
+## Visual Studio Code
 
 beautify
 
@@ -39,3 +55,21 @@ Preview
 Python
 
 View in Browser
+
+
+
+## Atom
+
+atom runner
+
+autocomplete python
+
+browser refresh on save
+
+emmet
+
+python tools
+
+run in atom
+
+run in browser
