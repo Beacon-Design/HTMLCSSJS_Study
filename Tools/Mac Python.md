@@ -1,4 +1,8 @@
-# VSCode配置Python开发环境
+# Mac下配置Python开发环境
+
+
+
+## VSCode配置Python开发环境
 
 ### 配置环境
 
@@ -40,14 +44,16 @@
 
 
 
-# Atom配置python
+## Atom配置python
 
 1. install atom-runner
 2. run a python file Ctrol + R
 
 
 
-# Sublime Text 运行 python file
+
+
+## Sublime Text 运行 python file
 
 run a python file
 
@@ -55,8 +61,46 @@ Cmd + B (Tools > Build)
 
 
 
-# Brackets 运行python file
+## Brackets 运行python file
 
 1. install plugin "Brackets Builder Extended"(Hornets / Kmashint)
 2. run a python file: Cmd + Alt + B
 
+
+
+
+------
+
+
+
+
+
+# Python Terminal
+
+
+
+## Terminal 退出 python
+
+> Ctrl + D 
+
+或
+
+```python
+exit()
+```
+
+
+
+## Terminal切换不同版本python
+
+> python2
+>
+> ```python
+> python 
+> ```
+
+> python3
+>
+> ```python
+> python3
+> ```

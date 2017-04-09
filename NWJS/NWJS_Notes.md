@@ -7,3 +7,4 @@
 5. enter `nwjs.app/Contents/MacOS/nwjs` in terminal
 6. the app will open
 
+
