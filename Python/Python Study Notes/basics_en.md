@@ -1,3 +1,7 @@
+# Python Study Notes
+
+
+
 # Basics
 
 

@@ -1,3 +1,7 @@
+# Python Study Notes
+
+
+
 # Operators and Expressions
 
 Most statements (logical lines) will contain _expressions_. A simple example of an expression is `2 + 3`. An expression can be broken down into operators and operands.
