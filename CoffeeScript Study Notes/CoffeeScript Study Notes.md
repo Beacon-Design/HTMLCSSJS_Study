@@ -58,10 +58,16 @@ You can use any existing JavaScript library seamlessly from CoffeeScript (and vi
 **CoffeeScript uses significant whitespace to delimit blocks of code.** 
 
 > You don’t need to use semicolons `;` to terminate expressions, ending the line will do just as well (although semicolons can still be used to fit multiple expressions onto a single line). 
+>
+>  **NOT to mix up tabs and spaces**
 
 **use indentation**
 
 > **Instead of using curly braces** `{ }` to surround blocks of code in [functions](http://coffeescript.org/#literals), [if-statements](http://coffeescript.org/#conditionals), [switch](http://coffeescript.org/#switch), and [try/catch](http://coffeescript.org/#try).you can replace curly brackets (`{}`) with a tab. This takes inspiration from Python's syntax, and has the excellent side effect of **ensuring** that your **script is formatted in a sane manner**, **otherwise it won't even compile!**
+
+**Case Sensitive**
+
+> a variable named `box`, it is not the same as `Box`
 
 
 
