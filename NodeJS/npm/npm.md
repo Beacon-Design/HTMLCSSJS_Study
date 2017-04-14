@@ -5,14 +5,15 @@
 [npm docs](https://docs.npmjs.com)
 
 ```
-//To upgrade, run: [sudo] npm install npm@latest -g
+$ sudo npm install npm@latest -g
+//To upgrade the latest version.
 
 $ npm -v
 2.3.0
 //查看版本信息
 
 $ sudo npm install npm -g
-//npm 升级
+//npm 全局安装
 
 $ npm ls -g
 //查看所有全局安装的模块

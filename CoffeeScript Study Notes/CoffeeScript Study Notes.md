@@ -201,7 +201,7 @@ http://stackoverflow.com/questions/14533885/which-ide-supports-coffeescript-debu
 
 https://www.jetbrains.com/help/idea/2017.1/debugging-coffeescript.html
 
-**WebStorm**
+### WebStorm
 
 Webstorm有个file watchers的功能，当你coffee文件有改动，自动帮你编译成js文件。
 
@@ -221,24 +221,39 @@ Webstorm有个file watchers的功能，当你coffee文件有改动，自动帮�
    –bare –compile $FileName$
    ```
 
+   or
+
+   ```
+   --compile --map $FileName$
+   ```
+
    编译后的JavaScript就不会被匿名函数的包裹（之前我们设置的Arguments）
 
 
 
 
+### WebStorm Error
 
+run coffeescript in webstorm Error
 
-
-
-
-
-
-
-
-
-
-
-
+> **Question:**
+>
+> ```
+> Error: Cannot find module 'coffee-script/register'
+> ```
+>
+> **Solurion:**
+>
+> update npm to the latest version
+>
+> ```
+> //in Terminal
+> sudo npm install npm@latest -g
+> ```
+>
+> ```
+> npm install --save-dev coffee-script
+> ```
 
 
 

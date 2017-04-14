@@ -1,0 +1,10 @@
+{
+  "version": 3,
+  "file": "t001.js",
+  "sourceRoot": "",
+  "sources": [
+    "t001.coffee"
+  ],
+  "names": [],
+  "mappings": ";AAAA,OAAO,CAAC,GAAR,CAAY,KAAZ"
+}
