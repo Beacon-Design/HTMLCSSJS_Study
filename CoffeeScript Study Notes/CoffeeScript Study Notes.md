@@ -148,17 +148,17 @@ zh Version:
 
 
 
+## 0.5 CoffeeScript IDE
 
+### 1. Terminal
 
-## 0.4 Run CoffeeScript 
-
-### Run CoffeeScript in Terminal
+#### Run CoffeeScript in Terminal
 
 ```
 coffee
 ```
 
-### Run A CoffeeScript File
+#### Run A CoffeeScript File
 
 1. 新建一个demo.coffee文件。
 
@@ -195,13 +195,13 @@ coffee
 
 
 
-## 0.5 CoffeeScript IDE
+### 2. WebStorm
 
 http://stackoverflow.com/questions/14533885/which-ide-supports-coffeescript-debugging-source-mapping-breakpoints-call-st
 
 https://www.jetbrains.com/help/idea/2017.1/debugging-coffeescript.html
 
-### WebStorm
+#### WebStorm Setup
 
 Webstorm有个file watchers的功能，当你coffee文件有改动，自动帮你编译成js文件。
 
@@ -232,7 +232,7 @@ Webstorm有个file watchers的功能，当你coffee文件有改动，自动帮�
 
 
 
-### WebStorm Error
+#### WebStorm Error
 
 run coffeescript in webstorm Error
 
