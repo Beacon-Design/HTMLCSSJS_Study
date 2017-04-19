@@ -33,17 +33,27 @@ Version B
 
 
 
-| Keyboard Shortcut | Command  |
-| ----------------- | -------- |
-| ctrl + a          | 将光标移动到行首 |
-| ctrl + e          | 将光标移动到行尾 |
-| ctrl + l          | 清除屏幕     |
-|                   |          |
-|                   |          |
-|                   |          |
-|                   |          |
-|                   |          |
-|                   |          |
+| Keyboard Shortcut           | Command    |
+| --------------------------- | ---------- |
+| ctrl + a                    | 将光标移动到行首   |
+| ctrl + e                    | 将光标移动到行尾   |
+| ctrl + l                    | 清除屏幕       |
+| ctrl + u                    | 清除当前行      |
+| option + left/right arrow   | 单词为单位左右移动  |
+| up arrow                    | 输入上次输入内容   |
+| cmd + left/right arrow      | 下一个/上一个 窗口 |
+| cmd + alt + fn + up arrow   | Line Up    |
+| cmd + alt + fn + down arrow | Line Down  |
+| cmd + fn + up arrow         | Page Up    |
+| cmd + fn + down arrow       | Page Down  |
+|                             |            |
+|                             |            |
+|                             |            |
+|                             |            |
+|                             |            |
+|                             |            |
+|                             |            |
+|                             |            |
 
 
 
