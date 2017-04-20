@@ -20,7 +20,7 @@ Literal                                       Interpretation
 3+4j, 3.0+4.0j, 3J                            Complex number literals
 set('spam'), {1, 2, 3, 4}                     Sets:2.X and 3.X construction forms
 Decimal('1.0'), Fraction(1, 3)                Decimal and fraction extension types
-bool(X),True,False                            Boolean type and constants
+bool(X),True,                                 False Boolean type and constants
 
 Integer and floating-point literals
 Integers are written as strings of decimal digits. Floating-point numbers have a
