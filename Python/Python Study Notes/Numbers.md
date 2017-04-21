@@ -65,7 +65,7 @@ Decimal('1.0'), Fraction(1, 3)                Decimal and fraction extension typ
 bool(X), True, False                          Boolean type and constants
 ```
 
-**1. Integer and floating-point literals：**
+### 1. Integer and floating-point literals
 
 整型(Int) - 通常被称为是整型或整数，是正或负整数，不带小数点。
 
@@ -87,7 +87,7 @@ Integers in Python 3.X: a single type：
 
 > In Python 3.X, the normal and long integer types have been merged—there is only integer, which automatically supports the unlimited precision of Python 2.X’s separate long integer type. Because of this, integers can no longer be coded with a trailing l or L, and integers never print with this character either. Apart from this, most programs are unaffected by this change, unless they do type testing that checks for 2.X long integers.
 
-**2. Hexadecimal, octal, and binary literals：**
+### 2. Hexadecimal, octal, and binary literals
 
 > Integers may be coded in **decimal (base 10)**, **hexadecimal (base 16)**, **octal (base 8)**, or **binary (base 2)**, the last three of which are common in some programming do-mains. 
 >
@@ -118,30 +118,361 @@ hexadecimal (base 16)    (0x9ff)
 a leading 0x or 0X, followed by a string of hexadecimal digits (0–9 and A–F)
 ```
 
-**3. Complex numbers:**
-
-复数( (complex)) - 复数由实数部分和虚数部分构成，可以用a + bj,或者complex(a,b)表示， 复数的实部a和虚部b都是浮点型。
-
-> **Python complex literals are written as realpart+imaginarypart, where the imaginarypart is terminated with a j or J. The realpart is technically optional, so the imaginarypart may appear on its own**. Internally, complex numbers are implemented as pairs of floating-point numbers, but all numeric operations perform complex math when applied to complex numbers. Complex numbers may also be created with the complex(real, imag) built-in call.
-
-**4. Coding other numeric types:**
-
-> As we’ll see later in this chapter, there are additional numeric types at the end of  that serve more advanced or specialized roles. You create some of these by calling functions in imported modules (e.g., decimals and fractions), and others have literal syntax all their own (e.g., sets).
-
 我们可以使用十六进制、八进制、二进制来代表整数：
 
 ```
->>> number = 0xA0F # 十六进制
->>> number
-2575
+>>> 0x01, 0x10, 0xFF  	    # 十六进制 Hex literals: base 16, digits 0-9/A-F (3.X, 2.X)
+(1, 16, 255)
 
->>> number=0o37 # 八进制
->>> number
-31
+>>> 0o1, 0o20, 0o377           # 八进制 Octal literals: base 8, digits 0-7 (3.X, 2.6+)
+(1, 16, 255)
 
->>> number = 0b101010 # 二进制
->>> number
-42
+>>> 0b1, 0b10000, 0b11111111   # 二进制 Binary literals: base 2, digits 0-1 (3.X, 2.6+)
+(1, 16, 255)
+```
+
+The F digits in the hex value, for example, each mean 15 in decimal and a 4-bit 1111 in binary, and reflect powers of 16.
+
+```
+>>> 0xFF, (15 * (16 ** 1)) + (15 * (16 ** 0)) 	# How hex/binary map to decimal
+(255, 255)
+>>> 0x2F, (2 * (16 ** 1)) + (15 * (16 ** 0)) 
+(47, 47)
+>>> 0xF, 0b1111, (1*(2**3) + 1*(2**2) + 1*(2**1) + 1*(2**0)) 
+(15, 15, 15)
+```
+
+#### convert integers to other bases’ digit strings
+
+```
+>>> oct(64), hex(64), bin(64) 		# Numbers=>digit strings
+('0o100', '0x40', '0b1000000')
+```
+
+#### converts a string of digits to an integer
+
+```
+>>> 64, 0o100, 0x40, 0b1000000 				# Digits=>numbers in scripts and strings
+(64, 64, 64, 64)
+
+>>> int('64'), int('100', 8), int('40', 16), int('1000000', 2) 
+(64, 64, 64, 64)
+
+>>> int('0x40', 16), int('0b1000000', 2)	 # Literal forms supported too 
+(64, 64)
+```
+
+
+
+### 3. Complex numbers
+
+复数( (complex)) - 复数由实数部分(浮点数)和虚数部分(浮点数)构成，并在虚部增加了j或J的后缀。可以用a + bj,或者complex(a,b)表示， 复数的实部a和虚部b都是浮点数。
+
+> For example, the complex number with a real part of 2 and an imaginary part of −3 is written 2 + −3j.
+
+> **Python complex literals are written as realpart+imaginarypart, where the imaginarypart is terminated with a j or J. The realpart is technically optional, so the imaginarypart may appear on its own**. Internally, complex numbers are implemented as pairs of floating-point numbers, but all numeric operations perform complex math when applied to complex numbers. Complex numbers may also be created with the complex(real, imag) built-in call.
+
+```
+>>> 1j * 1J 
+(-1+0j)
+>>> 2 + 1j * 3 
+(2+3j)
+>>> (2 + 1j) * 3 
+(6+3j)
+```
+
+
+
+### 4. Decimal Type 小数数字
+
+the decimal object, formally known as Decimal. decimals are like floating-point numbers, but they have a fixed number of decimal points. Hence, decimals are fixed-precision floating-point values.
+
+> the decimal type is well suited to representing fixed-precision quantities like sums of money and can help you achieve better numeric accuracy.
+
+floating-point math is less than exact because of the limited space used to store values:
+
+```
+>>> 0.1 + 0.1 + 0.1 - 0.3 		# Python 3.3
+5.551115123125783e-17
+```
+
+with decimals, the result can be dead-on:
+
+```
+>>> from decimal import Decimal
+>>> Decimal('0.1') + Decimal('0.1') + Decimal('0.1') - Decimal('0.3') 
+Decimal('0.0')
+```
+
+**Setting decimal precision globally**
+
+Other tools in the decimal module can be used to set the precision of all decimal num-bers, arrange error handling, and more.
+
+```
+>>> import decimal
+>>> decimal.Decimal(1) / decimal.Decimal(7) 	# Default: 28 digits
+Decimal('0.1428571428571428571428571429')
+
+>>> decimal.getcontext().prec = 4				# Fixed precision
+>>> decimal.Decimal(1) / decimal.Decimal(7) 
+Decimal('0.1429')
+
+>>> Decimal(0.1) + Decimal(0.1) + Decimal(0.1) - Decimal(0.3) 	# Closer to 0
+Decimal('1.110E-17')
+```
+
+
+
+### 5. Fraction Type 分数类型
+
+Fraction, which implements a rational number object. It essentially keeps both a numerator and a denominator explicitly, so as to avoid some of the inaccuracies and limitations of floating-point math.
+
+Like decimals, fractions do not map as closely to computer hardware as floating-point numbers. This means their performance may not be as good, but it also allows them to provide extra utility in a standard tool where required or useful.
+
+```
+>>> from fractions import Fraction
+>>> x = Fraction(1, 3)		# Numerator, denominator
+>>> y = Fraction(4, 6)		# Simplified to 2, 3 by gcd
+>>> x 
+Fraction(1, 3)
+>>> y 
+Fraction(2, 3)
+>>> print(y) 
+2/3
+
+>>> x + y 
+Fraction(1, 1)
+>>> x − y 					# Results are exact: numerator, denominator
+Fraction(−1, 3)
+>>> x * y 
+Fraction(2, 9)
+```
+
+
+
+### 6. Sets
+
+**the set a collection type—an unordered collection of immutable objects** that supports operations corresponding to mathematical set theory. an item appears only once in a set,
+
+ sets are iterable, can grow and shrink on demand, and may contain a variety of object types，it supports extra operations. 
+
+**不可变对象的一个无序集合，一个项在集合中只能出现一次。**集合可以迭代，可根据需要增长或缩短，能够包含各种对象类型，支持额外操作。
+
+#### Set basics in Python 2.6 and earlier
+
+**make a set object**, pass in a sequence or other iterable object to the built-in set function:
+
+```
+>>> x = set('abcde')
+>>> y = set('bdxyz')
+>>> x 
+set(['a', 'c', 'b', 'e', 'd'])		# Pythons <= 2.6 display format
+
+# sets do not have a positional ordering, and so are not sequences
+```
+
+support the common mathematical **set operations with expression operators**.
+
+> Note that we can’t perform the following operations on plain sequences like strings, lists, and tuples—we must create sets from them by passing them to set in order to apply these tools:
+
+```
+>>> x − y 			# Difference
+set(['a', 'c', 'e'])
+
+>>> x | y 			# Union
+set(['a', 'c', 'b', 'e', 'd', 'y', 'x', 'z'])
+
+>>> x & y 			# Intersection
+set(['b', 'd'])
+
+>>> x ^ y 			# Symmetric difference (XOR)
+set(['a', 'c', 'e', 'y', 'x', 'z'])
+
+>>> x > y, x < y 	# Superset, subset
+(False, False)
+
+>>> 'e' in x 		# Membership (sets)
+True
+
+>>> 'e' in 'Camelot', 22 in [11, 22, 33] 		# But works on other types too
+(True, True)
+```
+
+the set object provides **method**s
+
+```
+>>> z = x.intersection(y)			# Same as x & y
+>>> z 
+set(['b', 'd'])
+
+>>> z.add('SPAM')					# Insert one item
+>>> z 
+set(['b', 'd', 'SPAM'])
+
+>>> z.update(set(['X', 'Y']))		# Merge: in-place union
+>>> z 
+set(['Y', 'X', 'b', 'd', 'SPAM'])
+
+>>> z.remove('b')					# Delete one item
+>>> z 
+set(['Y', 'X', 'd', 'SPAM'])
+```
+
+**As iterable containers**, sets can also be used in operations such as len, for loops, and list comprehensions. Because **they are unordered**, though, they don’t support sequence operations like indexing and slicing:
+
+```
+>>> for item in set('abc'): print(item * 3) 
+aaa 
+ccc 
+bbb
+```
+
+
+
+#### Set literals in Python 3.X and 2.7
+
+a new set literal form
+
+```
+the following are equivalent:
+
+set([1, 2, 3, 4]) 	# Built-in call (all)
+{1, 2, 3, 4}		# Newer set literals (2.7, 3.X)
+```
+
+```
+>>> set([1, 2, 3, 4]) 		# Built-in: same as in 2.6
+{1, 2, 3, 4}
+>>> set('spam') 			# Add all items in an iterable
+{'s', 'a', 'p', 'm'}
+
+>>> {1, 2, 3, 4} 			# Set literals: new in 3.X (and 2.7)
+{1, 2, 3, 4}
+>>> S = {'s', 'p', 'a', 'm'}
+>>> S 
+{'s', 'a', 'p', 'm'}
+
+>>> S.add('alot')			# Methods work as before
+>>> S 
+{'s', 'a', 'p', 'alot', 'm'}
+```
+
+Note that {} is still a dictionary in all Pythons. Empty sets must be created with the set built-in, and print the same way:
+
+```
+>>> S1 - {1, 2, 3, 4} 		# Empty sets print differently
+set()
+>>> type({}) 				# Because {} is an empty dictionary
+<class 'dict'>
+
+>>> S = set()				# Initialize an empty set
+>>> S.add(1.23)
+>>> S 
+{1.23}
+```
+
+```
+>>> {1, 2, 3} | {3, 4} 
+{1, 2, 3, 4}
+>>> {1, 2, 3} | [3, 4] 
+TypeError: unsupported operand type(s) for |: 'set' and 'list'
+
+>>> {1, 2, 3}.union([3, 4]) 
+{1, 2, 3, 4}
+>>> {1, 2, 3}.union({3, 4}) 
+{1, 2, 3, 4}
+>>> {1, 2, 3}.union(set([3, 4])) 
+{1, 2, 3, 4}
+
+>>> {1, 2, 3}.intersection((1, 3, 5)) 
+{1, 3}
+>>> {1, 2, 3}.issubset(range(-5, 5)) 
+True
+```
+
+
+
+#### Immutable constraints and frozen sets 不可变限制和冻结集合
+
+because of their implementation, sets can only contain immutable (a.k.a. “hashable”) object types.
+
+集合只能包含不可变对象类型，列表、字典不能嵌入到集合中，元组可以。
+
+> lists and dictionaries cannot be embedded in sets, but tuples can
+
+```
+>>> S
+{1.23}
+>>> S.add([1, 2, 3]) 				# Only immutable objects work in a set
+TypeError: unhashable type: 'list'
+
+>>> S.add({'a':1}) 
+TypeError: unhashable type: 'dict'
+>>> S.add((1, 2, 3))
+>>> S 				# No list or dict, but tuple OK
+{1.23, (1, 2, 3)}
+
+>>> S | {(4, 5, 6), (1, 2, 3)} 		# Union: same as S.union(...)
+{1.23, (4, 5, 6), (1, 2, 3)}
+>>> (1, 2, 3) in S 			# Membership: by complete values
+True
+>>> (1, 4, 3) in S 
+False
+```
+
+
+
+#### Set comprehensions in Python 3.X and 2.7 集合解析
+
+集合解析运行一个循环并在每次迭代时 收集一个表达式的结果，通过一个循环变量来访问当前的迭代值以用于集合表达式中。通过运行代码创建一个新的集合。
+
+> Set comprehensions run a loop and collect the result of an expression on each iteration; a loop variable gives access to the current iteration value for use in the collection expression. The result is a new set you create by running the code, with all the normal set behavior.
+
+```
+>>> {x ** 2 for x in [1, 2, 3, 4]} 		# 3.X/2.7 set comprehension
+{16, 1, 4, 9}
+
+In this expression, the loop is coded on the right, and the collection expression is coded on the left (x ** 2) .“Give me a new set containing X squared, for every X in a list.”
+"对于列表中的每一个X, 给出包含X的平方的一个新的集合"
+```
+
+Comprehensions can also iterate across other kinds of objects：
+
+```
+>>> {x for x in 'spam'} 		# Same as: set('spam')
+{'m', 's', 'p', 'a'}
+
+>>> {c * 4 for c in 'spam'} 	# Set of collected expression results
+{'pppp', 'aaaa', 'ssss', 'mmmm'}
+>>> {c * 4 for c in 'spamham'} 
+{'pppp', 'aaaa', 'hhhh', 'ssss', 'mmmm'}
+
+>>> S = {c * 4 for c in 'spam'}
+>>> S | {'mmmm', 'xxxx'} 
+{'pppp', 'xxxx', 'mmmm', 'aaaa', 'ssss'}
+>>> S & {'mmmm', 'xxxx'} 
+{'mmmm'}
+```
+
+
+
+### 7. Booleans 布尔型
+
+True and False, are just customized versions of the integers 1 and 0 that print themselves differently
+
+```
+>>> type(True) 
+<class 'bool'>
+>>> isinstance(True, int) 
+True
+>>> True == 1 		# Same value
+True
+>>> True is 1 		# But a different object: see the next chapter
+False
+>>> True or False 	# Same as: 1 or 0
+True
+>>> True + 4 		# (Hmmm)
+5
 ```
 
 
@@ -160,7 +491,7 @@ a leading 0x or 0X, followed by a string of hexadecimal digits (0–9 and A–F)
 
 ## Python Expression Operators
 
-
+### Python expression operators and precedence
 
 ```
 1. Operators lower in the table have higher precedence, and so bind more tightly in mixed expressions.
@@ -223,21 +554,21 @@ about version differences and recent additions related to the operators. both Py
 
 Python 解释器可以作为一个简单的计算器，您可以在解释器里输入一个表达式，它将输出表达式的值。
 
-`+`
+### 加法 `+`
 
 ```
 >>> 2 + 2
 4
 ```
 
-`-`
+### 减法 `-`
 
 ```
 >>> 4 - 2
 2
 ```
 
-`*`
+### 乘法 `*` 
 
 ```
 >>> 5 * 6
@@ -245,6 +576,8 @@ Python 解释器可以作为一个简单的计算器，您可以在解释器里�
 ```
 
 **注意：**在不同的机器上浮点运算的结果可能会不一样。
+
+### 除法 `/` 
 
 在整数除法中，除法 `/` 总是返回一个浮点数。(Python 3.X)
 
@@ -268,7 +601,9 @@ Python 2.X
 3.5
 ```
 
-Floor division `//`  ，只得到整数的结果，省略结果的小数部分 (available in both Python 2.X and 3.X)：
+### Floor division `//`  
+
+只得到整数的结果，省略结果的小数部分 (available in both Python 2.X and 3.X)：
 
 ```
 Python 2.X and 3.X
@@ -300,12 +635,145 @@ Alternatively, you can enable 3.X / division in 2.X with a` __future__` import, 
 This special from statement applies to the rest of your session when typed interactively like this, and must appear as the first executable line when used in a script file (and alas, we can import from the future in Python, but not the past; insert something about talking to “the Doc” here...).
 ```
 
+### Floor versus truncation
+
+```
+>>> import math
+>>> math.floor(2.5) 	# Closest number below value
+2
+>>> math.floor(-2.5) 
+-3
+>>> math.trunc(2.5) 	# Truncate fractional part (toward zero)
+2
+>>> math.trunc(-2.5) 
+-2
+```
+
+Python 3.X:
+
+```
+Python 3.X
+
+>>> 5 / 2, 5 / −2 
+(2.5, −2.5)
+>>> 5 // 2, 5 // −2 		# Truncates to floor: rounds to first lower integer
+(2, −3)						# 2.5 becomes 2, −2.5 becomes −3
+
+>>> 5 / 2.0, 5 / −2.0 
+(2.5, −2.5)
+>>> 5 // 2.0, 5 // −2.0	 	# Ditto for floats, though result is float too
+(2.0, −3.0)
+```
+
+Python 2.X:
+
+```
+>>> 5 / 2, 5 / −2 		# Differs in 3.X
+(2, −3)
+>>> 5 // 2, 5 // −2 	# This and the rest are the same in 2.X and 3.X
+(2, −3)
+
+>>> 5 / 2.0, 5 / −2.0 
+(2.5, −2.5)
+>>> 5 // 2.0, 5 // −2.0 
+(2.0, −3.0)
+```
+
+If you really want truncation toward zero regardless of sign, you can always run a float division result through math.trunc, regardless of Python version (also see the round built-in for related functionality, and the int built-in, which has the same effect here but requires no import):
+
+Python 3.X:
+
+```
+Python 3.X:
+
+>>> import math
+>>> 5 / −2 						# Keep remainder
+−2.5
+>>> 5 // −2 					# Floor below result 
+-3
+>>> math.trunc(5 / −2) 			# Truncate instead of floor (same as int())
+−2
+```
+
+Python 2.X:
+
+```
+Python 2.X:
+
+>>> import math
+>>> 5 / float(−2) 				# Remainder in 2.X
+−2.5
+>>> 5 / −2, 5 // −2 			# Floor in 2.X 
+(−3, −3)
+>>> math.trunc(5 / float(−2)) 	# Truncate in 2.X
+−2
+```
+
+Why does truncation matter?
+
+It’s possible that the nontruncating behavior of / in 3.X may break a significant number of 2.X programs.
+
+```
+Python 3.X:
+>>> (5 / 2), (5 / 2.0), (5 / −2.0), (5 / −2) 		# 3.X true division
+(2.5, 2.5, −2.5, −2.5)
+
+>>> (5 // 2), (5 // 2.0), (5 // −2.0), (5 // −2) 	# 3.X floor division
+(2, 2.0, −3.0, −3)
+
+>>> (9 / 3), (9.0 / 3), (9 // 3), (9 // 3.0) 		# Both
+(3.0, 3.0, 3, 3.0)
+```
+
+```
+Python 2.X:
+>>> (5 / 2), (5 / 2.0), (5 / −2.0), (5 / −2) 		# 2.X classic division (differs)
+(2, 2.5, −2.5, −3)
+
+>>> (5 // 2), (5 // 2.0), (5 // −2.0), (5 // −2) 	# 2.X floor division (same)
+(2, 2.0, −3.0, −3)
+
+>>> (9 / 3), (9.0 / 3), (9 // 3), (9 // 3.0) 		# Both
+(3, 3.0, 3, 3.0)
+```
+
+### How can you truncate and round a floating-point number?
+
+```
+>>> int(3.6)			# 方法1：int(N) 省略小数部分
+3
+>>> int(-3.6)
+-3
+
+>>> import math			# 方法2：math.trunc(N) 省略小数部分
+>>> math.trunc(3.6)
+3
+>>> math.trunc(-3.6)
+-3
+
+>>> round(3.6)			# 方法3：round(N, digit) 函数做四舍五入
+4
+>>> round(3.62, 1)
+3.6
+
+```
+
+
+
+
+
+
+
+### 余数 `％` 
+
 `％` 操作符返回除法的余数
 
 ```
 >>> 17 % 3  # ％操作符返回除法的余数
 2
 ```
+
+### 赋值 `=` 
 
 等号 `=` 用于给变量赋值。
 
@@ -315,6 +783,8 @@ This special from statement applies to the rest of your session when typed inter
 >>> width * height
 900
 ```
+
+### 幂 `**` 
 
 使用 `**` 操作来进行幂运算：
 
@@ -347,13 +817,15 @@ NameError: name 'n' is not defined
 113.06
 ```
 
+### 不同类型的数混合运算
+
 Python automatically converts up to the more complex type within an expression.
 
 > in mixed-type numeric expressions, Python first converts operands up to the type of the most complicated operand, and then performs the math on same-type operands. 
 >
 > all these mixed-type conversions apply only when mixing numeric types (e.g., an integer and a floating point) in an expression, including those using numeric and comparison operators.
 
-不同类型的数混合运算时会将整数转换为浮点数：
+**不同类型的数混合运算时会将整数转换为浮点数：**
 
 ```
 >>> 40 + 3.14 		# Integer to float, float math/result
@@ -364,7 +836,21 @@ Python automatically converts up to the more complex type within an expression.
 3.5
 ```
 
+### 位操作 Bitwise Operations
 
+注意位操作在python这样的高级语言中并不想在C这样的底层语言中那么重要。python中有比字符串等号的编码信息的方法
+
+> bitwise operations are often not as important in a high-level language such as Python as they are in a low-level language such as C. As a rule of thumb, if you find yourself wanting to flip bits in Python, you should think about which language you’re really coding.Python’s lists, dictionaries, and the like provide richer—and usually better—ways to encode information than bit strings, especially when your data’s audience includes readers of the human variety.
+
+```
+>>> x = 1		# 1 decimal is 0001 in bits
+>>> x << 2		# Shift left 2 bits: 0100
+4
+>>> x | 2 		# Bitwise OR (either bit=1): 0011 
+3
+>>> x & 1 		# Bitwise AND (both bits=1): 0001
+1
+```
 
 ## Python 数字类型转换
 
@@ -566,3 +1052,23 @@ Python包括以下三角函数：
 | ---- | -------------------- |
 | pi   | 数学常量 pi（圆周率，一般以π来表示） |
 | e    | 数学常量 e，e即自然常数（自然常数）。 |
+
+
+
+## 更多
+
+### 3种方法计算平方根
+
+there are three ways to compute square roots in Python: using a module function, an expression, or a built-in function
+
+```
+>>> import math
+>>> math.sqrt(144)		# Module
+12.0
+>>> 144 ** .5			# Expression
+12.0
+>>> pow(144, .5)		# Built-in
+12.0
+```
+
+### NumPy
