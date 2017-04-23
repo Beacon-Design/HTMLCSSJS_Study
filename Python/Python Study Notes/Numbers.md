@@ -87,6 +87,55 @@ Integers in Python 3.X: a single type：
 
 > In Python 3.X, the normal and long integer types have been merged—there is only integer, which automatically supports the unlimited precision of Python 2.X’s separate long integer type. Because of this, integers can no longer be coded with a trailing l or L, and integers never print with this character either. Apart from this, most programs are unaffected by this change, unless they do type testing that checks for 2.X long integers.
 
+#### FLOATING POINT ACCURACY
+
+```
+Decimal number:
+302 = 3*10**2 + 0*10*1 + 2*10**0		(** is the Python exponentiation operator)
+
+Binary number:
+10011 = 1*2**4 + 0*2**3 + 0*2**2 + 1*2**1 + 1*2**0		(decimal is 16+2+1=19)
+
+Internally,computer represents numbers in binary
+
+```
+
+Converting decimal integer to binary (电脑内部将十进制转变成二进制)
+
+```
+Example: x = 1*2**4 + 0*2**3 + 0*2**2 + 1*2**1 + 1*2**0
+
+1. If we take remainder relative to 2 (x%2) of this number, that give us the last     binary bit (1)
+2. If we then divide x by 2 (x/2), all the bits get shifted left
+   x/2 = 1*2**3 + 0*2**2 + 0*2**1 + 1*2**0 = 1001
+
+Keep doing successive dividions; (repeat 1 and 2) now remainder gets next bit, and so on. (10011)
+```
+
+Doing this in python
+
+```
+if num < 0:
+	isNeg = True
+	num = abs(num)
+else:
+	isNeg = False
+result = ''
+if num == 0:
+	result = '0'
+while num > 2:
+	result = str(num%2) + result	(next bit)
+	num = num/2						(shift left)
+if isNeg:							(convert)
+	result = '-' + result
+```
+
+ 
+
+
+
+
+
 ### 2. Hexadecimal, octal, and binary literals
 
 > Integers may be coded in **decimal (base 10)**, **hexadecimal (base 16)**, **octal (base 8)**, or **binary (base 2)**, the last three of which are common in some programming do-mains. 
