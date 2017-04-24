@@ -110,3 +110,122 @@ the names a and b are not linked to each other directly when this happens.both v
 
 
 ### Shared References and In-Place Changes
+
+there are objects and operations that perform in-place object changes—Python’s mutable types, including lists, dictionaries, sets and some objects defined with class statements.. For instance, an assignment to an offset in a list actually changes the list object itself in place, rather than generating a brand-new list object.
+
+reference:
+
+```
+mutable objects that support in-place changes，reference：
+
+>>> L1 = [2, 3, 4]		# A mutable object
+>>> L2 = L1				# Make a reference to the same object
+>>> L1[0] = 24			# An in-place change
+
+>>> L1 					# L1 is different
+[24, 3, 4]
+>>> L2 					# But so is L2!
+[24, 3, 4]
+```
+
+#### list copy:
+
+```
+the two variables point to different pieces of memory. copy：
+
+>>> L1 = [2, 3, 4]
+>>> L2 = L1[:]			# Make a copy of L1 (or list(L1), copy.copy(L1), etc.)
+>>> L1[0] = 24
+
+>>> L1 
+[24, 3, 4]
+>>> L2 					# L2 is not changed
+[2, 3, 4]
+
+Note that this slicing technique won’t work on the other major mutable core types, dictionaries and sets, because they are not sequences
+```
+
+#### copy a dictionary or set:
+
+1. X.copy() 		(lists have one as of Python 3.3 as well)
+
+2. pass the original object to their type names, dict and set.
+
+3. copy module has a call for copying any object type generically, copying nested object structures—a dictionary with nested lists, for example:
+
+   ```
+   import copy 
+   X = copy.copy(Y) 		# Make top-level "shallow" copy of any object Y 
+   X = copy.deepcopy(Y)	# Make deep copy of any object Y: copy all nested parts
+   ```
+
+### Shared References and Equality
+
+Python caches and reuses small integers and small strings.
+
+```
+>>> L = [1, 2, 3]
+>>> M = L			# M and L reference the same object
+>>> L == M 			# Same values 
+True
+>>> L is M 			# Same objects
+True
+```
+
+```
+>>> L = [1, 2, 3]
+>>> M = [1, 2, 3]	# M and L reference different objects 
+>>> L == M 			# Same values 
+True
+>>> L is M 			# Different objects
+False
+```
+
+> the == operator, tests whether the two referenced objects have the same values;
+>
+> the is operator, instead tests for object identity—it returns True only if both names point to the exact same object, (it is a much stronger form of equality testing and is rarely applied in most programs.)
+
+small integers and strings are cached and reused:
+
+```
+>>> X = 42
+>>> Y = 42		# Should be two different objects
+>>> id(x)
+4297372000
+>>> id(y)
+4297372000
+>>> X == Y 
+True
+>>> X is Y 		# Same object anyhow: caching at work!
+True
+
+X and Y should be == (same value), but not is (same object) because we ran two different literal expressions (42). Because small integers and strings are cached and reused, though, is tells us they reference the same single object.
+
+>>> x = 123456
+>>> y = 123456
+>>> id(x)
+4298641296
+>>> id(y)
+4323389840
+>>> x == y
+True
+>>> x is y
+False
+```
+
+ask Python how many references there are to an object: 
+
+```
+>>> import sys
+>>> sys.getrefcount(1)		# 647 pointers to this shared piece of memory
+647
+
+the getrefcount function in the standard sys module returns the object’s reference count.
+```
+
+> Because you cannot change immutable numbers or strings in place, it doesn’t matter how many references there are to the same object—every reference will always see the same, unchanging value. Still, this behavior reflects one of the many ways Python optimizes its model for execution speed.
+
+
+
+
+
