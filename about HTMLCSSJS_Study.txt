@@ -23,3 +23,4 @@ Change Log
 20170424 1650 String Methods
 20170424 2209
 20170425 1013 String Method Examples
+20170427      String Method Examples: Parsing Text / Preview: Mapping values to keys
