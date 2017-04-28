@@ -10,13 +10,21 @@
    >
    >    > 识
 
-3. 意识的认知
+3. 意识的认知（[荣格](http://baike.baidu.com/link?url=xFYRRurbabGniuExKJhyomdTrn7M1D3_5PV1ObyiXqLd1PD2yoZV0G0sc-imAC-5A7njd14PT0tiorrK2aE0QqiR_dYUk5hSXxTZ-dY7436Ng09VzSKvtlBQ5C1Vc4b1OZSe5jhKx_xFIK4DfgdYfAHW3QrZThuw3FdFYAVb--t4JDxxIk09ZICT5fh52Tvrpua2WeLZN6QYUH_s6YIo0McrpZH-VpUaXLcMXt7rzRUn7ANsbMcc3kFMOrjrgnZs)）
 
    > 1. 理性认识（意识）：功能的、逻辑的、实用的
    >
    >    > 1. 理性（英语：reason）最早源起于希腊语词语“逻各斯”（希腊语：λόγος，logos）。在罗马时代，译成拉丁语：ratio，拉丁语原意是计算金钱，但在等同于逻各斯后，成为哲学上广泛使用的术语。译成法语后，成为法语：raison。最后形成了理性（英语：rationality）与理智（英语：raison）的字根。
+   >    >
    >    > 2. **理性**一般指我们形成概念、进行[判断](http://baike.baidu.com/item/%E5%88%A4%E6%96%AD/33345)、[分析](http://baike.baidu.com/item/%E5%88%86%E6%9E%90)、[综合](http://baike.baidu.com/item/%E7%BB%BC%E5%90%88)、[比较](http://baike.baidu.com/item/%E6%AF%94%E8%BE%83/3474)、进行推理、计算等方面的能力。意思和[感性](http://baike.baidu.com/item/%E6%84%9F%E6%80%A7)相对 ，指处理问题按照事物发展的规律和自然进化原则来考虑的态度，考虑问题、处理事情不冲动，不凭感觉做事情。
+   >    >
    >    > 3. [理性思维](http://baike.baidu.com/item/%E7%90%86%E6%80%A7%E6%80%9D%E7%BB%B4)是一种有明确的思维方向，有充分的思维依据，能对事物或问题进行观察、比较、分析、综合、抽象与概括的一种思维。说得简单些理性思维就是一种建立在证据和逻辑推理基础上的思维方式。
+   >    >
+   >    >    > [逻辑](http://baike.baidu.com/link?url=4p-I6qudlyJWL58ce11Lrt4s4xOARcK3Lv4IIk32VWq_v-B2VMmR6E9cWN4-9Ev6OcsAR1AT0snpk2qVGZnXPKT9FG9GAgWExJaI3IgUp_m)
+   >    >    >
+   >    >    > [逻辑学](http://baike.baidu.com/link?url=DzDoviFZfkyfpw7qxrL-bDVsThMPpGk1qrW0o3pFnejgpTVPp32VYm5c4GWpNbUiYAwAnDaUPJ68xDmzDxG-jhdO_btJmZKzUPezv8GaetIfB-v3tE2fX0hj25IzpWPL)
+   >    >
+   >    > ​
    >
    > 2. 非理性
    >
@@ -33,15 +41,23 @@
    >    > 思维不正常（因醉酒、吸毒等情况思维不正常或有神经障碍），致使大脑不能输出正常结果，叫失神经；
    >    >
    >    > 大脑机理正常，但因反应速度相对迟钝，造成瞬时无结果输出，导致的所谓不加思考的行为，叫无意识。这是人脑的机理性缺陷。
+   >    >
+   >    > [精神官能症](http://baike.baidu.com/item/精神官能症)
    >
    > 3. 感性认识：情感的表达。喜、怒、哀、乐…
    >
-   >    > 多巴胺
+   >    > [多巴胺](http://baike.baidu.com/link?url=sC8bFxW_vxtNkTR0o-OBJtfiNCks5j3VBpKZmpjFDK4eLo4PvB7E9UD0zizP2Lq8Z9RwUCn4FdkrvsG6_JhrOf2vKqYZr2H91d4DlvPdcmdlbdy_MFNvej2qkyqQMHJJ)
+   >    >
+   >    > [内啡肽](http://baike.baidu.com/link?url=vPilvEDCxaeTifM4xUCI7PvoMRZ67ApoJQnKTjZy9nlRzBOyhfrNnUvIKt8Njsu6VA3aetyZEngIPOBH6Is9Y2d9Gp3Z3IFjwTlcovmnRdUbSPl5_X2-v_bn90n86d7k)
+   >    >
+   >    > [肾上腺素](http://baike.baidu.com/link?url=bdT5FLmfUrxaFj1dXpKNVdPDOs4T6lz8STdvE1AGpCE8X3K1YlTWyRMVv1GG4x3-HUlRKWTF4WQKtWv3G_jax0zMiqhz5-Ak6Kpnma_46lVcQDCxAEks1w62kV7Zdk-5)
    >
    >
    > 3. 潜意识：（self,自我）长期外部信息刺激与反馈所形成的肌肉与情感记忆进而逐渐形成的自我。
    >
    >    > 巴普洛夫的狗
+   >    >
+   >    > 潜意识是人们不能认知或没有认知到的部分，是人们“已经发生但并未达到意识状态的心理活动过程”。
    >
    > 4. 集体潜意识：
    >
@@ -62,15 +78,19 @@
    >    > 。。。 
 
 
-1. 联想与抽象
+2. 联想与抽象
 
    > 比喻
 
-2. 规律与建立联系
+3. 规律与建立联系
 
    > 纳入到自己的认知体系中
    >
    > 一致性
+
+4. [格式塔心理学](http://baike.baidu.com/link?url=UM3aHLjaVQ-3qVERDEaA4mirP3OL6RjrU-UfXdMxrbs6bCPm_-1cJ7ztdjjZuz1gjlTEpo5CKPzI7MluNjHuDZe2ywYahVe8PJiHljAWnzCqBj3zLMamONMAxrDilKFhTEUHtDktAR0IypSyeDfOKK)
+
+   ​
 
 所建立的认知内容：
 

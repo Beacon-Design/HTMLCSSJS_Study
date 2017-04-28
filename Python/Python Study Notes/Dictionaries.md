@@ -185,7 +185,163 @@ The update method:
 1983 	The Meaning of Life
 ```
 
-> For any dictionary D, saying `for key in D` works the same as saying the complete `for key in D.keys()`.
+> For any dictionary D, saying `for key in D:` works the same as saying the complete `for key in D.keys():` .
+
+
+
+### Mapping values to keys
+
+**in dictionaries, there’s just one value per key, but there may be many keys per value.**
+
+```
+>>> table = {'Holy Grail': '1975', 				# Key=>Value (title=>year)
+... 		 'Life of Brian': '1979', 
+... 		 'The Meaning of Life': '1983'}
+>>>
+>>> table['Holy Grail'] 
+'1975'
+
+>>> list(table.items()) 						# Value=>Key (year=>title) 
+[('The Meaning of Life', '1983'), ('Holy Grail', '1975'), ('Life of Brian', '1979')]
+>>> [title for (title, year) in table.items() if year == '1975'] 
+['Holy Grail']
+```
+
+Note that both of the last two commands return a list of titles:
+
+```
+>>> K = 'Holy Grail'
+>>> table[K] 				# Key=>Value (normal usage)
+'1975'
+
+>>> V = '1975'
+>>> [key for (key, value) in table.items() if value == V] 		# Value=>Key 
+['Holy Grail']
+>>> [key for key in table.keys() if table[key] == V] 			# Ditto
+['Holy Grail']
+```
+
+
+
+### Dictionary Usage Notes
+
+1. Sequence operations don’t work.
+
+   > Dictionaries are mappings, not sequences; because there’s no notion of ordering among their items, things like concatenation (an ordered joining) and slicing (extracting a contiguous section) simply don’t ap-ply.
+
+2. Assigning to new indexes adds entries.
+
+   > Keys can be created when you write a dictionary literal (embedded in the code of the literal itself), or when you assign values to new keys of an existing dictionary object individually. The end result is the same.
+
+3. Keys need not always be strings.
+
+   > any other immutable objects work, their values are “hashable” and thus won’t change.
+   >
+   > Mutable objects such as lists, sets, and other dictionaries don’t work as keys, but are allowed as values.
+
+
+
+### Using dictionaries to simulate flexible lists: Integer keys
+
+When you use lists, it is illegal to assign to an offset that is off the end of the list:
+
+```
+>>> L = []
+>>> L[99] = 'spam' 
+Traceback (most recent call last):
+	File "<stdin>", line 1, in ?
+IndexError: list assignment index out of range
+```
+
+By using integer keys, dictionaries can emulate lists that seem to grow on offset assignment:
+
+```
+>>> D = {}
+>>> D[99] = 'spam'
+>>> D[99] 
+'spam'
+>>> D 
+{99: 'spam'}
+```
+
+another example:
+
+```
+>>> table = {1975: 'Holy Grail', 
+... 		 1979: 'Life of Brian', 			# Keys are integers, not strings
+... 		 1983: 'The Meaning of Life'}
+>>> table[1975] 
+'Holy Grail'
+>>> list(table.items()) 
+[(1979, 'Life of Brian'), (1983, 'The Meaning of Life'), (1975, 'Holy Grail')]
+```
+
+
+
+### Using dictionaries for sparse data structures: Tuple keys
+
+In a similar way, dictionary keys are also commonly leveraged to implement sparse data structures.
+
+```
+>>> Matrix = {}
+>>> Matrix[(2, 3, 4)] = 88
+>>> Matrix[(7, 8, 9)] = 99
+>>>
+>>> X = 2; Y = 3; Z = 4			# ; separates statements:
+>>> Matrix[(X, Y, Z)]
+>>> Matrix 
+{(2, 3, 4): 88, (7, 8, 9): 99}
+```
+
+we can use a simple two-item dictionary. In this scheme, accessing an empty slot triggers a nonexistent key exception, as these slots are not physically stored:
+
+```
+>>> Matrix[(2,3,6)] 
+Traceback (most recent call last):
+	File "<stdin>", line 1, in ? 
+KeyError: (2, 3, 6)
+```
+
+
+
+### Avoiding missing-key errors
+
+There are at least three ways to fill in a default value instead of getting such an error message:
+
+1. you can test for keys ahead of time in `if` statements, 
+2. use a `try` statement to catch and recover from the exception explicitly,
+3.  or simply use the dictionary `get` method shown earlier to provide a default for keys that do not exist.
+
+the `get` method is the most concise in terms of coding requirements, but the `if` and `try` statements are much more general in scope
+
+```
+>>> if (2, 3, 6) in Matrix:				# Check for key before fetch
+... 	print(Matrix[(2, 3, 6)]) 		
+... else:
+... 	print(0) 
+...
+0
+>>> try:								# Try to index
+... 	print(Matrix[(2, 3, 6)]) 
+... except KeyError:					# Catch and recover
+... 	print(0) 
+...
+0
+>>> Matrix.get((2, 3, 4), 0) 			# Exists: fetch and return
+88
+>>> Matrix.get((2, 3, 6), 0) 			# Doesn't exist: use default arg
+0
+```
+
+
+
+### Nesting in dictionaries
+
+
+
+
+
+
 
 
 
