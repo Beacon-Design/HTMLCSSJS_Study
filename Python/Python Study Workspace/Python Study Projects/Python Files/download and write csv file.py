@@ -1,0 +1,24 @@
+# coding:utf-8
+
+# python download\ and\ write\ csv\ file.py
+
+from urllib import request
+
+# asign csv data file address
+goog_url = "http://chart.finance.yahoo.com/table.csv?s=BLTO&a=2&b=29&c=2017&d=3&e=29&f=2017&g=d&ignore=.csv"
+
+
+def download_stock_data(csv_url):
+    response = request.urlopen(csv_url)    # download data
+    csv = response.read()	 # read data to a file
+    csv_str = str(csv)		 # data to string
+    lines = csv_str.split("\\n")  # split string to lines
+    dest_url = r"goog.csv"	 # file name
+    fw = open(dest_url, "w")	 # create a file to write
+    for line in lines:
+        fw.write(line + "\n")
+    fw.close()			 # close file
+
+
+download_stock_data(goog_url)
+print("download and write csv file Done!")

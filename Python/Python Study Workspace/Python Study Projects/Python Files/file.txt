@@ -1,0 +1,2 @@
+Python write a file.
+Write Done.

@@ -310,7 +310,7 @@ There are at least three ways to fill in a default value instead of getting such
 
 1. you can test for keys ahead of time in `if` statements, 
 2. use a `try` statement to catch and recover from the exception explicitly,
-3.  or simply use the dictionary `get` method shown earlier to provide a default for keys that do not exist.
+3. or simply use the dictionary `get` method shown earlier to provide a default for keys that do not exist.
 
 the `get` method is the most concise in terms of coding requirements, but the `if` and `try` statements are much more general in scope
 
@@ -337,11 +337,260 @@ the `get` method is the most concise in terms of coding requirements, but the `i
 
 ### Nesting in dictionaries
 
+nests a list and a dictionary to represent structured property values:
+
+```
+>>> rec = {'name': 'Bob', 
+... 	'jobs': ['developer', 'manager'], 
+... 	'web': 'www.bobs.org/˜Bob', 
+... 	'home': {'state': 'Overworked', 'zip': 12345}}
+>>> rec['name'] 
+'Bob'
+>>> rec['jobs'] 
+['developer', 'manager']
+>>> rec['jobs'][1] 
+'manager'
+>>> rec['home']['zip'] 
+12345
+```
+
+top-level container in realistic programs:
+
+```
+db = [] 
+db.append(rec) 			# A list "database"
+db.append(other) 
+db[0]['jobs']
+
+db = {} 
+db['bob'] = rec			# A dictionary "database"
+db['sue'] = other 
+db['bob']['jobs']
+```
+
+
+
+### Other Ways to Make Dictionaries
+
+```
+{'name': 'Bob', 'age': 40}			# Traditional literal expression
+
+D = {} 									# Assign by keys dynamically
+D['name'] = 'Bob' 
+D['age'] = 40
+
+dict(name='Bob', age=40)				# dict keyword argument form
+
+dict([('name', 'Bob'), ('age', 40)])	# dict key/value tuples form
+```
+
+All four of these forms create the same two-key dictionary, but they are useful in differing circumstances:
+
+- The first is handy if you can spell out the entire dictionary ahead of time.
+
+
+- The second is of use if you need to create the dictionary one field at a time on the fly.
+
+
+
+- The third involves less typing than the first, but it requires all keys to be strings.
+
+
+
+- The last is useful if you need to build up keys and values as sequences at runtime.
+
+to combine separate lists of keys and values obtained dynamically at runtime (parsed out of a data file’s columns, for instance):
+
+```
+dict(zip(keyslist, valueslist))  # Zipped key/value tuples form (ahead)
+```
+
+Provided all the key’s values are the same initially, you can also create a dictionary with this special form—simply pass in a list of keys and an initial value for all of the values (the default is None):
+
+```
+>>> dict.fromkeys(['a', 'b'], 0) 
+{'a': 0, 'b': 0}
+```
+
+
+
+### Dictionary Changes in Python 3.X and 2.7
+
+Specifically, dictionaries in Python 3.X:
+
+- Support a new dictionary comprehension expression, a close cousin to list and set comprehensions
+
+
+- Return set-like iterable views instead of lists for the methods D.keys, D.values, and
+
+  D.items
+
+
+- Require new coding styles for scanning by sorted keys, because of the prior point
+
+
+
+- No longer support relative magnitude comparisons directly—compare manually instead
+
+
+
+- No longer have the D.has_key method—the in membership test is used instead
+
+dictionaries in Python 2.7 (but not earlier in 2.X):
+
+- Support item 1 in the prior list—dictionary comprehensions—as a direct back-port from 3.X
+
+
+- Support item 2 in the prior list—set-like iterable views—but do so with special method names D.viewkeys, D.viewvalues, D.viewitems); their nonview methods return lists as before
+
+
+
+### Dictionary comprehensions in 3.X and 2.7
+
+```
+# Zip together keys and values
+>>> list(zip(['a', 'b', 'c'], [1, 2, 3])) 
+[('a', 1), ('b', 2), ('c', 3)]
+
+# Make a dict from zip result
+>>> D = dict(zip(['a', 'b', 'c'], [1, 2, 3]))
+>>> D 
+{'b': 2, 'c': 3, 'a': 1}
+```
+
+In Python 3.X and 2.7, though, you can achieve the same effect with a dictionary comprehension expression:
+
+```
+>>> D = {k: v for (k, v) in zip(['a', 'b', 'c'], [1, 2, 3])}
+>>> D 
+{'b': 2, 'c': 3, 'a': 1}
+```
+
+map a single stream of values to dictionaries as well, and keys can be computed with expressions just like values:
+
+```
+>>> D = {x: x ** 2 for x in [1, 2, 3, 4]}	# Or: range(1, 5)
+>>> D 
+{1: 1, 2: 4, 3: 9, 4: 16}
+
+>>> D = {c: c * 4 for c in 'SPAM'} 			# Loop over any iterable
+>>> D 
+{'S': 'SSSS', 'P': 'PPPP', 'A': 'AAAA', 'M': 'MMMM'}
+
+>>> D = {c.lower(): c + '!' for c in ['SPAM', 'EGGS', 'HAM']}
+>>> D 
+{'eggs': 'EGGS!', 'spam': 'SPAM!', 'ham': 'HAM!'}
+```
+
+Dictionary comprehensions are also useful for initializing dictionaries from keys lists:
+
+```
+>>> D = dict.fromkeys(['a', 'b', 'c'], 0)  # Initialize dict from keys
+>>> D 
+{'b': 0, 'c': 0, 'a': 0}
+
+>>> D = {k:0 for k in ['a', 'b', 'c']}# Same, but with a comprehension
+>>> D 
+{'b': 0, 'c': 0, 'a': 0}
+
+>>> D = dict.fromkeys('spam')		# Other iterables, default value
+>>> D 
+{'s': None, 'p': None, 'a': None, 'm': None}
+
+>>> D = {k: None for k in 'spam'}
+>>> D 
+{'s': None, 'p': None, 'a': None, 'm': None}
+```
+
+
+
+### Dictionary views in 3.X (and 2.7 via new methods)
+
+```
+>>> D = dict(a=1, b=2, c=3)
+>>> D 
+{'b': 2, 'c': 3, 'a': 1}
+
+>>> K = D.keys()		# Makes a view object in 3.X, not a list
+>>> K 
+dict_keys(['b', 'c', 'a'])
+>>> list(K) 			# Force a real list in 3.X if needed
+['b', 'c', 'a']
+
+>>> V = D.values()		# Ditto for values and items views
+>>> V 
+dict_values([2, 3, 1])
+>>> list(V) 
+[2, 3, 1]
+
+>>> D.items() 
+dict_items([('b', 2), ('c', 3), ('a', 1)])
+>>> list(D.items()) 
+[('b', 2), ('c', 3), ('a', 1)]
+
+>>> K[0] 			# List operations fail unless converted 
+TypeError: 'dict_keys' object does not support indexing
+>>> list(K)[0] 
+'b'
+```
+
+because looping constructs in Python automatically force iterable objects to produce one result on each iteration:
+
+```
+>>> for k in D.keys(): print(k) # Iterators used automatically in loops
+...
+b
+c
+a
+```
+
+3.X dictionaries still have iterators themselves, which return successive keys—as in 2.X,
+
+```
+>>> for key in D: print(key) # Still no need to call keys() to iterate
+...
+b
+c
+a
+```
+
+dictionary views in 3.X, dynamically reflect future changes made to the dictionary after the view object has been created:
+
+```
+>>> D = {'a': 1, 'b': 2, 'c': 3}
+>>> D 
+{'b': 2, 'c': 3, 'a': 1}
+
+>>> K = D.keys()
+>>> V = D.values()
+>>> list(K) 		# Views maintain same order as dictionary
+['b', 'c', 'a']
+>>> list(V) 
+[2, 3, 1]
+
+>>> del D['b']		# Change the dictionary in place
+>>> D 
+{'c': 3, 'a': 1}
+
+>>> list(K) 		# Reflected in any current view objects
+['c', 'a']
+>>> list(V) 		# Not true in 2.X! - lists detached from dict
+[3, 1]
+```
+
+
+
+### Dictionary views and sets
 
 
 
 
 
+### ...
+
+### ...
+
+### ...
 
 
 
