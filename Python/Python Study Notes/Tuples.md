@@ -175,7 +175,7 @@ the same record recoded as a dictionary with named fields:
 [('jobs', ['dev', 'mgr']), ('name', 'Bob'), ('age', 40.5)]
 ```
 
-
+named tuples are a tuple/class/dictionary hybrid. They also represent a classic tradeoff.(In short, named tuples build new classes that extend the tuple type, inserting a property accessor method for each named field that maps the name to its position)
 
 ```
 >>> from collections import namedtuple					# Import extension type
@@ -195,6 +195,50 @@ Rec(name='Bob', age=40.5, jobs=['dev', 'mgr'])
 >>> O 
 OrderedDict([('name', 'Bob'), ('age', 40.5), ('jobs', ['dev', 'mgr'])])
 ```
+
+the positional initial values here: named tuples accept these by name, position, or both:
+
+```
+>>> bob = Rec('Bob', 40.5, ['dev', 'mgr'])		# For both tuples and named tuples
+>>> name, age, jobs = bob						# Tuple assignment
+>>> name, jobs 
+('Bob', ['dev', 'mgr'])
+
+>>> for x in bob: print(x) 						# Iteration context
+...prints Bob, 40.5, ['dev', 'mgr']...
+```
+
+
+
+```
+>>> bob = {'name': 'Bob', 'age': 40.5, 'jobs': ['dev', 'mgr']}
+>>> job, name, age = bob.values()
+>>> name, job 									# Dict equivalent (but order may vary) 
+('Bob', ['dev', 'mgr'])
+
+>>> for x in bob: print(bob[x]) 				# Step though keys, index values
+...prints values...
+>>> for x in bob.values(): print(x) 			# Step through values view
+...prints values...
+```
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 ### ...
 

@@ -29,29 +29,93 @@ https://docs.python.org/3.6/library/functions.html
 
 
 
+## eval()
+
+eval() 函数用来执行一个字符串表达式，并返回表达式的值。
+
+```
+eval(expression[, globals[, locals]])
+```
+
+> ```
+> eval(...)
+>     eval(source[, globals[, locals]]) -> value
+>     
+>     Evaluate the source in the context of globals and locals.
+>     The source may be a string representing a Python expression
+>     or a code object as returned by compile().
+>     The globals must be a dictionary and locals can be any mapping,
+>     defaulting to the current globals and locals.
+>     If only globals is given, locals defaults to it.
+> ```
+
+### 参数
+
+- expression -- 表达式。
+- globals -- 变量作用域，全局命名空间，如果被提供，则必须是一个字典对象。
+- locals -- 变量作用域，局部命名空间，如果被提供，可以是任何映射对象。
+
+### 返回值
+
+返回表达式计算结果
+
+### 实例
+
+```
+>>>x = 7
+>>> eval( '3 * x' )
+21
+>>> eval('pow(2,2)')
+4
+>>> eval('2 + 2')
+4
+>>> eval("n + 4")
+85
+```
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 ## open()
 
 python open() 函数用于打开一个文件，创建一个 `file` 对象，相关的方法才可以调用它进行读写。
 
 更多文件操作可参考：[Python 文件I/O](http://www.runoob.com/python/python-files-io.html)。
 
-```
-open(...)
-    open(file, mode='r', buffering=-1, encoding=None,
-         errors=None, newline=None, closefd=True, opener=None) -> file object
-    
-    Open file and return a stream.  Raise IOError upon failure.
-    
-    file is either a text or byte string giving the name (and the path
-    if the file isn't in the current working directory) of the file to
-    be opened or an integer file descriptor of the file to be
-    wrapped. (If a file descriptor is given, it is closed when the
-    returned I/O object is closed, unless closefd is set to False.)
-    
-    mode is an optional string that specifies the mode in which the file
-    is opened. It defaults to 'r' which means open for reading in text
-    mode.  Other common values are 'w' for writing (truncating the file if
-```
+> ```
+> open(...)
+>     open(file, mode='r', buffering=-1, encoding=None,
+>          errors=None, newline=None, closefd=True, opener=None) -> file object
+>     
+>     Open file and return a stream.  Raise IOError upon failure.
+>     
+>     file is either a text or byte string giving the name (and the path
+>     if the file isn't in the current working directory) of the file to
+>     be opened or an integer file descriptor of the file to be
+>     wrapped. (If a file descriptor is given, it is closed when the
+>     returned I/O object is closed, unless closefd is set to False.)
+>     
+>     mode is an optional string that specifies the mode in which the file
+>     is opened. It defaults to 'r' which means open for reading in text
+>     mode.  Other common values are 'w' for writing (truncating the file if
+>     it already exists), 'x' for creating and writing to a new file, and
+>     'a' for appending (which on some Unix systems, means that all writes
+>     append to the end of the file regardless of the current seek position).
+>     In text mode, if encoding is not specified the encoding used is platform
+>     dependent: locale.getpreferredencoding(False) is called to get the
+>     current locale encoding. (For reading and writing raw bytes use binary
+> ```
 
 ### 函数语法
 

@@ -26,3 +26,4 @@ Change Log
 20170427      String Method Examples: Parsing Text / Preview: Mapping values to keys
 20170427 2240
 20170428
+20170502        Immutable Types Can¡¯t Be Changed in Place
