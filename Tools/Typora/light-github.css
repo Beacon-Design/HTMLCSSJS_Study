@@ -116,28 +116,31 @@ h6 code {
 h1 {
     padding-bottom: .3em;
     font-size: 2.25em;
+/*     color: #000; */
     line-height: 1.2;
-    border-bottom: 4px solid #CCCCCC;
+    border-bottom: 3px solid #999;
 }
 h2 {
-   padding-bottom: .3em;
-    font-size: 1.75em;
+    padding-bottom: .3em;
+	font-size: 2em;
     line-height: 1.225;
-    border-bottom: 2px solid #CCCCCC;
+    border-bottom: 3px solid #CCC;
 }
 h3 {
-    font-size: 1.5em;
+	padding-bottom: .3em;	
+    font-size: 1.75em;
     line-height: 1.43;
+    border-bottom: 1px solid #CCCCCC;
 }
 h4 {
-    font-size: 1.25em;
+    font-size: 1.5em;
 }
 h5 {
-    font-size: 1em;
+    font-size: 1.25em;
 }
 h6 {
-   font-size: 1em;
-    color: #777;
+   font-size: 1.125em;
+/*     color: #777; */
 }
 p,
 blockquote,
@@ -152,10 +155,10 @@ li>ul {
     margin: 0 0;
 }
 hr {
-    height: 2px;
+    height: 1px;
     padding: 0;
     margin: 16px 0;
-    background-color: #999999;
+    background-color: #4A4A4A;
     border: 0 none;
     overflow: hidden;
     box-sizing: content-box;

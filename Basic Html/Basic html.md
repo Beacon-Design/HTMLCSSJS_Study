@@ -9,6 +9,8 @@ you need to define *what* you want to say (HTML) before defining *how* you want 
 
 ##### **emphasis(italic) elements**
 
+1em = 16px
+
 ```
 this is <em>em</em>.
 ```

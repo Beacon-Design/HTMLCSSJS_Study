@@ -33,10 +33,6 @@ https://docs.python.org/3.6/library/functions.html
 
 eval() 函数用来执行一个字符串表达式，并返回表达式的值。
 
-```
-eval(expression[, globals[, locals]])
-```
-
 > ```
 > eval(...)
 >     eval(source[, globals[, locals]]) -> value
@@ -48,6 +44,12 @@ eval(expression[, globals[, locals]])
 >     defaulting to the current globals and locals.
 >     If only globals is given, locals defaults to it.
 > ```
+
+### 函数语法
+
+```
+eval(expression[, globals[, locals]])
+```
 
 ### 参数
 
@@ -77,11 +79,69 @@ eval(expression[, globals[, locals]])
 
 
 
+## isinstance() 
 
+isinstance() 函数来判断一个对象是否是一个已知的类型，类似 type()。
 
+> isinstance() 与 type() 区别：
+>
+> - type() 不会认为子类是一种父类类型，不考虑继承关系。
+> - isinstance() 会认为子类是一种父类类型，考虑继承关系。
+>
+> 如果要判断两个类型是否相同推荐使用 isinstance()。
 
+> ```
+> isinstance(...)
+>     isinstance(object, class-or-type-or-tuple) -> bool
+>     
+>     Return whether an object is an instance of a class or of a subclass thereof.
+>     With a type as second argument, return whether that is the object's type.
+>     The form using a tuple, isinstance(x, (A, B, ...)), is a shortcut for
+>     isinstance(x, A) or isinstance(x, B) or ... (etc.).
+>
+> ```
 
+### 函数语法:
 
+```
+isinstance(object, classinfo)
+```
+
+### 参数说明：
+
+- object -- 实例对象。
+- classinfo -- 可以是直接或间接类名、基本类型或者有它们组成的元组。
+
+### 返回值:
+
+如果对象的类型与参数二的类型（classinfo）相同则返回 True，否则返回 False。。
+
+### 实例:
+
+```
+>>>a = 2
+>>> isinstance (a,int)
+True
+>>> isinstance (a,str)
+False
+>>> isinstance (a,(str,int,list))    # 是元组中的一个返回 True
+True
+```
+
+### type() 与 isinstance() 区别:
+
+```
+class A:
+    pass
+ 
+class B(A):
+    pass
+ 
+isinstance(A(), A)    # returns True
+type(A()) == A        # returns True
+isinstance(B(), A)    # returns True
+type(B()) == A        # returns False
+```
 
 
 
@@ -117,7 +177,7 @@ python open() 函数用于打开一个文件，创建一个 `file` 对象，�
 >     current locale encoding. (For reading and writing raw bytes use binary
 > ```
 
-### 函数语法
+### 函数语法:
 
 ```
 open(name[, mode[, buffering]])
@@ -166,3 +226,76 @@ open(name[, mode[, buffering]])
 - 起始位置:0-文件头,默认值;1-当前位置;2-文件尾
 
 **file.close()** 关闭文件
+
+
+
+## type()
+
+type() 函数如果你只有第一个参数则返回对象的类型，三个参数返回新的类型对象。
+
+> isinstance() 与 type() 区别：
+>
+> - type() 不会认为子类是一种父类类型，不考虑继承关系。
+> - isinstance() 会认为子类是一种父类类型，考虑继承关系。
+>
+> 如果要判断两个类型是否相同推荐使用 isinstance()。
+
+> ```
+>
+> ```
+
+### 函数语法:
+
+```
+class type(name, bases, dict)
+```
+
+### 参数说明：
+
+- name -- 类的名称。
+- bases -- 基类的元组。
+- dict -- 字典，类内定义的命名空间变量。
+
+### 返回值:
+
+一个参数返回对象类型, 三个参数，返回新的类型对象。
+
+### 实例:
+
+```
+# 一个参数实例
+>>> type(1)
+<class 'int'>
+>>> type('apple')
+<class 'str'>
+>>> type([2])
+<class 'list'>
+>>> type({0:'zero'})
+<class 'dict'>
+>>> x = 1
+>>> type(x) == int		# 判断类型是否相等
+True
+
+# 三个参数
+>>> class D(object):
+...     a = 1
+... 
+>>> D = type('D', (object,), dict(a=1))		# 产生一个新的类型 D
+>>> D
+<class '__main__.D'>
+```
+
+### type() 与 isinstance() 区别：
+
+```
+class A:
+    pass
+ 
+class B(A):
+    pass
+ 
+isinstance(A(), A)    # returns True
+type(A()) == A        # returns True
+isinstance(B(), A)    # returns True
+type(B()) == A        # returns False
+```
