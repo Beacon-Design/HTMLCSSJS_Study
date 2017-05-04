@@ -28,3 +28,4 @@ Change Log
 20170428
 20170502        Immutable Types Can¡¯t Be Changed in Place
 20170503	Extended Sequence Unpacking in Python 3.X
+20170504	Print Operations

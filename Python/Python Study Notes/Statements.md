@@ -97,7 +97,7 @@ Python 3.X’s statements, Here are a few fine points about its content:
 - `print` is technically neither a reserved word nor a statement in 3.X, but a built-in function call; because it will nearly always be run as an expression statement, though (and often on a line by itself), it’s generally thought of as a statement type.
 
 
-- `yield` is also an expression instead of a statement as of 2.5; like print, it’s typically used as an expression statement and so is included in this table, but scripts occasionally assign or otherwise use its result. As an expres-sion, `yield` is also a reserved word, unlike print.
+- `yield` is also an expression instead of a statement as of 2.5; like print, it’s typically used as an expression statement and so is included in this table, but scripts occasionally assign or otherwise use its result. As an expression, `yield` is also a reserved word, unlike print.
 
 Python 2.X, here are a few notes for your Python:
 
@@ -234,7 +234,7 @@ Although statements normally appear one per line, it is possible to squeeze more
 a = 1; b = 2; print(a + b)			# Three statements on one line
 ```
 
-This is the only place in Python where semicolons are required: as statement separators.This only works, though, if the statements thus combined are not themselves compound statements. In other words, you can chain together only simple statements, like assignments, prints, and function calls.
+This is the only place in Python where semicolons are required: **as statement separators**.**This only works**, though, **if the statements thus combined are not themselves compound statements**. In other words, you can chain together only simple statements, like assignments, prints, and function calls.
 
 > Compound statements like if tests and while loops must still appear on lines of their own
 
@@ -242,7 +242,7 @@ This is the only place in Python where semicolons are required: as statement sep
 
 #### make a single statement span across multiple lines.
 
-To make this work, you simply have to enclose part of your statement in a bracketed pair—parentheses ( `()` ), square brackets ( `[]` ), or curly braces ( `{}` ). Any code enclosed in these constructs can cross multiple lines: your statement doesn’t end until Python reaches the line containing the closing part of the pair. For instance, to continue a list literal:
+To make this work, you simply have to enclose part of your statement in a bracketed pair—parentheses ( `()` ), square brackets ( `[]` ), or curly braces ( `{}` ). **Any code enclosed in these constructs can cross multiple lines: your statement doesn’t end until Python reaches the line containing the closing part of the pair**. For instance, to continue a list literal:
 
 ```
 mylist = [1111, 
@@ -266,7 +266,7 @@ if (A == 1 and
 		print('spam' * 3)
 ```
 
-> An older rule also allows for continuation lines when the prior line ends in a backslash:
+> An older rule also allows for continuation lines when the prior line ends in a backslash: don't do this
 >
 > ```
 > X = A + B + \ 
@@ -337,7 +337,7 @@ spam = ham = 'lunch' 			Multiple-target assignment
 spams += 42				Augmented assignment (equivalent to spams = spams + 42)
 ```
 
-#### Tuple- and list-unpacking assignments
+### Tuple- and list-unpacking assignments
 
 The second and third forms in the table are related. When you code a tuple or list on the left side of the `=` , Python pairs objects on the right side with targets on the left by position and assigns them from left to right. For example, in the second line of Table , the name `spam` is assigned the string `'yum'` , and the name `ham` is bound to the string  `'YUM'`. In this case Python internally may make a tuple of the items on the right, which is why this is called tuple-unpacking assignment.
 
@@ -351,7 +351,7 @@ The second and third forms in the table are related. When you code a tuple or li
 ['yum', 'YUM']
 ```
 
-#### Sequence assignments
+### Sequence assignments
 
 In later versions of Python, tuple and list assignments were generalized into instances of what we now call **sequence assignment** — **any sequence of names can be assigned to any sequence of values, and Python assigns the items one at a time by position**. We can even mix and match the types of the sequences involved. The fourth line in Table, for example, pairs a tuple of names with a string of characters: `a` is assigned `'s'` , `b` is assigned `'p'` , and so on.
 
@@ -403,9 +403,9 @@ Technically speaking, **sequence assignment actually supports any iterable objec
 
 
 
-#### Advanced sequence assignment patterns
+### Advanced sequence assignment patterns
 
-around the `=` symbol, we must generally have the same number of items on the right as we have variables on the left, or we’ll get an error.
+around the `=` symbol, **sequence assignments must generally have the same number of items on the right as we have variables on the left, or we’ll get an error**.
 
 ```
 >>> string = 'SPAM'
@@ -491,7 +491,7 @@ Another place you may see a tuple assignment at work is for splitting a sequence
 > ...		L = L[1:]
 > ```
 
-Notice that this code is using the list as a sort of stack data structure, which can often also be achieved with the `append` and `pop` methods of list objects; here, `front = L.pop(0)` would have much the same effect as the tuple assignment statement, but it would be an in-place change.
+Notice that this code is using the list as a sort of stack data structure, which can often **also be achieved with the `append` and `pop` methods of list objects**; here, **`front = L.pop(0)` would have much the same effect as the tuple assignment statement**, but it would be an in-place change.
 
 
 
@@ -501,7 +501,7 @@ Notice that this code is using the list as a sort of stack data structure, which
 
 
 
-#### Extended sequence unpacking
+### Extended sequence unpacking
 
 In Python 3.X (only), a new form of sequence assignment allows us to be more flexible in how we select portions of a sequence to assign. The fifth line in Table, for example, matches a with the first character in the string on the right and b with the rest: `a` is assigned `'s'`, and `b` is assigned `'pam'` . This provides a simpler alternative to assigning the results of manual slicing operations.
 
@@ -513,13 +513,111 @@ In Python 3.X (only), a new form of sequence assignment allows us to be more fle
 ['p', 'a', 'm']
 ```
 
-### Extended Sequence Unpacking in Python 3.X
+**In Python 3.X, though, we can use a single starred name in the target to match more generally:**
+
+```
+>>> seq = [1, 2, 3, 4]
+>>> a, *b = seq
+>>> a
+1
+>>> b
+[2, 3, 4]
+```
+
+**When a starred name is used, the number of items in the target on the left need not match the length of the subject sequence**:
+
+```
+>>> seq = [1, 2, 3, 4]
+>>> *a, b = seq
+>>> a
+[1, 2, 3]
+>>> b
+4
+
+>>> a, b, *c = seq
+>>> a
+1
+>>> b
+2
+>>> c
+[3, 4]
+```
+
+This is similar in spirit to slicing, but not exactly the same—**a sequence unpacking assignment always returns a list for multiple matched items**, whereas **slicing returns a sequence of the same type as the object sliced**:
+
+```
+>>> a, *b = 'spam'			# * assignment always returns a list
+>>> a, b
+('s', ['p', 'a', 'm'])
+>>> a, *b, c = 'spam'
+>>> a, b, c
+('s', ['p', 'a'], 'm')
+
+>>> S = 'spam'
+>>> S[0], S[1:] 			# Slices are type-specific, 
+('s', 'pam')
+>>> S[0], S[1:3], S[3] 
+('s', 'pa', 'm')
+```
+
+**the starred name may match just a single item, but is always assigned a list**. example:
+
+```
+>>> L = [1, 2, 3, 4]
+>>> while L:
+...     front, *L = L			# Get first, rest without slicing
+...     print(front, L)
+... 
+1 [2, 3, 4]
+2 [3, 4]
+3 [4]
+4 []
+```
+
+**if there is nothing left to match the starred name, it is assigned an empty list, regardless of where it appears**:
+
+```
+>>> seq = [1, 2, 3, 4]
+
+>>> a, b, c, d, *e = seq
+>>> print(a, b, c, d, e) 
+1 2 3 4 []
+
+>>> a, b, *e, c, d = seq
+>>> print(a, b, c, d, e) 
+1 2 3 4 []
+```
+
+**errors can still be triggered if there is more than one starred name, if there are too few values and no star (as before), and if the starred name is not itself coded inside a sequence:**
+
+```
+>>> a, *b, c, *d = seq 
+SyntaxError: two starred expressions in assignment
+
+>>> a, b = seq 
+ValueError: too many values to unpack (expected 2)
+
+>>> *a = seq 
+SyntaxError: starred assignment target must be in a list or tuple
+
+>>> *a, = seq
+>>> a 
+[1, 2, 3, 4]
+```
+
+In Python 3.X, extended assignments may show up after the word for, where a simple variable name is more commonly used:
+
+```
+>>> for (a, *b, c) in [(1, 2, 3, 4), (5, 6, 7, 8)]:		# (a, *b, c) = (1, 2, 3, 4)...
+...     print(a, b, c)
+... 
+1 [2, 3] 4
+5 [6, 7] 8
+```
 
 
 
-
-
-#### Multiple-target assignments 
+### Multiple-target assignments 
 
 The sixth line in Table shows the multiple-target form of assignment. In this form, Python assigns a reference to the same object (the object farthest to the right) to all the targets on the left. In the table, the names `spam` and `ham` are both assigned references to the same string object, `'lunch'`. The effect is the same as if we had coded `ham = 'lunch'` followed by `spam = ham`, as `ham` evaluates to the original string object (i.e., not a separate copy of that object).
 
@@ -536,7 +634,45 @@ ham = 'lunch'
 spam = ham
 ```
 
-#### Augmented assignments 
+### Multiple-target assignment and shared references
+
+Keep in mind that **there is just one object here, shared by all three variables (they all wind up pointing to the same object in memory). This behavior is fine for immutable types**
+
+```
+>>> a = b = 0
+>>> b = b + 1
+>>> a, b 
+(0, 1)
+
+# As long as the object assigned is immutable, it’s irrelevant if more than one name references it.
+```
+
+we have to **be more cautious when initializing variables to an empty mutable object such as a list or dictionary**:
+
+```
+>>> a = b = []
+>>> b.append(42)
+>>> a, b 
+([42], [42])
+
+# because a and b reference the same object, appending to it in place through b will impact what we see through a as well.
+```
+
+initialize mutable objects in separate statements:
+
+```
+>>> a = []
+>>> b = []				# a and b do not share the same object
+>>> b.append(42)
+>>> a, b 
+([], [42])
+
+>>> a, b = [], []		# a and b do not share the same object
+```
+
+
+
+### Augmented assignments 
 
 The last line in Table is an example of augmented assignment—a shorthand that combines an expression and an assignment in a concise way. Saying `spam += 42`, for example, has the same effect as `spam = spam + 42` , but the augmented form requires less typing and is generally quicker to run. In addition, if the subject is mutable and supports the operation, an augmented assignment may run even quicker by choosing an in-place update operation instead of an object copy. There is one augmented assignment statement for every binary expression operator in Python.
 
@@ -546,3 +682,132 @@ spam += 42
 equivalent to:
 spam = spam + 42
 ```
+Known as **augmented assignments**, and borrowed from the C language. They **imply the combination of a binary expression and an assignment**.
+
+```
+the following two formats are roughly equivalent:
+
+X = X + Y 			# Traditional form
+X += Y				# Newer augmented form
+```
+
+Augmented assignment statements:
+
+```
+X += Y 			X *= Y 			X %= Y
+X &= Y 			X ^= Y 			X <<= Y
+X −= Y 			X /= Y 			X **= Y
+X |= Y 			X >>= Y 		X //= Y
+```
+
+**Augmented assignments have three advantages**:
+
+1. **There’s less for you to type**. Need I say more?
+
+2. **The left side has to be evaluated only once**. In X += Y, X may be a complicated object expression. In the augmented form, its code must be run only once. However, in the long form, X = X + Y, X appears twice and must be run twice. Because of this, augmented assignments usually run faster.
+
+3. **The optimal technique is automatically chosen**. That is, for objects that support in-place changes, the augmented forms automatically perform in-place change operations instead of slower copies.
+
+   > ```
+   > >>> L = [1, 2]
+   > >>> L = L + [3]			# Concatenate: slower
+   > >>> L 
+   > [1, 2, 3]
+   > >>> L.append(4)			# Faster, but in place
+   > >>> L 
+   > [1, 2, 3, 4]
+   > ```
+   > For augmented assignments, in-place operations may be applied for mutable objects as an optimization.
+   >
+   > **Concatenation operations must create a new object**, copy in the list on the left, and then copy in the list on the right.
+   >
+   > **in-place method calls simply add items at the end of a memory block**.
+
+
+**Augmented assignment and shared references**:
+
+```
+>>> L = [1, 2]
+>>> M = L						# L and M reference the same object
+>>> L = L + [3, 4]				# Concatenation makes a new object
+>>> L, M 						# Changes L but not M
+([1, 2, 3, 4], [1, 2])
+
+>>> L = [1, 2]
+>>> M = L
+>>> L += [3, 4]					# But += really means extend
+>>> L, M 						# M sees the in-place change too!
+([1, 2, 3, 4], [1, 2, 3, 4])
+```
+
+- **This only matters for mutables like lists and dictionaries**
+
+
+- **!!! Concatenation makes a new object** : `L = L + [3, 4]`
+
+
+- **!!! `+=`  in-place change really means extend **: `L += [3, 4]`	
+
+make copies of your mutable objects if you need to break the shared reference structure.
+
+
+
+## Expression Statements
+
+**you can use an expression as a statement, on a line by itself**. But because the result of the expression won’t be saved, it usually makes sense to do so only if the expression does something useful as a side effect.
+
+ Expressions are commonly used as statements in two situations:
+
+- **For calls to functions and methods** 
+
+  > **Some functions and methods do their work without returning a value.** Such functions are sometimes called procedures in other languages. Because they don’t return values that you might be interested in retaining, you can call these functions with expression statements.
+
+
+- **For printing values at the interactive prompt** 
+
+  > **Python echoes back the results of expressions typed at the interactive command line**. Technically, these are expression statements, too; they serve as a shorthand for typing print statements.
+
+Common Python expression statements (expressions that evaluate to objects):
+
+```
+# Common Python expression statements (expressions that evaluate to objects)
+
+Operation					Interpretation
+
+spam(eggs, ham) 			Function calls
+spam.ham(eggs) 				Method calls
+spam 						Printing variables in the interactive interpreter
+print(a, b, c, sep='') 		Printing operations in Python 3.X
+yield x ** 2				Yielding expression statements
+```
+
+
+
+### Expression Statements and In-Place Changes
+
+Expression statements are often used to run list methods that change a list in place:
+
+```
+>>> L = [1, 2]
+>>> L.append(3)		# Append is an in-place change
+>>> L 
+[1, 2, 3]
+```
+
+**!!! Calling an in-place change operation** such as `append` , `sort` , or `reverse` on a list always changes the list in place, but **these methods do not return the list they have changed; instead, they return the None object.**
+
+> ```
+> >>> L = L.append(4)		# But append returns None, not L
+> >>> print(L) 			# So we lose our list!
+> None
+> ```
+
+
+
+## Print Operations
+
+### ...
+
+### ...
+
+### ...
