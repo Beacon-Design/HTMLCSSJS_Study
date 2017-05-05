@@ -616,3 +616,46 @@ dictionary views in 3.X, dynamically reflect future changes made to the dictiona
 >>> dir(dict)
 ['__class__', '__contains__', '__delattr__', '__delitem__', '__dir__', '__doc__', '__eq__', '__format__', '__ge__', '__getattribute__', '__getitem__', '__gt__', '__hash__', '__init__', '__iter__', '__le__', '__len__', '__lt__', '__ne__', '__new__', '__reduce__', '__reduce_ex__', '__repr__', '__setattr__', '__setitem__', '__sizeof__', '__str__', '__subclasshook__', 'clear', 'copy', 'fromkeys', 'get', 'items', 'keys', 'pop', 'popitem', 'setdefault', 'update', 'values']
 ```
+
+
+
+
+
+
+### dict.get()
+
+Python 字典(Dictionary) get() 函数返回指定键的值，如果值不在字典中返回默认值。
+
+```
+dict.get(key, default=None)
+```
+
+- key -- 字典中要查找的键。
+- default -- 如果指定键的值不存在时，返回该默认值值。
+
+返回指定键的值，如果值不在字典中返回默认值None。
+
+> **get**(...)
+>
+> ​    D.get(k[,d]) -> D[k] if k in D, else d.  d defaults to None.
+
+**实例**:
+
+```
+>>> dict = {'Name':'tom','Age':'6'}
+>>> print(dict.get('Name'))
+tom
+>>> print(dict.get('school'))
+None
+>>> print(dict.get('Class','4'))
+4
+```
+
+
+
+
+
+
+
+
+

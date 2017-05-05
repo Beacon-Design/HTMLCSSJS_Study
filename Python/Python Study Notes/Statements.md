@@ -708,20 +708,24 @@ X |= Y 			X >>= Y 		X //= Y
 
 3. **The optimal technique is automatically chosen**. That is, for objects that support in-place changes, the augmented forms automatically perform in-place change operations instead of slower copies.
 
-   > ```
-   > >>> L = [1, 2]
-   > >>> L = L + [3]			# Concatenate: slower
-   > >>> L 
-   > [1, 2, 3]
-   > >>> L.append(4)			# Faster, but in place
-   > >>> L 
-   > [1, 2, 3, 4]
-   > ```
-   > For augmented assignments, in-place operations may be applied for mutable objects as an optimization.
-   >
-   > **Concatenation operations must create a new object**, copy in the list on the left, and then copy in the list on the right.
-   >
-   > **in-place method calls simply add items at the end of a memory block**.
+   ```
+   >>> L = [1, 2]
+   >>> L = L + [3]			# Concatenate: slower
+   >>> L 
+   [1, 2, 3]
+   >>> L.append(4)			# Faster, but in place
+   >>> L 
+   [1, 2, 3, 4]
+   ```
+   - For augmented assignments, in-place operations may be applied for mutable objects as an optimization.
+
+
+
+- **Concatenation operations must create a new object**, copy in the list on the left, and then copy in the list on the right.
+
+
+
+- **in-place method calls simply add items at the end of a memory block**.
 
 
 **Augmented assignment and shared references**:
@@ -811,3 +815,119 @@ Expression statements are often used to run list methods that change a list in p
 ### ...
 
 ### ...
+
+
+
+
+
+# Python Syntax Revisited
+
+- **Statements execute one after another, until you say otherwise.** 
+
+  > Python normally runs statements in a file or nested block in order from first to last as a sequence, but statements like `if` (as well as loops and exceptions) cause the interpreter to jump around in your code. Because Python’s path through a program is called the control flow, statements such as `if` that affect it are often called control-flow statements.
+
+
+- **Block and statement boundaries are detected automatically.**
+
+  >  As we’ve seen, there are no braces or “begin/end” delimiters around blocks of code in Python; instead, Python uses the indentation of statements under a header to group the statements in a nested block. Similarly, Python statements are not normally terminated with semicolons; rather, the end of a line usually marks the end of the statement coded on that line. As a special case, statements can span lines and be combined on a line with special syntax.
+
+
+- **Compound statements = header + “`:`” + indented statements.** 
+
+  > All Python compound statements—those with nested statements—follow the same pattern: a header line terminated with a colon, followed by one or more nested statements, usually indented under the header. The indented statements are called a block (or sometimes, a suite). In the `if` statement, the `elif` and `else` clauses are part of the `if`, but they are also header lines with nested blocks of their own. As a special case, blocks can show up on the same line as the header if they are simple noncompound code.
+
+
+- **Blank lines, spaces, and comments are usually ignored.** 
+
+  > Blank lines are both optional and ignored in files (but not at the interactive prompt, when they terminate compound statements). Spaces inside statements and expressions are almost always ignored (except in string literals, and when used for indentation). Comments are always ignored: they start with a # character (not inside a string literal) and extend to the end of the current line.
+
+
+- **Docstrings are ignored but are saved and displayed by tools.**
+
+  >  Python supports an additional comment form called documentation strings (docstrings for short), which, unlike # comments, are retained at runtime for inspection. Docstrings are simply strings that show up at the top of program files and some statements. Python ignores their contents, but they are automatically attached to objects at runtime and may be displayed with documentation tools like PyDoc. Docstrings are part of Python’s larger documentation strategy
+
+
+
+### Block Delimiters: Indentation Rules
+
+Python detects block boundaries automatically, by line indentation—that is, the empty space to the left of your code. All statements indented the same distance to the right belong to the same block of code.
+
+Indentation is simpler in practice than its details might initially imply, and it makes your code reflect its logical structure.
+
+
+
+### Avoid mixing tabs and spaces: New error checking in 3.X
+
+In fact, Python 3.X issues an error, for these very reasons, when a script mixes tabs and spaces for indentation inconsistently within a block (that is, in a way that makes it dependent on a tab’s equivalent in spaces). Python 2.X allows such scripts to run, but it has a `-t` command-line flag that will warn you about inconsistent tab usage and a `-tt` flag that will issue errors for such code (you can use these switches in a command line like `python –t main.py` in a system shell window). Python 3.X’s error case is equivalent to 2.X’s `-tt` switch.
+
+
+
+### Statement Delimiters: Lines and Continuations
+
+A statement in Python normally ends at the end of the line on which it appears. When a statement is too long to fit on a single line, though, a few special rules may be used to make it span multiple lines:
+
+- **Statements may span multiple lines if you’re continuing an open syntactic pair.** 
+
+  > Python lets you continue typing a statement on the next line if you’re coding something enclosed in a `()` , `{}` , or `[]` pair. For instance, expressions in parentheses and dictionary and list literals can span any number of lines; your statement doesn’t end until the Python interpreter reaches the line on which you type the closing part of the pair ( a `)` , `}` , or `]` ). Continuation lines—lines 2 and beyond of the statement —can start at any indentation level you like, but you should try to make them align vertically for readability if possible. This open pairs rule also covers set and dictionary comprehensions in Python 3.X and 2.7.
+
+
+- **Statements may span multiple lines if they end in a backslash.**
+
+  >  This is a somewhat outdated feature that’s not generally recommended, but if a statement needs to span multiple lines, you can also add a backslash (a `\` not embedded in a string literal or comment) at the end of the prior line to indicate you’re continuing on the next line. Because you can also continue by adding parentheses around most con-structs, backslashes are rarely used today. This approach is also error-prone: accidentally forgetting a `\` usually generates a syntax error and might even cause the next line to be silently mistaken (i.e., without warning) for a new statement, with unexpected results.
+
+
+- **Special rules for string literals.**
+
+  > triple-quoted string blocks are designed to span multiple lines normally.  adjacent string literals are implicitly concatenated; when it’s used in conjunction with the open pairs rule mentioned earlier, wrapping this construct in parentheses allows it to span multiple lines.
+
+
+- **you can terminate a statement with a semi-colon**
+
+  > this convention is sometimes used to squeeze more than one simple (non-compound) statement onto a single line. Also, 
+
+
+- comments and blank lines can appear anywhere in a file; comments (which begin with a # character) terminate at the end of the line on which they appear.
+
+
+
+### A Few Special Cases
+
+Here’s what a continuation line looks like using the open syntactic pairs rule just described. Delimited constructs, such as lists in square brackets, can **span across any number of lines**:
+
+```
+L = ["Good", 
+	 "Bad", 
+	 "Ugly"]		# Open pairs may span lines
+```
+
+> This also **works for anything in parentheses (expressions, function arguments, function headers, tuples, and generator expressions)**, as well as **anything in curly braces (dictionaries and, in 3.X and 2.7, set literals and set and dictionary comprehensions)**
+
+**wrap a part of your statement in parentheses**:
+
+```
+if (a == b and c == d and 
+	d == e and e == f): 
+	print('new')				# But parentheses usually do too, and are obvious
+```
+
+> If you like using backslashes to continue lines, you can, but it’s not common practice in Python:
+>
+> ```
+> if a == b and c == d and 	\
+>    d == e and f == g: 
+>    print('olde')				# Backslashes allow continuations...
+> ```
+> backslashes are too easy to not notice and too easy to omit altogether
+
+Python lets you move a compound statement’s body up to the header line, provided the body contains just simple (noncompound) statements.
+
+```
+if 1: print('hello')		# Simple statement on header line
+```
+
+
+
+
+
+
+

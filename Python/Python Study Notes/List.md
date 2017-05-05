@@ -204,9 +204,18 @@ Both index and slice assignments are in-place changes—they modify the subject 
 
 
 
-### List method calls
+## List method calls
 
-#### L.append()
+
+
+```
+>>> dir(list)
+['__add__', '__class__', '__contains__', '__delattr__', '__delitem__', '__dir__', '__doc__', '__eq__', '__format__', '__ge__', '__getattribute__', '__getitem__', '__gt__', '__hash__', '__iadd__', '__imul__', '__init__', '__iter__', '__le__', '__len__', '__lt__', '__mul__', '__ne__', '__new__', '__reduce__', '__reduce_ex__', '__repr__', '__reversed__', '__rmul__', '__setattr__', '__setitem__', '__sizeof__', '__str__', '__subclasshook__', 'append', 'clear', 'copy', 'count', 'extend', 'index', 'insert', 'pop', 'remove', 'reverse', 'sort']
+```
+
+
+
+### L.append()
 
 append, which simply tacks a single item (object reference) onto the end of the list.
 
@@ -222,7 +231,9 @@ The effect of L.append(X) is similar to L+[X], but while the former changes L in
 ['SPAM!', 'eat', 'more', 'please']
 ```
 
-#### L.sort()
+
+
+### L.sort()
 
 by default sorts in ascending order
 
@@ -304,7 +315,7 @@ the list pop method is often used in conjunction with append to implement a quic
 1
 ```
 
-#### del
+### del
 
 ```
 >>> L = ['spam', 'eggs', 'ham', 'toast']
@@ -331,15 +342,6 @@ just stores a reference to the empty list object in the specified slot, rather t
 ```
 
 
-
-## List method calls
-
-
-
-```
->>> dir(list)
-['__add__', '__class__', '__contains__', '__delattr__', '__delitem__', '__dir__', '__doc__', '__eq__', '__format__', '__ge__', '__getattribute__', '__getitem__', '__gt__', '__hash__', '__iadd__', '__imul__', '__init__', '__iter__', '__le__', '__len__', '__lt__', '__mul__', '__ne__', '__new__', '__reduce__', '__reduce_ex__', '__repr__', '__reversed__', '__rmul__', '__setattr__', '__setitem__', '__sizeof__', '__str__', '__subclasshook__', 'append', 'clear', 'copy', 'count', 'extend', 'index', 'insert', 'pop', 'remove', 'reverse', 'sort']
-```
 
 #### ...
 

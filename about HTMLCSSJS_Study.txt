@@ -1,3 +1,5 @@
+
+
 #This is a Html+Css+Javascript study folder.
 Change Log
 20170105 18:45
@@ -29,3 +31,5 @@ Change Log
 20170502        Immutable Types Can¡¯t Be Changed in Place
 20170503	Extended Sequence Unpacking in Python 3.X
 20170504	Print Operations
+20170505	for Loops
+    |# every deviation would evolve into something new
