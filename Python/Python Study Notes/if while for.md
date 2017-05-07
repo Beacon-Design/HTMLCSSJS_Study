@@ -530,6 +530,161 @@ else:						# Optional else part
 
 When Python runs a `for` loop, it assigns the items in the iterable object to the target one by one and executes the loop body for each. The loop body typically uses the assignment target to refer to the current item in the sequence as though it were a cursor stepping through the sequence.
 
+```
+for target in object:			# Assign object items to target
+	statements 
+	if test: break 				# Exit loop now, skip else 
+	if test: continue 			# Go to top of loop now
+else:
+	statements					# If we didn't hit a 'break', run else
+```
+
+#### List Example:
+
+```
+>>> for x in ["spam", "eggs", "ham"]: 
+... 	print(x, end=' ') 
+...
+spam eggs ham
+
+>>> sum = 0
+>>> for x in [1, 2, 3, 4]: 
+... 	sum = sum + x 
+...
+>>> sum 
+10
+>>> prod = 1
+>>> for item in [1, 2, 3, 4]: prod *= item 
+...
+>>> prod 
+24
+```
+
+#### String & Tuple Example:
+
+```
+>>> S = "lumberjack"
+>>> T = ("and", "I'm", "okay")
+
+>>> for x in S: print(x, end=' ') 		# Iterate over a string
+...
+l u m b e r j a c k
+
+>>> for x in T: print(x, end=' ') 		# Iterate over a tuple
+...
+and I'm okay
+```
+
+assign manually within the loop to unpack:
+
+```
+>>> T 
+[(1, 2), (3, 4), (5, 6)]
+
+>>> for both in T: 
+... 	a, b = both 	# Manual assignment equivalent
+... 	print(a, b) 
+...
+1 2 
+3 4 
+5 6
+```
+
+
+
+#### iterating through a sequence of tuples:
+
+```
+>>> T = [(1, 2), (3, 4), (5, 6)]
+>>> for (a, b) in T: 			# Tuple assignment at work
+...		print(a, b) 
+...
+1 2
+3 4
+5 6
+```
+
+#### Dictionary:
+
+```
+>>> D = {'a': 1, 'b': 2, 'c': 3}
+>>> for key in D:
+... 	print(key, '=>', D[key]) 		# Use dict keys iterator and index
+...
+a => 1 
+c => 3 
+b => 2
+
+>>> list(D.items()) 			# dictionaries using the items method
+[('a', 1), ('c', 3), ('b', 2)]
+
+>>> for (key, value) in D.items(): 
+... 	print(key, '=>', value) 		# Iterate over both keys and values
+...
+a => 1 
+c => 3 
+b => 2
+```
+
+#### Nested Structures :
+
+```
+>>> ((a, b), c) = ((1, 2), 3)		# Nested sequences work too
+>>> a, b, c 
+(1, 2, 3)
+
+>>> for ((a, b), c) in [((1, 2), 3), ((4, 5), 6)]: print(a, b, c) 
+...
+1 2 3 
+4 5 6
+```
+
+Any nested sequence structure may be unpacked this way, simply because sequence assignment is so generic:
+
+```
+>>> for ((a, b), c) in [([1, 2], 3), ['XY', 6]]: print(a, b, c) 
+...
+1 2 3 
+X Y 6
+```
+
+### Python 3.X extended sequence assignment in for loops
+
+**The only difference is that slicing returns a type-specific result, whereas starred names always are assigned lists**
+
+In Python 3.X,:
+
+```
+>>> a, *b, c = (1, 2, 3, 4)		# Extended seq assignment
+>>> a, b, c
+(1, [2, 3], 4)
+
+>>> for (a, *b, c) in [(1, 2, 3, 4), (5, 6, 7, 8)]: 	# in 3.X
+... 	print(a, b, c) 
+...
+1 [2, 3] 4 
+5 [6, 7] 8
+```
+
+In Python 2.X starred names aren’t allowed, but you can achieve similar effects by slicing:
+
+```
+>>> for all in [(1, 2, 3, 4), (5, 6, 7, 8)]: 		# Manual slicing in 2.X
+... 	a, b, c = all[0], all[1:3], all[3] 
+... 	print(a, b, c) 
+...
+1 (2, 3) 4 
+5 (6, 7) 8
+```
+
+### Nested for loops
+
+
+
+
+
+
+
 
 
 
