@@ -679,11 +679,217 @@ In Python 2.X starred names aren’t allowed, but you can achieve similar effect
 
 ### Nested for loops
 
+this code searches for each key in the objects list and reports on the search’s outcome:
+
+```
+>>> items = ["aaa", 111, (4, 5), 2.01]		# A set of objects
+>>> tests = [(4, 5), 3.14]					# Keys to search for
+>>>
+>>> for key in tests:						# For all keys
+... 	for item in items:					# For all items
+... 		if item == key:					# Check for match
+... 		print(key, "was found") 
+... 		break 
+... 	else:
+... 		print(key, "not found!") 
+...
+(4, 5) was found
+3.14 not found!
+```
+
+> there are two loops going at the same time: **the outer loop scans the keys list, and the inner loop scans the items list for each key.** 
+>
+> The nesting of the loop else clause is critical; it’s indented to the same level as the header line of the inner for loop, so it’s associated with the inner loop, not the if or the outer for.
 
 
 
+Because `in` implicitly scans an object looking for a match (at least logically), it replaces the inner loop:
+
+```
+>>> items = ["aaa", 111, (4, 5), 2.01]		# A set of objects
+>>> tests = [(4, 5), 3.14]					# Keys to search for
+>>> for key in tests:						# For all keys
+... 	if key in items:					# Let Python check for a match
+... 		print(key, "was found") 
+... 	else:
+... 		print(key, "not found!") 
+...
+(4, 5) was found 
+3.14 not found!
+```
 
 
+
+collecting common items in two sequences (strings)—and serves as a rough set **intersection** routine. `res` refers to a list that contains all the items found in `seq1` and `seq2`:
+
+```
+>>> seq1 = "spam"
+>>> seq2 = "scam"
+>>>
+>>> res = []				# Start empty
+>>> for x in seq1:			# Scan first sequence
+... 	if x in seq2: 		# Common item?
+... 		res.append(x) 	# Add to result end
+...
+>>> res 
+['s', 'a', 'm']
+```
+
+list comprehension:
+
+```
+>>> [x for x in seq1 if x in seq2] 		# Let Python collect results
+['s', 'a', 'm']
+```
+
+
+
+# Loop Coding Techniques
+
+The `for` loop we just studied subsumes most counter-style loops. It’s generally simpler to code and often quicker to run than a `while`, so it’s the first tool you should reach for **whenever you need to step through a sequence or other iterable**. In fact, as a general rule, **you should resist the temptation to count things in Python**—its iteration tools automate much of the work you do to loop over collections in lower-level languages like C.
+
+
+
+> what if you need to visit every second or third item in a list, or change the list along the way? How about traversing more than one sequence in parallel, in the same for loop? What if you need indexes too?
+
+You can always code such unique iterations with a `while` loop and manual indexing, but Python provides a set of built-ins that allow you to specialize the iteration in a `for`:
+
+- The built-in `range` function produces a series of successively higher integers, which can be used as indexes in a `for`.
+
+
+- The built-in `zip` function (available since Python 2.0) returns a series of parallel-item tuples, which can be used to traverse multiple sequences in a `for`.
+
+
+- The built-in `enumerate` function (available since Python 2.3) generates both the values and indexes of items in an iterable, so we don’t need to count manually.
+
+
+- The built-in `map` function (available since Python 1.0) can have a similar effect to `zip` in Python 2.X, though this role is removed in 3.X.
+
+**Because `for` loops may run quicker than `while` based counter loops**
+
+
+
+### Counter Loops: range
+
+Note that `for` loops force results from `range` automatically in 3.X, so we don’t need to use a `list` wrapper here in 3.X (in 2.X we get a temporary list unless we call `xrange` instead).
+
+repeat an action a specific number of times.
+
+```
+>>> for i in range(3):
+... print(i, 'Pythons') 
+...
+0 Pythons 
+1 Pythons 
+2 Pythons
+```
+
+
+
+### Sequence Scans: while and range Versus for
+
+for loop handles the details of the iteration automatically:
+
+```
+>>> X = 'spam'
+>>> for item in X: print(item, end=' ') 
+...
+s p a m
+```
+
+take over the indexing logic explicitly:
+
+```
+>>> X = 'spam'
+>>> i = 0
+>>> while i < len(X):			# while loop iteration
+... 	print(X[i], end=' ') 
+... 	i += 1 
+...
+s p a m
+```
+
+You can also do manual indexing with a `for`, though, if you use `range` to generate a list of indexes to iterate through. It’s a multistep process, but it’s sufficient to generate offsets, rather than the items at those offsets:
+
+```
+>>> X 
+'spam'
+>>> len(X) 											# Length of string
+4
+>>> list(range(len(X))) 							# All legal offsets into X
+[0, 1, 2, 3]
+>>>
+>>> for i in range(len(X)): print(X[i], end=' ') 	# Manual range/len iteration
+...
+s p a m
+```
+
+> Note that because this example is stepping over a list of offsets into X, not the actual items of X, we need to index back into X within the loop to fetch each item. If this seems like overkill, though, it’s because it is: there’s really no reason to work this hard in this example.
+
+you’re better off **using the simple `for` loop form** in Python:
+
+```
+>>> for item in X: print(item, end=' ')		# Use simple iteration if you can
+```
+
+**As a general rule, use `for` instead of `while` whenever possible, and don’t use `range` calls in `for` loops except as a last resort.**
+
+
+
+### Sequence Shufflers: range and len
+
+> ```
+> >>> S = 'spam'
+> >>> for i in range(len(S)): 	# For repeat counts 0..3
+> ... 	S = S[1:] + S[:1] 		# Move front item to end
+> ... 	print(S, end=' ') 
+> ...
+> pams amsp mspa spam
+> ```
+>
+> doesn’t change the original variable as it goes
+
+you shuffle a list, you create reordered lists:
+
+```
+>>> L = [1, 2, 3]
+>>> for i in range(len(L)): 
+... 	X = L[i:] + L[:i] 		# Works on any sequence type
+...		print(X, end=' ') 
+...
+[1, 2, 3] [2, 3, 1] [3, 1, 2]
+```
+
+
+
+### Nonexhaustive Traversals(非完备遍历): range Versus Slices
+
+the range/len combination to skip items：
+
+```
+>>> S = 'abcdefghijk'
+>>> list(range(0, len(S), 2)) 
+[0, 2, 4, 6, 8, 10]
+
+>>> for i in range(0, len(S), 2): print(S[i], end=' ') 
+...
+a c e g i k
+```
+
+skip items in a sequence, the extended three-limit form of the slice expression, provides a simpler route
+
+```
+>>> S = 'abcdefghijk'
+>>> for c in S[::2]: print(c, end=' ') 	slicing makes a copy of the string in both 2.X and 3.X
+...
+a c e g i k
+```
+
+The potential advantage to using range here instead is space: slicing makes a copy of the string in both 2.X and 3.X, while range in 3.X and xrange in 2.X do not create a list; for very large strings, they may **save memory**.
+
+
+
+### Changing Lists: range Versus Comprehensions
 
 
 

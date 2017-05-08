@@ -1,0 +1,4 @@
+File Scanners
+<<Learning Python 5th Edition>> Nested for loops_Why You Will Care: File Scanners
+123456
+“abcdeABCDE”

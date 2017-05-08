@@ -6,7 +6,7 @@ In short, the built-in open function creates a Python file object, which serves 
 
 they export only methods for common file-processing tasks. Most file methods are concerned with performing input from and output to the external file associated with a file object, but other file methods allow us to seek to a new position in the file, flush output buffers, and so on.
 
-### Common file operations
+## Common file operations
 
 ```
 Common file operations
@@ -32,7 +32,7 @@ codecs.open('f.txt', encoding='utf8')  Python 2.X Unicode text files (unicode st
 open('f.bin', 'rb')                    Python 2.X bytes files (str strings)
 ```
 
-### 常用的函数
+## 常用的函数
 
 file 对象使用 `open()` 函数来创建，下表列出了 file 对象常用的函数：
 
@@ -51,6 +51,32 @@ file 对象使用 `open()` 函数来创建，下表列出了 file 对象常用�
 | 11   | [`file.truncate([size])`](http://www.runoob.com/python/file-truncate.html) 截取文件，截取的字节通过size指定，默认为当前文件位置。 |
 | 12   | [`file.write(str)`](http://www.runoob.com/python/python-file-write.html) 将字符串写入文件，没有返回值。 |
 | 13   | [`file.writelines(sequence)`](http://www.runoob.com/python/file-writelines.html) 向文件写入一个序列字符串列表，如果需要换行则要自己加入每行的换行符。 |
+
+
+
+### file.read()
+
+**read()** 方法用于从文件读取指定的字节数，如果未给定或为负则读取所有。
+
+```
+fileObject.read([size]); 
+```
+
+**size** -- 从文件中读取的字节数。
+
+返回从字符串中读取的字节。
+
+
+
+
+
+
+
+
+
+
+
+
 
 ### Opening Files
 
@@ -72,7 +98,9 @@ afile.method()
 >
 > Both of the first two arguments to open must be Python strings. An optional third argument can be used to control output buffering—passing a zero means that output is unbuffered (it is transferred to the external file immediately on a write method call), and additional arguments may be provided for special types of files (e.g., an encoding for Unicode text files in Python 3.X).
 
-### Using Files
+
+
+## Using Files
 
 Once you make a file object with open, you can call its methods to read from or write to the associated external file. In all cases, file text takes the form of strings in Python programs; reading a file returns its content in strings, and content is passed to the write methods as strings.
 
@@ -99,7 +127,7 @@ Once you make a file object with open, you can call its methods to read from or 
   >
   > in Python an object’s memory space is automatically reclaimed as soon as the object is no longer referenced anywhere in the program. When file objects are reclaimed, Python also automatically closes the files if they are still open (this also happens when a program shuts down).
 
-### Files in Action
+## Files in Action
 
 ```
 >>> myfile = open('myfile.txt', 'w')			# Open for text output: create/empty
@@ -331,4 +359,68 @@ b'\x00\x00\x00\x07spam\x00\x08'
 >>> F.close()
 ```
 
-### 
+
+
+## File Scanners
+
+1. To **load a file’s contents into a string all at once**, you simply call the file object’s `read` method:
+
+   ```
+   file = open('test.txt', 'r') 		# Read contents into a string
+   print(file.read())
+   ```
+
+
+2. load a file in smaller pieces, To **read by characters**, either of the following codings will suffice:
+
+   **a while loop with breaks on end-of-file**
+
+   ```
+   file = open('test.txt') 
+   while True:
+   	char = file.read(1) 	# Read by character
+   	if not char: break 		# Empty string means end-of-file
+   	print(char)
+   ```
+
+   **a for loop**
+
+   ```
+   file = open('test.txt') 
+   for char in open('test.txt').read():
+   	print(char)
+   ```
+
+   > The `for` loop here also processes each character, but it loads the file into memory all at once (and assumes it fits!).
+
+3. To **read by lines** :
+
+   ```
+   file = open('test.txt') 
+   while True:
+   	line = file.readline() 		# Read line by line
+   	if not line: break 
+   	print(line.rstrip())		# Line already has a \n
+   ```
+
+4. **read binary data in blocks**:
+
+   ```
+   file = open('test.txt', 'rb') 
+   while True:
+   	chunk = file.read(10) 		# Read byte chunks: up to 10 bytes
+   	if not chunk: break 
+   	print(chunk)
+   ```
+
+5. To **read text files line by line**, though, the for loop tends to be easiest to code and the quickest to run:
+
+   ```
+   for line in open('test.txt').readlines():
+   	print(line.rstrip())
+
+   for line in open('test.txt'):		# Use iterators: best for text input
+   	print(line.rstrip())
+   ```
+
+   > Both of these versions work in both Python 2.X and 3.X. The first uses the file read lines method to load a file all at once into a line-string list, and the last example here relies on file iterators to automatically read one line on each loop iteration.
