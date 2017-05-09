@@ -37,9 +37,10 @@ def messageHistoryLinks(messageHistory_url):
         link_text = link_content.get_text()                      # get text in ankor a
         print(link_text)
     print('Done!')
+    print(soup.prettify())
 
-zuiJinShangYeDongCha_url = 'https://mp.weixin.qq.com/mp/profile_ext?action=home&__biz=MzIxMjEzODA5Mw==&scene=123&uin=MTEwMTgzNjQxMg%3D%3D&key=3624ad3ebaf14b8aa46ae6b14316147bb79d504558073b2796a38c7bd2a9c6e0f5b63f5aba23a0b764c53fbe366a8dbb1063b74f384ee8b858ab47a085ba206f1dde7d0a0877acaef09537c5a5c07672&devicetype=iMac17%2C1+OSX+OSX+10.11.6+build(15G31)&version=12020610&lang=en&nettype=WIFI&a8scene=0&fontScale=100&pass_ticket=3LGcPVuJsLXpssR0B4DCO2v%2FE3Mv7ZECgLt9TybtFiZ0wIv%2Fo1XLnZ2KOMAWCfzZ'
-messageHistoryLinks(zuiJinShangYeDongCha_url)
+url = 'https://mp.weixin.qq.com/mp/profile_ext?action=home&__biz=MzIxMjEzODA5Mw==&scene=124#wechat_redirect'
+messageHistoryLinks(url)
 
 
 # def write_file(max_pages):
