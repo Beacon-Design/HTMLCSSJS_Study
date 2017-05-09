@@ -152,3 +152,42 @@ def skipItems02():
         print(c, end=' ')
 print('\nNonexhaustive Traversals slice skip items: ')
 skipItems02()
+
+
+# really Changing Lists as we proceed through the loop
+def changeOriginalList():
+    L = [1, 2, 3, 4, 5]
+    for i in range(len(L)):     # Add one to each item in L
+        L[i] += 1               # Or L[i] = L[i] + 1
+    print(L)
+print('\nreally Changing Lists as we proceed through the loop: ')
+changeOriginalList()
+
+
+# Changing Lists without changing the original list in place
+def changeList():
+    L = [1, 2, 3, 4, 5]
+    L1 = [x + 1 for x in L]
+    print(L1)
+print('\nChanging Lists without changing the original list in place:')
+changeList()
+
+
+# Generating Both Offsets and Items normal for
+def offsetItem():
+    S = 'spam'
+    offset = 0
+    for item in S:
+        print(item, 'appears at offset', offset)
+        offset += 1
+print('\nGenerating Both Offsets and Items: ')
+offsetItem()
+
+
+# Generating Both Offsets and Items for enumerate
+def forEnumerate():
+    S = 'spam'
+    for i, item in enumerate(S):
+        print(i, item)
+print('\nGenerating Both Offsets and Items for enumerate: ')
+forEnumerate()

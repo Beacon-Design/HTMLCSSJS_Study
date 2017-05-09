@@ -891,7 +891,98 @@ The potential advantage to using range here instead is space: slicing makes a co
 
 ### Changing Lists: range Versus Comprehensions
 
+change a list as it is being traversed：
+
+```
+>>> L = [1, 2, 3, 4, 5]
+>>> for x in L: 
+... 	x += 1 		# Changes x, not L
+...
+>>> L 
+[1, 2, 3, 4, 5]
+>>> x 
+6
+```
+
+> it changes the loop variable x, not the list L.
+>
 
 
 
+To really change the list as we march across it, we need to use indexes so we can assign an updated value to each position as we go：
+
+```
+>>> L = [1, 2, 3, 4, 5]
+
+>>> for i in range(len(L)): 		# Add one to each item in L
+... 	L[i] += 1 					# Or L[i] = L[i] + 1
+...
+>>> L 
+[2, 3, 4, 5, 6]
+```
+
+> the list is changed as we proceed through the loop.
+>
+> There is no way to do the same with a simple `for x in L:`–style loop, because such a loop iterates through actual items, not list positions.
+
+
+
+run more slowly:
+
+```
+>>> L = [1, 2, 3, 4, 5]
+>>> i = 0
+>>> while i < len(L): 
+... 	L[i] += 1 
+... 	i += 1 
+...
+>>> L 
+[3, 4, 5, 6, 7]
+```
+
+A list comprehension expression of the form:
+
+```
+[x + 1 for x in L]
+```
+
+> without changing the original list in place (we could assign the expression’s new list object result back to L, but this would not update any other references to the original list)
+
+
+
+### zip()
+
+go to Built-in Functions, zip()
+
+
+
+### Generating Both Offsets and Items: enumerate
+
+a simple `for` loop that also kept a counter of the current offset:
+
+```
+>>> S = 'spam'
+>>> offset = 0
+>>> for item in S:
+... 	print(item, 'appears at offset', offset) 
+... 	offset += 1 
+...
+s appears at offset 0 
+p appears at offset 1 
+a appears at offset 2 
+m appears at offset 3
+```
+
+`enumerate` in all recent Python 2.X and 3.X releases (since 2.3), give loops a counter “for free” :
+
+```
+>>> S = 'spam'
+>>> for (offset, item) in enumerate(S):
+... 	print(item, 'appears at offset', offset) 
+...
+s appears at offset 0 
+p appears at offset 1 
+a appears at offset 2 
+m appears at offset 3
+```
 

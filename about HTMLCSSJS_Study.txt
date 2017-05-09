@@ -33,4 +33,5 @@ Change Log
 20170504	Print Operations
 20170505	for Loops
     |# every deviation would evolve into something new
-20170508	Changing Lists: range Versus Comprehensions
+20170508	Changing Lists: range Versus Comprehensions	¡ªDone-
+20170509	Manual Iteration: iter and next

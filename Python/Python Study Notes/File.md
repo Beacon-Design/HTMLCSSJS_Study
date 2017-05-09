@@ -6,6 +6,139 @@ In short, the built-in open function creates a Python file object, which serves 
 
 they export only methods for common file-processing tasks. Most file methods are concerned with performing input from and output to the external file associated with a file object, but other file methods allow us to seek to a new position in the file, flush output buffers, and so on.
 
+
+
+## TextIOWrapper object
+
+Help on TextIOWrapper object:
+
+```
+class TextIOWrapper(_TextIOBase)
+ |  Character and line based layer over a BufferedIOBase object, buffer.
+ |  
+ |  encoding gives the name of the encoding that the stream will be
+ |  decoded or encoded with. It defaults to locale.getpreferredencoding(False).
+ |  
+ |  errors determines the strictness of encoding and decoding (see
+ |  help(codecs.Codec) or the documentation for codecs.register) and
+ |  defaults to "strict".
+ |  
+ |  newline controls how line endings are handled. It can be None, '',
+ |  '\n', '\r', and '\r\n'.  It works as follows:
+ |  
+ |  * On input, if newline is None, universal newlines mode is
+ |    enabled. Lines in the input can end in '\n', '\r', or '\r\n', and
+ |    these are translated into '\n' before being returned to the
+ |    caller. If it is '', universal newline mode is enabled, but line
+ |    endings are returned to the caller untranslated. If it has any of
+ |    the other legal values, input lines are only terminated by the given
+ |    string, and the line ending is returned to the caller untranslated.
+ |  
+ |  * On output, if newline is None, any '\n' characters written are
+ |    translated to the system default line separator, os.linesep. If
+ |    newline is '' or '\n', no translation takes place. If newline is any
+ |    of the other legal values, any '\n' characters written are translated
+ |    to the given string.
+ |  
+ |  If line_buffering is True, a call to flush is implied when a call to
+ |  write contains a newline character.
+ |  
+ |  Method resolution order:
+ |      TextIOWrapper
+ |      _TextIOBase
+ |      _IOBase
+ |      builtins.object
+ |  
+ |  Methods defined here:
+ |  
+ |  __getstate__(...)
+ |  
+ |  __init__(self, /, *args, **kwargs)
+ |      Initialize self.  See help(type(self)) for accurate signature.
+ |  
+ |  __new__(*args, **kwargs) from builtins.type
+ |      Create and return a new object.  See help(type) for accurate signature.
+ |  
+ |  __next__(self, /)
+ |      Implement next(self).
+ |  
+ |  __repr__(self, /)
+ |      Return repr(self).
+ |  
+ |  close(...)
+ |  
+ |  detach(...)
+ |  
+ |  fileno(...)
+ |  
+ |  flush(...)
+ |  
+ |  isatty(...)
+ |  
+ |  read(...)
+ |  
+ |  readable(...)
+ |  
+ |  readline(...)
+ |  
+ |  seek(...)
+ |  
+ |  seekable(...)
+ |  
+ |  tell(...)
+ |  
+ |  truncate(...)
+ |  
+ |  writable(...)
+ |  
+ |  write(...)
+ |  
+ |  ----------------------------------------------------------------------
+ |  Data descriptors defined here:
+ |  
+ |  buffer
+ |  
+ |  closed
+ |  
+ |  encoding
+ |  
+ |  errors
+ |  
+ |  line_buffering
+ |  
+ |  name
+ |  
+ |  newlines
+ |  
+ |  ----------------------------------------------------------------------
+ |  Methods inherited from _IOBase:
+ |  
+ |  __del__(...)
+ |  
+ |  __enter__(...)
+ |  
+ |  __exit__(...)
+ |  
+ |  __iter__(self, /)
+ |      Implement iter(self).
+ |  
+ |  readlines(...)
+ |      Return a list of lines from the stream.
+ |      
+ |      hint can be specified to control the number of lines read: no more
+ |      lines will be read if the total size (in bytes/characters) of all
+ |      lines so far exceeds hint.
+ |  
+ |  writelines(...)
+ |  
+ |  ----------------------------------------------------------------------
+ |  Data descriptors inherited from _IOBase:
+ |  
+ |  __dict__
+```
+
+
+
 ## Common file operations
 
 ```

@@ -8,9 +8,11 @@ Reference:
 
 https://docs.python.org/3.6/library/functions.html
 
+https://docs.python.org/2.7/library/functions.html
 
+Built-in Functions 3.X
 
-|                                          |                                          | Built-in Functions                       |                                          |                                          |
+| Built-in Functions                       | 3.X                                      |                                          |                                          |                                          |
 | ---------------------------------------- | ---------------------------------------- | ---------------------------------------- | ---------------------------------------- | ---------------------------------------- |
 | [`abs()`](https://docs.python.org/3.6/library/functions.html#abs) | [`dict()`](https://docs.python.org/3.6/library/functions.html#func-dict) | [`help()`](https://docs.python.org/3.6/library/functions.html#help) | [`min()`](https://docs.python.org/3.6/library/functions.html#min) | [`setattr()`](https://docs.python.org/3.6/library/functions.html#setattr) |
 | [`all()`](https://docs.python.org/3.6/library/functions.html#all) | [`dir()`](https://docs.python.org/3.6/library/functions.html#dir) | [`hex()`](https://docs.python.org/3.6/library/functions.html#hex) | [`next()`](https://docs.python.org/3.6/library/functions.html#next) | [`slice()`](https://docs.python.org/3.6/library/functions.html#slice) |
@@ -26,6 +28,137 @@ https://docs.python.org/3.6/library/functions.html
 | [`compile()`](https://docs.python.org/3.6/library/functions.html#compile) | [`globals()`](https://docs.python.org/3.6/library/functions.html#globals) | [`map()`](https://docs.python.org/3.6/library/functions.html#map) | [`reversed()`](https://docs.python.org/3.6/library/functions.html#reversed) | [`__import__()`](https://docs.python.org/3.6/library/functions.html#__import__) |
 | [`complex()`](https://docs.python.org/3.6/library/functions.html#complex) | [`hasattr()`](https://docs.python.org/3.6/library/functions.html#hasattr) | [`max()`](https://docs.python.org/3.6/library/functions.html#max) | [`round()`](https://docs.python.org/3.6/library/functions.html#round) |                                          |
 | [`delattr()`](https://docs.python.org/3.6/library/functions.html#delattr) | [`hash()`](https://docs.python.org/3.6/library/functions.html#hash) | [`memoryview()`](https://docs.python.org/3.6/library/functions.html#func-memoryview) | [`set()`](https://docs.python.org/3.6/library/functions.html#func-set) |                                          |
+
+
+
+Built-in Functions 2.X
+
+| Built-in Functions                       | 2.X                                      |                                          |                                          |                                          |
+| ---------------------------------------- | ---------------------------------------- | ---------------------------------------- | ---------------------------------------- | ---------------------------------------- |
+| [`abs()`](https://docs.python.org/2.7/library/functions.html#abs) | [`divmod()`](https://docs.python.org/2.7/library/functions.html#divmod) | [`input()`](https://docs.python.org/2.7/library/functions.html#input) | [`open()`](https://docs.python.org/2.7/library/functions.html#open) | [`staticmethod()`](https://docs.python.org/2.7/library/functions.html#staticmethod) |
+| [`all()`](https://docs.python.org/2.7/library/functions.html#all) | [`enumerate()`](https://docs.python.org/2.7/library/functions.html#enumerate) | [`int()`](https://docs.python.org/2.7/library/functions.html#int) | [`ord()`](https://docs.python.org/2.7/library/functions.html#ord) | [`str()`](https://docs.python.org/2.7/library/functions.html#str) |
+| [`any()`](https://docs.python.org/2.7/library/functions.html#any) | [`eval()`](https://docs.python.org/2.7/library/functions.html#eval) | [`isinstance()`](https://docs.python.org/2.7/library/functions.html#isinstance) | [`pow()`](https://docs.python.org/2.7/library/functions.html#pow) | [`sum()`](https://docs.python.org/2.7/library/functions.html#sum) |
+| [`basestring()`](https://docs.python.org/2.7/library/functions.html#basestring) | [`execfile()`](https://docs.python.org/2.7/library/functions.html#execfile) | [`issubclass()`](https://docs.python.org/2.7/library/functions.html#issubclass) | [`print()`](https://docs.python.org/2.7/library/functions.html#print) | [`super()`](https://docs.python.org/2.7/library/functions.html#super) |
+| [`bin()`](https://docs.python.org/2.7/library/functions.html#bin) | [`file()`](https://docs.python.org/2.7/library/functions.html#file) | [`iter()`](https://docs.python.org/2.7/library/functions.html#iter) | [`property()`](https://docs.python.org/2.7/library/functions.html#property) | [`tuple()`](https://docs.python.org/2.7/library/functions.html#tuple) |
+| [`bool()`](https://docs.python.org/2.7/library/functions.html#bool) | [`filter()`](https://docs.python.org/2.7/library/functions.html#filter) | [`len()`](https://docs.python.org/2.7/library/functions.html#len) | [`range()`](https://docs.python.org/2.7/library/functions.html#range) | [`type()`](https://docs.python.org/2.7/library/functions.html#type) |
+| [`bytearray()`](https://docs.python.org/2.7/library/functions.html#bytearray) | [`float()`](https://docs.python.org/2.7/library/functions.html#float) | [`list()`](https://docs.python.org/2.7/library/functions.html#list) | [`raw_input()`](https://docs.python.org/2.7/library/functions.html#raw_input) | [`unichr()`](https://docs.python.org/2.7/library/functions.html#unichr) |
+| [`callable()`](https://docs.python.org/2.7/library/functions.html#callable) | [`format()`](https://docs.python.org/2.7/library/functions.html#format) | [`locals()`](https://docs.python.org/2.7/library/functions.html#locals) | [`reduce()`](https://docs.python.org/2.7/library/functions.html#reduce) | [`unicode()`](https://docs.python.org/2.7/library/functions.html#unicode) |
+| [`chr()`](https://docs.python.org/2.7/library/functions.html#chr) | [`frozenset()`](https://docs.python.org/2.7/library/functions.html#func-frozenset) | [`long()`](https://docs.python.org/2.7/library/functions.html#long) | [`reload()`](https://docs.python.org/2.7/library/functions.html#reload) | [`vars()`](https://docs.python.org/2.7/library/functions.html#vars) |
+| [`classmethod()`](https://docs.python.org/2.7/library/functions.html#classmethod) | [`getattr()`](https://docs.python.org/2.7/library/functions.html#getattr) | [`map()`](https://docs.python.org/2.7/library/functions.html#map) | [`repr()`](https://docs.python.org/2.7/library/functions.html#func-repr) | [`xrange()`](https://docs.python.org/2.7/library/functions.html#xrange) |
+| [`cmp()`](https://docs.python.org/2.7/library/functions.html#cmp) | [`globals()`](https://docs.python.org/2.7/library/functions.html#globals) | [`max()`](https://docs.python.org/2.7/library/functions.html#max) | [`reversed()`](https://docs.python.org/2.7/library/functions.html#reversed) | [`zip()`](https://docs.python.org/2.7/library/functions.html#zip) |
+| [`compile()`](https://docs.python.org/2.7/library/functions.html#compile) | [`hasattr()`](https://docs.python.org/2.7/library/functions.html#hasattr) | [`memoryview()`](https://docs.python.org/2.7/library/functions.html#func-memoryview) | [`round()`](https://docs.python.org/2.7/library/functions.html#round) | [`__import__()`](https://docs.python.org/2.7/library/functions.html#__import__) |
+| [`complex()`](https://docs.python.org/2.7/library/functions.html#complex) | [`hash()`](https://docs.python.org/2.7/library/functions.html#hash) | [`min()`](https://docs.python.org/2.7/library/functions.html#min) | [`set()`](https://docs.python.org/2.7/library/functions.html#func-set) |                                          |
+| [`delattr()`](https://docs.python.org/2.7/library/functions.html#delattr) | [`help()`](https://docs.python.org/2.7/library/functions.html#help) | [`next()`](https://docs.python.org/2.7/library/functions.html#next) | [`setattr()`](https://docs.python.org/2.7/library/functions.html#setattr) |                                          |
+| [`dict()`](https://docs.python.org/2.7/library/functions.html#func-dict) | [`hex()`](https://docs.python.org/2.7/library/functions.html#hex) | [`object()`](https://docs.python.org/2.7/library/functions.html#object) | [`slice()`](https://docs.python.org/2.7/library/functions.html#slice) |                                          |
+| [`dir()`](https://docs.python.org/2.7/library/functions.html#dir) | [`id()`](https://docs.python.org/2.7/library/functions.html#id) | [`oct()`](https://docs.python.org/2.7/library/functions.html#oct) | [`sorted()`](https://docs.python.org/2.7/library/functions.html#sorted) |                                          |
+
+
+
+
+
+
+
+## enumerate()
+
+enumerate() 函数用于将一个可遍历的数据对象(如列表、元组或字符串)组合为一个索引序列，同时列出数据和数据下标，一般用在 for 循环当中。
+
+Python 2.3. 以上版本可用，2.6 添加 start 参数。
+
+> ```
+> class enumerate(object)
+>  |  enumerate(iterable[, start]) -> iterator for index, value of iterable
+>  |  
+>  |  Return an enumerate object.  iterable must be another object that supports
+>  |  iteration.  The enumerate object yields pairs containing a count (from
+>  |  start, which defaults to zero) and a value yielded by the iterable argument.
+>  |  enumerate is useful for obtaining an indexed list:
+>  |      (0, seq[0]), (1, seq[1]), (2, seq[2]), ...
+>  |  
+>  |  Methods defined here:
+>  |  
+>  |  __getattribute__(self, name, /)
+>  |      Return getattr(self, name).
+>  |  
+>  |  __iter__(self, /)
+>  |      Implement iter(self).
+>  |  
+>  |  __new__(*args, **kwargs) from builtins.type
+>  |      Create and return a new object.  See help(type) for accurate signature.
+>  |  
+>  |  __next__(self, /)
+>  |      Implement next(self).
+>  |  
+>  |  __reduce__(...)
+>  |      Return state information for pickling.
+> ```
+
+#### 函数语法
+
+```
+enumerate(sequence, [start=0])
+```
+
+#### 参数
+
+- sequence -- 一个序列、迭代器或其他支持迭代对象。
+- start -- 下标起始位置。
+
+#### 返回值
+
+返回 enumerate(枚举) 对象。
+
+#### 实例
+
+```
+>>>seasons = ['Spring', 'Summer', 'Fall', 'Winter']
+>>> list(enumerate(seasons))
+[(0, 'Spring'), (1, 'Summer'), (2, 'Fall'), (3, 'Winter')]
+>>> list(enumerate(seasons, start=1))       			# 小标从 1 开始
+[(1, 'Spring'), (2, 'Summer'), (3, 'Fall'), (4, 'Winter')]
+```
+
+普通的 `for` 循环:
+
+```
+>>>i = 0
+>>> seq = ['one', 'two', 'three']
+>>> for element in seq:
+...     print (i, seq[i])
+...     i +=1
+... 
+0 one
+1 two
+2 three
+```
+
+`for` 循环使用 `enumerate`:
+
+```
+>>> seq = ['one', 'two', 'three']
+>>> for i, item in enumerate(seq):
+...     print(i, item)
+... 
+0 one
+1 two
+2 three
+```
+
+it has a method called by the `next` built-in function, which returns an (index, value) tuple each time through the loop. The `for` steps through these tuples automatically, which allows us to unpack their values with tuple assignment,
+
+```
+>>> seq = ['one', 'two', 'three']
+>>> E = enumerate(seq)
+>>> E
+<enumerate object at 0x101605f78>
+>>> next(E)
+(0, 'one')
+>>> next(E)
+(1, 'two')
+>>> next(E)
+(2, 'three')
+```
+
+
 
 
 
@@ -85,6 +218,31 @@ eval(expression[, globals[, locals]])
 
 该接收两个参数，第一个为函数，第二个为序列，序列的每个元素作为参数传递给函数进行判，然后返回 True 或 False，最后将返回 True 的元素放到新列表中。
 
+> ```
+> class filter(object)
+>  |  filter(function or None, iterable) --> filter object
+>  |  
+>  |  Return an iterator yielding those items of iterable for which function(item)
+>  |  is true. If function is None, return the items that are true.
+>  |  
+>  |  Methods defined here:
+>  |  
+>  |  __getattribute__(self, name, /)
+>  |      Return getattr(self, name).
+>  |  
+>  |  __iter__(self, /)
+>  |      Implement iter(self).
+>  |  
+>  |  __new__(*args, **kwargs) from builtins.type
+>  |      Create and return a new object.  See help(type) for accurate signature.
+>  |  
+>  |  __next__(self, /)
+>  |      Implement next(self).
+>  |  
+>  |  __reduce__(...)
+>  |      Return state information for pickling.
+> ```
+
 #### 函数语法:
 
 ```
@@ -118,6 +276,69 @@ print(newlist)
 ```
 
 
+
+
+
+## help()
+
+**help()** 函数用于查看函数或模块用途的详细说明。
+
+> ```
+> class _Helper(builtins.object)
+>  |  Define the builtin 'help'.
+>  |  
+>  |  This is a wrapper around pydoc.help that provides a helpful message
+>  |  when 'help' is typed at the Python interactive prompt.
+>  |  
+>  |  Calling help() at the Python prompt starts an interactive help session.
+>  |  Calling help(thing) prints help for the python object 'thing'.
+>  |  
+>  |  Methods defined here:
+>  |  
+>  |  __call__(self, *args, **kwds)
+>  |  
+>  |  __repr__(self)
+>  |  
+>  |  ----------------------------------------------------------------------
+>  |  Data descriptors defined here:
+>  |  
+>  |  __dict__
+>  |      dictionary for instance variables (if defined)
+>  |  
+>  |  __weakref__
+>  |      list of weak references to the object (if defined)
+> ```
+
+#### 函数语法:
+
+```
+help([object])
+```
+
+#### 参数说明：
+
+- object -- 对象；
+
+#### 返回值:
+
+返回对象帮助信息。
+
+#### 实例:
+
+```
+>>>help('sys')             # 查看 sys 模块的帮助
+……显示帮助信息……
+ 
+>>>help('str')             # 查看 str 数据类型的帮助
+……显示帮助信息……
+ 
+>>>a = [1,2,3]
+>>>help(a)                 # 查看列表 list 帮助信息
+……显示帮助信息……
+ 
+>>>help(a.append)          # 显示list的append方法的帮助
+……显示帮助信息……
+```
 
 
 
@@ -219,9 +440,107 @@ python open() 函数用于打开一个文件，创建一个 `file` 对象，�
 >     In text mode, if encoding is not specified the encoding used is platform
 >     dependent: locale.getpreferredencoding(False) is called to get the
 >     current locale encoding. (For reading and writing raw bytes use binary
+>     mode and leave encoding unspecified.) The available modes are:
 >     
+>     ========= ===============================================================
+>     Character Meaning
+>     --------- ---------------------------------------------------------------
+>     'r'       open for reading (default)
+>     'w'       open for writing, truncating the file first
+>     'x'       create a new file and open it for writing
+>     'a'       open for writing, appending to the end of the file if it exists
+>     'b'       binary mode
+>     't'       text mode (default)
+>     '+'       open a disk file for updating (reading and writing)
+>     'U'       universal newline mode (deprecated)
+>     ========= ===============================================================
 >     
+>     The default mode is 'rt' (open for reading text). For binary random
+>     access, the mode 'w+b' opens and truncates the file to 0 bytes, while
+>     'r+b' opens the file without truncation. The 'x' mode implies 'w' and
+>     raises an `FileExistsError` if the file already exists.
 >     
+>     Python distinguishes between files opened in binary and text modes,
+>     even when the underlying operating system doesn't. Files opened in
+>     binary mode (appending 'b' to the mode argument) return contents as
+>     bytes objects without any decoding. In text mode (the default, or when
+>     't' is appended to the mode argument), the contents of the file are
+>     returned as strings, the bytes having been first decoded using a
+>     platform-dependent encoding or using the specified encoding if given.
+>     
+>     'U' mode is deprecated and will raise an exception in future versions
+>     of Python.  It has no effect in Python 3.  Use newline to control
+>     universal newlines mode.
+>     
+>     buffering is an optional integer used to set the buffering policy.
+>     Pass 0 to switch buffering off (only allowed in binary mode), 1 to select
+>     line buffering (only usable in text mode), and an integer > 1 to indicate
+>     the size of a fixed-size chunk buffer.  When no buffering argument is
+>     given, the default buffering policy works as follows:
+>     
+>     * Binary files are buffered in fixed-size chunks; the size of the buffer
+>       is chosen using a heuristic trying to determine the underlying device's
+>       "block size" and falling back on `io.DEFAULT_BUFFER_SIZE`.
+>       On many systems, the buffer will typically be 4096 or 8192 bytes long.
+>     
+>     * "Interactive" text files (files for which isatty() returns True)
+>       use line buffering.  Other text files use the policy described above
+>       for binary files.
+>     
+>     encoding is the name of the encoding used to decode or encode the
+>     file. This should only be used in text mode. The default encoding is
+>     platform dependent, but any encoding supported by Python can be
+>     passed.  See the codecs module for the list of supported encodings.
+>     
+>     errors is an optional string that specifies how encoding errors are to
+>     be handled---this argument should not be used in binary mode. Pass
+>     'strict' to raise a ValueError exception if there is an encoding error
+>     (the default of None has the same effect), or pass 'ignore' to ignore
+>     errors. (Note that ignoring encoding errors can lead to data loss.)
+>     See the documentation for codecs.register or run 'help(codecs.Codec)'
+>     for a list of the permitted encoding error strings.
+>     
+>     newline controls how universal newlines works (it only applies to text
+>     mode). It can be None, '', '\n', '\r', and '\r\n'.  It works as
+>     follows:
+>     
+>     * On input, if newline is None, universal newlines mode is
+>       enabled. Lines in the input can end in '\n', '\r', or '\r\n', and
+>       these are translated into '\n' before being returned to the
+>       caller. If it is '', universal newline mode is enabled, but line
+>       endings are returned to the caller untranslated. If it has any of
+>       the other legal values, input lines are only terminated by the given
+>       string, and the line ending is returned to the caller untranslated.
+>     
+>     * On output, if newline is None, any '\n' characters written are
+>       translated to the system default line separator, os.linesep. If
+>       newline is '' or '\n', no translation takes place. If newline is any
+>       of the other legal values, any '\n' characters written are translated
+>       to the given string.
+>     
+>     If closefd is False, the underlying file descriptor will be kept open
+>     when the file is closed. This does not work when a file name is given
+>     and must be True in that case.
+>     
+>     A custom opener can be used by passing a callable as *opener*. The
+>     underlying file descriptor for the file object is then obtained by
+>     calling *opener* with (*file*, *flags*). *opener* must return an open
+>     file descriptor (passing os.open as *opener* results in functionality
+>     similar to passing None).
+>     
+>     open() returns a file object whose type depends on the mode, and
+>     through which the standard file operations such as reading and writing
+>     are performed. When open() is used to open a file in a text mode ('w',
+>     'r', 'wt', 'rt', etc.), it returns a TextIOWrapper. When used to open
+>     a file in a binary mode, the returned class varies: in read binary
+>     mode, it returns a BufferedReader; in write binary and append binary
+>     modes, it returns a BufferedWriter, and in read/write mode, it returns
+>     a BufferedRandom.
+>     
+>     It is also possible to use a string or bytearray as a file for both
+>     reading and writing. For strings StringIO can be used like a file
+>     opened in a text mode, and for bytes a BytesIO can be used like a file
+>     opened in a binary mode.
 > ```
 
 #### 函数语法:
@@ -281,6 +600,79 @@ open(name[, mode[, buffering]])
 ## range()
 
 pytho range() 函数可创建一个整数列表，一般用在 for 循环中。
+
+> ```
+> class range(object)
+>  |  range(stop) -> range object
+>  |  range(start, stop[, step]) -> range object
+>  |  
+>  |  Return a sequence of numbers from start to stop by step.
+>  |  
+>  |  Methods defined here:
+>  |  
+>  |  __contains__(self, key, /)
+>  |      Return key in self.
+>  |  
+>  |  __eq__(self, value, /)
+>  |      Return self==value.
+>  |  
+>  |  __ge__(self, value, /)
+>  |      Return self>=value.
+>  |  
+>  |  __getattribute__(self, name, /)
+>  |      Return getattr(self, name).
+>  |  
+>  |  __getitem__(self, key, /)
+>  |      Return self[key].
+>  |  
+>  |  __gt__(self, value, /)
+>  |      Return self>value.
+>  |  
+>  |  __hash__(self, /)
+>  |      Return hash(self).
+>  |  
+>  |  __iter__(self, /)
+>  |      Implement iter(self).
+>  |  
+>  |  __le__(self, value, /)
+>  |      Return self<=value.
+>  |  
+>  |  __len__(self, /)
+>  |      Return len(self).
+>  |  
+>  |  __lt__(self, value, /)
+>  |      Return self<value.
+>  |  
+>  |  __ne__(self, value, /)
+>  |      Return self!=value.
+>  |  
+>  |  __new__(*args, **kwargs) from builtins.type
+>  |      Create and return a new object.  See help(type) for accurate signature.
+>  |  
+>  |  __reduce__(...)
+>  |  
+>  |  __repr__(self, /)
+>  |      Return repr(self).
+>  |  
+>  |  __reversed__(...)
+>  |      Return a reverse iterator.
+>  |  
+>  |  count(...)
+>  |      rangeobject.count(value) -> integer -- return number of occurrences of value
+>  |  
+>  |  index(...)
+>  |      rangeobject.index(value, [start, [stop]]) -> integer -- return index of value.
+>  |      Raise ValueError if the value is not present.
+>  |  
+>  |  ----------------------------------------------------------------------
+>  |  Data descriptors defined here:
+>  |  
+>  |  start
+>  |  
+>  |  step
+>  |  
+>  |  stop
+> ```
 
 #### 函数语法:
 
@@ -344,7 +736,89 @@ type() 函数如果你只有第一个参数则返回对象的类型，三个参�
 > 如果要判断两个类型是否相同推荐使用 isinstance()。
 
 > ```
->
+> class type(object)
+>  |  type(object_or_name, bases, dict)
+>  |  type(object) -> the object's type
+>  |  type(name, bases, dict) -> a new type
+>  |  
+>  |  Methods defined here:
+>  |  
+>  |  __call__(self, /, *args, **kwargs)
+>  |      Call self as a function.
+>  |  
+>  |  __delattr__(self, name, /)
+>  |      Implement delattr(self, name).
+>  |  
+>  |  __dir__(...)
+>  |      __dir__() -> list
+>  |      specialized __dir__ implementation for types
+>  |  
+>  |  __getattribute__(self, name, /)
+>  |      Return getattr(self, name).
+>  |  
+>  |  __init__(self, /, *args, **kwargs)
+>  |      Initialize self.  See help(type(self)) for accurate signature.
+>  |  
+>  |  __instancecheck__(...)
+>  |      __instancecheck__() -> bool
+>  |      check if an object is an instance
+>  |  
+>  |  __new__(*args, **kwargs)
+>  |      Create and return a new object.  See help(type) for accurate signature.
+>  |  
+>  |  __prepare__(...)
+>  |      __prepare__() -> dict
+>  |      used to create the namespace for the class statement
+>  |  
+>  |  __repr__(self, /)
+>  |      Return repr(self).
+>  |  
+>  |  __setattr__(self, name, value, /)
+>  |      Implement setattr(self, name, value).
+>  |  
+>  |  __sizeof__(...)
+>  |      __sizeof__() -> int
+>  |      return memory consumption of the type object
+>  |  
+>  |  __subclasscheck__(...)
+>  |      __subclasscheck__() -> bool
+>  |      check if a class is a subclass
+>  |  
+>  |  __subclasses__(...)
+>  |      __subclasses__() -> list of immediate subclasses
+>  |  
+>  |  mro(...)
+>  |      mro() -> list
+>  |      return a type's method resolution order
+>  |  
+>  |  ----------------------------------------------------------------------
+>  |  Data descriptors defined here:
+>  |  
+>  |  __abstractmethods__
+>  |  
+>  |  __dict__
+>  |  
+>  |  __text_signature__
+>  |  
+>  |  ----------------------------------------------------------------------
+>  |  Data and other attributes defined here:
+>  |  
+>  |  __base__ = <class 'object'>
+>  |      The most base type
+>  |  
+>  |  __bases__ = (<class 'object'>,)
+>  |  
+>  |  __basicsize__ = 824
+>  |  
+>  |  __dictoffset__ = 264
+>  |  
+>  |  __flags__ = 2148291584
+>  |  
+>  |  __itemsize__ = 40
+>  |  
+>  |  __mro__ = (<class 'type'>, <class 'object'>)
+>  |  
+>  |  __weakrefoffset__ = 368
 > ```
 
 #### 函数语法:
@@ -402,3 +876,163 @@ type(A()) == A        # returns True
 isinstance(B(), A)    # returns True
 type(B()) == A        # returns False
 ```
+
+
+## zip()
+
+**zip()** 函数用于将可迭代的对象作为参数，将对象中对应的元素打包成一个个元组，然后返回由这些元组组成的列表。
+
+如果各个迭代器的元素个数不一致，则返回列表长度与最短的对象相同，利用 * 号操作符，可以将元组解压为列表。
+
+> ```
+> class zip(object)
+>  |  zip(iter1 [,iter2 [...]]) --> zip object
+>  |  
+>  |  Return a zip object whose .__next__() method returns a tuple where
+>  |  the i-th element comes from the i-th iterable argument.  The .__next__()
+>  |  method continues until the shortest iterable in the argument sequence
+>  |  is exhausted and then it raises StopIteration.
+>  |  
+>  |  Methods defined here:
+>  |  
+>  |  __getattribute__(self, name, /)
+>  |      Return getattr(self, name).
+>  |  
+>  |  __iter__(self, /)
+>  |      Implement iter(self).
+>  |  
+>  |  __new__(*args, **kwargs) from builtins.type
+>  |      Create and return a new object.  See help(type) for accurate signature.
+>  |  
+>  |  __next__(self, /)
+>  |      Implement next(self).
+>  |  
+>  |  __reduce__(...)
+>  |      Return state information for pickling.
+> ```
+
+#### 函数语法:
+
+```
+zip([iterable, ...])
+```
+
+#### 参数说明：
+
+- iterabl -- 一个或多个迭代器;
+
+#### 返回值:
+
+返回元组列表。
+
+#### 实例:
+
+```
+# Python 2.X
+--------------------------------------------------------------------------------
+>>>a = [1,2,3]
+>>> b = [4,5,6]
+>>> c = [4,5,6,7,8]
+>>> zipped = zip(a,b)     # 打包为元组的列表
+[(1, 4), (2, 5), (3, 6)]
+>>> zip(a,c)              # 元素个数与最短的列表一致
+[(1, 4), (2, 5), (3, 6)]
+>>> zip(*zipped)          # 与 zip 相反，可理解为解压，返回二维矩阵式
+[(1, 2, 3), (4, 5, 6)]
+
+# Python 3.X
+--------------------------------------------------------------------------------
+>>> a = [1,2,3]
+>>> b = [4,5,6]
+>>> zip(a,b)
+<zip object at 0x10103ea48>
+>>> list(zip(a,b))			# list() required in 3.X, not 2.X
+[(1, 4), (2, 5), (3, 6)]
+```
+
+parallel iterations:
+
+```
+>>> L1 = [1,2,3,4]
+>>> L2 = [5,6,7,8]
+>>> for (x, y) in zip(L1, L2): 
+... 	print(x, y, '--', x+y) 
+...
+1 5 -- 6 
+2 6 -- 8 
+3 7 -- 10 
+4 8 -- 12
+```
+
+> Notice that this for loop again uses the tuple assignment form we met earlier to unpack each tuple in the zip result. The first time through, it’s as though we ran the assignment statement (x, y) = (1, 5).
+
+
+
+**the `zip` function**, it **accepts any type of sequence** (really, any iterable object, including files), and it **accepts more than two arguments**.
+
+```
+>>> T1, T2, T3 = (1,2,3), (4,5,6), (7,8,9)
+>>> T3 
+(7, 8, 9)
+>>> list(zip(T1, T2, T3)) 			# Three tuples for three arguments
+[(1, 4, 7), (2, 5, 8), (3, 6, 9)]
+```
+
+
+
+#### map equivalence in Python 2.X
+
+`zip` truncates result tuples at the length of the shortest sequence when the argument lengths differ.
+
+```
+>>> S1 = 'abc'
+>>> S2 = 'xyz123'
+
+>>> map(None, S1, S2) 			# 2.X only: pads to len(longest) 
+[('a', 'x'), ('b', 'y'), ('c', 'z'), (None, '1'), (None, '2'), (None,'3')]
+```
+
+```
+>>> list(map(ord, 'spam')) 
+[115, 112, 97, 109]
+```
+
+`map` is often quicker
+
+```
+>>> res = []
+>>> for c in 'spam': res.append(ord(c))
+>>> res 
+[115, 112, 97, 109]
+```
+
+
+
+#### Dictionary construction with `zip`
+
+```
+>>> keys = ['spam', 'eggs', 'toast']
+>>> vals = [1, 3, 5]
+
+>>> list(zip(keys, vals)) 
+[('spam', 1), ('eggs', 3), ('toast', 5)]
+
+>>> D2 = {}
+>>> for (k, v) in zip(keys, vals): D2[k] = v 
+...
+>>> D2 
+{'eggs': 3, 'toast': 5, 'spam': 1}
+```
+
+in Python 2.2 and later you can skip the for loop altogether and simply pass the zipped keys/values lists to the built-in dict constructor call:
+
+```
+>>> keys = ['spam', 'eggs', 'toast']
+>>> vals = [1, 3, 5]
+
+>>> D3 = dict(zip(keys, vals))
+>>> D3 
+{'eggs': 3, 'toast': 5, 'spam': 1}
+```
+
+> The built-in name dict is really a type name in Python. Calling it achieves something like a list-to-dictionary conversion, but it’s really an object construction request.
