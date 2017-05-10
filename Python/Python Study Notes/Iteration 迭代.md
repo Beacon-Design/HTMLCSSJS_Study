@@ -30,9 +30,122 @@ call the iteration protocol in Python. Any object with a `__next__` method to ad
 >
 > calls `X.__next__()` in 3.X and `X.next()` in 2.X.
 
+In fact, everything that scans left to right in Python employs the iteration protocol in the same way
+
+
+
 
 
 ### Manual Iteration: iter and next
+
+To simplify manual iteration code.
+
+a `next(X)` built-in function is also available in both Python 3.X and 2.X (2.6 and later)
+
+calls `X.__next__()` in 3.X and `X.next()` in 2.X.
+
+```
+>>> f = open('script2.py')
+>>> f.__next__() 			# Call iteration method directly
+'import sys\n'
+>>> f.__next__() 
+'print(sys.path)\n'
+
+>>> f = open('script2.py')
+>>> next(f) 				# The next(f) built-in calls f.__next__() in 3.X
+'import sys\n'
+>>> next(f) 				# next(f) => [3.X: f.__next__()], [2.X: f.next()]
+'print(sys.path)\n'
+```
+
+When the `for` loop begins, it first obtains an iterator from the iterable object by passing it to the `iter` built-in function; the object returned by `iter` in turn has the required `next` method. The `iter` function internally runs the `__iter__` method, much like next and `__next__`.
+
+> the file iterator still appears to be slightly faster than `readlines` and at least 30% faster than the `while` loop in both 2.7 and 3.3 on tests
+
+#### The full iteration protocol
+
+- The iterable object you request iteration for, whose `__iter__` is run by `iter`
+
+
+- The iterator object returned by the iterable that actually produces values during the iteration, whose `__next__` is run by `next` and raises `StopIteration` when finished producing results
+
+
+![Python iteration protocol](img/Python iteration protocol.jpg)
+
+> The Python iteration protocol, used by for loops, comprehensions, maps, and more, and supported by files, lists, dictionaries, generators, and more. Some objects are both iteration context and iterable object, such as generator expressions and 3.X’s flavors of some tools (such as map and zip). Some objects are both iterable and iterator, returning themselves for the iter() call, which is then a no-op.
+
+how `for` loops internally process built-in sequence types such as lists:
+
+```
+>>> L = [1, 2, 3]
+>>> I = iter(L)				# Obtain an iterator object from an iterable
+>>> I.__next__()			# Call iterator's next to advance to next item
+>>> I.__next__() 			# Or use I.next() in 2.X, next(I) in either line
+2
+>>> I.__next__() 
+3
+>>> I.__next__() 
+...error text omitted... 
+StopIteration
+```
+
+This initial step is not required for files, because a file object is its own iterator. Because they support just one iteration (they can’t seek backward to support multiple active scans), files have their own `__next__` method and do not need to return a different object that does:
+
+```
+>>> f = open('script2.py')
+>>> iter(f) is f True
+>>> iter(f) is f.__iter__() 
+True
+>>> f.__next__() 
+'import sys\n'
+```
+
+Lists and many other built-in objects, though, are not their own iterators because they do support multiple open iterations—for example, there may be multiple iterations in nested loops all at different positions. For such objects, we must call `iter` to start iter-ating:
+
+```
+>>> L = [1, 2, 3]
+>>> iter(L) is L 
+False
+>>> L.__next__() 
+AttributeError: 'list' object has no attribute '__next__'
+
+>>> I = iter(L)
+>>> I.__next__() 
+1
+>>> next(I) 		# Same as I.__next__()
+2
+```
+
+
+
+#### Manual iteration
+
+automatic iteration:
+
+```
+>>> L = [1, 2, 3]
+>>>
+>>> for X in L:					# Automatic iteration
+... 	print(X ** 2, end=' ') 	# Obtains iter, calls __next__, catches exceptions
+...
+1 4 9
+```
+
+manual iteration:
+
+```
+>>> L = [1, 2, 3]
+>>> I = iter(L)					# Manual iteration: what for loops usually do
+>>> while True:
+... 	try:					# try statement catches exceptions
+... 		X = next(I) 		# Or call I.__next__ in 3.X
+... 	except StopIteration: 
+... 		break 
+... 	print(X ** 2, end=' ') 
+...
+1 4 9
+```
+
 
 
 
@@ -159,6 +272,49 @@ a 1
 b 2
 ```
 
+to request its keys list explicitly:
+
+```
+>>> D = {'a':1, 'b':2, 'c':3}
+>>> for key in D.keys(): 
+... 	print(key, D[key]) 
+...
+a 1 
+b 2 
+c 3
+```
+
+dictionaries are iterables with an iterator that automatically returns one key at a time in an iteration context:
+
+```
+>>> I = iter(D)
+>>> next(I) 
+'a'
+>>> next(I) 
+'b'
+>>> next(I) 
+'c'
+>>> next(I) 
+Traceback (most recent call last):
+	File "<stdin>", line 1, in <module> 
+StopIteration
+```
+
+the `for` loop will use the iteration protocol to grab one key each time through:
+
+```
+>>> for key in D:
+... 	print(key, D[key]) 
+...
+a 1 
+b 2 
+c 3
+```
+
+
+
+
+
 
 
 ### 字符串也是可迭代对象
@@ -171,6 +327,36 @@ A
 B
 C
 ```
+
+
+
+### os.popen
+
+shelves (an access-by-key filesystem for Python objects) and the results from `os.popen` (a tool for reading the output of shell commands) are iterable:
+
+```
+>>> import os
+>>> P = os.popen('dir')
+>>> P.__next__() 
+' Volume in drive C has no label.\n'
+>>> P.__next__() 
+' Volume Serial Number is D093-D1F7\n'
+>>> next(P) 
+TypeError: _wrap_close object is not an iterator
+```
+
+`popen` objects themselves support a `P.next()` method in Python 2.X. In 3.X, they support the `P.__next__()` method, but not the `next(P)` built-in.
+
+```
+>>> P = os.popen('dir')
+>>> I = iter(P)
+>>> next(I) 
+' Volume in drive C has no label.\n'
+>>> I.__next__() 
+' Volume Serial Number is D093-D1F7\n'
+```
+
+
 
 
 
@@ -201,4 +387,14 @@ Python内置的 `enumerate` 函数可以把一个list变成索引-元素对，�
 0 A
 1 B
 2 C
+```
+```
+>>> E = enumerate('spam') 		# enumerate is an iterable too
+>>> E 
+<enumerate object at 0x00000000029B7678>
+>>> I = iter(E)
+>>> next(I) 					# Generate results with iteration protocol (0, 's')
+>>> next(I) 					# Or use list to force generation to run (1, 'p')
+>>> list(enumerate('spam')) 
+[(0, 's'), (1, 'p'), (2, 'a'), (3, 'm')]
 ```

@@ -410,6 +410,115 @@ type(B()) == A        # returns False
 
 
 
+## iter()
+
+**iter()** 函数用来生成迭代器。
+
+> ```
+> iter(...)
+>     iter(iterable) -> iterator
+>     iter(callable, sentinel) -> iterator
+>     
+>     Get an iterator from an object.  In the first form, the argument must
+>     supply its own iterator, or be a sequence.
+>     In the second form, the callable is called until it returns the sentinel.
+> ```
+
+#### 函数语法:
+
+```
+iter(object[, sentinel])
+```
+
+#### 参数说明：
+
+- object -- 支持迭代的集合对象。
+- sentinel -- 如果传递了第二个参数，则参数 object 必须是一个可调用的对象（如，函数），此时，iter 创建了一个迭代器对象，每次调用这个迭代器对象的 `__next__()` 方法时，都会调用 object。
+
+#### 返回值:
+
+迭代器对象。
+
+#### 实例:
+
+```
+>>>L = [1, 2, 3]
+>>> for i in iter(L):
+...     print(i)
+... 
+1
+2
+3
+```
+
+
+
+## next()
+
+**next()** 返回迭代器的下一个项目。
+
+> ```
+> next(...)
+>     next(iterator[, default])
+>     
+>     Return the next item from the iterator. If default is given and the iterator
+>     is exhausted, it is returned instead of raising StopIteration.
+> ```
+
+#### 函数语法:
+
+```
+next(iterator[, default])
+```
+
+#### 参数说明：
+
+- iterator -- 可迭代对象
+- default -- 可选，用于设置在没有下一个元素时返回该默认值，如果不设置，又没有下一个元素则会触发 StopIteration 异常。
+
+#### 返回值:
+
+Return the next item from the iterator or raising StopIteration
+
+#### 实例:
+
+example 1:
+
+```
+>>> L = 'good'
+>>> I = iter(L)
+>>> I
+<str_iterator object at 0x10113bda0>
+>>> list(I)
+['g', 'o', 'o', 'd']
+```
+example 2:
+
+```
+#!/usr/bin/python
+# -*- coding: UTF-8 -*-
+ 
+# 首先获得Iterator对象:
+it = iter([1, 2, 3, 4, 5])
+# 循环:
+while True:
+    try:
+        # 获得下一个值:
+        x = next(it)
+        print(x)
+    except StopIteration:
+        # 遇到StopIteration就退出循环
+        break
+```
+
+> ```
+> 1
+> 2
+> 3
+> 4
+> 5
+> ```
+
 
 
 ## open()
