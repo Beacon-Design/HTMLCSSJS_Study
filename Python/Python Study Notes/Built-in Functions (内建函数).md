@@ -54,6 +54,65 @@ Built-in Functions 2.X
 
 
 
+## dir()
+
+**dir()** 函数不带参数时，返回当前范围内的变量、方法和定义的类型列表；带参数时，返回参数的属性、方法列表。如果参数包含方法 `__dir__()` ，该方法将被调用。如果参数不包含 `__dir__()` ，该方法将最大限度地收集参数信息。
+
+> ```
+> dir(...)
+>     dir([object]) -> list of strings
+>     
+>     If called without an argument, return the names in the current scope.
+>     Else, return an alphabetized list of names comprising (some of) the attributes
+>     of the given object, and of attributes reachable from it.
+>     If the object supplies a method named __dir__, it will be used; otherwise
+>     the default dir() logic is used and returns:
+>       for a module object: the module's attributes.
+>       for a class object:  its attributes, and recursively the attributes
+>         of its bases.
+>       for any other object: its attributes, its class's attributes, and
+>         recursively the attributes of its class's base classes.
+> ```
+
+#### 函数语法
+
+```
+dir([object])
+```
+
+#### 参数
+
+- object -- 对象、变量、类型。
+
+#### 返回值
+
+返回模块的属性列表。
+
+#### 扩展
+
+To find out what attributes are provided in objects of built-in types, run `dir` on a literal or an existing instance of the desired type.
+
+For example, to see list and string attributes, you can pass empty objects:
+
+```
+>>> dir([]) ['__add__', '__class__', '__contains__', ...more..., 'append', 'clear', 'copy', 'count', 'extend', 'index', 'insert', 'pop', 'remove', 'reverse', 'sort']
+
+>>> dir('') ['__add__', '__class__', '__contains__', ...more..., 'split', 'splitlines', 'startswith','strip', 'swapcase', 'title', 'translate', 'upper', 'zfill']
+```
+
+#### 实例
+
+```
+>>>dir()   		# 获得当前模块的属性列表
+['__builtins__', '__doc__', '__name__', '__package__', 'arr', 'myslice']
+>>> dir([ ])    # 查看列表的方法
+['__add__', '__class__', '__contains__', '__delattr__', '__delitem__', '__delslice__', '__doc__', '__eq__', '__format__', '__ge__', '__getattribute__', '__getitem__', '__getslice__', '__gt__', '__hash__', '__iadd__', '__imul__', '__init__', '__iter__', '__le__', '__len__', '__lt__', '__mul__', '__ne__', '__new__', '__reduce__', '__reduce_ex__', '__repr__', '__reversed__', '__rmul__', '__setattr__', '__setitem__', '__setslice__', '__sizeof__', '__str__', '__subclasshook__', 'append', 'count', 'extend', 'index', 'insert', 'pop', 'remove', 'reverse', 'sort']
+```
+
+
+
+
+
 
 
 
@@ -258,6 +317,28 @@ filter(function, iterable)
 
 返回列表。
 
+#### 扩展：
+
+`filter` both accepts an iterable to process and returns an iterable to generate results in 3.X.
+
+It returns items in an iterable for which a passed-in function returns `True` (as we’ve learned, in Python `True` includes nonempty objects, and `bool` returns an object’s truth value)
+
+```
+>>> filter(bool, ['spam', '', 'ni']) 
+<filter object at 0x00000000029B7B70>
+>>> list(filter(bool, ['spam', '', 'ni'])) 
+['spam', 'ni']
+```
+
+It can also generally be emulated by extended list comprehension syntax that automatically tests truth values:
+
+```
+>>> [x for x in ['spam', '', 'ni'] if bool(x)] 
+['spam', 'ni']
+>>> [x for x in ['spam', '', 'ni'] if x] 
+['spam', 'ni']
+```
+
 #### 实例:
 
 ```
@@ -268,7 +349,7 @@ def is_odd(n):
     return n % 2 == 1
  
 newlist = filter(is_odd, [1, 2, 3, 4, 5, 6, 7, 8, 9, 10])
-print(newlist)
+print(newlist)			# the result is:[1, 3, 5, 7, 9]
 ```
 
 ```
@@ -450,6 +531,112 @@ iter(object[, sentinel])
 2
 3
 ```
+
+
+
+## map()
+
+**map()** 会根据提供的函数对指定序列做映射。
+
+第一个参数 function 以参数序列中的每一个元素调用 function 函数，返回包含每次 function 函数返回值的新列表。
+
+> ```
+> class map(object)
+>  |  map(func, *iterables) --> map object
+>  |  
+>  |  Make an iterator that computes the function using arguments from
+>  |  each of the iterables.  Stops when the shortest iterable is exhausted.
+>  |  
+>  |  Methods defined here:
+>  |  
+>  |  __getattribute__(self, name, /)
+>  |      Return getattr(self, name).
+>  |  
+>  |  __iter__(self, /)
+>  |      Implement iter(self).
+>  |  
+>  |  __new__(*args, **kwargs) from builtins.type
+>  |      Create and return a new object.  See help(type) for accurate signature.
+>  |  
+>  |  __next__(self, /)
+>  |      Implement next(self).
+>  |  
+>  |  __reduce__(...)
+>  |      Return state information for pickling.
+> ```
+
+#### 函数语法:
+
+```
+map(function, iterable, ...)
+```
+
+#### 参数说明：
+
+- function -- 函数，有两个参数
+- iterable -- 一个或多个序列
+
+#### 返回值:
+
+返回列表。
+
+#### 扩展：
+
+- **they are their own iterators—after you step through their results once, they are ex-hausted**. In other words, you can’t have multiple iterators on their results that maintain different positions in those results.
+- **a single iterator generally means an object returns itself**
+
+#### 实例:
+
+```
+>>>def square(x) :            		 # 计算平方数
+...     return x ** 2
+... 
+
+>>> map(square, [1,2,3,4,5])   		 # Python 2.X
+[1, 4, 9, 16, 25]
+
+>>> map(square, [1,2,3,4])			 # Python 3.X
+<map object at 0x1014040b8>		
+>>> list(map(square, [1,2,3,4,5]))   # 计算列表和：1+2+3+4+5
+[1, 4, 9, 16, 25]
+
+>>> list(map(lambda x: x ** 2, [1, 2, 3, 4, 5]))  # 使用 lambda 匿名函数
+[1, 4, 9, 16, 25]
+ 
+# 提供了两个列表，对相同位置的列表数据进行相加
+>>> list(map(lambda x, y: x + y, [1, 3, 5, 7, 9], [2, 4, 6, 8, 10]))
+[3, 7, 11, 15, 19]
+```
+Python 3.X:
+```
+>>> M = map(abs, (-1, 0, 1))			# map returns an iterable, not a list
+>>> M
+<map object at 0x1010d8198>
+>>> next(M)								# Use iterator manually: exhausts results
+1										# These do not support len() or indexing
+>>> next(M)
+0
+>>> next(M)
+1
+>>> next(M)
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+StopIteration
+
+>>> for x in M: print(x)				# map iterator is now empty: one pass only
+... 
+
+>>> M = map(abs, (-1, 0, 1))			# Make a new iterable/iterator to scan again
+>>> for x in M: print(x)				# Iteration contexts auto call next()
+... 
+1
+0
+1
+>>> list(map(abs, (-1, 0, 1)))			# Can force a real list if needed
+[1, 0, 1]
+```
+
+
 
 
 
@@ -795,6 +982,13 @@ range(start, stop[, step])
 - end: 计数到 end 结束，但不包括 end。例如：range（0， 5） 是[0, 1, 2, 3, 4]没有5
 - step：步长，默认为1。例如：range（0， 5） 等价于 range(0, 5, 1)
 
+#### 扩展：
+
+- **they are their own iterators—after you step through their results once, they are ex-hausted**. In other words, you can’t have multiple iterators on their results that maintain different positions in those results.
+
+
+- **multiple iterators are usually supported by returning new objects for the iter call**
+
 #### 实例:
 
 ```
@@ -821,7 +1015,107 @@ range(start, stop[, step])
 [-5, -4, -3, -2, -1, 0, 1, 2, 3, 4]
 >>> list(range(5, -5, -1))
 [5, 4, 3, 2, 1, 0, -1, -2, -3, -4]
+
+>>> R = range(10)			# range returns an iterable, not a list
+>>> R 
+range(0, 10)
+
+>>> I = iter(R)				# Make an iterator from the range iterable
+>>> next(I) 				# Advance to next result
+0							# What happens in for loops, comprehensions, etc.
+>>> next(I) 
+1
+>>> next(I) 
+2
+
+>>> list(range(10)) 		# To force a list if required
+[0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
+
+>>> len(R) 					# range also does len and indexing, but no others
+10
+>>> R[0] 
+0
+>>> R[-1] 
+9
+
+>>> next(I) 				# Continue taking from iterator, where left off
+3
+>>> I.__next__() 			# .next() becomes .__next__(), but use new next()
+4
 ```
+
+
+
+
+
+## sorted()
+
+**sorted()** 函数对所有可迭代的对象进行排序操作。
+
+#### **sort 与 sorted 区别：**
+
+- sort 是应用在 list 上的方法，sorted 可以对所有可迭代的对象进行排序操作。
+
+
+- list 的 sort 方法返回的是对已经存在的列表进行操作，而内建函数 sorted 方法返回的是一个新的 list，而不是在原来的基础上进行的操作。
+
+> ```
+> # Python 2.X
+>
+> sorted(...)
+>     sorted(iterable, cmp=None, key=None, reverse=False) --> new sorted list
+> ```
+
+> ```
+> # Python 3.X
+>
+> sorted(...)
+>     sorted(iterable, key=None, reverse=False) --> new sorted list
+> ```
+
+#### 函数语法:
+
+```
+sorted(iterable[, cmp[, key[, reverse]]])
+```
+
+#### 参数说明：
+
+- iterable -- 可迭代对象。
+- cmp -- 比较的函数，这个具有两个参数，参数的值都是从可迭代对象中取出，此函数必须遵守的规则为，大于则返回1，小于则返回-1，等于则返回0。
+- key -- 主要是用来进行比较的元素，只有一个参数，具体的函数的参数就是取自于可迭代对象中，指定可迭代对象中的一个元素来进行排序。
+- reverse -- 排序规则，reverse = True 降序 ， reverse = False 升序（默认）。
+
+#### 返回值:
+
+返回重新排序的列表。
+
+#### 实例:
+
+```
+>>>a = [5,7,6,3,4,1,2]
+>>> b = sorted(a)       # 保留原列表
+>>> a 
+[5, 7, 6, 3, 4, 1, 2]
+>>> b
+[1, 2, 3, 4, 5, 6, 7]
+ 
+>>> L=[('b',2),('a',1),('c',3),('d',4)]
+>>> sorted(L, cmp=lambda x,y:cmp(x[1],y[1]))   # 利用cmp函数
+[('a', 1), ('b', 2), ('c', 3), ('d', 4)]
+>>> sorted(L, key=lambda x:x[1])               # 利用key
+[('a', 1), ('b', 2), ('c', 3), ('d', 4)]
+ 
+ 
+>>> students = [('john', 'A', 15), ('jane', 'B', 12), ('dave', 'B', 10)]
+>>> sorted(students, key=lambda s: s[2])            # 按年龄排序
+[('dave', 'B', 10), ('jane', 'B', 12), ('john', 'A', 15)]
+ 
+>>> sorted(students, key=lambda s: s[2], reverse=True)       # 按降序
+[('john', 'A', 15), ('jane', 'B', 12), ('dave', 'B', 10)]
+```
+
+
 
 
 
@@ -987,6 +1281,9 @@ type(B()) == A        # returns False
 ```
 
 
+
+
+
 ## zip()
 
 **zip()** 函数用于将可迭代的对象作为参数，将对象中对应的元素打包成一个个元组，然后返回由这些元组组成的列表。
@@ -1034,6 +1331,11 @@ zip([iterable, ...])
 
 返回元组列表。
 
+#### 扩展：
+
+- **they are their own iterators—after you step through their results once, they are ex-hausted**. In other words, you can’t have multiple iterators on their results that maintain different positions in those results.
+- **a single iterator generally means an object returns itself**
+
 #### 实例:
 
 ```
@@ -1057,6 +1359,29 @@ zip([iterable, ...])
 <zip object at 0x10103ea48>
 >>> list(zip(a,b))			# list() required in 3.X, not 2.X
 [(1, 4), (2, 5), (3, 6)]
+
+>>> Z = zip((1, 2, 3), (10, 20, 30))		# zip is the same: a one-pass iterator
+>>> Z 
+<zip object at 0x0000000002951108>
+
+>>> list(Z) 
+[(1, 10), (2, 20), (3, 30)]
+
+>>> for pair in Z: print(pair) 				# Exhausted after one pass
+...
+
+>>> Z = zip((1, 2, 3), (10, 20, 30))
+>>> for pair in Z: print(pair) 				# Iterator used automatically or manually
+...
+(1, 10) 
+(2, 20) 
+(3, 30)
+
+>>> Z = zip((1, 2, 3), (10, 20, 30))		# Manual iteration (iter() not needed)
+>>> next(Z) 
+(1, 10)
+>>> next(Z) 
+(2, 20)
 ```
 
 parallel iterations:

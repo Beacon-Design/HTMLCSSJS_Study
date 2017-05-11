@@ -35,3 +35,4 @@ Change Log
     |# every deviation would evolve into something new
 20170508	Changing Lists: range Versus Comprehensions	¡ªDone-
 20170509	Manual Iteration: iter and next
+20170511	The dir Function

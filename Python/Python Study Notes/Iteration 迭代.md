@@ -20,7 +20,7 @@ all iteration tools that scan objects from left to right in Python, including `f
 
 
 
-### The Iteration Protocol: File Iterators
+## The Iteration Protocol: File Iterators
 
 understand the iteration protocol is to see how it works with a built-in type such as the file：
 
@@ -36,7 +36,7 @@ In fact, everything that scans left to right in Python employs the iteration pro
 
 
 
-### Manual Iteration: iter and next
+## Manual Iteration: iter and next
 
 To simplify manual iteration code.
 
@@ -148,6 +148,64 @@ manual iteration:
 
 
 
+## Other Iteration Contexts
+
+every built-in tool that scans from left to right across objects uses the iteration protocol.
+
+list comprehensions and the `map` built-in function use the same protocol as their `for` loop cousin. When applied to a file, they both leverage the file object’s iterator automatically to scan line by line, fetching an iterator with `__iter__` and calling `__next__` each time through:
+
+```
+>>> for line in open('script2.py'): 		# Use file iterators
+... 	print(line.upper(), end='')
+...
+IMPORT SYS 
+PRINT(SYS.PATH) 
+X = 2 
+PRINT(X ** 32)
+```
+
+For example, sequence assignment, the `in` membership test, slice assignment, and the list’s `extend` method also leverage the iteration protocol to scan, and thus read a file by lines automatically:
+
+```
+>>> a, b, c, d = open('script2.py')		# Sequence assignment
+>>> a, d 
+('import sys\n', 'print(x ** 32)\n')
+
+>>> a, *b = open('script2.py') 			# 3.X extended form
+>>> a, b 
+('import sys\n', ['print(sys.path)\n', 'x = 2\n', 'print(x ** 32)\n'])
+
+>>> 'y = 2\n' in open('script2.py') 	# Membership test
+False
+>>> 'x = 2\n' in open('script2.py') 
+True
+
+>>> L = [11, 22, 33, 44]				# Slice assignment
+>>> L[1:3] = open('script2.py')
+>>> L 
+[11, 'import sys\n', 'print(sys.path)\n', 'x = 2\n', 'print(x ** 32)\n', 44]
+
+>>> L = [11]
+>>> L.extend(open('script2.py'))		# list.extend method
+
+>>> L 
+[11, 'import sys\n', 'print(sys.path)\n', 'x = 2\n', 'print(x ** 32)\n']
+```
+
+
+
+- User-defined functions can be turned into iterable generator functions, with yield statements.
+
+
+- List comprehensions morph into iterable generator expressions when coded in parentheses.
+
+
+- User-defined classes are made iterable with `__iter__` or `__getitem__` operator over-loading.
+
+
+
+
+
 
 ### `for` loop
 
@@ -230,13 +288,48 @@ read a file line by line with a `while` loop:
 
 
 
+### list comprehensions
 
-
-
+```
+>>> uppers = [line.upper() for line in open('script2.py')]
+>>> uppers 
+['IMPORT SYS\n', 'PRINT(SYS.PATH)\n', 'X = 2\n', 'PRINT(X ** 32)\n']
+```
 
 
 
 ### dict 可以迭代
+
+- in Python 3.X the dictionary `keys`, `values`, and `items` methods return iterable view objects that generate result items one at a time, instead of producing result lists all at once in memory .
+
+
+- Views are also available in 2.7 as an option, but under special method names to avoid impacting existing code. 
+
+
+- View items maintain the same physical ordering as that of the dictionary and reflect changes made to the underlying dictionary.
+
+```
+>>> D = dict(a=1, b=2, c=3)
+>>> D
+{'c': 3, 'b': 2, 'a': 1}
+
+>>> K = D.keys()			# A view object in 3.X, not a list
+>>> K
+dict_keys(['c', 'b', 'a'])
+
+>>> next(K)					# Views are not iterators themselves
+TypeError: 'dict_keys' object is not an iterator
+
+>>> I = iter(K)				# View iterables have an iterator,
+>>> next(I)					# which can be used manually,
+'c'							# but does not support len(), index
+>>> next(I)
+'b'
+
+>>> for k in D.keys(): print(k, end=' ')		# All iteration contexts use auto
+...
+a b c
+```
 
 ```
 >>> d = {'a': 1, 'b': 2, 'c': 3}
@@ -311,7 +404,20 @@ b 2
 c 3
 ```
 
+because `keys` no longer returns a list, the traditional coding pattern for scanning a dictionary by sorted keys won’t work in 3.X. Instead, convert keys views first with a `list` call, or use the `sorted` call on either a keys view or the dictionary itself,
 
+```
+>>> D = dict(a=1, b=2, c=3)
+>>> D
+{'c': 3, 'b': 2, 'a': 1}
+>>> for k in sorted(D.keys()): print(k, D[k], end=' ')
+... 
+a 1 b 2 c 3 
+>>> 
+>>> for k in sorted(D): print(k, D[k], end=' ')
+... 
+a 1 b 2 c 3 
+```
 
 
 
@@ -376,7 +482,7 @@ False
 
 
 
-### enumerate
+### enumerate()
 
 Python内置的 `enumerate` 函数可以把一个list变成索引-元素对，这样就可以在`for`循环中同时迭代索引和元素本身：
 
@@ -397,4 +503,143 @@ Python内置的 `enumerate` 函数可以把一个list变成索引-元素对，�
 >>> next(I) 					# Or use list to force generation to run (1, 'p')
 >>> list(enumerate('spam')) 
 [(0, 's'), (1, 'p'), (2, 'a'), (3, 'm')]
+```
+```
+>>> list(enumerate(open('script2.py'))) 
+[(0, 'import sys\n'), (1, 'print(sys.path)\n'), (2, 'x = 2\n'), (3, 'print(x ** 32)\n')]
+```
+
+
+
+### sorted()
+
+`sorted` sorts items in an iterable
+
+```
+>>> sorted(open('script2.py')) 
+['import sys\n', 'print(sys.path)\n', 'print(x ** 32)\n', 'x = 2\n']
+```
+
+
+
+### zip()
+
+`zip` combines items from iterables
+
+```
+>>> list(zip(open('script2.py'), open('script2.py'))) 
+[('import sys\n', 'import sys\n'), ('print(sys.path)\n', 'print(sys.path)\n'), ('x = 2\n', 'x = 2\n'), ('print(x ** 32)\n', 'print(x ** 32)\n')]
+```
+
+
+
+### filter()
+
+`filter` selects items for which a function is true
+
+```
+>>> list(filter(bool, open('script2.py'))) 			# nonempty=True 
+['import sys\n', 'print(sys.path)\n', 'x = 2\n', 'print(x ** 32)\n']
+```
+
+
+
+### reduce()
+
+`reduce` runs pairs of items in an iterable through a function
+
+```
+>>> import functools, operator
+>>> functools.reduce(operator.add, open('script2.py')) 
+'import sys\nprint(sys.path)\nx = 2\nprint(x ** 32)\n'
+```
+
+
+
+### map()
+
+```
+>>> map(str.upper, open('script2.py')) 		# map is itself an iterable in 3.X
+<map object at 0x00000000029476D8>
+>>> list(map(str.upper, open('script2.py'))) 
+['IMPORT SYS\n', 'PRINT(SYS.PATH)\n', 'X = 2\n', 'PRINT(X ** 32)\n']
+```
+
+
+
+### range()
+
+In 3.X, it returns an iterable that generates numbers in the range on demand, instead of building the result list in memory.
+
+```
+C:\code> c:\python33\python
+>>> R = range(10)			# range returns an iterable, not a list
+>>> R 
+range(0, 10)
+
+>>> I = iter(R)				# Make an iterator from the range iterable
+>>> next(I) 				# Advance to next result
+0							# What happens in for loops, comprehensions, etc.
+>>> next(I) 
+1
+>>> next(I) 
+2
+
+>>> list(range(10)) 		# To force a list if required
+[0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
+```
+
+
+
+## Multiple Versus Single Pass Iterators 多个迭代器与单个迭代器
+
+- **multiple iterators are usually supported by returning new objects for the iter call**
+
+
+- **a single iterator generally means an object returns itself**
+
+example：
+
+the `range` object it is not its own iterator (you make one with `iter` when iterating manually), and it supports multiple iterators over its result that remember their positions independently:
+
+```
+>>> R = range(3)		# range allows multiple iterators
+>>> next(R)
+TypeError: range object is not an iterator
+
+>>> I1 = iter(R)
+>>> next(I1)
+0
+>>> next(I1)
+1
+>>> I2 = iter(R)		# Two iterators on one range
+>>> next(I2)
+0
+>>> next(I2)
+1
+>>> next(I1)			# I1 is at a different spot than I2
+2
+>>> next(I2)
+2
+```
+
+By contrast, in 3.X `zip`, `map`, and `filter` do not support multiple active iterators on the same result; because of this the `iter` call is optional for stepping through such objects’ results—their `iter` is themselves (in 2.X these built-ins return multiple-scan lists so the following does not apply):
+
+```
+>>> Z = zip((1, 2, 3), (10, 11, 12))
+>>> I1 = iter(Z)
+>>> I2 = iter(Z)			# Two iterators on one zip
+>>> next(I1)
+(1, 10)
+>>> next(I1)
+(2, 11)
+>>> next(I2)				# (3.X) I2 is at same spot as I1!
+(3, 12)
+
+>>> M = map(abs, (-1, 0, 1))
+>>> I1 = iter(M); I2 = iter(M)
+>>> print(next(I1), next(I1), next(I1))
+1 0 1
+>>> next(I2)				# (3.X) Single scan is exhausted!
+StopIteration
 ```
