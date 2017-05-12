@@ -36,3 +36,4 @@ Change Log
 20170508	Changing Lists: range Versus Comprehensions	¡ªDone-
 20170509	Manual Iteration: iter and next
 20170511	The dir Function
+20170512	PyDoc: The help Function
