@@ -37,3 +37,4 @@ Change Log
 20170509	Manual Iteration: iter and next
 20170511	The dir Function
 20170512	PyDoc: The help Function
+20170515	Scope Details
