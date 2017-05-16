@@ -38,3 +38,4 @@ Change Log
 20170511	The dir Function
 20170512	PyDoc: The help Function
 20170515	Scope Details
+20170516	Factory Functions: Closures
