@@ -40,3 +40,4 @@ Change Log
 20170515	Scope Details
 20170516	Factory Functions: Closures
 20170517	State with nonlocal: 3.X only
+20170518	Arguments
