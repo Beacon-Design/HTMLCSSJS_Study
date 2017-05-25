@@ -42,3 +42,4 @@ Change Log
 20170517	State with nonlocal: 3.X only
 20170518	Arguments
 20170519	Applying functions generically
+20170525
