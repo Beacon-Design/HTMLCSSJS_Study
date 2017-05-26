@@ -135,3 +135,106 @@ An “HTML entity” is a special character that can’t be represented as plain
 >    <a href="https://dev.w3.org/html5/html-author/charref">HTML entities</a>
 > ```
 
+
+
+### 网站图标Icon
+
+只需要将这个图标文件（favicon.ico）上传到您的网站所在的服务器的根目录下。(也就是你的主页index.html所在的那个文件夹)您不需要对您的网页文件作任何的修改，IE5会自动的不停的搜索您的网站的根目录，只要它一发现了favicon.ico 这个文件，就会将该图标显示在访问者的地址栏和收藏夹列表中了。 
+如果您希望为不同的页面设置不同的“收藏夹”图标，那么您就需要在该网页文件的HEAD部分加入下面的内容: 
+
+```
+<link rel="shortcut icon"href="myicon.ico"> 
+```
+
+注意：该图标的路径一定要使用绝对路径。 
+2、第二种方法:在首页HTML文件中，加入link命令，`<link>`是放在`<head>`与`</head>`之间 
+例如下面这样： 
+
+```
+<HEAD> 
+<link rel = "Shortcut Icon" href=/favicon.ico> 
+</HEAD> 
+```
+
+其中的href="/favicon.icon（只是一个例子，你只要将他替换成你的网址）将favicon.ico替换成你制作的ICO文件名即可 
+这样只有当网友把你的网站加到Internet Explorer的收藏夹中并重新打开Internet Explorer浏览器之后，你自行制作的图标才会显示出来。 
+
+常用方法： 
+
+```
+<link rel="icon" href="/jb51.ico" type="image/x-icon"/> 
+<link rel="shortcut icon" href="/jb51.ico" type="image/x-icon"/> 
+```
+
+
+
+#### Data URI scheme `data:image/png;base64`
+
+大家可能注意到了，网页上有些图片的src或css背景图片的url后面跟了一大串字符，比如：
+
+```
+data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAkAAAAJAQMAAADaX5RTAAAAA3NCSVQICAjb4U/gAAAABlBMVEX///+ZmZmOUEqyAAAAAnRSTlMA/1uRIrUAAAAJcEhZcwAACusAAArrAYKLDVoAAAAWdEVYdENyZWF0aW9uIFRpbWUAMDkvMjAvMTIGkKG+AAAAHHRFWHRTb2Z0d2FyZQBBZG9iZSBGaXJld29ya3MgQ1M26LyyjAAAAB1JREFUCJljONjA8LiBoZyBwY6BQQZMAtlAkYMNAF1fBs/zPvcnAAAAAElFTkSuQmCC
+```
+
+那么这是什么呢？这是Data URI scheme。
+
+Data URI scheme是在RFC2397中定义的，目的是将一些小的数据，直接嵌入到网页中，从而不用再从外部文件载入。比如上面那串字符，其实是一张小图片，将这些字符复制黏贴到火狐的地址栏中并转到，就能看到它了，一张1X36的白灰png图片。
+
+在上面的Data URI中，data表示取得数据的协定名称，image/png 是数据类型名称，base64 是数据的编码方法，逗号后面就是这个image/png文件base64编码后的数据。
+
+```
+Data URI scheme支持的类型有：
+
+data:,文本数据
+data:text/plain,文本数据
+data:text/html,HTML代码
+data:text/html;base64,base64编码的HTML代码
+data:text/css,CSS代码
+data:text/css;base64,base64编码的CSS代码
+data:text/javascript,Javascript代码
+data:text/javascript;base64,base64编码的Javascript代码
+data:image/gif;base64,base64编码的gif图片数据
+data:image/png;base64,base64编码的png图片数据
+data:image/jpeg;base64,base64编码的jpeg图片数据
+data:image/x-icon;base64,base64编码的icon图片数据
+
+base64简单地说，它把一些 8-bit 数据翻译成标准 ASCII 字符.
+```
+
+网上有很多免费的base64 编码和解码的工具，在PHP中可以用函数base64_encode() 进行编码，
+
+如
+
+```
+echo base64encode(file_get_contents(‘wg.png’));
+```
+
+目前，IE8、Firfox、Chrome、Opera浏览器都支持这种小文件嵌入。
+
+ 
+
+举个图片的例子：
+
+网页中一张图片可以这样显示：
+
+```
+<img src="http://mail.163.com/images/x.png" />
+```
+
+ 
+
+也可以这样显示：
+
+```
+<img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAkAAAAJAQMAAADaX5RTAAAAA3NCSVQICAjb4U/gAAAABlBMVEX///+ZmZmOUEqyAAAAAnRSTlMA/1uRIrUAAAAJcEhZcwAACusAAArrAYKLDVoAAAAWdEVYdENyZWF0aW9uIFRpbWUAMDkvMjAvMTIGkKG+AAAAHHRFWHRTb2Z0d2FyZQBBZG9iZSBGaXJld29ya3MgQ1M26LyyjAAAAB1JREFUCJljONjA8LiBoZyBwY6BQQZMAtlAkYMNAF1fBs/zPvcnAAAAAElFTkSuQmCC" />
+```
+
+ 把图像文件的内容直接写在了HTML 文件中，这样做的好处是，节省了一个HTTP 请求。坏处是浏览器不会缓存这种图像。
+
+ 
+
+
+
+#### base64
+
+http://baike.baidu.com/link?url=70MjSwBpM2r_woKdjRXSO3SUD95DUwCairxxoszaRpOWmkx5aBeehNGKTks38_WnrrkbdZ7tUI_YG_Jr9h8iBa
