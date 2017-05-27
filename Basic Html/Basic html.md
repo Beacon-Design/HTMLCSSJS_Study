@@ -137,7 +137,7 @@ An “HTML entity” is a special character that can’t be represented as plain
 
 
 
-### 网站图标Icon
+## 网站图标Icon
 
 只需要将这个图标文件（favicon.ico）上传到您的网站所在的服务器的根目录下。(也就是你的主页index.html所在的那个文件夹)您不需要对您的网页文件作任何的修改，IE5会自动的不停的搜索您的网站的根目录，只要它一发现了favicon.ico 这个文件，就会将该图标显示在访问者的地址栏和收藏夹列表中了。 
 如果您希望为不同的页面设置不同的“收藏夹”图标，那么您就需要在该网页文件的HEAD部分加入下面的内容: 
@@ -168,42 +168,145 @@ An “HTML entity” is a special character that can’t be represented as plain
 
 
 
-#### Data URI scheme `data:image/png;base64`
+### URI & URL
 
-大家可能注意到了，网页上有些图片的src或css背景图片的url后面跟了一大串字符，比如：
+**RFC(Request For Comments)** ，RFC文档是一系列关于Internet（早期为ARPANET）的技术资料汇总，于1969年开始发布。它制定了我们很多常见和不常见的Internet的各种文字资料和规范。
+
+**URI(Universal Resource Identifiers)** 统一资源标识符， [RFC 文献1630](http://www.ietf.org/rfc/rfc1630.txt)中定义了它详细的规范(1994年6月)
+
+ **URL(Uniform Resource Locators)** 统一资源定位符，[RFC文献1738](http://www.ietf.org/rfc/rfc1738.txt)中定义了它详细的规范(1994年12月)
+
+#### Generic URI Syntax
 
 ```
-data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAkAAAAJAQMAAADaX5RTAAAAA3NCSVQICAjb4U/gAAAABlBMVEX///+ZmZmOUEqyAAAAAnRSTlMA/1uRIrUAAAAJcEhZcwAACusAAArrAYKLDVoAAAAWdEVYdENyZWF0aW9uIFRpbWUAMDkvMjAvMTIGkKG+AAAAHHRFWHRTb2Z0d2FyZQBBZG9iZSBGaXJld29ya3MgQ1M26LyyjAAAAB1JREFUCJljONjA8LiBoZyBwY6BQQZMAtlAkYMNAF1fBs/zPvcnAAAAAElFTkSuQmCC
+BNF of Generic URI Syntax
+
+    This is a BNF-like description of the URI syntax. at the level at
+which specific schemes are not considered.
+    A vertical line "|" indicates alternatives, and [brackets] indicate
+optional parts.  Spaces are represented by the word "space", and the
+vertical line character by "vline".  Single letters stand for single
+letters.  All words of more than one letter below are entities
+described somewhere in this description.
+    The "generic" production gives a higher level parsing of the same
+URIs as the other productions.  The "national" and "punctuation"
+characters do not appear in any productions and therefore may not
+appear in URIs.
+   
+     fragmentaddress        uri [ # fragmentid ]
+--------------------------------------------------------------------------
+     uri                    scheme :  path [ ? search ]
+--------------------------------------------------------------------------
+     scheme                 ialpha
+--------------------------------------------------------------------------
+     path                   void |  xpalphas  [  / path ]
+--------------------------------------------------------------------------
+     search                 xalphas [ + search ]
+--------------------------------------------------------------------------
+     fragmentid             xalphas
+--------------------------------------------------------------------------
+     xalpha                 alpha | digit | safe | extra | escape
+--------------------------------------------------------------------------
+     xalphas                xalpha [ xalphas ]
+--------------------------------------------------------------------------
+     xpalpha                xalpha | +
+--------------------------------------------------------------------------
+     xpalphas               xpalpha [ xpalpha ]
+--------------------------------------------------------------------------
+     ialpha                 alpha [ xalphas ]
+--------------------------------------------------------------------------
+     alpha                  a | b | c | d | e | f | g | h | i | j | k |
+                            l | m | n | o  | p | q | r | s | t | u | v |
+                            w | x | y | z | A | B | C  | D | E | F | G |
+                            H | I | J | K | L | M | N | O | P |  Q | R |
+                            S | T | U | V | W | X | Y | Z
+--------------------------------------------------------------------------
+     digit                  0 |1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9
+--------------------------------------------------------------------------
+     safe                   $ | - | _ | @ | . | &
+--------------------------------------------------------------------------
+     extra                  ! | * | " |  ' | ( | ) | ,
+--------------------------------------------------------------------------
+     reserved               = | ; | / | # | ? | : | space
+--------------------------------------------------------------------------
+     escape                 % hex hex
+--------------------------------------------------------------------------
+     hex                    digit | a | b | c | d | e | f | A | B | C |
+                            D | E | F
+--------------------------------------------------------------------------
+     national               { | } | vline | [ | ] | \ | ^ | ~
+--------------------------------------------------------------------------
+     punctuation            < | >
+--------------------------------------------------------------------------
+     void
+--------------------------------------------------------------------------
+      (end of URI BNF)
 ```
 
-那么这是什么呢？这是Data URI scheme。
+在**URI**的规范中，资源描述文字，只允许使用字母，数字，安全字符，特殊字符，和转义字符
 
-Data URI scheme是在RFC2397中定义的，目的是将一些小的数据，直接嵌入到网页中，从而不用再从外部文件载入。比如上面那串字符，其实是一张小图片，将这些字符复制黏贴到火狐的地址栏中并转到，就能看到它了，一张1X36的白灰png图片。
+转义字符在**URL**中规定是使用**%**和两个**hex**进行表示，所以也就是为什么浏览器的**form post**会自动进行转义成**%xx**的关系而不使用**unicode常用的%uxxxx**（同时ECMAScript v3也不推荐在js中使用escape）。
+
+但是值得注意的是在URI中，空格是作为保留字的，所以URI规范中空格被辅以一个快速标记符号(short hand notation)来进行标识，就是我们看到的**+**号。所以在php中提供的**urlencode**方法是为了把字符串转换成URI规范用的, 保留空格转换成+号，可以模拟出浏览器form post的结果。
+
+#### URL
+
+
+
+
+
+
+
+### Data URI scheme
+
+Data URI scheme 允许我们使用内联（inline-code）的方式在网页中包含数据.
+
+Data URI scheme是在RFC2397中定义的，目的是将一些小的数据，直接嵌入到网页中，从而不用再从外部文件载入。常用于将图片嵌入网页。(比如上面那串字符，其实是一张小图片，将这些字符复制黏贴到浏览器的地址栏中并转到，就能看到它了。）
+
+```
+Data URI的图片内嵌式是这样用的:
+
+img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAkUlEQVQ4jWOUO87Q8J+RoZ6BDMD4n6GRUfYEw39yNMMAEyWaqW9AoUw9wyPz/3BswWfPwMDAwLBKcx9crFCmHrcB6KBPaQFpLkAHMuwKGDaiAxZCNhRKNzA8+fmAdBcga5JhVyDHgPsM/U8bCDkQfxj0P2nE63yCBjAwMDAU3UvAKz8ckjLjf4ZGcjUz/mdoBADXpy5umvCg6AAAAABJRU5ErkJggg=="/
+--------------------------------------------------------------------------
+
+Data URI的直接通过url传递方式:
+
+data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAkUlEQVQ4jWOUO87Q8J+RoZ6BDMD4n6GRUfYEw39yNMMAEyWaqW9AoUw9wyPz/3BswWfPwMDAwLBKcx9crFCmHrcB6KBPaQFpLkAHMuwKGDaiAxZCNhRKNzA8+fmAdBcga5JhVyDHgPsM/U8bCDkQfxj0P2nE63yCBjAwMDAU3UvAKz8ckjLjf4ZGcjUz/mdoBADXpy5umvCg6AAAAABJRU5ErkJggg==
+```
 
 在上面的Data URI中，data表示取得数据的协定名称，image/png 是数据类型名称，base64 是数据的编码方法，逗号后面就是这个image/png文件base64编码后的数据。
 
 ```
+Data URI的格式规范:
+
+data:[<mime type>][;charset=<charset>][;<encoding>],<encoded data>
+1.  data ：协议名称；
+2.  [<mime type>] ：可选项，数据类型（image/png、text/plain等）
+3.  [;charset=<charset>] ：可选项，源文本的字符集编码方式
+4.  [;<encoding>] ：数据编码方式（默认US-ASCII，BASE64两种）
+5.  ,<encoded data> ：编码后的数据
+```
+
+```
 Data URI scheme支持的类型有：
 
-data:,文本数据
-data:text/plain,文本数据
-data:text/html,HTML代码
-data:text/html;base64,base64编码的HTML代码
-data:text/css,CSS代码
-data:text/css;base64,base64编码的CSS代码
-data:text/javascript,Javascript代码
-data:text/javascript;base64,base64编码的Javascript代码
-data:image/gif;base64,base64编码的gif图片数据
-data:image/png;base64,base64编码的png图片数据
-data:image/jpeg;base64,base64编码的jpeg图片数据
-data:image/x-icon;base64,base64编码的icon图片数据
+data:,                              文本数据
+data:text/plain,                    文本数据
+data:text/html,                     HTML代码
+data:text/html;base64,              base64编码的HTML代码
+data:text/css,                      CSS代码
+data:text/css;base64,               base64编码的CSS代码
+data:text/javascript,               Javascript代码
+data:text/javascript;base64,        base64编码的Javascript代码
+data:image/gif;base64,              base64编码的gif图片数据
+data:image/png;base64,              base64编码的png图片数据
+data:image/jpeg;base64,             base64编码的jpeg图片数据
+data:image/x-icon;base64,           base64编码的icon图片数据
 
 base64简单地说，它把一些 8-bit 数据翻译成标准 ASCII 字符.
 ```
 
-网上有很多免费的base64 编码和解码的工具，在PHP中可以用函数base64_encode() 进行编码，
-
-如
+网上有很多免费的base64 编码和解码的工具，在PHP中可以用函数base64_encode() 进行编码，如:
 
 ```
 echo base64encode(file_get_contents(‘wg.png’));
@@ -211,17 +314,11 @@ echo base64encode(file_get_contents(‘wg.png’));
 
 目前，IE8、Firfox、Chrome、Opera浏览器都支持这种小文件嵌入。
 
- 
-
-举个图片的例子：
-
-网页中一张图片可以这样显示：
+举个图片的例子, 网页中一张图片可以这样显示：
 
 ```
 <img src="http://mail.163.com/images/x.png" />
 ```
-
- 
 
 也可以这样显示：
 
@@ -229,11 +326,32 @@ echo base64encode(file_get_contents(‘wg.png’));
 <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAkAAAAJAQMAAADaX5RTAAAAA3NCSVQICAjb4U/gAAAABlBMVEX///+ZmZmOUEqyAAAAAnRSTlMA/1uRIrUAAAAJcEhZcwAACusAAArrAYKLDVoAAAAWdEVYdENyZWF0aW9uIFRpbWUAMDkvMjAvMTIGkKG+AAAAHHRFWHRTb2Z0d2FyZQBBZG9iZSBGaXJld29ya3MgQ1M26LyyjAAAAB1JREFUCJljONjA8LiBoZyBwY6BQQZMAtlAkYMNAF1fBs/zPvcnAAAAAElFTkSuQmCC" />
 ```
 
- 把图像文件的内容直接写在了HTML 文件中，这样做的好处是，节省了一个HTTP 请求。坏处是浏览器不会缓存这种图像。
+#### Data URI Scheme优缺点
 
- 
+优点：
 
+```
+1. 减少资源请求链接数。
+2. 当访问外部资源很麻烦或受限时，可以很好的利用Data URI Scheme
+```
 
+缺点：
+
+```
+1. Data URL形式的图片不会被浏览器缓存，这意味着每次访问这样页面时都被下载一次，
+   但可通过在css文件的background-image样式规则使用Data URI Scheme，使其随css文件一同被浏览器缓存起来）。
+2. Base64编码的数据体积通常是原数据的体积4/3，
+   也就是Data URL形式的图片会比二进制格式的图片体积大1/3。
+3. 移动端性能比较低。 
+```
+
+#### Data URI Scheme适用场景：
+
+```
+1. 当访问外部资源很麻烦或受限时。
+2. 当图片是在服务器端用程序动态生成，每个访问用户显示的都不同时。
+3. 当图片的体积太小，占用一个HTTP会话不是很值得时。
+```
 
 #### base64
 
