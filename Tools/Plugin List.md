@@ -32,7 +32,19 @@ live-server
 
 Package Control
 
+SublimeCodeIntel
+
 Emmet
+
+Brackethighlighter
+
+SideBarEnhancements
+
+Python PEP8 Autoformat 插件
+
+SublimeREPL
+
+BuildView
 
 
 

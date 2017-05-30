@@ -4,6 +4,19 @@
 
 [apple support](https://support.apple.com/en-us/HT201236)
 
+- Command ⌘
+- Shift ⇧
+
+
+- Option ⌥
+- Control ⌃
+
+
+- Caps Lock ⇪
+- Fn
+
+
+
 ### Global Scope
 
 | Keyboard Shortcut                        | Command                                  |

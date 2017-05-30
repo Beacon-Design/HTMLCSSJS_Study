@@ -306,6 +306,29 @@ data:image/x-icon;base64,           base64编码的icon图片数据
 base64简单地说，它把一些 8-bit 数据翻译成标准 ASCII 字符.
 ```
 
+#### 例子
+
+```
+data:,hello
+(copy to browser address will display: 'hello!')
+------------------------------------------------------------------------------------------------
+
+data:text/plain,hello!
+(copy to browser address will display: 'hello!')
+------------------------------------------------------------------------------------------------
+
+data:text/html,www.baidu.com
+(copy to browser address will display: 'www.baidu.com')
+------------------------------------------------------------------------------------------------
+
+data:text/html;base64,aHR0cDovL3d3dy5iYWlkdS5jb20=
+(copy to browser address will display: 'http://www.baidu.com')
+------------------------------------------------------------------------------------------------
+
+data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAkUlEQVQ4jWOUO87Q8J+RoZ6BDMD4n6GRUfYEw39yNMMAEyWaqW9AoUw9wyPz/3BswWfPwMDAwLBKcx9crFCmHrcB6KBPaQFpLkAHMuwKGDaiAxZCNhRKNzA8+fmAdBcga5JhVyDHgPsM/U8bCDkQfxj0P2nE63yCBjAwMDAU3UvAKz8ckjLjf4ZGcjUz/mdoBADXpy5umvCg6AAAAABJRU5ErkJggg==
+(copy to browser address will display a image)
+```
+
 网上有很多免费的base64 编码和解码的工具，在PHP中可以用函数base64_encode() 进行编码，如:
 
 ```
@@ -325,6 +348,8 @@ echo base64encode(file_get_contents(‘wg.png’));
 ```
 <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAkAAAAJAQMAAADaX5RTAAAAA3NCSVQICAjb4U/gAAAABlBMVEX///+ZmZmOUEqyAAAAAnRSTlMA/1uRIrUAAAAJcEhZcwAACusAAArrAYKLDVoAAAAWdEVYdENyZWF0aW9uIFRpbWUAMDkvMjAvMTIGkKG+AAAAHHRFWHRTb2Z0d2FyZQBBZG9iZSBGaXJld29ya3MgQ1M26LyyjAAAAB1JREFUCJljONjA8LiBoZyBwY6BQQZMAtlAkYMNAF1fBs/zPvcnAAAAAElFTkSuQmCC" />
 ```
+
+
 
 #### Data URI Scheme优缺点
 

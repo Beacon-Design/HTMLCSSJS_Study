@@ -1,0 +1,29 @@
+this is an example file.
+line 2.
+line 3.
+end of the file. 
+
+b'aHR0cDovL3d3dy5iYWlkdS5jb20='
+
+data:image/png;base64,
+
+
+data:,hello
+(copy to browser address will display: 'hello!')
+
+data:text/plain,hello!
+(copy to browser address will display: 'hello!')
+
+data:text/html,www.baidu.com
+(copy to browser address will display: 'www.baidu.com')
+
+data:text/html;base64,aHR0cDovL3d3dy5iYWlkdS5jb20=
+(copy to browser address will display: 'http://www.baidu.com')
+
+data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAkUlEQVQ4jWOUO87Q8J+RoZ6BDMD4n6GRUfYEw39yNMMAEyWaqW9AoUw9wyPz/3BswWfPwMDAwLBKcx9crFCmHrcB6KBPaQFpLkAHMuwKGDaiAxZCNhRKNzA8+fmAdBcga5JhVyDHgPsM/U8bCDkQfxj0P2nE63yCBjAwMDAU3UvAKz8ckjLjf4ZGcjUz/mdoBADXpy5umvCg6AAAAABJRU5ErkJggg==
+(copy to browser address will display a image)
+
+data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAkUlEQVQ4jWOUO87Q8J+RoZ6BDMD4n6GRUfYEw39yNMMAEyWaqW9AoUw9wyPz/3BswWfPwMDAwLBKcx9crFCmHrcB6KBPaQFpLkAHMuwKGDaiAxZCNhRKNzA8+fmAdBcga5JhVyDHgPsM/U8bCDkQfxj0P2nE63yCBjAwMDAU3UvAKz8ckjLjf4ZGcjUz/mdoBADXpy5umvCg6AAAAABJRU5ErkJggg==
+
+data
+iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAkUlEQVQ4jWOUO87Q8J+RoZ6BDMD4n6GRUfYEw39yNMMAEyWaqW9AoUw9wyPz/3BswWfPwMDAwLBKcx9crFCmHrcB6KBPaQFpLkAHMuwKGDaiAxZCNhRKNzA8+fmAdBcga5JhVyDHgPsM/U8bCDkQfxj0P2nE63yCBjAwMDAU3UvAKz8ckjLjf4ZGcjUz/mdoBADXpy5umvCg6AAAAABJRU5ErkJggg==

@@ -329,7 +329,7 @@ Python base64模块真正用的上的方法只有8个，分别是`encode`, `deco
 
 1. `encode`,`decode`一组，专门用来编码和解码文件的,也可以对StringIO里的数据做编解码；
 2. `encodestring`,`decodestring`一组，专门用来编码和解码字符串；
-3.  `b64encode` , `b64decode`一组，用来编码和解码字符串，并且有一个替换符号字符的功能。这个功能是这样的：因为base64编码后的字符除了英文字母和数字外还有三个字符 `+` `/` `=`, 其中`=`只是为了补全编码后的字符数为4的整数，而`+`和`/`在一些情况下需要被替换的，`b64encode`和`b64decode`正是提供了这样的功能。至于什么情况下`+`和`/`需要被替换，最常见的就是对url进行base64编码的时候。
+3. `b64encode` , `b64decode`一组，用来编码和解码字符串，并且有一个替换符号字符的功能。这个功能是这样的：因为base64编码后的字符除了英文字母和数字外还有三个字符 `+` `/` `=`, 其中`=`只是为了补全编码后的字符数为4的整数，而`+`和`/`在一些情况下需要被替换的，`b64encode`和`b64decode`正是提供了这样的功能。至于什么情况下`+`和`/`需要被替换，最常见的就是对url进行base64编码的时候。
 4. `urlsafe_b64encode` , `urlsafe_b64decode` 一组，这个就是用来专门对url进行base64编解码的，实际上也是调用的前一组函数。
 
 
@@ -400,8 +400,18 @@ b64encode(s, altchars=None)
 
 ```
 >>> import base64
->>> base64.b64encode(b'How are you?')			
+>>> base64.b64encode(b'How are you?')	
 b'SG93IGFyZSB5b3U/'
+>>> base64.b64encode(b'how are you?', b'-_')
+b'aG93IGFyZSB5b3U_'
+
+>>> base64.b64encode(b'i\xb7\x1d\xfb\xef\xff')
+b'abcd++//'
+>>> base64.b64encode(b'i\xb7\x1d\xfb\xef\xff', b'-_')
+b'abcd--__'
+>>> base64.b64encode(b'i\xb7\x1d\xfb\xef\xff', b'!@')
+b'abcd!!@@'
+
 >>> base64.b64decode(b'SG93IGFyZSB5b3U/')
 b'How are you?'
 ```
@@ -436,6 +446,15 @@ b64decode(s, altchars=None, validate=False)
 b'SG93IGFyZSB5b3U/'
 >>> base64.b64decode(b'SG93IGFyZSB5b3U/')
 b'How are you?'
+>>> base64.b64decode(b'SG93IGFyZSB5b3U_', b'-_')
+b'How are you?'
+
+>>> base64.b64decode(b'abcd++//')
+b'i\xb7\x1d\xfb\xef\xff'
+>>> base64.b64decode(b'abcd--__', b'-_')
+b'i\xb7\x1d\xfb\xef\xff'
+>>> base64.b64decode(b'abcd!!@@', b'!@')
+b'i\xb7\x1d\xfb\xef\xff'
 ```
 
 
