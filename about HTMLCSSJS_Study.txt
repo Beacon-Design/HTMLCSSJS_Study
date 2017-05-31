@@ -44,3 +44,4 @@ Change Log
 20170519	Applying functions generically
 20170525
 20170527
+20170531	Generalized Set Functions 546
