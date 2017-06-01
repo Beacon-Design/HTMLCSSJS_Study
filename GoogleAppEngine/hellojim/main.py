@@ -45,17 +45,17 @@ def valid_day(day):
 def valid_year(year):
     if year and year.isdigit():
         year = int(year)
-        if year > 1900 and year < 2020:
+        if year > 0 and year < 9000:
             return year
 
 
-form="""
+form ="""
    <form method="post">
         what is your birthday?
         <br>
-        <label>Month <input type="text" name="month"></label>
-        <label>Day <input type="text" name="day"></label>
-        <label>Year <input type="text" name="year"></label>
+        <label>Month <input type="text" name="MontH" value="%(MONTH)s"> </label>
+        <label>Day <input type="text" name="DaY" value="%(DAY)s"> </label>
+        <label>Year <input type="text" name="YeaR" value="%(YEAR)s"> </label>
         <div style="color: red">%(ERROR)s<div>
         <br>
         <br>
@@ -65,19 +65,26 @@ form="""
 """
 
 class MainPage(webapp2.RequestHandler):
-    def write_form(self, error=""):
-        self.response.out.write(form % {"ERROR": error})
+    def write_form(self, error="", month="", day="", year=""):
+        self.response.out.write(form % {"ERROR": error,
+                                        "MONTH": month,
+                                        "DAY": day,
+                                        "YEAR": year})
 
     def get(self):
         self.write_form()
     
     def post(self):
-        user_month = valid_month(self.request.get('month'))
-        user_day = valid_day(self.request.get('day'))
-        user_year = valid_year(self.request.get('year'))
+        user_month = self.request.get('MontH')
+        user_day = self.request.get('DaY')
+        user_year = self.request.get('YeaR')
 
-        if not (user_month and user_day and user_year):
-            self.write_form("Bad error!")
+        month = valid_month(user_month)
+        day = valid_day(user_day)
+        year = valid_year(user_year)
+
+        if not (month and day and year):
+            self.write_form("Bad error!", user_month, user_day, user_year)
         else:
             self.response.write("Thanks! That's a totally valid day")
         # self.response.out.write("Thanks! That's a totally valid day")
