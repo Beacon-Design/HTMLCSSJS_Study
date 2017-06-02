@@ -46,3 +46,5 @@ Change Log
 20170527
 20170531	Generalized Set Functions 546
 20170601	Recursive Functions 555
+20170602	Summation with Recursion
+https://classroom.udacity.com/courses/cs253/lessons/48756009/concepts/485384170923

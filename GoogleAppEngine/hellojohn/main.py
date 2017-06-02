@@ -16,9 +16,27 @@
 #
 import webapp2
 
+form="""
+	<form method="post">
+		Enter some text to ROT13:
+		<br>
+		<input type="text" name="Aera" value="%(tarea)s">
+		<br>
+		<input type="submit">
+
+
+	</form>
+"""
+
+
+
+
+
 class MainHandler(webapp2.RequestHandler):
     def get(self):
         self.response.write('Hello John')
+
+
 
 app = webapp2.WSGIApplication([
     ('/', MainHandler)

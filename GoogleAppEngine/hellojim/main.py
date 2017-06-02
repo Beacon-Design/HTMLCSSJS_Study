@@ -15,6 +15,7 @@
 # limitations under the License.
 #
 import webapp2
+import cgi
 
 months = [
     'January',
@@ -29,19 +30,23 @@ months = [
     'October',
     'November',
     'December',
-    ]
+]
 month_abbvs = dict((m[:3].lower(), m) for m in months)
+
 
 def valid_month(month):
     if month:
         short_month = month[:3].lower()
         return month_abbvs.get(short_month)
 
+
 def valid_day(day):
     if day and day.isdigit():
         day = int(day)
         if day > 0 and day <= 31:
             return day
+
+
 def valid_year(year):
     if year and year.isdigit():
         year = int(year)
@@ -49,7 +54,11 @@ def valid_year(year):
             return year
 
 
-form ="""
+def escape_html(s):
+    return cgi.escape(s, quote=True)
+
+
+form = """
    <form method="post">
         what is your birthday?
         <br>
@@ -64,16 +73,17 @@ form ="""
 
 """
 
+
 class MainPage(webapp2.RequestHandler):
     def write_form(self, error="", month="", day="", year=""):
         self.response.out.write(form % {"ERROR": error,
-                                        "MONTH": month,
-                                        "DAY": day,
-                                        "YEAR": year})
+                                        "MONTH": escape_html(month),
+                                        "DAY": escape_html(day),
+                                        "YEAR": escape_html(year)})
 
     def get(self):
         self.write_form()
-    
+
     def post(self):
         user_month = self.request.get('MontH')
         user_day = self.request.get('DaY')
@@ -86,11 +96,13 @@ class MainPage(webapp2.RequestHandler):
         if not (month and day and year):
             self.write_form("Bad error!", user_month, user_day, user_year)
         else:
-            self.response.write("Thanks! That's a totally valid day")
-        # self.response.out.write("Thanks! That's a totally valid day")
+            self.redirect("/thanks")
+
+class ThanksHandler(webapp2.RequestHandler):
+    def get(self):
+        self.response.out.write("thanks")
 
 app = webapp2.WSGIApplication([
     ('/', MainPage),
+    ('/thanks', ThanksHandler)
 ], debug=True)
-
-
