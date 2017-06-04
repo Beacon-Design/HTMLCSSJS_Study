@@ -49,7 +49,6 @@ app = webapp2.WSGIApplication([
     ('/', MainPage),
     ('/testform', TestHandler)
 ], debug=True)
-
 ```
 
 
@@ -103,7 +102,6 @@ app = webapp2.WSGIApplication([
     ('/', MainPage),
     ('/testform', TestHandler)
 ], debug=True)
-
 ```
 
 
@@ -166,7 +164,7 @@ class MainPage(webapp2.RequestHandler):
         self.response.write(form)
     
     def post(self):
-        self.response.write("Thanks! That's a totally valid day!")
+        self.response.write("Thanks!")
 
 app = webapp2.WSGIApplication([
     ('/', MainPage),

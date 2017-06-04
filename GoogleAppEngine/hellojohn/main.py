@@ -15,29 +15,57 @@
 # limitations under the License.
 #
 import webapp2
+import cgi
 
-form="""
-	<form method="post">
-		Enter some text to ROT13:
-		<br>
-		<input type="text" name="Aera" value="%(tarea)s">
-		<br>
-		<input type="submit">
+def escape_text(t):
+	return cgi.escape(t, quote = True)
 
+form = """
+   <form method="post">
+        Enter your text
+        <br>
+        <textarea name="q">%(Area)s</textarea>
+        <div style="color: red">%(Error)s</div>
+       <input type="submit">
+   </form>
 
-	</form>
 """
 
 
 
+class MainPage(webapp2.RequestHandler):
+	def write_form(self, error="", area=""):
+		self.response.out.write(form % {"Error": error,
+										"Area": area,})
 
 
-class MainHandler(webapp2.RequestHandler):
-    def get(self):
-        self.response.write('Hello John')
+	def get(self):
+		self.write_form()
+
+	def post(self):
+		text = self.request.get("q")
+		eText = escape_text(text)
+		if not text:
+			self.write_form("Bad!", text)
+		else:
+			self.write_form(error=eText)
 
 
+
+
+
+			# self.redirect("/thanks")
+
+
+
+
+
+
+class ThanksPage(webapp2.RequestHandler):
+	def get(self):
+		self.response.out.write("thanks")
 
 app = webapp2.WSGIApplication([
-    ('/', MainHandler)
+    ('/', MainPage),
+    ('/thanks', ThanksPage)
 ], debug=True)
