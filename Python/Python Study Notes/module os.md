@@ -4,6 +4,322 @@
 
 
 
+## help(os)
+
+```
+Help on module os:
+
+NAME
+    os - OS routines for NT or Posix depending on what system we're on.
+
+MODULE REFERENCE
+    http://docs.python.org/3.4/library/os
+    
+    The following documentation is automatically generated from the Python
+    source files.  It may be incomplete, incorrect or include features that
+    are considered implementation detail and may vary between Python
+    implementations.  When in doubt, consult the module reference at the
+    location listed above.
+
+DESCRIPTION
+    This exports:
+      - all functions from posix, nt or ce, e.g. unlink, stat, etc.
+      - os.path is either posixpath or ntpath
+      - os.name is either 'posix', 'nt' or 'ce'.
+      - os.curdir is a string representing the current directory ('.' or ':')
+      - os.pardir is a string representing the parent directory ('..' or '::')
+      - os.sep is the (or a most common) pathname separator ('/' or ':' or '\\')
+      - os.extsep is the extension separator (always '.')
+      - os.altsep is the alternate pathname separator (None or '/')
+      - os.pathsep is the component separator used in $PATH etc
+      - os.linesep is the line separator in text files ('\r' or '\n' or '\r\n')
+      - os.defpath is the default search path for executables
+      - os.devnull is the file path of the null device ('/dev/null', etc.)
+    
+    Programs that import and use 'os' stand a better chance of being
+    portable between different platforms.  Of course, they must then
+    only use functions that are defined by all platforms (e.g., unlink
+    and opendir), and leave all pathname manipulation to os.path
+    (e.g., split and join).
+
+FUNCTIONS
+    _exit(...)
+        _exit(status)
+        
+        Exit to the system with specified status, without normal exit processing.
+    
+    execl(file, *args)
+        execl(file, *args)
+        
+        Execute the executable file with argument list args, replacing the
+        current process.
+    
+    execle(file, *args)
+        execle(file, *args, env)
+        
+        Execute the executable file with argument list args and
+        environment env, replacing the current process.
+    
+    execlp(file, *args)
+        execlp(file, *args)
+        
+        Execute the executable file (which is searched for along $PATH)
+        with argument list args, replacing the current process.
+    
+    execlpe(file, *args)
+        execlpe(file, *args, env)
+        
+        Execute the executable file (which is searched for along $PATH)
+        with argument list args and environment env, replacing the current
+        process.
+    
+    execvp(file, args)
+        execvp(file, args)
+        
+        Execute the executable file (which is searched for along $PATH)
+        with argument list args, replacing the current process.
+        args may be a list or tuple of strings.
+    
+    execvpe(file, args, env)
+        execvpe(file, args, env)
+        
+        Execute the executable file (which is searched for along $PATH)
+        with argument list args and environment env , replacing the
+        current process.
+        args may be a list or tuple of strings.
+    
+    fdopen(fd, *args, **kwargs)
+        # Supply os.fdopen()
+    
+    fsdecode(filename)
+        Decode filename from the filesystem encoding with 'surrogateescape' error
+        handler, return str unchanged. On Windows, use 'strict' error handler if
+        the file system encoding is 'mbcs' (which is the default encoding).
+    
+    fsencode(filename)
+        Encode filename to the filesystem encoding with 'surrogateescape' error
+        handler, return bytes unchanged. On Windows, use 'strict' error handler if
+        the file system encoding is 'mbcs' (which is the default encoding).
+    
+    get_exec_path(env=None)
+        Returns the sequence of directories that will be searched for the
+        named executable (similar to a shell) when launching a process.
+        
+        *env* must be an environment variable dict or None.  If *env* is None,
+        os.environ will be used.
+    
+    getenv(key, default=None)
+        Get an environment variable, return None if it doesn't exist.
+        The optional second argument can specify an alternate default.
+        key, default and the result are str.
+    
+    getenvb(key, default=None)
+        Get an environment variable, return None if it doesn't exist.
+        The optional second argument can specify an alternate default.
+        key, default and the result are bytes.
+    
+    makedirs(name, mode=511, exist_ok=False)
+        makedirs(name [, mode=0o777][, exist_ok=False])
+        
+        Super-mkdir; create a leaf directory and all intermediate ones.  Works like
+        mkdir, except that any intermediate path segment (not just the rightmost)
+        will be created if it does not exist. If the target directory already
+        exists, raise an OSError if exist_ok is False. Otherwise no exception is
+        raised.  This is recursive.
+    
+    popen(cmd, mode='r', buffering=-1)
+        # Supply os.popen()
+    
+    putenv(...)
+        putenv(key, value)
+        
+        Change or add an environment variable.
+    
+    removedirs(name)
+        removedirs(name)
+        
+        Super-rmdir; remove a leaf directory and all empty intermediate
+        ones.  Works like rmdir except that, if the leaf directory is
+        successfully removed, directories corresponding to rightmost path
+        segments will be pruned away until either the whole path is
+        consumed or an error occurs.  Errors during this latter phase are
+        ignored -- they generally mean that a directory was not empty.
+    
+    renames(old, new)
+        renames(old, new)
+        
+        Super-rename; create directories as necessary and delete any left
+        empty.  Works like rename, except creation of any intermediate
+        directories needed to make the new pathname good is attempted
+        first.  After the rename, directories corresponding to rightmost
+        path segments of the old name will be pruned way until either the
+        whole path is consumed or a nonempty directory is found.
+        
+        Note: this function can fail with the new directory structure made
+        if you lack permissions needed to unlink the leaf directory or
+        file.
+    
+    spawnl(mode, file, *args)
+        spawnl(mode, file, *args) -> integer
+        
+        Execute file with arguments from args in a subprocess.
+        If mode == P_NOWAIT return the pid of the process.
+        If mode == P_WAIT return the process's exit code if it exits normally;
+        otherwise return -SIG, where SIG is the signal that killed it.
+    
+    spawnle(mode, file, *args)
+        spawnle(mode, file, *args, env) -> integer
+        
+        Execute file with arguments from args in a subprocess with the
+        supplied environment.
+        If mode == P_NOWAIT return the pid of the process.
+        If mode == P_WAIT return the process's exit code if it exits normally;
+        otherwise return -SIG, where SIG is the signal that killed it.
+    
+    spawnlp(mode, file, *args)
+        spawnlp(mode, file, *args) -> integer
+        
+        Execute file (which is looked for along $PATH) with arguments from
+        args in a subprocess with the supplied environment.
+        If mode == P_NOWAIT return the pid of the process.
+        If mode == P_WAIT return the process's exit code if it exits normally;
+        otherwise return -SIG, where SIG is the signal that killed it.
+    
+    spawnlpe(mode, file, *args)
+        spawnlpe(mode, file, *args, env) -> integer
+        
+        Execute file (which is looked for along $PATH) with arguments from
+        args in a subprocess with the supplied environment.
+        If mode == P_NOWAIT return the pid of the process.
+        If mode == P_WAIT return the process's exit code if it exits normally;
+        otherwise return -SIG, where SIG is the signal that killed it.
+    
+    spawnv(mode, file, args)
+        spawnv(mode, file, args) -> integer
+        
+        Execute file with arguments from args in a subprocess.
+        If mode == P_NOWAIT return the pid of the process.
+        If mode == P_WAIT return the process's exit code if it exits normally;
+        otherwise return -SIG, where SIG is the signal that killed it.
+    
+    spawnve(mode, file, args, env)
+        spawnve(mode, file, args, env) -> integer
+        
+        Execute file with arguments from args in a subprocess with the
+        specified environment.
+        If mode == P_NOWAIT return the pid of the process.
+        If mode == P_WAIT return the process's exit code if it exits normally;
+        otherwise return -SIG, where SIG is the signal that killed it.
+    
+    spawnvp(mode, file, args)
+        spawnvp(mode, file, args) -> integer
+        
+        Execute file (which is looked for along $PATH) with arguments from
+        args in a subprocess.
+        If mode == P_NOWAIT return the pid of the process.
+        If mode == P_WAIT return the process's exit code if it exits normally;
+        otherwise return -SIG, where SIG is the signal that killed it.
+    
+    spawnvpe(mode, file, args, env)
+        spawnvpe(mode, file, args, env) -> integer
+        
+        Execute file (which is looked for along $PATH) with arguments from
+        args in a subprocess with the supplied environment.
+        If mode == P_NOWAIT return the pid of the process.
+        If mode == P_WAIT return the process's exit code if it exits normally;
+        otherwise return -SIG, where SIG is the signal that killed it.
+    
+    unsetenv(...)
+        unsetenv(key)
+        
+        Delete an environment variable.
+    
+    walk(top, topdown=True, onerror=None, followlinks=False)
+        Directory tree generator.
+        
+        For each directory in the directory tree rooted at top (including top
+        itself, but excluding '.' and '..'), yields a 3-tuple
+        
+            dirpath, dirnames, filenames
+        
+        dirpath is a string, the path to the directory.  dirnames is a list of
+        the names of the subdirectories in dirpath (excluding '.' and '..').
+        filenames is a list of the names of the non-directory files in dirpath.
+        Note that the names in the lists are just names, with no path components.
+        To get a full path (which begins with top) to a file or directory in
+        dirpath, do os.path.join(dirpath, name).
+        
+        If optional arg 'topdown' is true or not specified, the triple for a
+        directory is generated before the triples for any of its subdirectories
+        (directories are generated top down).  If topdown is false, the triple
+        for a directory is generated after the triples for all of its
+        subdirectories (directories are generated bottom up).
+        
+        When topdown is true, the caller can modify the dirnames list in-place
+        (e.g., via del or slice assignment), and walk will only recurse into the
+        subdirectories whose names remain in dirnames; this can be used to prune the
+        search, or to impose a specific order of visiting.  Modifying dirnames when
+        topdown is false is ineffective, since the directories in dirnames have
+        already been generated by the time dirnames itself is generated. No matter
+        the value of topdown, the list of subdirectories is retrieved before the
+        tuples for the directory and its subdirectories are generated.
+        
+        By default errors from the os.listdir() call are ignored.  If
+        optional arg 'onerror' is specified, it should be a function; it
+        will be called with one argument, an OSError instance.  It can
+        report the error to continue with the walk, or raise the exception
+        to abort the walk.  Note that the filename is available as the
+        filename attribute of the exception object.
+        
+        By default, os.walk does not follow symbolic links to subdirectories on
+        systems that support them.  In order to get this functionality, set the
+        optional argument 'followlinks' to true.
+        
+        Caution:  if you pass a relative pathname for top, don't change the
+        current working directory between resumptions of walk.  walk never
+        changes the current directory, and assumes that the client doesn't
+        either.
+        
+        Example:
+        
+        import os
+        from os.path import join, getsize
+        for root, dirs, files in os.walk('python/Lib/email'):
+            print(root, "consumes", end="")
+            print(sum([getsize(join(root, name)) for name in files]), end="")
+            print("bytes in", len(files), "non-directory files")
+            if 'CVS' in dirs:
+                dirs.remove('CVS')  # don't visit CVS directories
+
+DATA
+    P_NOWAIT = 1
+    P_NOWAITO = 1
+    P_WAIT = 0
+    SEEK_CUR = 1
+    SEEK_END = 2
+    SEEK_SET = 0
+    __all__ = ['altsep', 'curdir', 'pardir', 'sep', 'pathsep', 'linesep', ...
+    altsep = None
+    curdir = '.'
+    defpath = ':/bin:/usr/bin'
+    devnull = '/dev/null'
+    environb = environ({b'TERM_PROGRAM_VERSION': b'361.1', b'SS...GS': b'0...
+    extsep = '.'
+    linesep = '\n'
+    name = 'posix'
+    pardir = '..'
+    pathsep = ':'
+    sep = '/'
+    supports_bytes_environ = True
+
+FILE
+    /Library/Frameworks/Python.framework/Versions/3.4/lib/python3.4/os.py
+```
+
+
+
+## dir(os)
+
 ```
 >>> import os
 >>> dir(os)
@@ -365,3 +681,118 @@ writev
 | 61   | [os.utime(path, times)](http://www.runoob.com/python3/python3-os-utime.html)返回指定的path文件的访问和修改的时间。 |
 | 62   | `os.walk(top[, topdown=True[, onerror=None[, followlinks=False]]])` 输出在文件夹中的文件名通过在树中游走，向上或者向下。 |
 | 63   | [os.write(fd, str)](http://www.runoob.com/python3/python3-os-write.html)写入字符串到文件描述符 fd中. 返回实际写入的字符串长度 |
+
+
+
+### os.getcwd()
+
+os.getcwd() 方法用于返回当前工作目录。
+
+> ```
+> getcwd(...)
+>     getcwd() -> path
+>     
+>     Return a unicode string representing the current working directory.
+> ```
+
+**语法**
+
+```
+os.getcwd()
+```
+
+返回当前进程的工作目录。
+
+example:
+
+```python
+>>> import os
+>>> print(os.getcwd())
+/Users/myMac
+```
+
+
+
+
+
+### os.listdir()
+
+`os.listdir()` 方法用于返回指定的文件夹包含的文件或文件夹的名字的列表。这个列表以字母顺序。 它不包括 '.' 和'..' 即使它在文件夹中。
+
+只支持在 Unix, Windows 下使用。
+
+> ```
+> Help on built-in function listdir in module posix:
+>
+> listdir(...)
+>     listdir(path='.') -> list_of_filenames
+>     
+>     Return a list containing the names of the files in the directory.
+>     The list is in arbitrary order.  It does not include the special
+>     entries '.' and '..' even if they are present in the directory.
+>     
+>     path can be specified as either str or bytes.  If path is bytes,
+>       the filenames returned will also be bytes; in all other circumstances
+>       the filenames returned will be str.
+>     On some platforms, path may also be specified as an open file descriptor;
+>       the file descriptor must refer to a directory.
+>       If this functionality is unavailable, using it raises NotImplementedError.
+> ```
+
+**语法**
+
+```
+os.listdir(path)
+```
+
+**path** -- 需要列出的目录路径
+
+返回指定路径下的文件和文件夹列表。
+
+example:
+
+```python
+>>> import os
+>>> print(os.listdir("/Users"))
+['.localized', 'Shared', 'userMac']
+```
+
+
+
+
+
+### os.rename()
+
+`os.rename()` 方法用于命名文件或目录，从 src 到 dst,如果dst是一个存在的目录, 将抛出OSError。
+
+> ```
+> Help on built-in function rename in module posix:
+>
+> rename(...)
+>     rename(src, dst, *, src_dir_fd=None, dst_dir_fd=None)
+>     
+>     Rename a file or directory.
+>     
+>     If either src_dir_fd or dst_dir_fd is not None, it should be a file
+>       descriptor open to a directory, and the respective path string (src or dst)
+>       should be relative; the path will then be relative to that directory.
+>     src_dir_fd and dst_dir_fd, may not be implemented on your platform.
+>       If they are unavailable, using them will raise a NotImplementedError.
+> ```
+
+**语法**
+
+```
+os.rename(src, dst)
+```
+
+- **src** -- 要修改的目录名
+- **dst** -- 修改后的目录名
+
+该方法没有返回值
+
+example:
+
+```
+
+```
