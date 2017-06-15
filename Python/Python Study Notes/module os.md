@@ -619,23 +619,23 @@ writev
 | 序号   | 方法及描述                                    |
 | ---- | ---------------------------------------- |
 | 1    | [os.access(path, mode)](http://www.runoob.com/python3/python3-os-access.html) 检验权限模式 |
-| 2    | [os.chdir(path)](http://www.runoob.com/python3/python3-os-chdir.html)改变当前工作目录 |
-| 3    | [os.chflags(path, flags)](http://www.runoob.com/python3/python3-os-chflags.html)设置路径的标记为数字标记。 |
-| 4    | [os.chmod(path, mode)](http://www.runoob.com/python3/python3-os-chmod.html)更改权限 |
-| 5    | [os.chown(path, uid, gid)](http://www.runoob.com/python3/python3-os-chown.html)更改文件所有者 |
-| 6    | [os.chroot(path)](http://www.runoob.com/python3/python3-os-chroot.html)改变当前进程的根目录 |
-| 7    | [os.close(fd)](http://www.runoob.com/python3/python3-os-close.html)关闭文件描述符 fd |
-| 8    | [os.closerange(fd_low, fd_high)](http://www.runoob.com/python3/python3-os-closerange.html)关闭所有文件描述符，从 fd_low (包含) 到 fd_high (不包含), 错误会忽略 |
-| 9    | [os.dup(fd)](http://www.runoob.com/python3/python3-os-dup.html)复制文件描述符 fd |
-| 10   | [os.dup2(fd, fd2)](http://www.runoob.com/python3/python3-os-dup2.html)将一个文件描述符 fd 复制到另一个 fd2 |
-| 11   | [os.fchdir(fd)](http://www.runoob.com/python3/python3-os-fchdir.html)通过文件描述符改变当前工作目录 |
-| 12   | [os.fchmod(fd, mode)](http://www.runoob.com/python3/python3-os-fchmod.html)改变一个文件的访问权限，该文件由参数fd指定，参数mode是Unix下的文件访问权限。 |
-| 13   | [os.fchown(fd, uid, gid)](http://www.runoob.com/python3/python3-os-fchown.html)修改一个文件的所有权，这个函数修改一个文件的用户ID和用户组ID，该文件由文件描述符fd指定。 |
-| 14   | [os.fdatasync(fd)](http://www.runoob.com/python3/python3-os-fdatasync.html)强制将文件写入磁盘，该文件由文件描述符fd指定，但是不强制更新文件的状态信息。 |
-| 15   | [os.fdopen(fd[, mode[, bufsize\]])](http://www.runoob.com/python3/python3-os-fdopen.html)通过文件描述符 fd 创建一个文件对象，并返回这个文件对象 |
-| 16   | [os.fpathconf(fd, name)](http://www.runoob.com/python3/python3-os-fpathconf.html)返回一个打开的文件的系统配置信息。name为检索的系统配置的值，它也许是一个定义系统值的字符串，这些名字在很多标准中指定（POSIX.1, Unix 95, Unix 98, 和其它）。 |
-| 17   | [os.fstat(fd)](http://www.runoob.com/python3/python3-os-fstat.html)返回文件描述符fd的状态，像stat()。 |
-| 18   | [os.fstatvfs(fd)](http://www.runoob.com/python3/python3-os-fstatvfs.html)返回包含文件描述符fd的文件的文件系统的信息，像 statvfs() |
+| 2    | [os.chdir(path)](http://www.runoob.com/python3/python3-os-chdir.html) 改变当前工作目录 |
+| 3    | [os.chflags(path, flags)](http://www.runoob.com/python3/python3-os-chflags.html) 设置路径的标记为数字标记。 |
+| 4    | [os.chmod(path, mode)](http://www.runoob.com/python3/python3-os-chmod.html) 更改权限 |
+| 5    | [os.chown(path, uid, gid)](http://www.runoob.com/python3/python3-os-chown.html) 更改文件所有者 |
+| 6    | [os.chroot(path)](http://www.runoob.com/python3/python3-os-chroot.html) 改变当前进程的根目录 |
+| 7    | [os.close(fd)](http://www.runoob.com/python3/python3-os-close.html) 关闭文件描述符 fd |
+| 8    | [os.closerange(fd_low, fd_high) ](http://www.runoob.com/python3/python3-os-closerange.html) 关闭所有文件描述符，从 fd_low (包含) 到 fd_high (不包含), 错误会忽略 |
+| 9    | [os.dup(fd)](http://www.runoob.com/python3/python3-os-dup.html) 复制文件描述符 fd |
+| 10   | [os.dup2(fd, fd2)](http://www.runoob.com/python3/python3-os-dup2.html) 将一个文件描述符 fd 复制到另一个 fd2 |
+| 11   | [os.fchdir(fd)](http://www.runoob.com/python3/python3-os-fchdir.html) 通过文件描述符改变当前工作目录 |
+| 12   | [os.fchmod(fd, mode)](http://www.runoob.com/python3/python3-os-fchmod.html) 改变一个文件的访问权限，该文件由参数fd指定，参数mode是Unix下的文件访问权限。 |
+| 13   | [os.fchown(fd, uid, gid)](http://www.runoob.com/python3/python3-os-fchown.html) 修改一个文件的所有权，这个函数修改一个文件的用户ID和用户组ID，该文件由文件描述符fd指定。 |
+| 14   | [os.fdatasync(fd)](http://www.runoob.com/python3/python3-os-fdatasync.html) 强制将文件写入磁盘，该文件由文件描述符fd指定，但是不强制更新文件的状态信息。 |
+| 15   | [os.fdopen(fd[, mode[, bufsize\]])](http://www.runoob.com/python3/python3-os-fdopen.html) 通过文件描述符 fd 创建一个文件对象，并返回这个文件对象 |
+| 16   | [os.fpathconf(fd, name)](http://www.runoob.com/python3/python3-os-fpathconf.html) 返回一个打开的文件的系统配置信息。name为检索的系统配置的值，它也许是一个定义系统值的字符串，这些名字在很多标准中指定（POSIX.1, Unix 95, Unix 98, 和其它）。 |
+| 17   | [os.fstat(fd)](http://www.runoob.com/python3/python3-os-fstat.html) 返回文件描述符fd的状态，像stat()。 |
+| 18   | [os.fstatvfs(fd)](http://www.runoob.com/python3/python3-os-fstatvfs.html) 返回包含文件描述符fd的文件的文件系统的信息，像 statvfs() |
 | 19   | [os.fsync(fd)](http://www.runoob.com/python3/python3-os-fsync.html)强制将文件描述符为fd的文件写入硬盘。 |
 | 20   | [os.ftruncate(fd, length)](http://www.runoob.com/python3/python3-os-ftruncate.html)裁剪文件描述符fd对应的文件, 所以它最大不能超过文件大小。 |
 | 21   | [os.getcwd()](http://www.runoob.com/python3/python3-os-getcwd.html)返回当前工作目录 |
@@ -681,6 +681,51 @@ writev
 | 61   | [os.utime(path, times)](http://www.runoob.com/python3/python3-os-utime.html)返回指定的path文件的访问和修改的时间。 |
 | 62   | `os.walk(top[, topdown=True[, onerror=None[, followlinks=False]]])` 输出在文件夹中的文件名通过在树中游走，向上或者向下。 |
 | 63   | [os.write(fd, str)](http://www.runoob.com/python3/python3-os-write.html)写入字符串到文件描述符 fd中. 返回实际写入的字符串长度 |
+
+
+
+### os.chdir()
+
+`os.chdir()` 方法用于改变当前工作目录到指定的路径。
+
+> ```
+> Help on built-in function chdir in module posix:
+>
+> chdir(...)
+>     chdir(path)
+>     
+>     Change the current working directory to the specified path.
+>     
+>     path may always be specified as a string.
+>     On some platforms, path may also be specified as an open file descriptor.
+>       If this functionality is unavailable, using it raises an exception.
+> ```
+
+语法:
+
+```
+os.chdir(path)
+```
+
+**path** -- 要切换到的新路径。
+
+如果允许访问返回 True , 否则返回False。
+
+example:
+
+```python
+>>> os.getcwd()
+'/Users/mac'
+>>> os.chdir("/Users/yulei/Music")
+>>> os.getcwd()
+'/Users/mac/Music'
+```
+
+
+
+
+
+
 
 
 
@@ -793,6 +838,16 @@ os.rename(src, dst)
 
 example:
 
-```
-
+```python
+>>> import os
+>>> os.getcwd()
+'/Users/yulei/Documents/YL/Hub/HTMLCSSJS_imac/Test Field/py/renameFiles'
+>>> os.listdir()
+['.DS_Store', 'folder', 'X.txt', 'XXYY.txt', 'Y.txt']
+>>> file = os.listdir()[1]
+>>> file
+'folder'
+>>> os.rename(file, "FOLDER")
+>>> os.listdir()
+['.DS_Store', 'FOLDER', 'X.txt', 'XXYY.txt', 'Y.txt']
 ```
