@@ -8,20 +8,27 @@ layerA.backgroundColor = "#F5F5F5"
 # layerA.visible = false
 # Set multiple states at once 
 layerA.states =
-    stateA:
-        backgroundColor: "#F5F5F5"
-        opacity: 0
-        animationOptions: 
-            curve: Bezier.easeOut
-            time: 0.4
-    stateB:
-        backgroundColor: "#F5F5F5"
-        opacity: 1
-        animationOptions:
-            curve: Bezier.easeOut
-            time: 0.5
+	stateX:
+		backgroundColor: "#F5F5F5"
+		opacity: 0
+		animationOptions: 
+			curve: Bezier.easeIn
+			time: 0.5
+			delay: 1
+	stateA:
+		backgroundColor: "#F5F5F5"
+		opacity: 0
+		animationOptions: 
+			curve: Bezier.easeIn
+			time: 0.5
+	stateB:
+		backgroundColor: "#F5F5F5"
+		opacity: 1
+		animationOptions:
+			curve: Bezier.easeOut
+			time: 0.5
  
-animation1 = layerA.animate("stateA")
+animation1 = layerA.animate("stateX")
 animation2 = layerA.animate("stateB")
 animation3 = layerA.animate("stateA")
 animation4 = layerA.animate("stateB")

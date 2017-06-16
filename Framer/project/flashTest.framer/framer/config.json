@@ -2,19 +2,20 @@
   "orientation" : 0,
   "updateDelay" : 0.3,
   "designModeSelected" : 0,
-  "cachedDeviceHeight" : 0,
+  "cachedDeviceHeight" : 568,
   "contentScale" : 1,
-  "cachedDeviceWidth" : 0,
+  "cachedDeviceWidth" : 320,
+  "fullScreen" : false,
   "sharedPrototype" : 0,
   "propertyPanelToggleStates" : {
-    "Filters" : false
+
   },
-  "deviceType" : "fullscreen",
-  "projectId" : "2C60A1A7-8796-4970-975B-3272BECEF27E",
+  "deviceType" : "apple-iphone-5s-space-gray",
+  "projectId" : "C3DB23F6-7A04-475C-9920-9503AF46A01B",
   "deviceOrientation" : 0,
   "selectedHand" : "",
   "foldedCodeRanges" : [
 
   ],
-  "deviceScale" : 1
+  "deviceScale" : "fit"
 }
