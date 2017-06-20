@@ -51,3 +51,4 @@ https://classroom.udacity.com/courses/cs253/lessons/48756009/concepts/4853841709
 20170605	Indirect Function Calls: ¡°First Class¡± Objects
 20170614	Function Annotations in 3.X
 20170619	Comprehensions and Generations
+20170620	Generator Functions and Expressions
