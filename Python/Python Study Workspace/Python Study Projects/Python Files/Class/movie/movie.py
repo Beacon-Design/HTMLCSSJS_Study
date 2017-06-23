@@ -1,6 +1,7 @@
 import webbrowser
 
 class Movieclass():
+    """THIS IS __doc__ text"""
     def __init__(self, mtitle, mstoryline, mimg, myoutube):
         self.title = mtitle
         self.story = mstoryline

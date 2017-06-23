@@ -20,4 +20,5 @@ test03 = movie.Movieclass("03",
 # toy_story.show_trailer()        # instance method
 
 movies = [test01, test02, test03 ]
-fresh_tomatoes.open_movies_page(movies)
+# fresh_tomatoes.open_movies_page(movies)
+print(movie.Movieclass.__doc__)
