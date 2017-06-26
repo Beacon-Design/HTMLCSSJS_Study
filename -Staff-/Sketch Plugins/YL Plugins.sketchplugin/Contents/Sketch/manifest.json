@@ -1,0 +1,24 @@
+{
+    "name" : "YL Plugins",
+    "identifier" : "com.yl.yl_plugins",
+    "version" : "1.0.0",
+    "description" : "Lock and Unlock all layers",
+    "authorEmail" : "",
+    "author" : "YL",
+    "commands" : [
+    {
+      "script" : "yl_unlock_all_layers.js",
+      "handler" : "onRun",
+      "shortcut" : "cmd shift l",
+      "name" : "Unlock All Layers",
+      "identifier" : "unlock_all_layers"
+    },
+     {
+      "script" : "yl_lock_layer.js",
+      "handler" : "onRun",
+      "shortcut" : "cmd l",
+      "name" : "Lock Layer",
+      "identifier" : "lock_layer"
+    }
+  ]
+}

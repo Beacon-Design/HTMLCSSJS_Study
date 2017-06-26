@@ -1,0 +1,3 @@
+AI Workspace Location
+
+Macintosh HD > User > user name > Library(Finder - hold option click go) > Preference > Adobe Illustrator 19 Settings > en_GB > Workspaces
