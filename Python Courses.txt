@@ -13,9 +13,8 @@ Lesson 8: Lesson 2a - Templates 1
 << 编程基础：Python >> / Udacity
 https://classroom.udacity.com/courses/ud036
 Total 7
+(Done)
 
-7-3
-https://classroom.udacity.com/courses/ud036/lessons/1002249055/concepts/9976602920923
 ================================================================================
 
 << 计算机科学导论 >> / Udacity

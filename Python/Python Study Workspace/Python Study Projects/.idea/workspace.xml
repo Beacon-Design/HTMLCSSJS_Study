@@ -36,6 +36,7 @@
     <SUITE FILE_PATH="coverage/Python_Study_Projects$download_and_write_csv_file.coverage" NAME="download and write csv file Coverage Results" MODIFIED="1493440771822" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Python Test Files" />
     <SUITE FILE_PATH="coverage/Python_Study_Projects$sum_recursion_v5.coverage" NAME="sum recursion v5 Coverage Results" MODIFIED="1496634641488" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Python Files" />
     <SUITE FILE_PATH="coverage/Python_Study_Projects$sum_recursion_v2.coverage" NAME="sum recursion v2 Coverage Results" MODIFIED="1496631906807" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Python Files" />
+    <SUITE FILE_PATH="coverage/Python_Study_Projects$parentChild.coverage" NAME="parentChild Coverage Results" MODIFIED="1498545709609" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Python Files/Class/parent and child" />
     <SUITE FILE_PATH="coverage/Python_Study_Projects$escape_html_v2.coverage" NAME="escape html v2 Coverage Results" MODIFIED="1496393940191" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Python Files" />
     <SUITE FILE_PATH="coverage/Python_Study_Projects$sum_recursion.coverage" NAME="sum recursion Coverage Results" MODIFIED="1496375665038" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Python Files" />
     <SUITE FILE_PATH="coverage/Python_Study_Projects$draw_square.coverage" NAME="draw square Coverage Results" MODIFIED="1497867961381" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Python Files/draw a turtle" />
@@ -49,26 +50,6 @@
   <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="375">
-      <file leaf-file-name="test.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Test Files/test.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="1" selection-end-column="13" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="renameFiles.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Python Files/take a time/renameFiles.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="1" selection-end-column="13" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="draw square.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Python Files/draw a turtle/draw square.py">
           <provider selected="true" editor-type-id="text-editor">
@@ -89,11 +70,51 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="changer.py" pinned="false" current-in-tab="true">
+      <file leaf-file-name="__init__.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Python Files/example/package import example/dir1/__init__.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="20">
+              <caret line="1" column="5" lean-forward="false" selection-start-line="1" selection-start-column="5" selection-end-line="1" selection-end-column="5" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="parentChild.py" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/Python Files/Class/parent and child/parentChild.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="620">
+              <caret line="31" column="16" lean-forward="true" selection-start-line="31" selection-start-column="16" selection-end-line="31" selection-end-column="16" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="__init__.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Python Files/example/package import example/dir1/dir2/__init__.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="20">
+              <caret line="1" column="5" lean-forward="false" selection-start-line="1" selection-start-column="5" selection-end-line="1" selection-end-column="5" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="mod.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Python Files/example/package import example/dir1/dir2/mod.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="20">
+              <caret line="1" column="3" lean-forward="false" selection-start-line="1" selection-start-column="3" selection-end-line="1" selection-end-column="3" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="changer.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Python Files/example/changer.py">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="100">
-              <caret line="5" column="29" lean-forward="false" selection-start-line="5" selection-start-column="29" selection-end-line="5" selection-end-column="29" />
+              <caret line="5" column="0" lean-forward="false" selection-start-line="5" selection-start-column="0" selection-end-line="5" selection-end-column="30" />
               <folding />
             </state>
           </provider>
@@ -115,20 +136,10 @@
         <entry file="file://$PROJECT_DIR$/Python Files/Class/movie/movieTest.py">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="440">
-              <caret line="23" column="31" lean-forward="true" selection-start-line="23" selection-start-column="31" selection-end-line="23" selection-end-column="31" />
+              <caret line="23" column="31" lean-forward="false" selection-start-line="23" selection-start-column="31" selection-end-line="23" selection-end-column="31" />
               <folding>
                 <element signature="e#38#50#0" expanded="true" />
               </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="translate.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Python Files/string/translate.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="100">
-              <caret line="5" column="38" lean-forward="false" selection-start-line="5" selection-start-column="38" selection-end-line="5" selection-end-column="38" />
-              <folding />
             </state>
           </provider>
         </entry>
@@ -210,6 +221,10 @@
         <option value="$PROJECT_DIR$/Python Files/Class/movie/movie.py" />
         <option value="$PROJECT_DIR$/Python Files/Class/movie/movieTest.py" />
         <option value="$PROJECT_DIR$/Python Files/example/changer.py" />
+        <option value="$PROJECT_DIR$/Python Files/example/package import example/dir1/__init__.py" />
+        <option value="$PROJECT_DIR$/Python Files/example/package import example/dir1/dir2/__init__.py" />
+        <option value="$PROJECT_DIR$/Python Files/example/package import example/dir1/dir2/mod.py" />
+        <option value="$PROJECT_DIR$/Python Files/Class/parent and child/parentChild.py" />
       </list>
     </option>
   </component>
@@ -220,8 +235,8 @@
     <sorting>DEFINITION_ORDER</sorting>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="991" />
-    <option name="y" value="1010" />
+    <option name="x" value="585" />
+    <option name="y" value="560" />
     <option name="width" value="2072" />
     <option name="height" value="961" />
   </component>
@@ -280,14 +295,14 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="example" />
+              <option name="myItemId" value="Class" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
         </subPane>
       </pane>
-      <pane id="Scope" />
       <pane id="Scratches" />
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -314,26 +329,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Python.movieTest (1)">
-    <configuration default="false" name="renameFiles" type="PythonConfigurationType" factoryName="Python" temporary="true">
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/Python Files/take a time" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <module name="Python Study Projects" />
-      <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Python Files/take a time/renameFiles.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <method />
-    </configuration>
+  <component name="RunManager" selected="Python.parentChild">
     <configuration default="false" name="translate" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -405,6 +401,25 @@
       <module name="Python Study Projects" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
       <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Python Files/Class/movie/movieTest.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <method />
+    </configuration>
+    <configuration default="false" name="parentChild" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/Python Files/Class/parent and child" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="Python Study Projects" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Python Files/Class/parent and child/parentChild.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -559,19 +574,19 @@
       <method />
     </configuration>
     <list size="5">
-      <item index="0" class="java.lang.String" itemvalue="Python.renameFiles" />
-      <item index="1" class="java.lang.String" itemvalue="Python.translate" />
-      <item index="2" class="java.lang.String" itemvalue="Python.draw square" />
-      <item index="3" class="java.lang.String" itemvalue="Python.movieTest" />
-      <item index="4" class="java.lang.String" itemvalue="Python.movieTest (1)" />
+      <item index="0" class="java.lang.String" itemvalue="Python.translate" />
+      <item index="1" class="java.lang.String" itemvalue="Python.draw square" />
+      <item index="2" class="java.lang.String" itemvalue="Python.movieTest" />
+      <item index="3" class="java.lang.String" itemvalue="Python.movieTest (1)" />
+      <item index="4" class="java.lang.String" itemvalue="Python.parentChild" />
     </list>
     <recent_temporary>
       <list size="5">
-        <item index="0" class="java.lang.String" itemvalue="Python.movieTest (1)" />
-        <item index="1" class="java.lang.String" itemvalue="Python.movieTest" />
-        <item index="2" class="java.lang.String" itemvalue="Python.draw square" />
-        <item index="3" class="java.lang.String" itemvalue="Python.translate" />
-        <item index="4" class="java.lang.String" itemvalue="Python.renameFiles" />
+        <item index="0" class="java.lang.String" itemvalue="Python.parentChild" />
+        <item index="1" class="java.lang.String" itemvalue="Python.movieTest (1)" />
+        <item index="2" class="java.lang.String" itemvalue="Python.movieTest" />
+        <item index="3" class="java.lang.String" itemvalue="Python.draw square" />
+        <item index="4" class="java.lang.String" itemvalue="Python.translate" />
       </list>
     </recent_temporary>
   </component>
@@ -603,9 +618,9 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="991" y="1010" width="2072" height="961" extended-state="0" />
+    <frame x="585" y="560" width="2072" height="961" extended-state="0" />
     <layout>
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.18423645" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.18719211" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32866243" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32980132" sideWeight="0.5028531" order="4" side_tool="true" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -637,16 +652,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/Python Files/requests.py" />
-    <entry file="file://$PROJECT_DIR$/Python Files/web crawler.py" />
-    <entry file="file://$PROJECT_DIR$/Python Files/web crawler and write file.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="693">
-          <caret line="111" column="3" lean-forward="false" selection-start-line="111" selection-start-column="3" selection-end-line="111" selection-end-column="3" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Python Files/web crawler page inside.py" />
     <entry file="file://$PROJECT_DIR$/Python Files/while sum.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="20">
@@ -819,7 +824,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="1" selection-end-column="13" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -827,17 +831,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="1" selection-end-column="13" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Python Files/take a time/countTimeForever.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="1" selection-end-column="13" />
-          <folding>
-            <element signature="e#38#49#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -864,10 +857,52 @@
     <entry file="file://$PROJECT_DIR$/Python Files/Class/movie/movieTest.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="440">
-          <caret line="23" column="31" lean-forward="true" selection-start-line="23" selection-start-column="31" selection-end-line="23" selection-end-column="31" />
+          <caret line="23" column="31" lean-forward="false" selection-start-line="23" selection-start-column="31" selection-end-line="23" selection-end-column="31" />
           <folding>
             <element signature="e#38#50#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Python Files/example/changer.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="100">
+          <caret line="5" column="0" lean-forward="false" selection-start-line="5" selection-start-column="0" selection-end-line="5" selection-end-column="30" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Python Files/take a time/countTimeForever.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="1" selection-end-column="13" />
+          <folding>
+            <element signature="e#38#49#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Python Files/example/package import example/dir1/dir2/mod.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="20">
+          <caret line="1" column="3" lean-forward="false" selection-start-line="1" selection-start-column="3" selection-end-line="1" selection-end-column="3" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Python Files/example/package import example/dir1/dir2/__init__.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="20">
+          <caret line="1" column="5" lean-forward="false" selection-start-line="1" selection-start-column="5" selection-end-line="1" selection-end-column="5" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Python Files/example/package import example/dir1/__init__.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="20">
+          <caret line="1" column="5" lean-forward="false" selection-start-line="1" selection-start-column="5" selection-end-line="1" selection-end-column="5" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -887,10 +922,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Python Files/example/changer.py">
+    <entry file="file://$PROJECT_DIR$/Python Files/Class/parent and child/parentChild.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="100">
-          <caret line="5" column="29" lean-forward="false" selection-start-line="5" selection-start-column="29" selection-end-line="5" selection-end-column="29" />
+        <state relative-caret-position="620">
+          <caret line="31" column="16" lean-forward="true" selection-start-line="31" selection-start-column="16" selection-end-line="31" selection-end-column="16" />
           <folding />
         </state>
       </provider>
