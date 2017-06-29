@@ -16,67 +16,71 @@
 
 ### Selection
 
-| Keyboard Shortcut     | Command Name            |
-| --------------------- | ----------------------- |
-| Alt + 1 / 1           | Live Selection          |
-| Alt + 2 / 2           | Rectangle Selection     |
-| Alt + 3 / 3 / U - L   | Loop Selection          |
-| Alt + 4 / 4 / U - B   | Ring Selection          |
-| Alt + 5 / 5 / U - M   | Path Selection          |
-| 6 / U - Q             | Outline Selection       |
-| 7                     | Lasso Selection         |
-|                       |                         |
-| W                     | Use Model Mode          |
-| Shift + M             | Modeling Settings       |
-| ~                     | Toggle Modeling Mode    |
-| Q                     | Points                  |
-| A                     | Edges                   |
-| Z                     | Polygons                |
-| S - S                 | Frame Selected Elements |
-| S - A                 | Scroll to First Active  |
-|                       |                         |
-| Y                     | Coordinate System       |
-|                       |                         |
-| B - O / S - O / S - M | Magic Solo              |
-|                       |                         |
-|                       |                         |
-|                       |                         |
+| Keyboard Shortcut     | Command Name           |
+| --------------------- | ---------------------- |
+| Alt + 1 / 1           | Live Selection         |
+| Alt + 2 / 2           | Rectangle Selection    |
+| Alt + 3 / 3 / U - L   | Loop Selection         |
+| Alt + 4 / 4 / U - B   | Ring Selection         |
+| Alt + 5 / 5 / U - M   | Path Selection         |
+| 6 / U - Q             | Outline Selection      |
+| 7                     | Lasso Selection        |
+|                       |                        |
+| W                     | Use Model Mode         |
+| Shift + M             | Modeling Settings      |
+| ~                     | Toggle Modeling Mode   |
+| Q                     | Points                 |
+| A                     | Edges                  |
+| Z                     | Polygons               |
+|                       |                        |
+| S - A                 | Scroll to First Active |
+|                       |                        |
+| Y                     | Coordinate System      |
+|                       |                        |
+| B - O / S - O / S - M | Magic Solo             |
+|                       |                        |
+|                       |                        |
+|                       |                        |
 
 
 
 ### Display
 
-| Keyboard Shortcut             | Command Name                             |
-| ----------------------------- | ---------------------------------------- |
-| N - H                         | Wireframe                                |
-| N - I                         | Isoparms                                 |
-| N - L                         | Skeleton                                 |
-| X - C / N - P                 | Backface Culling                         |
-| Alt + A                       | Isoline Editing                          |
-| X - X / N - R                 | X Ray                                    |
-| X - Z                         | Toggle Grid                              |
-|                               |                                          |
-| Alt + D                       | Toggle Axis                              |
-| L                             | Enable Axis                              |
-| Alt + S                       | Enable Snap                              |
-| Shift + S                     | Snap Pop-Up                              |
-|                               |                                          |
-| 8                             | Move Camera                              |
-| 9                             | Scale Camera                             |
-| 0                             | Rotate Camera                            |
-| -                             | Zoom In                                  |
-| =                             | Zoom Out                                 |
-| Tab / P                       | Toggle Parent Ganerator                  |
-|                               |                                          |
-| Ctrl + Alt + Click the Object | Set As Root ( Object Manager Activate / Show Path Bar) |
-|                               |                                          |
-| S - T                         | Show Tracks                              |
-| S - V                         | Show Track Values                        |
-|                               |                                          |
-| Alt + R                       | Render Region                            |
-| Ctrl + Alt + R                | Interactive Render Region                |
-|                               |                                          |
-|                               |                                          |
+| Keyboard Shortcut                        | Command Name                             |
+| ---------------------------------------- | ---------------------------------------- |
+| N - H                                    | Wireframe                                |
+| N - I                                    | Isoparms                                 |
+| N - L                                    | Skeleton                                 |
+| X - C / N - P                            | Backface Culling                         |
+| Alt + A                                  | Isoline Editing                          |
+| X - X / N - R                            | X Ray                                    |
+| X - Z                                    | Toggle Grid                              |
+|                                          |                                          |
+| Alt + D                                  | Toggle Axis                              |
+| L                                        | Enable Axis                              |
+| Alt + S                                  | Enable Snap                              |
+| Shift + S                                | Snap Pop-Up                              |
+|                                          |                                          |
+| ( 8 < Cmd + 1 < Shift + 1 ) + LMB / Alt + MMB | Move Camera ( move mix to max )          |
+| Cmd + 2 + LMB / Alt + RMB                | Scale Camera ( Screen center )           |
+| Shift + 2 + LMB / 9 + LMB#               | Scale Camera ( Cursor center )           |
+| Shift + 3 + LMB / 0 + LMB / Alt + LMB    | Rotate Camera ( Screen center )          |
+| Cmd + 3 + LMB                            | Rotate Camera ( World center or Select object center# ) |
+| -                                        | Zoom In                                  |
+| =                                        | Zoom Out                                 |
+| Alt + H / H                              | Frame Geometry                           |
+| S - S                                    | Frame Selected Elements                  |
+| Alt + O / O                              | Frame Selected Objects                   |
+| Tab / P                                  | Toggle Parent Ganerator                  |
+|                                          |                                          |
+| Ctrl + Alt + Click the Object            | Set As Root ( Object Manager Activate / Show Path Bar) |
+|                                          |                                          |
+| S - T                                    | Show Tracks                              |
+| S - V                                    | Show Track Values                        |
+|                                          |                                          |
+| Alt + R                                  | Render Region                            |
+| Ctrl + Alt + R                           | Interactive Render Region                |
+|                                          |                                          |
 
 
 
