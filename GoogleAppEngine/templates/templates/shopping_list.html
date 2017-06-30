@@ -1,34 +1,27 @@
 <!--Jinja2 templates-->
+{% extends "base.html" %}
 
-
-
+{% block content %}
 <form>
     <h2>Add a food!!!!</h2>
     <input type="text" name="food">
-    <input type="hidden" name="food" value="eggs">
+    {% if items %}
+        {% for item in items %}
+            <input type="hidden" name="food" value="{{item}}">
+        {% endfor %}
+    {% endif %}
     <button>Add</button>
     <h2>Hi!! {{name}}</h2>
-    <!--    "{{}}" means print ; "name" is a variable-->
-        
     
-<!--    statement use python code    
-
-{% statement %}
-output
-{% end statement %}
-
-{% if name == "steve" %}
-Hello, Steve!
-{% else %}
-Who are you?
-{% endif %}
-
--->
-
-{% if n == 1 %}
-    n equals 1
-{% else %}
-    n does not equal 1
-{% endif %}
-
+    {% if items %}
+    <br>
+    <br>
+    <h2>Shopping List</h2>
+    <ul>
+        {% for item in items %}
+            <li>{{ item }}</li>
+        {% endfor %}
+    </ul>
+    {% endif %}
 </form>
+{% endblock %}
