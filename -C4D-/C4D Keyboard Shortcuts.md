@@ -18,13 +18,13 @@
 
 | Keyboard Shortcut     | Command Name           |
 | --------------------- | ---------------------- |
-| Alt + 1 / 1           | Live Selection         |
-| Alt + 2 / 2           | Rectangle Selection    |
-| Alt + 3 / 3 / U - L   | Loop Selection         |
-| Alt + 4 / 4 / U - B   | Ring Selection         |
-| Alt + 5 / 5 / U - M   | Path Selection         |
-| 6 / U - Q             | Outline Selection      |
-| 7                     | Lasso Selection        |
+| 4                     | Live Selection         |
+| 5                     | Rectangle Selection    |
+| 6 / U - L             | Loop Selection         |
+| 7 / U - B             | Ring Selection         |
+| 8 / U - M             | Path Selection         |
+| 9 / U - Q             | Outline Selection      |
+| 0                     | Lasso Selection        |
 |                       |                        |
 | W                     | Use Model Mode         |
 | Shift + M             | Modeling Settings      |
@@ -61,14 +61,15 @@
 | Alt + S                                  | Enable Snap                              |
 | Shift + S                                | Snap Pop-Up                              |
 |                                          |                                          |
-| ( 8 < Cmd + 1 < Shift + 1 ) + LMB / Alt + MMB | Move Camera ( move mix to max )          |
-| Cmd + 2 + LMB / Alt + RMB                | Scale Camera ( Screen center )           |
-| Shift + 2 + LMB / 9 + LMB#               | Scale Camera ( Cursor center )           |
-| Shift + 3 + LMB / 0 + LMB / Alt + LMB    | Rotate Camera ( Screen center )          |
-| Cmd + 3 + LMB                            | Rotate Camera ( World center or Select object center# ) |
+| ( 1 < Cmd + 1 < Shift + 1 ) + LMB / Alt + MMB | Move Camera ( move mix to max )          |
+| 2 + Cmd + LMB / Alt + RMB                | Scale Camera ( Screen center )           |
+| 2 ( + Shift ) + LMB                      | Scale Camera ( Cursor center )           |
+| 3 ( + Shift ) + LMB  / Alt + LMB         | Rotate Camera ( Screen center )          |
+| 3 + Cmd + LMB                            | Rotate Camera ( World center or Select object center# ) |
 | -                                        | Zoom In                                  |
 | =                                        | Zoom Out                                 |
 | Alt + H / H                              | Frame Geometry                           |
+| Shift + H                                | Frame Default                            |
 | S - S                                    | Frame Selected Elements                  |
 | Alt + O / O                              | Frame Selected Objects                   |
 | Tab / P                                  | Toggle Parent Ganerator                  |
@@ -80,7 +81,6 @@
 |                                          |                                          |
 | Alt + R                                  | Render Region                            |
 | Ctrl + Alt + R                           | Interactive Render Region                |
-|                                          |                                          |
 
 
 
