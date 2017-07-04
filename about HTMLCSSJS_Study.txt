@@ -60,3 +60,5 @@ https://classroom.udacity.com/courses/cs253/lessons/48756009/concepts/4853841709
 
 20170629	Why Use Operator Overloading?
 20170630	A More Realistic Example
+20170604	Other Ways to Combine Classes
+		Relative imports versus absolute package paths
