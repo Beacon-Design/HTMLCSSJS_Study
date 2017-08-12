@@ -77,8 +77,6 @@ transition: unset;
 
 
 
-
-
 #### Property value lists are of different lengths
 
 > If any property's list of values is shorter than the others, its values are repeated to make them match. For example:
