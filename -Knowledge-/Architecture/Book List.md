@@ -182,6 +182,10 @@ E.沙里宁	城市－它的发展衰败与未来
 
 
 
+Christopher Alexander 提出的建筑模式【1977年 A Pattern Language: Towns,Building, Construction《建筑模式语言：城镇、建筑、构造》牛津大学出版社】
+
+
+
 ### 手绘书籍
 
 《30天学会绘画》马克•凯斯特勒
