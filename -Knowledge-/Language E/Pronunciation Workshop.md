@@ -306,3 +306,166 @@ Ha... Ha… Ha.
 > <u>H</u>e thought that <u>h</u>e should brea<u>th</u>e deeply. (Voiced TH) 
 >
 > Henry the hungry hippo, who hogged a huge heap of one hundred hamburgers, has had hiccups for one whole week.
+
+
+
+## Session 8: EE / I
+
+Front Vowels: (From high to low)
+
+```
+EE    Heat[hit] 	
+I     Hit[hɪt]
+AE    Hate[heɪt]
+EH    Het(nonsense word)[het]
+A-    Hat[hæt]
+```
+
+Back Vowels: (From high to low)
+
+```
+OO    Boot[but]
+U     Book[bʊk]
+OW    Boat[bəʊt]
+AW    Bought[bɔt]
+AH    Bot(nonsense word)
+```
+
+Comparing Heat (EE) and Hit (I)
+
+Heat is high 
+
+Hit is lower
+
+```
+Heat – Hit 
+Keen – Kin 
+Deal – Dill 
+Seek – Sick
+Seen – Sin 
+Reap – Rip 
+Teal - Till 
+Bean –Been*
+
+* Bean – I ate a bean (noun). – ‘high’ 
+Been – I have been here (verb). – ‘low’
+```
+
+‘EE’ Vowel Sound	
+
+```
+See Me Each Even Key Green Tree
+Very Happy Softly Mary Busy Finally Country
+```
+
+‘EE’ Practice
+
+```
+Speeding on the Freeway 
+Happily eating cheese 
+He and She 
+Skiing very Rapidly
+She sees a monkey eating honey. We see a pony stealing money. Who can he see? It must be me!
+```
+
+‘I’ Vowel Sound
+
+```
+Bit Bill Lift Fizz Kitchen Build Bigger Chimp Fifth Listen
+Business Fist Display Filming Live Fish Discuss Fig Fifty Been
+```
+
+‘EE’ and ‘I’ Practice (All ‘EE’ sounds are underlined.)
+
+The <u>beans</u> have been cooking since six o’clock.
+
+Sit in that <u>seat</u> by the window.
+
+We ate our <u>meal</u>, by the mill.
+
+The <u>seal</u> will live in the ocean.
+
+Tim’s <u>team</u> grinned after <u>seeing</u> the <u>green</u> <u>field</u>. 
+
+Pip and <u>Pete</u> shipped the <u>sheep</u> <u>cheaply</u>.
+
+Those bins are for Bill’s <u>beans</u>.
+
+Does Jim still <u>steal</u> Jill’s <u>jeans</u>?
+
+The girls put <u>concrete</u> on Jill’s <u>sneakers</u>.
+
+Pick <u>cherries</u> at their <u>peak</u> or you will <u>eat</u> the pits.
+
+
+
+## Session 9: OW / AE
+
+
+
+## Session 10: OO / UH / EH
+
+‘OO’ Vowel Sound 
+
+```
+Blue Booth News Juice Loosen Ruler Food Choose Mood Moving
+Loop Knew Tooth Smooth Pool Moon Shoes Zoo Grew Room
+```
+
+‘OO’ Practice
+
+```
+The room in the school was very cool. 
+Tuesday at noon in the studio. 
+Viewing the moon on June nights.
+Do you remember the woman who lived in a shoe? She hadn’t a clue what to do when her family grew. Well, through your help, they are moving in June into two big boots.
+```
+
+Food has a high vowel – ‘OO’ 
+
+Foot has a lower vowel – ‘Uh’
+
+‘UH’ Vowel Sound (that are spelled with ‘OO’)
+
+```
+Foot Took Cook Shook Stood
+Good Look Book Wool Swoosh
+```
+
+**Lower vowel – ‘Uh’**
+
+```
+Wood
+Would you help me?
+Hollywood, California
+```
+
+**‘UH’ Practice** (‘OO’ sounds are in <u>RED</u>)
+
+He took a good look under the hood and found a fl<u>u</u>te. J<u>u</u>lie enjoys good books after sch<u>oo</u>l.
+
+He put his foot in the new b<u>oo</u>t.
+
+She took her st<u>u</u>dents to the brook to wash their sh<u>oe</u>s.
+
+We pulled him out of the swimming p<u>oo</u>l. The f<u>oo</u>l ate until he was full.
+
+**‘EH’ Vowel Sounds**
+
+```
+Egg Get Friend Next Entrance Better Healthy Lettuce Wrench Spread
+Best Ready Every Red Exit Check Fence Headset Necklace Wealth
+```
+
+**‘EH’ Practice**
+
+```
+Resting on the edge of the bed. 
+Ten letters from the enemy. 
+Dennis will enter the festival. 
+The message was given to the chef.
+Hello again, friends! Let’s do a weather check. Well, whoever said temperatures are getting better, better get ready to spend a wet weekend in Tennessee.
+```
+
+
+
