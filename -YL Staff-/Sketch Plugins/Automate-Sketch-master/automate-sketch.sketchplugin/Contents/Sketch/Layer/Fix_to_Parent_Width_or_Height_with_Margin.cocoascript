@@ -1,0 +1,92 @@
+/*----------------------------------------------------------
+
+Copyright 2017 Ashung Hung
+
+Licensed under the Apache License, Version 2.0 (the "License");
+you may not use this file except in compliance with the License.
+You may obtain a copy of the License at
+
+    http://www.apache.org/licenses/LICENSE-2.0
+
+Unless required by applicable law or agreed to in writing, software
+distributed under the License is distributed on an "AS IS" BASIS,
+WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+See the License for the specific language governing permissions and
+limitations under the License.
+
+----------------------------------------------------------*/
+
+@import "../Libraries/Preferences.cocoascript";
+@import "../Libraries/Google_Analytics.cocoascript";
+
+var fixToParentHeightWithMargin = function(context) {
+
+    var doc = context.document;
+    var selection = context.selection;
+
+    var defaultUserInput = getPreferences(context, "margin") || "0";
+
+    var userInput = doc.askForUserInput_initialValue("Margins: \"<top & bottom>\" or \"<top> <bottom>\". ", defaultUserInput);
+
+    if (userInput) {
+        setPreferences(context, "margin", userInput.toString());
+
+        var marginTop = marginBottom = 0;
+
+        if (/(\d+)\s(\d+)/.test(userInput)) {
+            marginTop = parseInt(/(\d+)\s(\d+)/.exec(userInput)[1]);
+            marginBottom = parseInt(/(\d+)\s(\d+)/.exec(userInput)[2]);
+        } else if (/\d+/.test(userInput)) {
+            marginTop = marginBottom = parseInt(userInput);
+        }
+
+        for (var i = 0; i < selection.count(); i++) {
+            var layer = selection.objectAtIndex(i);
+            if (layer.parentGroup().class() != "MSPage") {
+                var parentHeight = layer.parentGroup().frame().height();
+                layer.frame().setY(marginTop);
+                layer.frame().setHeight(parentHeight - marginTop - marginBottom);
+            }
+        }
+
+        ga(context, "UA-99098773-3", "Layer", context.command.identifier(), "fix_parent_margin", userInput.toString());
+        
+    }
+
+};
+
+var fixToParentWidthWithMargin = function(context) {
+
+    var doc = context.document;
+    var selection = context.selection;
+
+    var defaultUserInput = getPreferences(context, "margin") || "0";
+
+    var userInput = doc.askForUserInput_initialValue("Margins: \"<left & right>\" or \"<left> <right>\". ", defaultUserInput);
+
+    if (userInput) {
+        setPreferences(context, "margin", userInput.toString());
+
+        var marginLeft = marginRight = 0;
+
+        if (/(\d+)\s(\d+)/.test(userInput)) {
+            marginLeft = parseInt(/(\d+)\s(\d+)/.exec(userInput)[1]);
+            marginRight = parseInt(/(\d+)\s(\d+)/.exec(userInput)[2]);
+        } else if (/\d+/.test(userInput)) {
+            marginLeft = marginRight = parseInt(userInput);
+        }
+
+        for (var i = 0; i < selection.count(); i++) {
+            var layer = selection.objectAtIndex(i);
+            if (layer.parentGroup().class() != "MSPage") {
+                var parentWidth = layer.parentGroup().frame().width();
+                layer.frame().setX(marginLeft);
+                layer.frame().setWidth(parentWidth - marginLeft - marginRight);
+            }
+        }
+
+        ga(context, "UA-99098773-3", "Layer", context.command.identifier(), "fix_parent_margin", userInput.toString());
+        
+    }
+
+};

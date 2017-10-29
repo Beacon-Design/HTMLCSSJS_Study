@@ -1,0 +1,48 @@
+/*----------------------------------------------------------
+
+Copyright 2017 Ashung Hung
+
+Licensed under the Apache License, Version 2.0 (the "License");
+you may not use this file except in compliance with the License.
+You may obtain a copy of the License at
+
+    http://www.apache.org/licenses/LICENSE-2.0
+
+Unless required by applicable law or agreed to in writing, software
+distributed under the License is distributed on an "AS IS" BASIS,
+WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+See the License for the specific language governing permissions and
+limitations under the License.
+
+----------------------------------------------------------*/
+
+function runCommand(command, args, callback) {
+    var task = NSTask.alloc().init();
+    var pipe = NSPipe.pipe();
+    var errPipe = NSPipe.pipe();
+        task.launchPath = command;
+        task.arguments = args;
+        task.standardOutput = pipe;
+        task.standardError = errPipe;
+        task.launch();
+    var errorData = errPipe.fileHandleForReading().readDataToEndOfFile();
+    if (errorData != nil && errorData.length()) {
+        var message = NSString.alloc().initWithData_encoding_(errorData, NSUTF8StringEncoding);
+        if (callback && typeof(callback) == "function") {
+            callback(
+                task.terminationStatus() == 0,
+                message
+            );
+            return;
+        } else {
+            return NSException.raise_format_("failed", message);
+        }
+    }
+    var data = pipe.fileHandleForReading().readDataToEndOfFile();
+    if (callback && typeof(callback) == "function") {
+        callback(
+            task.terminationStatus() == 0,
+            NSString.alloc().initWithData_encoding_(data, NSUTF8StringEncoding)
+        );
+    }
+}
