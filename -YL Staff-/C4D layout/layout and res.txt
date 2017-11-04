@@ -1,9 +1,0 @@
-C4D layput and preference
-
-layout(.l4d):
-copy to
-Preferences > Open Preferences Folder > library > layout
-
-(.res):
-copy to
-Preferences > Open Preferences Folder > prefs > 

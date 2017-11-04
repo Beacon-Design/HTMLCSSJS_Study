@@ -1,6 +1,0 @@
-ps workspace file: 
- .psw
-
-PS Workspace Location
-
-Macintosh HD > User > user name > Library(Finder - hold option click go) > Preference > Adobe Photoshop CC 2015 Settings > WorkSpaces/ Workspaces(modified) 

@@ -63,3 +63,5 @@ https://classroom.udacity.com/courses/cs253/lessons/48756009/concepts/4853841709
 20170604	Other Ways to Combine Classes
 		Relative imports versus absolute package paths
 20170605	Updating Objects on a Shelve
+
+20171104
