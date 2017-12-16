@@ -1,0 +1,33 @@
+body {
+    color: #414141;
+    background-color: #EEEEEE;
+    font-family:"BlackJack","Helvetica","Arial",sans-serif;
+    font-size: 14px;
+}
+p#five {
+    font-size:1em;
+}
+p#six {
+    font-size: 2em;
+}
+
+/*selecting multiple elements*/
+h1,h2,h3,h4,h5,h6{
+    font-family:"BlackJack","Arial",sans-serif;
+    font-weight: normal;  
+}
+
+@font-face {
+  font-family: 'BlackJack';
+
+    
+  src: url('fonts/blackjack-webfont.eot'); /* For IE6-8 */
+  src: url('fonts/blackjack-webfont.eot?#iefix') format('eot'),
+       url('fonts/blackjack-webfont.woff') format('woff'),
+       url('fonts/blackjack-webfont.ttf') format('truetype'),
+       url('fonts/blackjack-webfont.svg#BlackJack') format('svg');
+    
+  font-style: normal;
+  font-weight: 400;
+}
+

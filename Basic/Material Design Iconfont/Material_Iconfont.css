@@ -1,0 +1,58 @@
+body {
+    color: #414141;
+    background-color: #EEEEEE;
+    font-family:"PingFangSC","Helvetica","Arial",sans-serif;
+    font-size: 14px;
+}
+p#five {
+    font-size:1em;
+}
+p#six {
+    font-size: 2em;
+}
+
+/*selecting multiple elements*/
+h1,h2,h3,h4,h5,h6{
+    font-family:"Helvetica","Arial",sans-serif;
+    font-weight: normal;  
+}
+
+@font-face {
+  font-family: 'Material Icons';
+  font-style: normal;
+  font-weight: 400;
+  src: url(MaterialIcons-Regular.eot); /* For IE6-8 */
+  src: local('Material Icons'),
+    local('MaterialIcons-Regular'),
+    url(MaterialIcons-Regular.woff2) format('woff2'),
+    url(MaterialIcons-Regular.woff) format('woff'),
+    url(MaterialIcons-Regular.ttf) format('truetype');
+}
+
+.material-icons {
+  font-family: 'Material Icons';
+  font-weight: normal;
+  font-style: normal;
+  font-size: 24px;  /* Preferred icon size */
+  display: inline-block;
+  line-height: 1;
+  text-transform: none;
+  letter-spacing: normal;
+  word-wrap: normal;
+  white-space: nowrap;
+  direction: ltr;
+
+  /* Support for all WebKit browsers. */
+  -webkit-font-smoothing: antialiased;
+  /* Support for Safari and Chrome. */
+  text-rendering: optimizeLegibility;
+
+  /* Support for Firefox. */
+  -moz-osx-font-smoothing: grayscale;
+
+  /* Support for IE. */
+  font-feature-settings: 'liga';
+    
+    
+  vertical-align: bottom;
+}
