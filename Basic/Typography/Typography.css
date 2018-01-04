@@ -1,7 +1,7 @@
 body {
     color: #414141;
     background-color: #EEEEEE;
-    font-family:"BlackJack","Helvetica","Arial",sans-serif;
+    font-family:"Helvetica","Arial",sans-serif;
     font-size: 14px;
 }
 p#five {
@@ -17,9 +17,10 @@ h1,h2,h3,h4,h5,h6{
     font-weight: normal;  
 }
 
+
+/*Using web font as local*/
 @font-face {
   font-family: 'BlackJack';
-
     
   src: url('fonts/blackjack-webfont.eot'); /* For IE6-8 */
   src: url('fonts/blackjack-webfont.eot?#iefix') format('eot'),
@@ -31,3 +32,13 @@ h1,h2,h3,h4,h5,h6{
   font-weight: 400;
 }
 
+
+/*set Helvetica font class*/
+.Hel{
+    font-family:"Georgia",sans-serif;
+    font-size: 18px;
+    text-transform: uppercase;
+    font-weight: bold;
+    font-style: italic;
+    letter-spacing: 2px;
+}

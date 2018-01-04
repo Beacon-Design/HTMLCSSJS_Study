@@ -60,3 +60,10 @@
 | command-option-click dock icon or window | Switch to application and hide all others |
 | command-drag menulet                     | re-order icon                            |
 | command-drag menulet off the menu bar    | remove icon from menu bar                |
+
+
+
+| Keyboard Shortcut | Command       |
+| ----------------- | ------------- |
+| Ctrl + Cmd + D    | Dictionary 取词 |
+

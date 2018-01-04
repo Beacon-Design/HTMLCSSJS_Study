@@ -147,6 +147,36 @@ It needs to be maintained and allow for growth.
 
 
 
+### 7. Collaborate with  others
+
+##### Naming Conventions
+
+- Simple and consistent
+- Alphanumeric characters only (a-z 0-9)
+- No special characters (,./\@#$%{}_+-)
+- No Spaces
+- To seperate words:
+  - Use underscore (about_us) or
+  - Use camel case (aboutUs)
+
+(Naming objects helps with CSS coding)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 # Design System Part 2
@@ -159,11 +189,28 @@ accessibility. maintain reasonable contrast ratios between text and background c
 
 
 
+##### Color Wheel
+
+1. Analogous
+2. ​
+
 
 
 
 
 ### Typography
+
+> **Early days of the web**
+>
+> - Limited font options
+> - Readability & Avaliability
+> - "Websafe" fonts
+>
+> **Modern web design**
+>
+> - Many more font choices
+> - Font embedding
+> - Font hosting services
 
 ##### 1. Define font setting
 
@@ -212,7 +259,7 @@ work well when using a large number of icons with basic styling requirements.
 
 
 
-## === Design Example ===
+# - Design Example -
 
 ###### Principles 设计原则
 
