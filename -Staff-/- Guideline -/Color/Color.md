@@ -1,4 +1,4 @@
-# 色彩理论
+#  色彩理论
 
 ### A brief history of color theory
 
@@ -516,6 +516,26 @@ Black gives the feeling of perspective and depth, but a black background diminis
 
 
 
+### Personality of color
+
+Different colors have the abilities to attract specific types of shoppers, and can even alter consumer behaviors.
+
+![Personality-of-color](/Users/yulei/Documents/HUB/HTMLCSSJS_Study/-Staff-/- Guideline -/Color/Color Img/Personality-of-color.jpg)
+
+
+
+### Colors by gender
+
+By using color combinations that are favored by either male, female, or both, you can alter their perceptions of your brand – subconsciously.
+
+![color-preferences-by-gender](/Users/yulei/Documents/HUB/HTMLCSSJS_Study/-Staff-/- Guideline -/Color/Color Img/color-preferences-by-gender.png)
+
+
+
+### Colors affect conversions
+
+![how-colors-affect-conversion](/Users/yulei/Documents/HUB/HTMLCSSJS_Study/-Staff-/- Guideline -/Color/Color Img/how-colors-affect-conversion.png)
+
 ## Color Theory
 
 
@@ -586,6 +606,10 @@ Black gives the feeling of perspective and depth, but a black background diminis
 
 
 ## Color Models
+
+http://dba.med.sc.edu/price/irf/Adobe_tg/color/main.html
+
+
 
 ### RGB
 
@@ -723,11 +747,46 @@ The **YUV** color space stands for:
 
 
 
-# How to use color
+# How to Choose color
+
+When you pick the right color for your website, you are doing *so much more* than just make it look appealing — **You are creating a memorable brand**.
+
+> 85% of shoppers place color as a primary reason for why they buy a particular product.
+>
+> 80% increases in brand recognition when using color. Brand recognition directly links to consumer confidence.
+>
+> — Source: [Kissmetrics](https://blog.kissmetrics.com/color-psychology/)
 
 
 
-### The right color
+
+
+### 0A. Rules
+
+1. A good website design is one that always put its audience first.
+
+2. Choosing the right color scheme for your website should never be based on your favorite color, or on a gut feeling.
+
+3. Choose color and design that appeals to your target audience, so you can make a memorable connection (subconsciously), and stand apart from your competition.
+
+4. Picking color schemes should not be random at all. Instead, it should be a series of organized, objective, matching exercise:
+
+   > - Matching your brand with the right dominant color.
+   > - matching the dominant color with accent colors .
+   >
+   >
+   > - matching the background color with your dominant & accent colors.
+
+
+5. not to let your color overpower your content!
+
+
+
+
+
+
+
+### 0B. The right color
 
 1. Connect with your client's target audience
 2. Doesn't look like colors being usde by your client's competitors. (Come across as original)
@@ -735,7 +794,10 @@ The **YUV** color space stands for:
 
 
 
-### Choose color
+
+
+
+### 1. Choose color
 
 1. ask the clients the people they want connect with. (what they intrested in)
 2. what the competitors using for their branding etc.
@@ -756,11 +818,121 @@ Value = lightness or darkness
 
 
 
+### 2. Three steps to using color on your website
+
+> 1. Choosing a dominant color as your brand color
+> 2. Choosing 1 to 2 accent colors to create a color scheme for your website
+> 3. Choosing a background color to complete your design
+
+
+
+#### 01. Choosing a dominant color as your brand color
+
+The dominant color is your brand color
+
+This color will help bring out certain emotions or feelings when people arrive on your website – just like passion, excitement, boldness and love for Coke.
+
+This is the color that you want your audience to remember when they think of you.
+
+
+
+##### How to choose the right color ?
+
+Big companies don’t pick their dominant / brand colors by accident. It’s *strategically*chosen to be used as part of their branding and marketing initiatives.
+
+
+
+**Different colors have the abilities to attract specific types of shoppers, and can even alter consumer behaviors.**
+
+**By using color combinations that are favored by either male, female, or both, you can alter their perceptions of your brand – subconsciously.**
+
+**How you use color for your brand or products / services, can also be influenced by what emotions your target audience is drawn to.  **
+
+Take a few minutes and think about your ideal audience, and what they aspire to be identified with. What do they want and how do they want to be seen?
+
+
+
+##### How to use your dominant color on your website ?
+
+**Only use your dominant color in a limited number of places where you want your website visitors to pay attention to, or if you want your visitors to take certain actions **(such as call a phone number, fill in a contact form, sign up to a newsletter, etc).
+
+Basically, your dominant color is supposed to “pop” – really highlighting where you want your visitors to focus on.
+
+
+
+#### 02. Choose your accent colors
+
+To make your design more interesting (and professional), you need accent colors to highlight attention-worthy parts of your website like quotes, buttons or subtitles.
+
+These are content / items that are *not* the main focal points of your page, but you still want them to stand out.
+
+For example, they may be the subtitle, secondary buttons, information boxes, background color, etc.
+
+Try to limit to only 1 or 2 accent colors. If there are too many accent colors, they will create too many focal points that may confuse your visitors.
+
+
+
+#### 03. Choose your website background color
+
+> Your perfect background color is one that allows your content to be the focal point while working harmoniously with your dominant & accent colors, and makes your audience feel good while browsing your website.
+
+the color you choose as your background color completely depends on the purpose of your website.
+
+You want your website visitors to feel comfortable browsing your website. You don’t want to annoy your visitors or make it challenging to absorb your content by using overly bold or bright background colors. At the same time, you don’t want your website to be so blasé that your audience’s eyes just glazed over any important things you want to say.
+
+
+
+##### Type #1 – Content Intensive Information Websites & eCommerce Websites
+
+**the purpose of these types of websites is to promote ideas or products.**
+
+The focus is on the content or products, rather than the design of the website.  The background color is only a backdrop to help make the content more visible and readable.
+
+The best color scheme to use for information intensive and ecommerce websites is a white or light background, with bold dominant & accent colors. The bold dominant and accent colors give the website personality and focal points, while the plain background color keeps your visitors’ focus on your content or products.
+
+
+
+##### Type #2 – Corporate / Business Websites
+
+**Corporate / business websites usually have two purposes — Promoting the brand or its services.**
+
+Depending on which purpose your business website wants to focus on, your background color will be different.
+
+
+
+**Promoting a Brand**
+
+When you want to build a strong brand identity, you should use various shades of your dominant or brand color as your background color.
+
+This is because color is closely tied to brand recognition (remember our example of Coca Cola above?) When you use a variation of your dominant/brand color as your background, you are reinforcing your brand and makes it more memorable to your audience.
+
+If you have a very bold brand color, using it as your background color can be too overwhelming. If that was the case, consider choosing a less intense shade of your brand color instead. 
+
+
+
+**Promoting a Service**
+
+If you want the value of your service or your portfolio of past projects to be the focal point, use white or a neutral background color.
+
+Just like content intensive and ecommerce websites, you don’t want your background color to take the focus away from your content or the message you want to communicate.
+
+By choosing a neutral or white background, your content will naturally become more attention grabbing.
+
+
+
+##### Type #3 – Stylish & Creative Websites that are Graphic Intensive
+
+For websites used in fashion, design, restaurant, beauty and creative industries, the world is your oyster.
+
+There are really no rules as to what background image or colors you should use. You can use a black menu bar to create more drama; Or you can use all the colors of the rainbow to create an inspirational background image.
 
 
 
 
-### Borrow color
+
+
+
+### 3. Borrow color
 
 reference color from masters of painting, photo. 
 
@@ -768,11 +940,11 @@ reference color from masters of painting, photo.
 
 
 
-RGB Color Wheel
 
 
 
-### CMY Color Wheel
+
+### 
 
 
 
