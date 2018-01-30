@@ -1,5 +1,9 @@
 #  色彩理论
 
+
+
+## Basic
+
 ### A brief history of color theory
 
 The first color wheel was invented by Sir Isaac Newton. He split white sunlight into red, orange, yellow, green, cyan, and blue beams; then he joined the two ends of the color spectrum together to show the natural progression of colors. Newton associated each color with a note of a musical scale.
@@ -96,9 +100,13 @@ The current form of color theory was developed by [Johannes Itten](http://www.de
 
 ## Primary, Secondary and Tertiary Colors
 
+
+
+
+
 ### 原色 (Primary Color)
 
-色彩中不能再分解的基本色称为原色。原色能合成出其它色，而其他色不能还原出本来的颜色。原色只有三种。
+色彩中不能再分解的基本色称为原色。原色能合成出其它色，而其他色不能还原出本来的颜色。原色只有三种。(A color that cannot be made by mixing other colors; they are the source of other colors)
 
 ##### 色光三原色
 
@@ -130,7 +138,9 @@ The current form of color theory was developed by [Johannes Itten](http://www.de
 
 ### 间色 (Secondary Color)
 
-由两个原色混合得间色。间色也只有三种。
+由两个原色混合得间色。间色也只有三种。(A color made from two primary colors)
+
+
 
 色光三间色为品红 (magenta)、黄 (yellow)、青（湖蓝，cyan），或称为“补色”，是指色环上的互补关系。补色指完全不含另一种颜色，红和绿混合成黄色，因为完全不含蓝色，所以黄色就是蓝色的补色。两个等量补色混合也形成白色。红色与绿色经过一定比例混合后就是黄色了。所以黄色不能称之为三原色。
 
@@ -146,13 +156,69 @@ The current form of color theory was developed by [Johannes Itten](http://www.de
 
 颜料的两个间色或一种原色和其对应的间色（红与青、黄与蓝、绿与洋红）相混合得复色，亦称第三次色。复色中包含了所有的原色成分，只是各原色间的比例不等，从而形成了不同的红灰、黄灰、绿灰等灰调色。
 
+> 1. One primary and one secondary from the opposite side of the color wheel; 
+> 2. All three primaries; 
+> 3. Two secondary colors
+
+
+
 由于色光三原色相加得白色光，这样便产生两个后果：一是色光中没有复色，二是色光中没有灰调色,如两色光间色相加，只会产生一种淡的原色光，以黄色光加青色光为例：
 
 黄色光+青色光 = 红色光+绿色光+绿色光+蓝色光 = 绿色光+白色光 = 亮绿色光
 
 
 
-## Warm and cool colors
+## Elements of Color
+
+> Value
+>
+> Saturation
+>
+> Neutral
+>
+> Temperature
+>
+> Texture
+>
+> Opacity
+
+
+
+### 1. Value
+
+the relative darkness or lightness of a color
+
+
+
+### 2. Saturation (Vibrancy or Chroma)
+
+the colorfulness or the perceived intensity of a specific color
+
+
+
+### 3. Neutral
+
+reduce the saturation or vibrancy of a color. lack of chroma in a color
+
+1. combined with a complement
+2. combined with three primaries
+3. combined with two colors oppsite in temperature
+
+##### Neutralizing Colors
+
+1. Combine two or all three complementary colors
+2. Combine all three primaries
+3. Mix white into a color
+4. Mix black into a color
+5. Mix two primaries that act as complements
+
+
+
+### 4. Temperature
+
+the degree to which a color appears to be warm or cool
+
+##### Warm and cool colors
 
 ![warm-cool](/Users/yulei/Documents/HUB/HTMLCSSJS_Study/-Staff-/- Guideline -/Color/Color Img/warm-cool.gif)
 
@@ -166,7 +232,21 @@ White, black and gray are considered to be neutral.
 
 
 
-## Tint, Shade, and Tone
+### 5. Texture
+
+the appearance of the surface of a color in relationship to how it might feel to the touch
+
+
+
+### 6. Opaque, Translucent, and Transparent color
+
+dependent on the amount of light passing through a color
+
+
+
+
+
+### Tint, Shade, and Tone
 
 These terms are often used incorrectly, although they describe fairly simple color concepts. If a color is made lighter by adding white, the result is called a **tint**. If black is added, the darker version is called a **shade**. And if gray is added, the result is a different **tone**.
 
@@ -184,11 +264,43 @@ These terms are often used incorrectly, although they describe fairly simple col
 
 
 
-
-
-## Color theory does not analyze tints, shades, and tones
+**Color theory does not analyze tints, shades, and tones**
 
 Color theory analyzes only the relationships of pure colors; it does not take color lightness and saturation into account. While your color scheme can use any tints, shades, and tones, color theory pays attention only to the hue component.
+
+
+
+### Complementary
+
+Any two colors that are oppsite on the color wheel
+
+
+
+
+
+## Contrast
+
+the state of being different from something else, typically something in juxtaposition or close association
+
+> value / vibrancy / temperature / texture / shap / complementary color
+
+we look at the highest level of contrast first
+
+value contrast works with the contrast of vibrancy and the hierarchy of vibrancy to direct our eyes.
+
+### Hierarchy 
+
+the order of priority for the viewer's focus
+
+> value / vibrancy / temperature / texture / shape / complementary relationships
+
+### Focal Point
+
+area of high contrast
+
+
+
+
 
 
 
@@ -200,7 +312,7 @@ Over the years, many variations of the basic design have been made, but the most
 
 Traditionally, there are a number of color combinations that are considered especially pleasing. These are called **color harmonies** or **color chords** and they consist of two or more colors with a fixed relation in the color wheel.
 
-
+![color_wheel](/Users/yulei/Documents/HUB/HTMLCSSJS_Study/-Staff-/- Guideline -/Color/Color Img/color_wheel.jpg)
 
 
 
