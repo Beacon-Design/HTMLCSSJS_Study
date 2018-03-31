@@ -1298,3 +1298,62 @@ This technique can be used if the designer's goal is to produce something really
 
 ![olorcontrast](/Users/yulei/Documents/HUB/HTMLCSSJS_Study/-Staff-/- Guideline -/Typography/TypographyPIC/colorcontrast3.png)
 
+
+
+
+
+------
+
+
+
+# Font Stack
+
+
+
+```
+font-family: -apple-system, BlinkMacSystemFont,
+    “Segoe UI”, “Roboto”, “Oxygen”, “Ubuntu”, “Cantarell”,
+    “Fira Sans”, “Droid Sans”, “Helvetica Neue”,
+    sans-serif;
+```
+
+Let’s work through how this list got to look the way it does:
+
+```
+font-family:
+/* 1 / -apple-system, BlinkMacSystemFont,
+/ 2 / “Segoe UI”, “Roboto”, “Oxygen”, “Ubuntu”, “Cantarell”, “Fira Sans”, “Droid Sans”,
+/ 3 */ “Helvetica Neue”, sans-serif;
+```
+
+The first grouping is CSS properties that map to the system’s UI font. That covers a lot of ground, and there is no chance that these fonts will be mistaken for something else:
+
+- `-apple-system` targets San Francisco in Safari on Mac OS X and iOS, and it targets Neue Helvetica and Lucida Grande on older versions of Mac OS X. It properly selects between San Francisco Text and San Francisco Display depending on the text’s size.
+- `BlinkMacSystemFont` is the equivalent for Chrome on Mac OS X.
+
+The second grouping is for known system UI fonts:
+
+- `Segoe UI` targets Windows and Windows Phone.
+- `Roboto` targets Android and newer Chrome OS’. It is deliberately listed after Segoe UI so that if you’re an Android developer on Windows and have Roboto installed, Segoe UI will be used instead.
+- `Oxygen` targets KDE, `Ubuntu` targets… well, you can guess, and `Cantarell` targets GNOME. This is beginning to feel futile because some Linux distributions have many of these fonts.
+- `Fira Sans` targets Firefox OS.
+- `Droid Sans` targets older versions of Android.
+- Note that we don’t specify San Francisco by name. On both iOS and Mac OS X, San Francisco isn’t obviously accessible, but rather exists as a “hidden” font.
+- We also don’t specify San Francisco using `.SFNSText-Regular`, the internal PostScript name for San Francisco on Mac OS X. It only works in Chrome and is less versatile than `BlinkMacSystemFont`.
+
+The third grouping is our fallback fonts:
+
+- `Helvetica Neue` targets pre-El Capitan versions of Mac OS X. It is listed close to the end because it’s a popular font on other non-El Capitan computers.
+
+- ```
+  sans-serif
+  ```
+
+   
+
+  is the default sans-serif fallback font.
+
+Here are the currently known problems with this approach:
+
+- In Firefox on Mac OS X, San Francisco has tighter letter spacing than on Safari and Chrome.
+- It doesn’t render Lucida Grande on pre-Yosemite versions of Mac OS X, falling back to Neue Helvetica. And it might not match the correct font on less popular operating systems or more complicated configurations.
