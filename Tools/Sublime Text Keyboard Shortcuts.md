@@ -15,6 +15,11 @@
 
 
 
+
+整齐代码：全选 > Edit > Line > Reindent
+
+
+
 ### Editing
 
 | Keyboard Shortcut     | **Command**                              |

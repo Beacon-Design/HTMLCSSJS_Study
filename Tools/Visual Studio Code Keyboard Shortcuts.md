@@ -1,3 +1,17 @@
 # Visual Studio Code Keyboard Shortcuts
 
-## Plugins
+| Keyboard Shortcut | Command       |
+| ----------------- | ------------- |
+| Cmd + Shift + L   | Beautify file |
+|                   |               |
+|                   |               |
+|                   |               |
+|                   |               |
+
+
+
+
+
+# Plugins
+
+Beautify

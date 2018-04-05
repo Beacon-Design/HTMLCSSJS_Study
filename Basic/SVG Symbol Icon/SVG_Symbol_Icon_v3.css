@@ -1,0 +1,15 @@
+.icon{
+    width: 16px;
+    height: 16px;
+    fill: #999;
+}
+
+.icon.minus{
+    fill: #ff2200;
+}
+
+.icon.plus{
+    width: 32px;
+    height: 32px;
+    fill: #ff9900;
+}
