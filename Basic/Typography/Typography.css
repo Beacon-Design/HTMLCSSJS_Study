@@ -2,7 +2,7 @@ body {
     color: #414141;
     background-color: #EEEEEE;
     font-family: "Helvetica", "Arial", sans-serif;
-    font-size: 14px;
+    font-size: 16px;
 }
 
 /*Font Stack Test */
@@ -11,6 +11,27 @@ p#fontstacktest {
     /*    font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Helvetica,"PingFang SC","Hiragino Sans GB","Microsoft YaHei",SimSun,sans-serif;*/
     font-family:  -apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Helvetica, "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", sans-serif;
 }
+
+
+/*Label*/
+label:after{
+    content: ":";
+    margin: 0 8px 0 2px;
+}
+/*Label required*/
+.required:before{
+    content: "*";
+    margin-right: 4px;
+    font-family: PingFang SC;
+    color: #BF2600;
+}
+.inputtext{
+    height: 32px;
+
+}
+
+
+
 
 p#five {
     font-size: 1em;

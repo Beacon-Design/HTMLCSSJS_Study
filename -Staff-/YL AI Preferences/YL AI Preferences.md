@@ -24,8 +24,8 @@ save your .kys file to Mac(Macintosh HD > User > user name > Library(Finder - ho
 | Shift + 8         | Selection / Opacity - 80%              |
 | Shift + 9         | Selection / Opacity - 90%              |
 | Shift + 0         | Selection / Opacity - 100%             |
-| Cmd + Option + O  | Object > Path > Outline Stroke         |
-| Cmd + Shift + O   | Type > Creat Outlines                  |
+| Cmd + Shift + O   | Object > Path > Outline Stroke         |
+| Cmd + Option + O  | Type > Creat Outlines                  |
 |                   |                                        |
 |                   |                                        |
 |                   |                                        |

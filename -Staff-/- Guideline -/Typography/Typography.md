@@ -1496,6 +1496,18 @@ font-family: "黑体-简", "微软雅黑", "文泉驿微米黑";
 
 
 
+
+## Theory 3
+
+font stack 优先适配英文、数字及字符
+
+
+
+
+
+
+
+
 ## Atlassian Design Font stacks
 
 ## Font stacks
@@ -1561,4 +1573,18 @@ font: 12px/1.5 tahoma,arial,'Hiragino Sans GB','\5b8b\4f53',sans-serif;
 ## Reference
 
 https://css-tricks.com/snippets/css/system-font-stack/
+
+
+
+
+
+# Font
+
+## San Francisco
+
+Reference:
+
+```
+https://medium.com/@amachino/the-secret-of-san-francisco-fonts-4b5295d9a745
+```
 
