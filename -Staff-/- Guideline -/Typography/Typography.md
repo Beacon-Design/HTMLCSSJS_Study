@@ -977,6 +977,24 @@ Vertical rhythm on the web is contributed to by font-size, line-height, and marg
 
 The line-height is determined by the font-size of the body copy. If the base font-size is 12px or 0.75em (12 ÷ 16 = 0.75, 16px is the default browser font-size), then a proper line-height could be 0.75 × 1.5 = 1.125em (150% taller than the font-size, or 18px).
 
+#### Picking a base font size
+
+Think about the **amount** of content the interface will need to contain, the **readers** of the content, and the **context** it’ll likely be viewed in. 
+
+> For instance, if I’m designing a blog for readers over 50 (our eyesight blurs and dims over time), and my assumption is they’ll be reading during moments of boredom on their mobile devices, I would pick a larger body font size—possibly closer to Medium’s 21px.
+>
+> Conversely, if I was designing an interface for professional social media coordinators, who will likely be using the product at work on larger devices, then I can make the default font size smaller.
+
+#### Picking a base line height
+
+pick a line height that is somewhere between 120% — 150% of your body font size. It’s okay to break this rule if you have a good reason to.
+
+The looser the leading (corresponding to larger ratios closer to 1.5), the more whitespace you’ll have between lines. That can make it easier for the eye to find the next line of text. Stylistically, larger line height ratios also feel more luxurious, stable, and peaceful.
+
+Tighter leading (corresponding to ratios closer to 1.2 and sometimes even less) will smoosh lines of text closer together. The density this creates may be a good thing, depending on the design principles you established early on. Tight leading has the ability to increase reading speed, but you must be cautious that your line lengths aren’t too long or it will negatively impact reading speed. 
+
+
+
 ### Set the Space Between Paragraphs
 
 The browser’s default value for spacing between paragraphs is 1em for both the top and bottom margins. If the rhythm of the page is to be maintained, the spacing of paragraphs should be related to the basic line-height unit. With the paragraph property <p>, the values of the top and bottom margins can be set equal to the line-height.
@@ -985,7 +1003,7 @@ The browser’s default value for spacing between paragraphs is 1em for both the
 
 Of course, not all text on a page will be the same size. The type in the heading may be larger, and that in the sidenotes may be smaller. To keep the vertical rhythm, the line-height will remain the same, but the margin will be adjusted accordingly.
 
-FFollowing the previous example, if the sidebar font-size is set to 10px or 0.833em (10 ÷ 12 = 0.833; the default was set to 12px in the body property), then remember that margins relate to the font-size. The margin is to match the line-height of 18px, so the calculation is 18 ÷ 10 = 1.8.
+Following the previous example, if the sidebar font-size is set to 10px or 0.833em (10 ÷ 12 = 0.833; the default was set to 12px in the body property), then remember that margins relate to the font-size. The margin is to match the line-height of 18px, so the calculation is 18 ÷ 10 = 1.8.
 
 The margins of the heading maybe a little trickier because it is more readable when the top margin is slightly larger so that there are more spaces between sections, and so that the bottom margin, where the heading relates to the following texts, is closer. A good approach to solving this problem is to take some space from the bottom margin and add that same amount to the top margin.
 
@@ -996,6 +1014,10 @@ Based on the unified 18px line-height, the top margin of the heading can be 18 +
 [rhythm]
 
 ![hyth](/Users/yulei/Documents/HUB/HTMLCSSJS_Study/-Staff-/- Guideline -/Typography/TypographyPIC/rhythm.png)
+
+#### Typographic scale
+
+A typographic scale is nothing but a series of font sizes that share the same internal logic, similar to a musical scale. The classic scale progresses from 6, 7, 8, 9, 10, 11, 12, 14, 16, 18, 21, 24, etc. 
 
 
 
