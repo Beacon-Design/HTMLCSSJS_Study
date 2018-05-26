@@ -10,6 +10,14 @@ Version A
 Version B  
 * cd + 空格 + 拖曳要进入的文件夹
 
+Version C
+
+install Go2Shell Plugin
+
+http://zipzapmac.com/Go2Shell
+
+
+
 
 
 
