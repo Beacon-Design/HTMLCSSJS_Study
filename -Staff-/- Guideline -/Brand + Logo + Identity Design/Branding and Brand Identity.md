@@ -152,15 +152,17 @@ And remember to end with a page that says, "Thank you."
 
 
 
-## Identity systems
+## Logo Design
 
-An identity system is the combination of all the pieces that work together maintaining a singular voice for the brand. logo, color palette, color palette, image style, choice of materials, and copy style.
+### Identity systems
+
+An identity system is the combination of all the pieces that work together maintaining a singular voice for the brand. logo, color palette, image style, choice of materials, and copy style.
 
 Maintaining an identity system, and brand message, will lead to easy recognition by the audience. 
 
 
 
-## The rules of logo design
+### The rules of logo design
 
 I share logos with the client on every presentation. 
 
@@ -168,7 +170,7 @@ First, good logos identify, they do not describe. The most successful logos tell
 
 > I know you might be Jane, but that doesn't tell me whether you're nice or a jerk. This is tricky, most clients want a logo that shows what they do, or what product they make. But consider Apple, if the logo was a little illustration of the first Macintosh, they could never venture into iTunes,iPhones, and all the other products that are now part of the Apple family. By remaining neutral and focusing on a clear identifier, the client can evolve and grow in any direction.
 
-Second, a logo cannot solve every problem. As we discussed previously, the logo is there to reinforce the brand message. 
+Second, a logo cannot solve every problem. the logo is there to reinforce the brand message. 
 
 > It can't fix a company's profits if the distribution process in shipping is flawed. A logo is a good Armani suit, it makes me look professional, well-groomed, and confident, but can't help me if I have an awful personality. 
 
@@ -190,7 +192,7 @@ How does it work in a letterhead, brochure, or packaging?
 
 
 
-## Wordmarks
+### Wordmarks
 
 A wordmark is just that, a word that is a mark. It's the company name typeset in a proprietary way and used consistently.
 
@@ -208,7 +210,7 @@ The point is to create an iconic representation of the name that expresses the b
 
 
 
-## Monogram
+### Monogram
 
  A monogram is simply the initial of a company or, at times, a single letter. This is a good solution if the client has a long and unwieldy name.
 
@@ -226,7 +228,7 @@ The downside of a monogram is the ubiquity of acronyms in the world.
 
 
 
-## Icons
+### Icons
 
 Icons are logos that rely on symbolism. They work when we understand what they mean and whom they belong to.They are incredibly powerful, and cross cultures and languages.
 
@@ -246,7 +248,7 @@ Branding is about communicating the message. That takes time, and typically, rep
 
 
 
-## Logo
+### Logo
 
 Logo: a wordmark, monogram, icon, or combination of two
 
@@ -256,4 +258,159 @@ The logo is the final form the audience should see. It's the formal wear of the 
 
 
 
-## Making a wordmark
+### Making a wordmark
+
+I revisit the brand's defining attributes. These are my five to eight wordsthat my client and I agreed on in the research and strategy phase. Now that I've reminded myself what I'm communicating, 
+
+ I explore many variations of each type of logo.
+
+I start with a wordmark. At some point I will need to see the brand's name with or without an icon. 
+
+This is no longer a word. This is an icon of a word.
+
+
+
+### Designing a monogram
+
+Even if I don't think I need a monogram logo, I will explore the options. You never know, you might stumble onto something wonderful.
+
+And of course, the solution must communicate the brand's attributes. 
+
+
+
+### Designing an icon
+
+I found that the audience responds better to an icon that is a representation of a symbol or connected to the brand message. 
+
+1. When I start designing an icon, I start with words. I take the defining attributes that my client and I have determined for the brand,and write them down. 
+2. Now, I brainstorm concepts that might serve as a symbol of each word. I go down my list and assign symbols to each word.（Is it a good symbol for the word）
+3. Now I explore different ways to express these symbols visually.
+4. The icon will have more harmony with echoing forms. To start, I work in black and white. I don't want to be swayed by color, yet.
+5. Once I start refining, I will revert back to the defining attributes and apply color. 
+6. By the end of this process, you should have three or four possible symbols drawn in a style that reflects the brand.
+
+Now it's time to put it all back together.
+
+
+
+### Combining
+
+Most designers simply take an icon and stick it next to a word mark. That's half the job. The goal is to have a unified logo that feels harmonious and connected.
+
+I combine each wordmark with each icon. Next, combine each monogram with each icon, and finally, combine each wordmark with the monograms. 
+
+choose your favorite three. On each logo, create a grid to unify the forms.
+
+Doing this helps ensure that the forms will be related and not arbitrary. Feel free to use half units or base the structure on the size of the type.
+
+The final version of this is now the lockup. If the icon and wordmark are separated the brand message could be weakened. This logo is the way they will always be combined. It is a single unit and piece of art that isn't adjustable by others using the logo. It sounds uptight, but you've taken the time to manifest abstract concepts of the brand message into a physical and visual form. That deserves respect.
+
+
+
+## Visual System
+
+### The color palette
+
+The blue is not copyrighted, but Tiffany has maintained strict standards to never deviate, a little more blue, or green. The consistent usage of the color gives it value. Other brands are easily identified with a color palette. 
+
+I start a palette with research. I do a color study of the competition, make a diagram that shows which colors each of the other company uses.
+
+Typically, I'll find that they all will skew toward one palette. Now that I know that a certain palette dominates the field, I go the opposite direction. The point is to differentiate the brand from the others. Using blue because all other financial institutions use blue creates a brand that blends in.
+
+I choose a primary color based on the competition and values. This isn't the place to say, "Gee, I don't like purple," if the attributes are royal, vibrant and luxurious.
+
+A secondary palette adds additional colors that unify the brand. These colors should never be left to chance. If yellow is one of the colors, the palette makes sure that everyone is using the same exact shade of yellow. color is subjective. This is the place where you will need to remind your client the choice isn't about likes or dislikes, but what color best communicates the attributes.
+
+
+
+### Making a color palette
+
+\You've determined that one color is best as the primary color for your brand. How do you then create the secondary pallet or know what tones are best?
+
+ Fortunately, this isn't as complicatedas an electronics manual. It does take exploration and courage. I have one folder in iPhotowhere I save interesting color combinations I find. They can be on another piece of graphic design, something I find in the real world that I photograph, or an image from the internet. This takes some practice.
+
+Let's presume, I believe, green is the best primary color for my client. My next step is to decide which green. I do this while I pull together the rest of the pallet. A pallet can be based on grey tones, bright colors, subtle tones, pastels, warm or cold colors, primary colors, autumn, summer, or winter pallets.
+
+ Once you've arrived at one color pallet, you'll need to have three versions. The first is based on Pantone colors. the second CMYK values, for instances, where Pantone colors aren't available, and finally, RGB value for the screen.
+
+**Remember, color is subjective. You might have the absolute best logic to support a pallet, but the client may despise it. If he or she is absolutely adamant that it's wrong either the attributes you are using need to be modified, or it's entirely emotional. You can't reason with emotion.**
+
+
+
+### Typography
+
+It's amazing how well a simple and unifed typographic palette can create a cohesive brand. 
+
+There are two schools of thought regarding typefaces and the logo. One group believes that the primary typeface should be the same custom typeface as the logo.This provides unity and reinforces the visual consistency. 
+
+The other approach resists this. Their argument is that using the same typeface on everything diminishes the logo's unique properties and damages its equity. In other words, when seen too often it recedes into the background. 
+
+I believe that the primary typeface should complement the logo but not match it exactly. I look for a typeface that utilizes the same forms and ideas as the logo.
+
+
+
+### Images
+
+A brand is defined, not just by the logo, color and type, but by the type and style of imagery. 
+
+> For decades Coca-Cola employed illustrations in a specific style, depicting a healthy, all-American lifestyle. Apple has maintained an image style of beautifully lit products on a white background. And Nike portrays athletes in action with dramatic lighting and color.
+
+Looking at the brand attributes is the first step. 
+
+First, what is the content of the imagery? Nike's imagery matches a brand about aspiring to be your best as an athlete. Is the content the product? If so, is it well-designed enough to be the hero of a photo? Is the content of the imagery people? If so, the next question is, "Who?" Real people or celebrities? Children or adults? Families or individuals? This opens the door to issues such as race, gender, age or nationality.
+
+Hopefully you're working with a client that includes diversity in their attributes. Let's jump to a place where I've decided a wide range of people doing everyday activities communicates the brand's message. For example, honesty. I now need to decide what style of imagery is best.Should the images be black and white, technicolor and posed, realistic and candid, or illustrations? Frankly, this boils down to creativity. In the instance of communicating honesty as an attribute, my choice is a realistic color photograph.
+
+But the choice may not always be that clear. Using the brochure example, try several styles. It's often a good idea to have two or three options to present to the client, so let him or her help make that decision. **After all, it's their brand and they know it better than you can. They may not be able to define a visual concept verbally, but will respond to the content and styles of images.**
+
+
+
+### Patterns and materials
+
+> \- Patterns are often forgotten as a tool to build a visual system for a brand. But they can be incredibly successful, creating a unique and proprietary look. The 1968 Mexico City Olympics graphic program is one of the most successful examples of this. Lance Wyman created a system to brand these Olympic games with patterns and colors taken from Mexican culture. The repeating and radiating stripes emulated Aztec iconography and the vibrant tones reflected a Mexican color palette.
+
+The use of pattern was repeated consistently. The broad and bright color palette provided consistency without becoming dull. **If the goal of a strong visual system is to identify the brand quickly, without being told explicitly, this system succeeded incredibly well.** We identify certain brands with pattern. The Burberry plaid, IBM stripes, or Lilly Pulitzer flowers. The McCord Museum branding system, designed by Cossette, is based on a series of lines that echo the letter forms.
+
+> The system maintains a cohesive identity by employing a similar cropping of the stripe pattern.Paper, or special techniques like metallic foil, is another element that affects a brand's personality. Paper that is silicon glossy says something quite different from raw and rough.Automobile brands go to great expense to print brochures on high quality paper and varnishesthat display the product best. How it feels in the hands of a customer is as important as its appearance.
+
+On the other end of the scale, a brand committed to sustainable practices will choose recycled paper, perhaps in different colors or tones. 
+
+**The bottom line here is that every detail adds or subtracts from a brand's image. From the logo to the paper on the packaging, each visual and physical element will communicate the brand attributes.**
+
+
+
+### Presentation
+
+but being a designer is 80 percent persuasion. Persuading doesn't translate as, "making someone accept something they don't want." It's guiding the client down a path that reinforces the choices made.If the presentation is well-made and logical, this has a good success rate. 
+
+As I did with my presentation of the strategy, I'm going to work with an 11 by 17 landscape format document.This will project on a screen and work in printed form. 
+
+1. My first pages restate the assignment.
+
+   >  Again, this may fall in the hands of someone not at your presentation, and you want to make sure it's clear what you are asked to do. 
+
+   I recap the strategic thinking without replicating my first presentation. I list the brand attributes, the big message, and the target audience. Now, the viewer has background that will support my design solutions. I like my presentations to be written in plain English.If it's too fancy, or uses terms only a designer understands, you lose the client's attention. 
+
+2. Once I've established the strategic goals, I may have two or three design directions. 
+
+3. First, I provide a list of my logo rules. Remember, the client doesn't know anything about this. If you can explain why these rules exist, your choices will make better sense. 
+
+4. I then present a tightened version of the explorations, from typography to icon. This isn't to throw everything on the table.It shows that extensive studies led to your choices. It's a good way to stop someone from saying something like, "Hey, did you try making it a cup with a dog?" 
+
+5. From these exploration pages, I narrow the choices and present each direction. First, as a big and healthy logo, then the system page, with color palette and typography, and as many applications of the logo as possible No logo lives in a void. 
+
+6. In order to understand how everything works together, as a whole, I must show the system in-action.It's easier to visualize a solution and sell it when something looks real. 
+
+   I repeat the same sequence for any directions to show, but no more than three, this just gets confusing. End the presentation with a quotation that applies, or simply a page that says, "Thank you."
+
+
+
+there are several thingsyou can do to aid the process of a presentation. 
+
+1. First, and this may seem obvious, dress to impress. Even if it's a casual company, it shows respect when you take the time to look professional. 
+2. When you begin the presentation, take command of the room. You don't need to yell at anyone. Just make it clear you're confident and the expert. You wouldn't want a doctor meeting with you timidly and nervous. 
+3. State what you want the final outcome of the presentation to be. People need to know what the goal is. For example, you might say, "By the end of this meeting, I'd like to walk away "with one design direction and begin refining the visuals." 
+4. When presenting, never read the text on the screen or page. Hopefully, the viewer can read. You don't need to repeat what is there, but embellish it. If anyone has a question, stop and listen. If you don't know the answer, it's okay to say, "I don't have an answer for that right now, "but I'll find it." Never ever say "no".There are too many designers that kill what might be an interesting idea because it doesn't seem possible or appropriate. I prefer to say, "yes, if." Because anything is possible with the right resources. Remember, clients aren't designers. They don't have the vocabulary to express the design concept. And they can only suggest something they already have seen. If someone stops you and says, "Why can't we have 15 logos and no restrictions on color?", the better response is, "That's interesting."Why do you think that is right for this?" Maybe they think the company values are about no rules or restrictions. You can work with that, and might come up with an interesting version of your solution. 
+5. Once we've gone through the presentation, I ask for any comments. I also state what the next step is moving forward, and restate the outcome and course at the end of the meeting so it's clear we're all on the same page. 
+6. What we do is serious business, but be patient and kind. Everyone in the room has the same goal for the project to succeed.
+
