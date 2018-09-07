@@ -166,27 +166,27 @@ Maintaining an identity system, and brand message, will lead to easy recognition
 
 I share logos with the client on every presentation. 
 
-First, good logos identify, they do not describe. The most successful logos tell me who the brand is, not what it does. This like your name.
+1. good logos identify, they do not describe. The most successful logos tell me who the brand is, not what it does. This like your name.
 
 > I know you might be Jane, but that doesn't tell me whether you're nice or a jerk. This is tricky, most clients want a logo that shows what they do, or what product they make. But consider Apple, if the logo was a little illustration of the first Macintosh, they could never venture into iTunes,iPhones, and all the other products that are now part of the Apple family. By remaining neutral and focusing on a clear identifier, the client can evolve and grow in any direction.
 
-Second, a logo cannot solve every problem. the logo is there to reinforce the brand message. 
+2. a logo cannot solve every problem. the logo is there to reinforce the brand message. 
 
 > It can't fix a company's profits if the distribution process in shipping is flawed. A logo is a good Armani suit, it makes me look professional, well-groomed, and confident, but can't help me if I have an awful personality. 
 
-Third, the logo must be visually engaging. This is true for all design. The logo must be strong and clear.
+3. the logo must be visually engaging. This is true for all design. The logo must be strong and clear.
 
-Fourth, the logo must have mnemonic value. It must be memorable. 
+4. the logo must have mnemonic value. It must be memorable. 
 
 > One of the best tools to achieve this is to pose a question. Not, "What is the meaning of life?" But something as simple as, "Why is the "o" in Mobil red?" This engages the viewer, and the more time someone spends pondering, even an unconscious question, the more memorable the logo.
 
 > Another tool is to let something read two ways. Once someone sees the arrow in the FedEx logo, they never forget it. 
 
-Fifth, the logo must be able to exist in a variety of media. 
+5. the logo must be able to exist in a variety of media. 
 
-Sixth, a logo is not an illustration. 
+6. a logo is not an illustration. 
 
-Seven, a logo is the foundation of the visual system. The logo is the entry point to the brand message, but the entire identity system is the whole story. 
+7. a logo is the foundation of the visual system. The logo is the entry point to the brand message, but the entire identity system is the whole story. 
 
 How does it work in a letterhead, brochure, or packaging?
 
