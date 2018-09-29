@@ -217,6 +217,319 @@ The height of the main body of a lowercase letter.
 
 
 
+
+
+
+
+# Ty­pog­ra­phy Rules
+
+https://practicaltypography.com/
+
+
+
+> Good ty­pog­ra­phy *re­in­forces the mean­ing of the text*.
+>
+> Good ty­pog­ra­phy makes the text more effective.
+
+
+
+### Summary of key rules
+
+1. The four most im­por­tant ty­po­graphic choices you make in any doc­u­ment are [point size](https://practicaltypography.com/point-size.html), [line spac­ing](https://practicaltypography.com/line-spacing.html), [line length](https://practicaltypography.com/line-length.html), and font (see [font rec­om­men­da­tions](https://practicaltypography.com/font-recommendations.html)), be­cause those choices de­ter­mine how the [body text](https://practicaltypography.com/body-text.html) looks.
+2. [point size](https://practicaltypography.com/point-size.html) should be 10–12 points in printed doc­u­ments, 15-25 pix­els on the web.
+3. [line spac­ing](https://practicaltypography.com/line-spacing.html) should be 120–145% of the point size.
+4. The av­er­age [line length](https://practicaltypography.com/line-length.html) should be 45–90 char­ac­ters (in­clud­ing spaces).
+5. The eas­i­est and most vis­i­ble im­prove­ment you can make to your ty­pog­ra­phy is to use a pro­fes­sional font, like those found in [font rec­om­men­da­tions](https://practicaltypography.com/font-recommendations.html).
+6. Avoid [goofy fonts](https://practicaltypography.com/goofy-fonts.html), [mono­spaced fonts](https://practicaltypography.com/monospaced-fonts.html), most [free fonts](https://practicaltypography.com/free-fonts.html), and [sys­tem fonts](https://practicaltypography.com/system-fonts.html)—es­pe­cially [times new ro­man](https://practicaltypography.com/times-new-roman-alternatives.html) and [ar­ial](https://practicaltypography.com/helvetica-and-arial-alternatives.html).
+7. Use curly quo­ta­tion marks, not straight ones (see [straight and curly quotes](https://practicaltypography.com/straight-and-curly-quotes.html)).
+8. Put only [one space be­tween sen­tences](https://practicaltypography.com/one-space-between-sentences.html).
+9. Don’t use mul­ti­ple [word spaces](https://practicaltypography.com/word-spaces.html) or other [white-space char­ac­ters](https://practicaltypography.com/white-space-characters.html) in a row.
+10. Never use [un­der­lin­ing](https://practicaltypography.com/underlining.html), ex­cept per­haps for web links.
+11. Use [cen­tered text](https://practicaltypography.com/centered-text.html) sparingly.
+12. Use [bold or italic](https://practicaltypography.com/bold-or-italic.html) as lit­tle as possible.
+13. [all caps](https://practicaltypography.com/all-caps.html) are fine for less than one line of text.
+14. If you don’t have real [small caps](https://practicaltypography.com/small-caps.html), don’t use them at all.
+15. Use 5–12% ex­tra [let­terspac­ing](https://practicaltypography.com/letterspacing.html) with all caps and small caps.
+16. [kern­ing](https://practicaltypography.com/kerning.html) should al­ways be turned on.
+17. Use [first-line in­dents](https://practicaltypography.com/first-line-indents.html) that are one to four times the point size of the text, or use 4–10 points of space be­tween para­graphs. But don’t use both.
+18. If you use [jus­ti­fied text](https://practicaltypography.com/justified-text.html), also turn on [hy­phen­ation](https://practicaltypography.com/hyphenation.html).
+19. Don’t con­fuse [hy­phens and dashes](https://practicaltypography.com/hyphens-and-dashes.html), and don’t use mul­ti­ple hy­phens as a dash.
+20. Use [am­per­sands](https://practicaltypography.com/ampersands.html) spar­ingly, un­less in­cluded in a proper name.
+21. In a doc­u­ment longer than three pages, one ex­cla­ma­tion point is plenty (see [ques­tion marks and ex­cla­ma­tion points](https://practicaltypography.com/question-marks-and-exclamation-points.html)).
+22. Use proper [trade­mark and copy­right sym­bols](https://practicaltypography.com/trademark-and-copyright-symbols.html)—not al­pha­betic approximations.
+23. Put a [non­break­ing space](https://practicaltypography.com/nonbreaking-spaces.html) af­ter [para­graph and sec­tion marks](https://practicaltypography.com/paragraph-and-section-marks.html).
+24. Make [el­lipses](https://practicaltypography.com/ellipses.html) us­ing the proper char­ac­ter, not pe­ri­ods and spaces.
+25. Make sure [apos­tro­phes](https://practicaltypography.com/apostrophes.html) point downward.
+26. Make sure [foot and inch marks](https://practicaltypography.com/foot-and-inch-marks.html) are straight, not curly.
+
+
+
+### what is good typography?
+
+1. Good ty­pog­ra­phy is mea­sured by how well it re­in­forces the mean­ing of the text, not by some ab­stract scale of merit. Ty­po­graphic choices that work for one text won’t nec­es­sar­ily work for an­other. (Corol­lary: good ty­pog­ra­phers don’t rely on rote so­lu­tions. One size never fits all.)
+
+2. For a given text, there are many ty­po­graphic so­lu­tions that would be equally good. Ty­pog­ra­phy is not a math prob­lem with one cor­rect answer.
+
+3. Your abil­ity to pro­duce good ty­pog­ra­phy de­pends on how well you un­der­stand the goals of your text, not on taste or vi­sual train­ing. (Corol­lary: if you mis­un­der­stand the mean­ing of your text, good ty­pog­ra­phy be­comes purely a mat­ter of luck.)
+
+   > Ty­pog­ra­phy that re­in­forces the mean­ing of the text, even if aes­thet­i­cally un­pleas­ant, is a success.
+
+
+
+### who is typography for?
+
+> Ty­pog­ra­phy is *for the ben­e­fit of the reader.* Not the writer.
+
+what does my reader want?
+
+Good ty­pog­ra­phy can help your reader de­vote less at­ten­tion to the me­chan­ics of read­ing and more at­ten­tion to your mes­sage. Con­versely, bad ty­pog­ra­phy can dis­tract your reader and un­der­mine your message.
+
+
+
+### TYPE COMPOSITION
+
+
+
+#### 1. straight and curly quotes
+
+Always use curly quotes
+
+Straight quotes are the two generic ver­ti­cal quo­ta­tion marks lo­cated near the re­turn key: the straight sin­gle quote (') and the straight dou­ble quote (").
+
+Curly quotes are the quo­ta­tion marks used in good ty­pog­ra­phy. There are four curly quote char­ac­ters: the open­ing sin­gle quote (‘), the clos­ing sin­gle quote (’), the open­ing dou­ble quote (“), and the clos­ing dou­ble quote (”).
+
+|      |                       | windows  | mac                | html      |
+| ---- | :-------------------- | -------- | ------------------ | --------- |
+| '    | straight single quote | '        | '                  | '         |
+| "    | straight double quote | "        | "                  | "         |
+| ‘    | opening single quote  | alt 0145 | option + ]         | `&lsquo;` |
+| ’    | closing single quote  | alt 0146 | option + shift + ] | `&rsquo;` |
+| “    | opening double quote  | alt 0147 | option + [         | `&ldquo;` |
+| ”    | closing double quote  | alt 0148 | option + shift + [ | `&rdquo;` |
+
+> Straight quotes come to us from the type­writer. In tra­di­tional print­ing, all quo­ta­tion marks were curly. But type­writer char­ac­ter sets were lim­ited by me­chan­i­cal con­straints and phys­i­cal space. By re­plac­ing the curly open­ing and clos­ing quotes with am­bidex­trous straight quotes, two slots be­came avail­able for other characters.
+
+Word proces­sors are not lim­ited in this way. You can al­ways get curly quotes. Com­pared to straight quotes, curly quotes are more leg­i­ble on the page and match the other char­ac­ters bet­ter. There­fore, straight quotes should never, ever ap­pear in your documents.
+
+> "That's a 'magic' sock." 	wrong
+>
+> “That’s a ‘magic’ sock.” 	right
+
+
+
+For­tu­nately, avoid­ing straight quotes is easy: **use your word proces­sor’s smart-quote fea­ture**, which will sub­sti­tute curly quotes au­to­mat­i­cally. Smart quotes are typ­i­cally turned on by default.
+
+Use the search-and-re­place func­tion to convert all quotes to curly quotes.
+
+An­other op­tion is to use the lit­tle-known `q` tag, which au­to­mat­i­cally ap­pends curly quotes to the en­closed el­e­ments. So `<q>Hello</q>` ren­ders as Hello. Two caveats. First, a par­ent el­e­ment (like `html`) must have a `lang` at­tribute (like `lang="en"`) so the `q` tag knows what kind of curly quotes to use. Sec­ond, this change in markup re­moves the quote marks from the char­ac­ter stream, and doesn’t help with [apos­tro­phes](https://practicaltypography.com/apostrophes.html), so it may be a long drive for a short day at the beach.
+
+
+
+> 1. Don’t use quo­ta­tion marks for em­pha­sis. That’s a job for [bold or italic](https://practicaltypography.com/bold-or-italic.html).
+> 2. Straight quotes are ac­cept­able in email. It’s hard to see the dif­fer­ence be­tween straight and curly quotes on screen at small sizes. And if you’re typ­ing with thumbs on a smart­phone, it can be ir­ra­tionally dif­fi­cult to in­sert them.
+> 3. Some older dig­i­tal doc­u­ments are stored with dou­ble quotes made of two sin­gle quotes (' ') or two grave ac­cents (``). (The grave ac­cent, also some­times called a back­tick, is that char­ac­ter above the tab key you’ve prob­a­bly never used.) These can be fixed by adapt­ing the search-and-re­place tech­nique de­scribed above.
+> 4. Quo­ta­tion marks are an area of [vast ty­po­graphic di­ver­sity](http://en.wikipedia.org/wiki/Non-English_usage_of_quotation_marks)among other lan­guages—both the glyphs used and how they’re spaced. Now you know why quote-curl­ing al­go­rithms have to be smart.
+> 5. Con­fi­den­tial to com­puter sci­en­tists and doc­u­men­ta­tion writ­ers: straight quotes and back­ticks in soft­ware code should never be con­verted to curly quotes. Those marks are, of course, part of the code syn­tax and must be re­pro­duced lit­er­ally. In par­tic­u­lar, though fans of La­TeX have of­ten writ­ten me to trum­pet its type­set­ting su­pe­ri­or­ity, I’ve never seen any La­TeX-cre­ated doc­u­men­ta­tion that’s got­ten this right.
+
+
+
+#### 2. one space between sentences
+
+**Al­ways put ex­actly one space be­tween sentences.**
+
+Or more gen­er­ally: put ex­actly one space af­ter any punctuation.
+
+
+
+#### 3. question marks and exclamation points
+
+Ask more questions; avoid exclamations
+
+The *ex­cla­ma­tion point* is overused. Give your­self a bud­get of one ex­cla­ma­tion point for any doc­u­ment longer than three pages. If you must use it, use it wisely.
+
+> In tra­di­tional print shops, an ex­cla­ma­tion point was also known as a *bang*. The com­bi­na­tion of a ques­tion mark and ex­cla­ma­tion point (?!)—seen mostly in di­a­logue bal­loons in comics—is called an *in­ter­robang*. An in­ter­robang [lig­a­ture](https://practicaltypography.com/ligatures.html) was in­vented in 1962 and has had an undis­tin­guished ca­reer. It did, how­ever, make it into [Uni­code.](http://www.fileformat.info/info/unicode/char/203d/index.htm) Sorry, I don’t in­clude it in [my fonts.](https://mbtype.com/)
+>
+> Never use more than one ex­cla­ma­tion point in a row, un­less you’re a teenager send­ing a text mes­sage. Srsly.
+
+
+
+#### 4. emoticons & emoji
+
+Three caveats
+
+1. Emoti­cons and emoji, even more so than [am­per­sands](https://practicaltypography.com/ampersands.html), are ca­sual short­hand. So in non-ca­sual set­tings—for in­stance, on your [ré­sumé](https://practicaltypography.com/resumes.html)—don’t.
+2. Overuse of these sym­bols is just as ir­ri­tat­ing as the overuse of [ques­tion marks and ex­cla­ma­tion points](https://practicaltypography.com/question-marks-and-exclamation-points.html), or [all caps](https://practicaltypography.com/all-caps.html). If you find your­self punc­tu­at­ing every sen­tence with `:-)` to avoid mis­un­der­stand­ings, learn to write better.
+3. Though emoti­cons look mostly the same every­where, emoji can [ren­der dif­fer­ently](https://motherboard.vice.com/en_us/article/78kzn9/what-the-emoji-youre-sending-actually-look-like-to-your-friends) among [de­vices and plat­forms.](http://unicode.org/emoji/charts/full-emoji-list.html) So don’t count on nuance.
+4. Side­ways emoti­cons should match the ori­en­ta­tion of your writ­ing sys­tem. So in Eng­lish, a smi­ley is `:-)`, not `(-:`
+
+
+
+
+
+#### 5. semicolons and colons
+
+The semi­colon (;) has two pri­mary uses.
+
+1. It’s used in­stead of a con­junc­tion to com­bine two sen­tences (He did the crime; he must do the time). Don’t use a semi­colon to con­nect a sub­or­di­nate clause to a sen­tence (Since he did the crime; he must do the time). In that case, use a comma.
+
+   In a sen­tence with a con­junc­tion, don’t use a semi­colon be­fore the con­junc­tion (He did the crime; and he must do the time). Use ei­ther a comma or no punc­tu­a­tion be­fore the con­junc­tion. Or start a new sen­tence at the conjunction.
+
+2. A semi­colon also sep­a­rates list el­e­ments with in­ter­nal com­mas (*We vis­ited Tulsa, Ok­la­homa; Flint, Michi­gan; and Pa­d­u­cah, Ken­tucky*).
+
+The colon (:) usu­ally con­nects the in­tro­duc­tion of an idea and its com­ple­tion (*I own three cars: a con­vert­ible, a sedan, and a mini­van*).
+
+
+
+
+
+#### 6. paragraph and section marks
+
+The para­graph mark (¶) is used when cit­ing doc­u­ments with se­quen­tially num­bered para­graphs. The sec­tion mark (§) is used when cit­ing doc­u­ments with num­bered or let­tered sections.
+
+|      |                | windows  | mac        | html     |
+| ---- | -------------- | -------- | ---------- | -------- |
+| ¶    | paragraph mark | alt 0182 | option + 7 | `&para;` |
+| §    | section mark   | alt 0167 | option + 6 | `&sect;` |
+
+A para­graph mark or sec­tion mark should al­ways be fol­lowed by a [non­break­ing space](https://practicaltypography.com/nonbreaking-spaces.html). The non­break­ing space acts like glue that keeps the mark joined with the nu­meric ref­er­ence that follows.
+
+With­out the non­break­ing space, the mark and the ref­er­ence can end up on sep­a­rate lines or pages. This can con­fuse readers.
+
+> The seller can, under Business Law §
+> 1782, offer a full refund to buyers. But ¶
+> 49 of the contract offers another option.	wrong
+
+> The seller can, under Business Law
+> § 1782, offer a full refund to buyers. But
+> ¶ 49 of the contract offers another option.	right
+
+If the para­graph or sec­tion ref­er­ence comes at the start of a sen­tence, don’t use the mark—spell out the whole word (Sec­tion 17200 ap­plied to the trans­ac­tion, but § 17500 did not). In a ref­er­ence to mul­ti­ple para­graphs or sec­tions, dou­ble the mark (¶¶ or §§).
+
+Though these marks are used most fre­quently by le­gal and aca­d­e­mic writ­ers, there’s no rea­son oth­ers shouldn’t use them (See § 31.4.2 of the man­ual). Why not? They look cool.
+
+The para­graph mark is also known as a pil­crow.
+
+Oc­ca­sion­ally you see para­graph marks used within a solid block of text to de­note in­ter­nal para­graphs. This is ar­chaic. If you need to de­note real para­graphs (not ref­er­ences to para­graphs) then use a [first-line in­dent](https://practicaltypography.com/first-line-indents.html) or [space be­tween para­graphs](https://practicaltypography.com/space-between-paragraphs.html).
+
+
+
+
+
+#### 7. parentheses, brackets, and braces
+
+Paren­the­ses are for sep­a­rat­ing ci­ta­tions or other asides from the body text. Brack­ets show changes within quoted ma­te­r­ial. Braces—some­times known as *curly brack­ets*—are not typ­i­cally used ex­cept in tech­ni­cal and math­e­mat­i­cal writing.
+
+| (parentheses) |
+| ------------- |
+| [brackets]    |
+| {braces}      |
+
+In gen­eral, these marks should not adopt the for­mat­ting of the sur­rounded material.
+
+| *[Exit Music (For a Film)]*   | wrong |
+| ----------------------------- | ----- |
+| [*Exit Music (For a Film)*]   | right |
+| **[Exit Music (For a Film)]** | wrong |
+| [**Exit Music (For a Film)**] | right |
+
+But some­times, due to its slant, an italic char­ac­ter will col­lide with a ro­man paren­the­sis. In that case, it’s fine to ital­i­cize the paren­the­ses—read­ers will no­tice the col­li­sion more than the de­par­ture from convention.
+
+| (*yells offstage at Biff*) | oops   |
+| -------------------------- | ------ |
+| *(yells offstage at Biff)* | better |
+
+
+
+#### 8. hyphens and dashes
+
+Hy­phens and dashes look sim­i­lar, but they’re not interchangeable.
+
+|      |         | windows  | mac                     | html      |
+| ---- | ------- | -------- | ----------------------- | --------- |
+| -    | hyphen  | -        | -                       | -         |
+| –    | en dash | alt 0150 | option + hyphen         | `&ndash;` |
+| —    | em dash | alt 0151 | option + shift + hyphen | `&mdash;` |
+
+The hy­phen (-) is the small­est of these marks. It has three uses.
+
+1. A hy­phen ap­pears at the end of a line when a word breaks onto the next line. These hy­phens are added and re­moved au­to­mat­i­cally by the au­to­matic [hy­phen­ation](https://practicaltypography.com/hyphenation.html) in your word proces­sor or web browser.
+
+2. Some mul­ti­part words are spelled with a hy­phen (topsy-turvy, cost-ef­fec­tive, bric-a-brac). But a pre­fix is not typ­i­cally fol­lowed with a hy­phen (non­profit, not non-profit).
+
+3. A hy­phen is used in phrasal ad­jec­tives (lis­tener-sup­ported ra­dio, dog-and-pony show, high-school grades) to en­sure clar­ity. Non­pro­fes­sional writ­ers of­ten omit these hy­phens. As a pro­fes­sional writer, you should not.
+
+   For in­stance, con­sider the un­hy­phen­ated phrase five dol­lar bills. Is five the quan­tity of dol­lar bills, or are the bills each worth five dol­lars? As writ­ten, it sug­gests the for­mer. If you mean the lat­ter, then you’d write five-dol­lar bills.
+
+
+
+Dashes come in two sizes—the en dash and the em dash. The em dash (—) is typ­i­cally about as wide as a cap­i­tal H. The en dash (–) is about half as wide.
+
+En and em dashes are of­ten ap­prox­i­mated by typ­ing two or three hy­phens in a row (-- or --- ). Don’t do that—it’s an­other [type­writer habit](https://practicaltypography.com/typewriter-habits.html). Use real dashes.
+
+The en dash has two uses.
+
+1. It in­di­cates a range of val­ues (1880–1912, pages 330–39, Ex­hibits A–E). If you open with from, pair it with to in­stead of an en dash (from 1880 to 1912, not from 1880–1912).
+2. It de­notes a con­nec­tion or con­trast be­tween pairs of words (con­ser­v­a­tive–lib­eral split, Ari­zona–Nevada re­ci­pro­city, Dodd–Frank Act).
+
+
+
+The em dash is used to make a break be­tween parts of a sen­tence. Use it when a comma is too weak, but a colon, semi­colon, or pair of paren­the­ses is too strong. The em dash puts a nice pause in the text—and it is un­der­used in pro­fes­sional writing.
+
+
+
+> 1. Don’t use a slash ( / ) where an en dash is correct.
+> 2. Even though the en dash is used for joint au­thors (Dodd–Frank Act), use a hy­phen for com­pound names. If the son and daugh­ter of Dodd and Frank mar­ried, they’d be known as Mr. & Mrs. Dodd-Frank (with a hy­phen), not Mr. & Mrs. Dodd–Frank (with an en dash).
+> 3. Em and en dashes are typ­i­cally set flush against the sur­round­ing text. Some fonts in­clude a lit­tle white space around the em dash; some don’t. If your em dashes look like they’re be­ing crushed—par­tic­u­larly if you’re set­ting type on screen—it’s fine to add [word spaces](https://practicaltypography.com/word-spaces.html) be­fore and after.
+> 4. An en dash makes an ac­cept­able mi­nus sign in spread­sheets or math­e­mat­i­cal ex­pres­sions. (See also [math sym­bols](https://practicaltypography.com/math-symbols.html).)
+> 5. Em and en re­fer to units of ty­po­graphic mea­sure­ment, not to the let­ters M and N. In a tra­di­tional metal font, the em was the ver­ti­cal dis­tance from the top of a piece of type to the bot­tom. The en was half the size of the em. Orig­i­nally, the width of the em and en dashes cor­re­sponded to these units. In to­day’s dig­i­tal fonts, they run narrower.
+> 6. Fans of Robert Bringhurst’s book The El­e­ments of Ty­po­graphic Style (and I am among them—see [bib­li­og­ra­phy](https://practicaltypography.com/bibliography.html)) may know that he rec­om­mends us­ing en dashes with spaces rather than em dashes. Per­haps this prac­tice is com­mon in Mr. Bringhurst’s na­tive Canada. But in Amer­i­can ty­pog­ra­phy, it’s not.
+
+
+
+#### 9. trademark & copyright symbols
+
+Your key­board in­cludes a trade­mark sym­bol (™), a reg­is­tered trade­mark sym­bol (®), and a copy­right sym­bol (©). When you need these sym­bols, use them. Don’t use goofy al­pha­betic ap­prox­i­ma­tions like *(TM)* or *(c)*.
+
+|      |                      | windows  | mac        | html      |
+| ---- | -------------------- | -------- | ---------- | --------- |
+| ™    | trademark            | alt 0153 | option + 2 | `&trade;` |
+| ®    | registered trademark | alt 0174 | option + r | `&reg;`   |
+| ©    | copyright            | alt 0169 | option + g | `&copy;`  |
+
+> (c) 2018 MegaCorp (TM)	wrong
+>
+> © 2018 MegaCorp™	right
+
+Trade­mark sym­bols are set as su­per­scripts—smaller char­ac­ters po­si­tioned above the base­line of the text (*Roxy’s Pizza*™, *Car­ing Is Our Busi­ness*®). If you use proper trade­mark sym­bols, they’ll ap­pear at the right size and height. No space is needed be­tween the text and the trade­mark symbol.
+
+Copy­right sym­bols ap­pear in line with the text (*© 1999*). Use a [non­break­ing space](https://practicaltypography.com/nonbreaking-spaces.html) be­tween the copy­right sym­bol and the year to en­sure the two don’t end up on dif­fer­ent lines or pages.
+
+> This instructional goatherding video is ©
+> 2018 MegaCorp Inc.						wrong
+
+> This instructional goatherding video is
+> © 2018 MegaCorp Inc.					right
+
+Must you put a space af­ter the copy­right sym­bol? No, but se­man­ti­cally, it makes good sense. The © di­rectly re­places the word copy­right, so it should be spaced like any other word.
+
+Trade­mark sym­bols, on the other hand, are more like lit­tle bar­na­cles of legalese—im­mov­able but mostly ig­nored. To think of it an­other way, if you were read­ing the phrase “© 2018 Mega­Corp™” aloud, you’d prob­a­bly pro­nounce the © but not the ™.
+
+
+
+> 1. Some word proces­sors au­to­mat­i­cally sub­sti­tute a sym­bol when you type (TM), (R), or (c). Be cau­tious with this fea­ture, be­cause ref­er­ences like *Sec­tion 12(c)* can be silently con­verted to *Sec­tion 12©*. Your spelling checker won’t de­tect this er­ror, and it’s easy to over­look while editing.
+> 2. *Copy­right © 2018* is re­dun­dant. Word or sym­bol—not both.
+> 3. I al­ways use the non­i­tal­i­cized ver­sions of these marks, even if the ad­ja­cent text is ital­i­cized. I think it looks bet­ter. But that’s a pref­er­ence, not a rule.
+
+
+
+------
+
+
+
+
+
+
+
 # Typeset Like a True Print Designer
 
 https://www.designersinsights.com/designer-resources/learn-to-typeset-like-a-true-print-designer/
@@ -316,6 +629,8 @@ Review and read the marked-up proof example below. It also explains the proper p
 
 
 
+
+
 ------
 
 
@@ -355,7 +670,6 @@ Review and read the marked-up proof example below. It also explains the proper p
 
 - On your server, reference with @font-face
 - Access from someone else's server 
-
 
 
 
@@ -788,7 +1102,6 @@ In all the effort to sort through large typeface libraries looking for just the 
 - Use a classic sans-serif and serif combination. 
 - Use typefaces that have neutral personalities (for example, Helvetica and Garamond)
 - Use different font styles within the same font family.
-
 
 
 

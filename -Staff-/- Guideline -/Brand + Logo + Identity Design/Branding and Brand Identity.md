@@ -94,7 +94,7 @@ When we talk about strategy in the context of design, we are talking about commu
 
 ## Strategy
 
-##### What to know
+### What to know
 
 1. I want to know what the current brand strategy is, if there is one. If so, 
 2. what does the client think works and what doesn't? This isn't about the visuals, it's about the message. 
@@ -105,12 +105,13 @@ When we talk about strategy in the context of design, we are talking about commu
 7. I need to learn about the client's competition. This gave us great insight about the competitions, communications, and responses. Identifying the correct audience is critical. Surgical marketing with clear messages can only happen when you know whom you are trying to reach.
 8. what are the company's primary values? What are the company's strengths and weaknesses? What message is the company communicating now? What should the company be communicating?
 9. Who is the company's primary audience and stakeholders? Who should the audience be? Who is the primary competition? Remember, it's your job to gather the information, not disagree or argue. This is the chance for the client to do all the talking. Now it's time for how. How does the company reach the current audience? How does the company define itself to the outside world? How does the company communicate its values to the employees? Each of these questions could be broken into more detailed ones.
+10. Looking outside inspiration. What is already happened in the industry
 
 The point, here, is not to open the dialogue for a complain fest. It's to find the areas that are working, and those that can be improved. 
 
 
 
-##### Problem solving
+### Problem solving
 
 Now that I've gathered interviews, research, analytical data and existing visual material, it's time to do the hard work. It's time to solve the problem
 
@@ -120,7 +121,7 @@ You've pulled together the information that points to an answer with the values,
 
 
 
-##### determine a strategy for the communication and visual direction. 
+### determine a strategy for the communication and visual direction. 
 
 Who is the company's primary audience and stakeholders? I compare the answers I have from my interviews with the analytical research from data. The answers maybe 100% correct but if they are different than the reality, again, I need to show facts to prove this.
 
@@ -136,7 +137,7 @@ You will, however, have the tools needed to make choices about the design soluti
 
 
 
-##### Presentation
+### Presentation
 
  It's about convincing someone that your solution is the right one.  Most of our clients rely on facts and figures to make decisions. So we need to create a logical presentation in their language.
 
