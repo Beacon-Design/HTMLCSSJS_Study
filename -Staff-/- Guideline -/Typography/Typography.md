@@ -2,7 +2,11 @@
 
 
 
-# Anatomy of Typography 
+# LETTER
+
+
+
+## Anatomy of Typography 
 
 [Anatomy-of-Typography]
 
@@ -11,6 +15,18 @@
 
 
 ![Anotomy-of-Typography-1](/Users/yulei/Documents/HUB/HTMLCSSJS_Study/-Staff-/- Guideline -/Typography/TypographyPIC/Anotomy-of-Typography-1.png)
+
+
+
+![Anotomy-of-Typography-2](/Users/yulei/Documents/HUB/HTMLCSSJS_Study/-Staff-/- Guideline -/Typography/TypographyPIC/Anotomy-of-Typography-2.gif)
+
+
+
+### Anatomy: How Letters Sit on a Line
+
+
+
+![How Letters Sit on a Line](/Users/yulei/Documents/HUB/HTMLCSSJS_Study/-Staff-/- Guideline -/Typography/TypographyPIC/How Letters Sit on a Line.gif)
 
 
 
@@ -25,6 +41,8 @@ Opening at the end of an open counter.
 ### Arm
 
 A horizontal stroke not connected on one or both ends.
+
+A straight or curved portion of a letter that extends upwards or outwards, attached at one end and free at the other
 
 ![arm](/Users/yulei/Documents/HUB/HTMLCSSJS_Study/-Staff-/- Guideline -/Typography/TypographyPIC/arm.gif)
 
@@ -150,6 +168,8 @@ The smaller form of letters in a typeface.
 
 A curved stroke originating from a stem.
 
+The stroke that curves downwards and to the right of the lowercase h, m and n.
+
 ![shoulder](/Users/yulei/Documents/HUB/HTMLCSSJS_Study/-Staff-/- Guideline -/Typography/TypographyPIC/shoulder.gif)
 
 
@@ -210,6 +230,77 @@ begin sentences and proper nouns. Also known as “capital letters”.
 The height of the main body of a lowercase letter.
 
 ![x-height](/Users/yulei/Documents/HUB/HTMLCSSJS_Study/-Staff-/- Guideline -/Typography/TypographyPIC/x-height.gif)
+
+
+
+## Size
+
+### height
+
+> Attempts to standardize the measurement of
+> type began in the eighteenth century. The *point system* is the standard used today. 
+>
+> typographers and typesetters have traditionally specified a given type setting as 12/16, to indicate 12 point type with 16 point leading.
+>
+> A pica is a hair less than 1/6 inch, and contains 12 points. Picas are typically used to represent fixed horizontal measurements, most often column width. They are commonly used when designing newspapers, magazines, newsletters, and ads. Picas are designated with the letter p, such as 16p.
+
+One *point* equals 1/72 inch or .35 millimeters. 
+
+Twelve points equal one *pica,* the unit commonly used to measure column widths. 
+
+
+
+1 point = 1/72 inch = 0.35 millimeters = 1px
+
+12 points = 1 pica
+
+72 points = 72 px = 6pica = 1inch
+
+
+
+ **Abbreviating Picas and Points**
+
+8 picas = 8p
+
+8 points = p8, 8 pts
+
+8 picas, 4 points = 8p4
+
+8-point Helvetica with 9 points of line spacing = 8/9 Helvetica
+
+
+
+![Thinking_with_Type_Letter_height](/Users/yulei/Documents/HUB/HTMLCSSJS_Study/-Staff-/- Guideline -/Typography/TypographyPIC/Thinking_with_Type_Letter_height.gif)
+
+
+
+### width
+
+A letter also has a horizontal measure, called its *set width*. The set width is the body of the letter plus a sliver of space that protects it from other letters. The width of a letter is intrinsic to the proportions and visual impression of the typeface. Some typefaces have a narrow set width, and some have a wide one. You can change the set width of a typeface by fiddling with its horizontal or vertical scale.This distorts the line weight of the letters,however, forcing heavy elements to become thin, and thin elements to become thick. Instead of torturing a letterform, choose a typeface that has the proportions you are looking for, such as condensed, compressed, wide, or extended.
+
+
+
+### The Power of X-Heights
+
+![Thinking_with_Type_Letter_X](/Users/yulei/Documents/HUB/HTMLCSSJS_Study/-Staff-/- Guideline -/Typography/TypographyPIC/Thinking_with_Type_Letter_X.gif)
+
+
+
+### Optical Sizes
+
+![Thinking_with_Type_Letter_Optical Sizes](/Users/yulei/Documents/HUB/HTMLCSSJS_Study/-Staff-/- Guideline -/Typography/TypographyPIC/Thinking_with_Type_Letter_Optical Sizes.gif)
+
+
+
+### Type Classification
+
+> A basic system for classifying typefaces was devised in the nineteenth century, when printers sought to identify a heritage for their own craft analogous to that of art history. *Humanist* letterforms are closely connected to calligraphy and the movement of the hand. *Transitional* and *modern* typefaces are more abstract and less organic. These three main groups correspond roughly to the Renaissance, Baroque, and Enlightenment periods in art and literature. Historians and critics of typography have since proposed more finely grained schemes that attempt to better capture the diversity of letterforms. Designers in the twentieth and twenty-first centuries have continued to create new typefaces based on historic characteristics.
+
+![Thinking_with_Type_Letter_Type Classification](/Users/yulei/Documents/HUB/HTMLCSSJS_Study/-Staff-/- Guideline -/Typography/TypographyPIC/Thinking_with_Type_Letter_Type Classification.gif)
+
+
+
+
 
 
 
@@ -988,6 +1079,10 @@ Effectively using variations of  weight and style can help to create [visual hie
 
 ## Choose the Right Typeface
 
+https://prowebtype.com/selecting-body-text/
+
+
+
 Think less of styles,  but more of readability when choosing a typeface for body copy, and pick a typeface that works well in small sizes. The best way to decide on one is to try out each typeface that might work, then compare and decide. 
 
 **TIP**
@@ -1104,6 +1199,23 @@ In all the effort to sort through large typeface libraries looking for just the 
 - Use different font styles within the same font family.
 
 
+
+## Typeface Design
+
+#### 1. The first step in designing a typeface is to define a basic concept.
+
+- Will the letters be serif or sans serif? 
+
+- Will they be modular or organic? 
+- Will you construct them geometrically or base them on handwriting? 
+- Will you use them for display or for text? 
+- Will you work with historic source material or invent the characters more or less from scratch? 
+
+
+
+#### 2. The next step is to create drawings. 
+
+Begin by drawing a few core letters, such as *o, u, h*, and *n,* building curves, lines, and shapes that will reappear throughout the font. All the letters in a typeface are distinct from each other, yet they share many attributes, such as x-height, line weight, stress, and a common vocabulary of forms and proportions. You can control the spacing of the typeface by adding blank areas next to each character as well as creating kerning pairs that determine the distance between particular characters. Producing a complete typeface is an enormous task. However, for people with a knack for drawing letterforms, the process is hugely rewarding.
 
 ------
 
@@ -1923,3 +2035,18 @@ Reference:
 https://medium.com/@amachino/the-secret-of-san-francisco-fonts-4b5295d9a745
 ```
 
+
+
+
+
+# Reference
+
+http://webtypography.net/
+
+https://prowebtype.com/
+
+https://practicaltypography.com/
+
+https://smad.jmu.edu/shen/webtype/index.html
+
+http://thinkingwithtype.com/
