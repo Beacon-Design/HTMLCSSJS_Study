@@ -1075,6 +1075,20 @@ Effectively using variations of  weight and style can help to create [visual hie
 
 
 
+You can specify font-weights other than "normal" and "bold" by using numeric font-weight values in the CSS. The numeric values most frequently correspond to these weights:
+
+- 100 = thin
+- 200 = extra-light
+- 300 = light
+- 400 = normal, book
+- 500 = medium
+- 600 = demi-bold
+- 700 = bold
+- 800 = heavy
+- 900 = black
+
+
+
 
 
 ## Choose the Right Typeface
