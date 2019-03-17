@@ -510,7 +510,7 @@ goals, not features, are the key to product success
 
 # 第四章 设计研究 Understanding the Problem :Design Research
 
-定量分析只能回答那些少数简化轴上的“多与少”问题。而定性研究能够以丰富多元的形 式回答“是什么”、“怎么样”和“为什么”等问题，真实反映人类现实情况的复杂性。
+定量分析只能回答那些少数简化轴上的“多与少”问题。而定性研究能够以丰富多元的形式回答“是什么”、“怎么样”和“为什么”等问题，真实反映人类现实情况的复杂性。
 
 
 
@@ -537,11 +537,7 @@ goals, not features, are the key to product success
 
 - 为设计团队提供可信性和权威性方面的依据，因为有研究结果作为设计决定支撑。
 
-
-
 - 让团队对目标领域和用户关切达成统一认识。
-
-
 
 - 帮助管理人员在产品设计问题上做出更全面科学的决策，而不是基于猜测和个人偏好 做决定。
 
@@ -1158,41 +1154,49 @@ goals, not features, are the key to product success
 
 - 任务的执行频率和重要程度。
 
-
-
 - 提示——推动或促使任务执行的因素。
-
-
 
 - 依赖关系——执行任务的要素和完成任务的必备条件。
 
-
-
 - 相关人员有哪些，他们的职责和角色。
-
-
 
 - 执行的具体动作。
 
-
-
 - 做出的决定。
-
-
 
 - 支持决策的信息。
 
-
-
 - 有哪些问题——失误和意外情况。
-
-
 
 - 如何纠正这些失误和意外。
 
 问卷调查完成或访谈结束后，任务通常会被分解或分析。通常，结果会融入流程图中，或者类似的图表中，这些图表能够传达动作之间的关系，往往还能传达人与流程之间的关系。
 
 任务分析是了解用户当前行为、识别难点所在，以及改进机会的重要途径。然而，任务分析对明确用户目标帮助不大。人们目前的行为方式通常是不得不与落后的系统和组织 交互而遗留的产物。人们做某件事，往往与他们愿意怎么做或者如何有效地完成之间，没有多少相似之处。
+
+
+
+
+
+### 测试方法
+
+#### First-click testing
+
+> https://www.usability.gov/how-to-and-tools/methods/first-click-testing.html
+>
+> https://usabilityhub.com/guides/first-click-testing
+>
+> https://medium.com/gitlab-magazine/conducting-remote-ux-research-at-gitlab-1c89ed9a5ee5
+
+First-click testing explores what users click on first when completing a task within an interface. It tells us whether users are able to find what they’re looking for quickly and easily. This research method is based on the principle that users are two to three times more likely to find what they are looking for if their initial click is correct, rather than a click in the wrong direction.
+
+We’ve used first-click testing at GitLab to quickly evaluate multiple design ideas against one another. We share our designs with users via [UsabilityHub](https://usabilityhub.com/). We measure whether users take the correct path and how long it takes them to decide where to click. A slower click time would suggest a user has hesitated about where to click.
+
+First-click testing is great for providing an indication of whether a design is intuitive to users and helps us to quickly narrow down multiple design concepts.
+
+
+
+
 
 
 
@@ -1257,8 +1261,6 @@ goals, not features, are the key to product success
 
 - 自我参考设计。
 
-
-
 - 边缘功能设计。
 
 **弹性用户**
@@ -1296,15 +1298,9 @@ goals, not features, are the key to product success
 
 - 利益相关者和主题专家提供的用户相关信息。
 
-
-
 - 焦点小组、调查等市场研究数据。
 
-
-
 - 市场划分模型。
-
-
 
 - 文献综述和前期研究收集的数据。
 
@@ -1485,15 +1481,9 @@ goals, not features, are the key to product success
 
 - 有趣
 
-
-
 - 再次确保安全性和敏感性
 
-
-
 - 感觉很酷或很时髦或者放松
-
-
 
 - 保持专注警醒
 
@@ -1516,11 +1506,7 @@ goals, not features, are the key to product success
 
 - 成就自己的抱负。
 
-
-
 - 成为某个方面的行家。
-
-
 
 - 在同辈中有魅力、受欢迎、被尊重。
 
@@ -1538,8 +1524,6 @@ goals, not features, are the key to product success
 
 
 - 最终目标同行为处理过程相关，即用户想要做什么。
-
-
 
 - 人生目标同反思处理过程相关，即用户想要成为什么。
 
@@ -1564,23 +1548,13 @@ goals, not features, are the key to product success
 
 - 提高市场占有率。
 
-
-
 - 留住现有客户。
-
-
 
 - 打败竞争对手。
 
-
-
 - 更高效地使用资源。
 
-
-
 - 提供更多产品和服务。
-
-
 
 - 保证知识产权安全。
 
@@ -1596,19 +1570,11 @@ goals, not features, are the key to product success
 
 - 能够在不同浏览器中运行。
 
-
-
 - 保护数据完整性。
-
-
 
 - 提尚应用程序的执行效率。
 
-
-
 - 使用特定幵发语言或库。
-
-
 
 - 保持跨平台一致性。
 
